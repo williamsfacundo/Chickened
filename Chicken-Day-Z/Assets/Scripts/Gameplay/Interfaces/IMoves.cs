@@ -1,9 +1,11 @@
+using UnityEngine;
+
 namespace ChickenDayZ.Gameplay.Interfaces 
 {
     interface IMoves
     {
-        void Move();
+        void Move(GameObject gameObject);
 
-        void CalculateMoveDirection();
+        Vector3 CalculateMoveDirection();
     }
 }
