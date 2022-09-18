@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 {
-    public class PlayersIntanciator : MonoBehaviour
+    public class PlayersSpawner : MonoBehaviour
     {
         [SerializeField] private GameObject[] _playersPrefabs;
 
