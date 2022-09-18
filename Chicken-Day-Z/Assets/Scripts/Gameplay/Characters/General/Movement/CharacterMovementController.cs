@@ -3,7 +3,6 @@ using UnityEngine;
 using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Characters.Chicken.Movement;
 using ChickenDayZ.Gameplay.Enumerators;
-using ChickenDayZ.Gameplay.Characters.Stats;
 using ChickenDayZ.Gameplay.Characters.Chicken.Movement.Input;
 
 namespace ChickenDayZ.Gameplay.Characters.Movement
@@ -13,20 +12,13 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
     {
         [SerializeField] private MoveMechanics _moveMechanicEnum; 
 
-        [SerializeField] private CharacterInitialStats _characterInitialStats; 
+        [SerializeField] private float _characterInitialMoveSpeed; 
         
         private IMoves _moveMechanic;
 
         private void Awake()
         {
-            if (_characterInitialStats != null) 
-            {
-                SelectMoveMechanic();
-            }
-            else 
-            {
-                Debug.Log("Character initial stats is missing!");                
-            }            
+            SelectMoveMechanic();
         }
 
         void Update()
@@ -70,7 +62,7 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
                 case MoveMechanics.PLAYER_ONE:                    
 
                     _moveMechanic = new ChickenMovement(new KeyboardMovementInput(new AxisMovement("Horizontal", "Vertical")), 
-                        gameObject.GetComponent<Rigidbody2D>(), _characterInitialStats.MoveSpeed);
+                        gameObject.GetComponent<Rigidbody2D>(), _characterInitialMoveSpeed);
 
                     break;
                 default:
