@@ -12,37 +12,34 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 
         private static short _initialAmountOfPlayers = 1; 
 
-        private GameObject[] _players;
+        private GameObject[] _players;                
 
-        public static short InitialAmountOfPlayers 
-        {
-            set 
-            {
-                if (value > MaxPlayers) 
-                {
-                    _initialAmountOfPlayers = MaxPlayers;
-                }
-                else if (value <= 0) 
-                {
-                    _initialAmountOfPlayers = 1;
-                }
-                else 
-                {
-                    _initialAmountOfPlayers = value;
-                }
-            }
-        }
-
-        private void Awake()
+        void Awake()
         {
             InstanciatePlayers();
 
-            SetPlayersPositions();
+            SetPlayersPositions();            
+        }
+
+        public static void SetInitialAmountOfPlayers(short value)
+        {
+            if (value > MaxPlayers)
+            {
+                _initialAmountOfPlayers = MaxPlayers;
+            }
+            else if (value <= 0)
+            {
+                _initialAmountOfPlayers = 1;
+            }
+            else
+            {
+                _initialAmountOfPlayers = value;
+            }
         }
 
         private void InstanciatePlayers() 
         {
-            _players = new GameObject[_playersSpawnPositions.Length];
+            _players = new GameObject[_initialAmountOfPlayers];
 
             for (short i = 0; i < _players.Length; i++)
             {
