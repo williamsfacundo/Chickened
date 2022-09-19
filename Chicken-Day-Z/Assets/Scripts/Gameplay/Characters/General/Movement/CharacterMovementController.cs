@@ -4,6 +4,7 @@ using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Characters.Chicken.Movement;
 using ChickenDayZ.Gameplay.Enumerators;
 using ChickenDayZ.Gameplay.Characters.Chicken.Movement.Input;
+using ChickenDayZ.Gameplay.Controllers;
 
 namespace ChickenDayZ.Gameplay.Characters.Movement
 {
@@ -15,6 +16,16 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
         [SerializeField] private float _characterInitialMoveSpeed; 
         
         private IMoves _moveMechanic;
+
+        void OnEnable()
+        {
+            GameplayResetter.OnGameplayReset += ResetObject;
+        }
+
+        void OnDisable()
+        {
+            GameplayResetter.OnGameplayReset -= ResetObject;
+        }
 
         private void Awake()
         {
