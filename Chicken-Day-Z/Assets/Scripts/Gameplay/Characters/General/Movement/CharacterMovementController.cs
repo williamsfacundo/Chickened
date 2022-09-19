@@ -8,7 +8,7 @@ using ChickenDayZ.Gameplay.Characters.Chicken.Movement.Input;
 namespace ChickenDayZ.Gameplay.Characters.Movement
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class CharacterMovementController : MonoBehaviour
+    public class CharacterMovementController : MonoBehaviour, IResettable
     {
         [SerializeField] private MoveMechanics _moveMechanicEnum; 
 
@@ -29,6 +29,11 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
         void FixedUpdate()
         {
             MoveFuntionCall();
+        }
+
+        public void ResetObject()
+        {
+            _moveMechanic.ResetObject();
         }
 
         private void MoveFuntionCall() 
@@ -68,6 +73,6 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
                 default:
                     break;
             }
-        }
+        }        
     }
 }
