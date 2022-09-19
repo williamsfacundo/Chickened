@@ -53,8 +53,13 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
             _moveSpeed = moveSpeed;
         }
 
+        public void ResetObject()
+        {
+            _moveDirection = Vector2.zero;
+        }
+
         public abstract void CalculateMoveDirection();
 
-        public abstract void Move();
+        public abstract void Move();        
     }
 }
