@@ -1,8 +1,9 @@
 using UnityEngine;
+using ChickenDayZ.Gameplay.Interfaces;
 
 namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 {
-    public class PlayersSpawner : MonoBehaviour
+    public class PlayersSpawner : MonoBehaviour, IResettable
     {
         [SerializeField] private GameObject[] _playersPrefabs;
 
@@ -37,6 +38,11 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
             }
         }
 
+        public void ResetObject()
+        {
+            SetPlayersPositions();
+        }
+
         private void InstanciatePlayers() 
         {
             _players = new GameObject[_initialAmountOfPlayers];
@@ -54,6 +60,6 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
             {
                 _players[i].transform.position = _playersSpawnPositions[i].transform.position;
             }
-        }       
+        }        
     }
 }
