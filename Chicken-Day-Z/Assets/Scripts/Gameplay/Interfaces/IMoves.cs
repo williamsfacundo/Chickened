@@ -1,6 +1,6 @@
 namespace ChickenDayZ.Gameplay.Interfaces 
 {
-    interface IMoves
+    interface IMoves : IResettable
     {
         void Move();
 
