@@ -2,6 +2,7 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Controllers;
+using ChickenDayZ.Gameplay.Characters.Chicken.Camera;
 
 namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 {
@@ -10,6 +11,8 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
         [SerializeField] private GameObject[] _playersPrefabs;
 
         [SerializeField] private GameObject[] _playersSpawnPositions;
+
+        [SerializeField] private GameObject _cameraPrefab;
 
         private const short MaxPlayers = 2;
 
@@ -63,7 +66,18 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
             {
                 _players[i] = Instantiate(_playersPrefabs[i], _playersSpawnPositions[i].transform.position,
                     Quaternion.identity);
+
+                InstanciateCamera(i);
             }
+        }
+
+        private void InstanciateCamera(short index) 
+        {
+            GameObject auxCamera = Instantiate(_cameraPrefab);
+
+            CameraFollowingPlayer auxScript = auxCamera.GetComponent<CameraFollowingPlayer>();
+
+            auxScript.PlayerIndex = index;
         }
         
         private void SetPlayersPositions() 
