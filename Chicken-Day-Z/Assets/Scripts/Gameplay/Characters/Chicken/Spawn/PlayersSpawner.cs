@@ -1,5 +1,7 @@
 using UnityEngine;
+
 using ChickenDayZ.Gameplay.Interfaces;
+using ChickenDayZ.Gameplay.Controllers;
 
 namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 {
@@ -13,7 +15,17 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 
         private static short _initialAmountOfPlayers = 1; 
 
-        private GameObject[] _players;                
+        private GameObject[] _players;
+
+        private void OnEnable()
+        {
+            GameplayResetter.OnGameplayReset += ResetObject;
+        }
+
+        private void OnDisable()
+        {
+            GameplayResetter.OnGameplayReset -= ResetObject;
+        }
 
         void Awake()
         {
@@ -60,6 +72,6 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
             {
                 _players[i].transform.position = _playersSpawnPositions[i].transform.position;
             }
-        }        
+        }
     }
 }
