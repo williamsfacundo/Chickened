@@ -2,49 +2,49 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
 
-namespace ChickenDayZ.Gameplay.Characters.Movement 
+namespace ChickenDayZ.Gameplay.Characters.Movement
 {
     public abstract class CharacterMovement : IMoves
     {
-        private Rigidbody2D _objectRigidbody2D;        
+        private Rigidbody2D _objectRigidbody2D;
 
         private Vector2 _moveDirection;
 
         private float _moveSpeed;
 
-        public Rigidbody2D ObjectRigidbody2D 
+        public Rigidbody2D ObjectRigidbody2D
         {
-            get 
+            get
             {
                 return _objectRigidbody2D;
             }
         }
 
-        public Vector2 MoveDirection 
+        public Vector2 MoveDirection
         {
-            set 
+            set
             {
                 _moveDirection = value;
             }
-            get 
+            get
             {
                 return _moveDirection;
             }
         }
 
-        public float MoveSpeed 
+        public float MoveSpeed
         {
-            set 
+            set
             {
                 _moveSpeed = value;
             }
-            get 
+            get
             {
                 return _moveSpeed;
             }
-        }        
+        }
 
-        public CharacterMovement(Rigidbody2D objectRigidbody2D, float moveSpeed) 
+        public CharacterMovement(Rigidbody2D objectRigidbody2D, float moveSpeed)
         {
             _objectRigidbody2D = objectRigidbody2D;
 
@@ -60,6 +60,6 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
 
         public abstract void CalculateMoveDirection();
 
-        public abstract void Move();        
+        public abstract void Move();
     }
 }

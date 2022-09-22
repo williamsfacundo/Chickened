@@ -11,10 +11,10 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
     [RequireComponent(typeof(Rigidbody2D))]
     public class CharacterMovementController : MonoBehaviour, IResettable
     {
-        [SerializeField] private MoveMechanics _moveMechanicEnum; 
+        [SerializeField] private MoveMechanicsEnum _moveMechanicEnum;
 
-        [SerializeField] private float _characterInitialMoveSpeed; 
-        
+        [SerializeField] private float _characterInitialMoveSpeed;
+
         private IMoves _moveMechanic;
 
         void OnEnable()
@@ -47,13 +47,13 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
             _moveMechanic.ResetObject();
         }
 
-        private void MoveFuntionCall() 
+        private void MoveFuntionCall()
         {
-            if (_moveMechanic != null) 
+            if (_moveMechanic != null)
             {
                 _moveMechanic.Move();
             }
-            else 
+            else
             {
                 Debug.Log("Move mechanic is missing!");
             }
@@ -71,19 +71,19 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
             }
         }
 
-        private void SelectMoveMechanic() 
+        private void SelectMoveMechanic()
         {
-            switch (_moveMechanicEnum) 
+            switch (_moveMechanicEnum)
             {
-                case MoveMechanics.PLAYER_ONE:                    
+                case MoveMechanicsEnum.PLAYER_ONE:
 
-                    _moveMechanic = new ChickenMovement(new KeyboardMovementInput(new AxisMovement("Horizontal", "Vertical")), 
+                    _moveMechanic = new ChickenMovement(new KeyboardMovementInput(new AxisMovement("Horizontal", "Vertical")),
                         gameObject.GetComponent<Rigidbody2D>(), _characterInitialMoveSpeed);
 
                     break;
                 default:
                     break;
             }
-        }        
+        }
     }
 }
