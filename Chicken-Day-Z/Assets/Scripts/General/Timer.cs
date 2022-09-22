@@ -50,7 +50,7 @@ namespace ChickenDayZ.General
             _countDown = _time;
         }
 
-        public void DecreasTimer()
+        public void DecreaseTimer()
         {
             if (_countDown > 0f)
             {
