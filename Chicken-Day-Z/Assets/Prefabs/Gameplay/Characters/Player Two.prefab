@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7480977285595935394}
   - component: {fileID: 7480977285595935397}
   - component: {fileID: 7480977285595935393}
+  - component: {fileID: -5435672307098511663}
+  - component: {fileID: -1821022338696854922}
+  - component: {fileID: 368345250149241562}
   - component: {fileID: 7480977285595935392}
   - component: {fileID: 7480977285595935395}
   - component: {fileID: 3521646903989923705}
@@ -95,11 +98,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 7480977285595935396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 616d83539a70d3748a2cf01dece5942e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3aa7d4a6dd34fd0438ffda33f9f17c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _moveMechanicEnum: 0
-  _characterInitialMoveSpeed: 2
+  _characterInitialMoveSpeed: 0.5
+--- !u!114 &-5435672307098511663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c57ee4ac23e5994faa5d3d70ca6ad99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialInventoryItem: 0
+--- !u!114 &-1821022338696854922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d41868eeb6036f44948e9a1d04a6dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionType: 0
+--- !u!114 &368345250149241562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7e021697e8d4047a73a18bd938fbc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemActionController: {fileID: -1821022338696854922}
+  _fireMouseButton: 0
 --- !u!50 &7480977285595935392
 Rigidbody2D:
   serializedVersion: 4
