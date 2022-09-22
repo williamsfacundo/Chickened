@@ -1,4 +1,4 @@
 namespace ChickenDayZ.Gameplay.Enumerators 
 {
-    public enum MoveMechanics { PLAYER_ONE };
+    public enum MoveMechanicsEnum { PLAYER_ONE };
 }
