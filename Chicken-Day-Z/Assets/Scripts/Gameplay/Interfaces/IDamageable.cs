@@ -4,6 +4,6 @@ namespace ChickenDayZ.Gameplay.Interfaces
     {
         public void ReceiveDamage(float value);
 
-        public void IsDead();
+        public void HealthReachedZero();
     }
 }
