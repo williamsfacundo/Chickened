@@ -1,3 +1,5 @@
+using UnityEngine;
+
 using ChickenDayZ.Gameplay.Enumerators;
 using ChickenDayZ.Gameplay.Interfaces;
 
@@ -19,13 +21,13 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
-        public Firearm(Charger charger, Canyon canyon)
+        public Firearm(GameObject projectilePrefab, Charger charger, Canyon canyon)
         {
             _charger = charger;
             
             _canyon = canyon;
 
-           _fireFirearmMechanic = new FireFirearm();
+           _fireFirearmMechanic = new FireFirearm(projectilePrefab, _charger, _canyon);
         }
 
         public InventoryItemEnum GetInventoryItemType() 
