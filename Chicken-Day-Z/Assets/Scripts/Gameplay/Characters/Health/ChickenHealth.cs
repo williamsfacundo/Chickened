@@ -6,7 +6,7 @@ namespace ChickenDayZ.Gameplay.Characters.Health
     {
         public override void HealthReachedZero() 
         {
-            GameplayResetter.ResetGameplay();
+            GameplayResetter.ResetGameplay();            
         }        
     }
 }
