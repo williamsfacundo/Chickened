@@ -10,7 +10,22 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private float _moveSpeed;
 
-        private float _range;       
+        private float _initialRange;
+
+        private float _range;
+
+        public Vector3 Direction 
+        {
+            set 
+            {
+                _direction = value;
+            }
+        }
+
+        private void OnEnable()
+        {
+            _range = _initialRange;
+        }
 
         void FixedUpdate()
         {
@@ -23,15 +38,17 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             DestroyProjectileWhenRangeAchieved();
         }
 
-        public void SetProjectile(Vector3 direction, float moveSpeed, float range) 
+        public void SetProjectile(float moveSpeed, float range) 
         {
-            _direction = direction;
+            _direction = Vector3.zero;
+
+            _moveValue = Vector3.zero;
 
             _moveSpeed = moveSpeed;
 
-            _range = range;
+            _initialRange = range;
 
-            _moveValue = Vector3.zero;
+            _range = range;
         }
 
         private void CalculateMoveValue()
@@ -53,7 +70,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         {
             if (_range <= 0f) 
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);                 
             }
         }
     }
