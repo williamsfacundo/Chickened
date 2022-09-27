@@ -2,25 +2,28 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Inventory.ItemActions;
 
-public class ChickenFireInput : MonoBehaviour
+namespace ChickenDayZ.Gameplay.Characters.Chicken.Input 
 {
-    [SerializeField] private CharacterItemActionController _itemActionController;
-            
-    [SerializeField][Range(0, 2)] private int _fireMouseButton;
-
-    void Update()
+    public class ChickenFireInput : MonoBehaviour
     {
-        FireInput();       
-    }
+        [SerializeField] private CharacterItemActionController _itemActionController;
 
-    private void FireInput() 
-    {
-        if (Input.GetMouseButtonDown(_fireMouseButton)) 
+        [SerializeField] [Range(0, 2)] private int _fireMouseButton;
+
+        void Update()
         {
-            if (_itemActionController != null) 
+            FireInput();
+        }
+
+        private void FireInput()
+        {
+            if (UnityEngine.Input.GetMouseButtonDown(_fireMouseButton))
             {
-                _itemActionController.ExecuteAction = true;
-            }            
+                if (_itemActionController != null)
+                {
+                    _itemActionController.ExecuteAction = true;
+                }
+            }
         }
     }
 }
