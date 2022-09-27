@@ -1,28 +1,41 @@
 using ChickenDayZ.Gameplay.Enumerators;
+using ChickenDayZ.Gameplay.Interfaces;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 {
-    public class Firearm : Weapon
+    public class Firearm : IWeapon
     {
-        private FireFirearm _fireFirearmMechanic;
-        
+        private Charger _charger;
+
+        private Canyon _canyon;
+
+        private FireFirearm _fireFirearmMechanic;        
+
         public FireFirearm FireFirearmMechanic
         {
-            get 
+            get
             {
                 return _fireFirearmMechanic;
             }
         }
 
-        public Firearm(float attackCooldownTime, float attackDamage) 
-            : base(attackCooldownTime, attackDamage)
+        public Firearm(Charger charger, Canyon canyon)
         {
-            _fireFirearmMechanic = new FireFirearm();
+            _charger = charger;
+            
+            _canyon = canyon;
+
+           _fireFirearmMechanic = new FireFirearm();
         }
 
-        public override InventoryItemEnum GetInventoryItemType() 
+        public InventoryItemEnum GetInventoryItemType() 
         {
             return InventoryItemEnum.FIREARM;
+        }
+
+        public string GetWeaponID() 
+        {
+            return "firearm";
         }
     }
 }
