@@ -6,6 +6,10 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private float _damage;
 
+        private float _bulletMoveSpeed;
+
+        private float _range;
+
         private short _fireCapacity;
 
         public float FireRate
@@ -24,6 +28,22 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
+        public float BulletMoveSpeed 
+        {
+            get 
+            {
+                return _bulletMoveSpeed;
+            }
+        }
+
+        public float Range 
+        {
+            get 
+            {
+                return _range;
+            }
+        }
+
         public short FireCapacity
         {
             get
@@ -32,11 +52,15 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
-        public Canyon(float fireRate, float damage, short fireCapacity)
+        public Canyon(float fireRate, float damage, float bulletMoveSpeed, float range, short fireCapacity)
         {
             _fireRate = fireRate;
 
             _damage = damage;
+
+            _bulletMoveSpeed = bulletMoveSpeed;
+
+            _range = range;
 
             _fireCapacity = fireCapacity;
         }
