@@ -48,7 +48,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
                 case InventoryItemEnum.FIREARM:
 
                     //Tengo que tener otro switch y otro enum para el tipo concreto de firearm
-                    _equippedItem = new Firearm(Resources.Load<GameObject>("Bullet"), new Charger(30, 1.5f), new Canyon(0.5f, 15, 1));
+                    _equippedItem = new Firearm(Resources.Load<GameObject>("Bullet"), new Charger(30, 1.5f), new Canyon(0.5f, 15, 0.7f, 3.2f, 1), gameObject);
                     break;
                 default:
                     break;
