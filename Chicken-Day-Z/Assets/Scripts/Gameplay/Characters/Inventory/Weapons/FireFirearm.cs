@@ -1,26 +1,61 @@
 using UnityEngine;
 
+
+using ChickenDayZ.General;
+
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
 {
     public class FireFirearm
     {
-        //Tener un gameObject projectil
-        //Timer para el cooldown
-        //Nocion de cuantas valas le quedan al cargador
+        private GameObject[] _projectiles;
 
-        public FireFirearm() //Le pasamos el projectil como parametro 
+        private Timer _timer;
+
+        private Charger _charger;
+
+        private Canyon _canyon;
+
+        public FireFirearm(GameObject projectilePrefab, Charger charger, Canyon canyon)
         {
+            _charger = charger;
 
+            _canyon = canyon;
+
+            _timer = new Timer(_canyon.FireRate);
+
+            _projectiles = new GameObject[_charger.ChargerMaxAmmo];
+
+            for (short i = 0; i < _projectiles.Length; i++) 
+            {
+                _projectiles[i] = GameObject.Instantiate<GameObject>(projectilePrefab);
+
+                _projectiles[i].SetActive(false);
+            }
         }
 
-        public void InstanciateProjectile() 
+        public void ActivateProjectile() 
         {
-            Debug.Log("Instanciate Projectile");
+            if (_timer.TimerFinished && !_charger.IsEmpty) 
+            {
+                for (short i = 0; i < _projectiles.Length; i++)
+                {
+                    if (!_projectiles[i].activeSelf) 
+                    {
+                        _projectiles[i].SetActive(true);
+
+                        _timer.ResetTimer();
+
+                        _charger.DecreaseCharger(_canyon.FireCapacity);
+
+                        break;
+                    }                                        
+                }
+            }           
         }
 
         public void FireFirearmCoolDown() 
         {
-
+            _timer.DecreaseTimer();
         }
     }
 }
