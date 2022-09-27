@@ -11,6 +11,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private GameObject _character;
 
+        private ReloadFirearm _reloadFirearm;
+
         private Timer _timer;
 
         private Charger _charger;
@@ -19,9 +21,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private Camera _camera;
 
-        public FireFirearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character)
+        public FireFirearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character, ReloadFirearm reloadFirearm)
         {
             _character = character;
+
+            _reloadFirearm = reloadFirearm;
 
             _charger = charger;
 
@@ -43,7 +47,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         public void ActivateProjectile() 
         {
-            if (_timer.TimerFinished && !_charger.IsEmpty) 
+            if (_timer.TimerFinished && !_charger.IsEmpty && !_reloadFirearm.IsReloading) 
             {
                 for (short i = 0; i < _projectiles.Length; i++)
                 {
