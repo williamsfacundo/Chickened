@@ -1,13 +1,12 @@
 using System;
-using UnityEngine;
 
 namespace ChickenDayZ.Gameplay.Controllers 
 {
-    public class GameplayResetter : MonoBehaviour //No hace falta que sea MonoBehaviour, puede ser una clase static
+    public class GameplayResetter
     {
         public static event Action OnGameplayReset;
 
-        private void ResetGameplay()
+        public static void ResetGameplay()
         {
             if (OnGameplayReset != null) 
             {     
