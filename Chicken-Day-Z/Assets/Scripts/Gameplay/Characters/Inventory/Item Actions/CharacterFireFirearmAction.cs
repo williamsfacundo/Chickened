@@ -15,7 +15,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
         public void DoAction()
         {
-            _fireFirearm.InstanciateProjectile();                        
+            _fireFirearm.ActivateProjectile();                        
         }
         
         public void ActionCoolDown() 
