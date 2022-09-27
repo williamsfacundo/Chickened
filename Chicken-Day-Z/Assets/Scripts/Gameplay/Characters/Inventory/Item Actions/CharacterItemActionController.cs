@@ -47,18 +47,27 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
         private void SetActionType() 
         {
+            CharacterInventory characterInventory = GetComponent<CharacterInventory>();
+
             switch (_actionType)
             {
-                case ItemActionTypeEnum.FIRE_FIREARM:
-
-                    CharacterInventory characterInventory = GetComponent<CharacterInventory>();
+                case ItemActionTypeEnum.FIRE_FIREARM:                    
 
                     if (characterInventory.EquippedItem is Firearm) 
                     {
                         _itemAction = new CharacterFireFirearmAction(((Firearm)characterInventory.EquippedItem).FireFirearmMechanic);
                     }
                     
-                    break;                    
+                    break;
+
+                case ItemActionTypeEnum.RELOAD_FIREARM:                    
+
+                    if (characterInventory.EquippedItem is Firearm)
+                    {
+                        _itemAction = new CharacterReloadFirearmAction(((Firearm)characterInventory.EquippedItem).ReloadFirearmMechanic);
+                    }
+
+                    break;
                 default:
                     break;
             }
