@@ -2,6 +2,7 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Controllers;
+using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Gameplay.Characters.Health 
 {
@@ -40,19 +41,21 @@ namespace ChickenDayZ.Gameplay.Characters.Health
 
         public void ReceiveDamage(float value)
         {
-            Health -= value;
+            _health -= value;
 
-            if (Health <= 0f)
+            if (_health <= 0f)
             {
                 HealthReachedZero();
             }
         }
 
-        public abstract void HealthReachedZero();
-
-        public void ResetObject() 
+        public void ResetObject()
         {
             _health = _initialHealth;
         }
+
+        public abstract void HealthReachedZero();
+
+        public abstract CharacterTypeEnum GetCharacterType();         
     }
 }
