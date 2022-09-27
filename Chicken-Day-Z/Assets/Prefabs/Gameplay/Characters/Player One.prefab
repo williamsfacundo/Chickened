@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -8390087879077635849}
   - component: {fileID: 7324721198159398488}
   - component: {fileID: -1811832511453734552}
+  - component: {fileID: 4603626030284496535}
+  - component: {fileID: -680385895603658655}
   - component: {fileID: 7480977285595935392}
   - component: {fileID: 7480977285595935395}
   - component: {fileID: 3521646903989923705}
@@ -143,6 +145,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemActionController: {fileID: 7324721198159398488}
   _fireMouseButton: 0
+--- !u!114 &4603626030284496535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d41868eeb6036f44948e9a1d04a6dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionType: 1
+--- !u!114 &-680385895603658655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db1df6e17b4943448c9cfcc91954163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemActionController: {fileID: 4603626030284496535}
+  _reloadKey: 114
 --- !u!50 &7480977285595935392
 Rigidbody2D:
   serializedVersion: 4
