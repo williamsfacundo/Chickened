@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Chicken.Score;
+using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Gameplay.Characters.Health 
 {
@@ -18,6 +19,11 @@ namespace ChickenDayZ.Gameplay.Characters.Health
         public override void HealthReachedZero()
         {
             _chickenScore?.AddScore(_pointsGivenWhenDie);
+        }
+
+        public override CharacterTypeEnum GetCharacterType()
+        {
+            return CharacterTypeEnum.ZOMBIE;
         }
     }
 }
