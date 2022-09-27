@@ -1,12 +1,15 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Health;
+using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
 {
     public class ProjectileImpact : MonoBehaviour
     {
         private float _damage;
+
+        private CharacterTypeEnum _targetType;
 
         public float Damage 
         {
@@ -16,16 +19,37 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
+        public CharacterTypeEnum TargetType
+        {
+            set
+            {
+                _targetType = value;
+            }
+        }
+
+        private void Start()
+        {
+            _targetType = CharacterTypeEnum.ZOMBIE;
+            _damage = 10f;
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             ObjectHealth objectHealth = collision.gameObject.GetComponent<ObjectHealth>();
 
             if (objectHealth != null) 
             {
-                objectHealth.ReceiveDamage(_damage);
-            }
+                if (objectHealth.GetCharacterType() == _targetType) 
+                {
+                    objectHealth.ReceiveDamage(_damage);
 
-            gameObject.SetActive(false);
+                    gameObject.SetActive(false);
+                }                                
+            }
+            else 
+            {
+                gameObject.SetActive(false);
+            }            
         }
     }
 }
