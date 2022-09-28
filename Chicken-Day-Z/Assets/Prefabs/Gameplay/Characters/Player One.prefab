@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c57ee4ac23e5994faa5d3d70ca6ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _firearmStats: {fileID: 11400000, guid: 2b4c8ded93924a5448b79fdc481fccca, type: 2}
   _initialInventoryItem: 0
 --- !u!114 &7324721198159398488
 MonoBehaviour:
