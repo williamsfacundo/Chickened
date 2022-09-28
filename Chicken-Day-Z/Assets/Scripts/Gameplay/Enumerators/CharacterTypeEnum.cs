@@ -1,4 +1,4 @@
 namespace ChickenDayZ.Gameplay.Enumerators
 {
-    public enum CharacterTypeEnum { CHICKEN, ZOMBIE }
+    public enum CharacterTypeEnum { CHICKEN, ZOMBIE, EGG_BASE }
 }

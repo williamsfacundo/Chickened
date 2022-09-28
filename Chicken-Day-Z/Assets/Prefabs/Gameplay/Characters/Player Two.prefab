@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3521646903989923705}
   m_Layer: 0
   m_Name: Player Two
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1615129303
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8379379321108658869, guid: 84e2128db2a41ec46b54dd69c59dbc96, type: 3}
   m_Color: {r: 0.69673645, g: 0.9607843, b: 0.6392157, a: 1}
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c57ee4ac23e5994faa5d3d70ca6ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _firearmStats: {fileID: 0}
   _initialInventoryItem: 0
 --- !u!114 &-1821022338696854922
 MonoBehaviour:
