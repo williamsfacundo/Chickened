@@ -5,7 +5,7 @@ using ChickenDayZ.Gameplay.Interfaces;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 {
-    public class Firearm : IWeapon
+    public class Firearm : IInventoryItem
     {
         private Charger _charger;
 
@@ -45,11 +45,6 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public InventoryItemEnum GetInventoryItemType() 
         {
             return InventoryItemEnum.FIREARM;
-        }
-
-        public string GetWeaponID() 
-        {
-            return "firearm";
-        }
+        }        
     }
 }
