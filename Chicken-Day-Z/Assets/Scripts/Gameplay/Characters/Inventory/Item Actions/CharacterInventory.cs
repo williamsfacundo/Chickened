@@ -9,6 +9,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
 {
     public class CharacterInventory : MonoBehaviour, IResettable
     {
+        [SerializeField] private FirearmStats _firearmStats;
+
         [SerializeField] private InventoryItemEnum _initialInventoryItem;
 
         private IInventoryItem _equippedItem;
@@ -26,7 +28,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
             GameplayResetter.OnGameplayReset += ResetObject;
         }
 
-        private void OnDisable()
+        void OnDisable()
         {
             GameplayResetter.OnGameplayReset -= ResetObject;
         }
@@ -47,8 +49,20 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
             {
                 case InventoryItemEnum.FIREARM:
 
-                    //Tengo que tener otro switch y otro enum para el tipo concreto de firearm
-                    _equippedItem = new Firearm(Resources.Load<GameObject>("Bullet"), new Charger(30, 1.5f), new Canyon(0.5f, 15, 0.7f, 3.2f, 1), gameObject);
+                    switch (_firearmStats.FirearmType)
+                    {
+                        case FirearmTypeEnum.RIFLE:
+                            
+                            _equippedItem = new Firearm(_firearmStats.ProjectilePrefab,
+                                new Charger(_firearmStats.ChargerMaxAmmo, _firearmStats.ReloadTime),
+                                new Canyon(_firearmStats.FireRate, _firearmStats.Damage, _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.FireCapacity),
+                                gameObject);
+
+                            break;
+                        default:
+                            break;
+                    }                    
+                    
                     break;
                 default:
                     break;
