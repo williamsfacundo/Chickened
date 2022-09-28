@@ -33,16 +33,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _timer = new Timer(_canyon.FireRate);
 
-            _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];            
+            _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];
 
-            for (short i = 0; i < _projectiles.Length; i++) 
-            {
-                _projectiles[i] = GameObject.Instantiate<GameObject>(projectilePrefab).GetComponent<ProjectileMovement>();
-
-                _projectiles[i].SetProjectile(canyon.BulletMoveSpeed, canyon.Range);
-
-                _projectiles[i].gameObject.SetActive(false);
-            }
+            InstanciateProjectiles(projectilePrefab);
         }
 
         public void ActivateProjectile() 
@@ -76,10 +69,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private Vector3 CalculateProjectileDirection(Vector3 playerPosition) 
         {
-            if (_camera == null) 
-            {
-                _camera = Camera.main;
-            }
+            SetCamera();
 
             Vector3 direction = _camera.ScreenToWorldPoint(Input.mousePosition) - playerPosition;
 
@@ -88,6 +78,26 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             Vector3 normalizedDirection = Vector3.Normalize(direction);
 
             return normalizedDirection;
+        }
+
+        private void SetCamera() 
+        {
+            if (_camera == null)
+            {
+                _camera = Camera.main;
+            }
+        }
+
+        private void InstanciateProjectiles(GameObject projectilePrefab) 
+        {
+            for (short i = 0; i < _projectiles.Length; i++)
+            {
+                _projectiles[i] = GameObject.Instantiate<GameObject>(projectilePrefab).GetComponent<ProjectileMovement>();
+
+                _projectiles[i].SetProjectile(_canyon.BulletMoveSpeed, _canyon.Range);
+
+                _projectiles[i].gameObject.SetActive(false);
+            }
         }
     }
 }
