@@ -14,7 +14,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private ZombieMovement _zombieMovement;
 
-        private EggBaseHealth _base;
+        private ObjectHealth _objectHealth;
 
         private float _zombieDamage;
 
@@ -29,7 +29,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Start()
         {
-            _base = _zombieMovement.Target.GetComponent<EggBaseHealth>();
+            _objectHealth = _zombieMovement.Target.GetComponent<ObjectHealth>();
 
             _zombieDamage = _zombieInitialDamage;
 
@@ -59,7 +59,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             if (_inAttackMode)
             {
-                _base.ReceiveDamage(_zombieDamage);
+                _objectHealth.ReceiveDamage(_zombieDamage);
 
                 _attackCooldownTimer = _zombieAttackCooldownTime;
 
