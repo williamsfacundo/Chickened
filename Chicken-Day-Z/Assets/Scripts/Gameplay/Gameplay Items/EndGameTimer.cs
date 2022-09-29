@@ -18,6 +18,16 @@ namespace ChickenDayZ.GameplayItems
             }
         }
 
+        void OnEnable()
+        {
+            GameplayResetter.OnGameplayReset += ResetTimer;
+        }
+
+        void OnDisable()
+        {
+            GameplayResetter.OnGameplayReset -= ResetTimer;
+        }
+
         void Start()
         {
             ResetTimer();

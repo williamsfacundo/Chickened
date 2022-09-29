@@ -22,7 +22,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Camera
             }
         }
 
-        private void Awake()
+        void Start()
         {
             _characterMovementController = FindObjectsOfType<CharacterMovementController>();
 

@@ -3,11 +3,12 @@ using UnityEngine;
 using ChickenDayZ.Gameplay.Enumerators;
 using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
+using ChickenDayZ.Gameplay.Controllers;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions 
 {    
     [RequireComponent(typeof(CharacterInventory))]
-    public class CharacterItemActionController : MonoBehaviour
+    public class CharacterItemActionController : MonoBehaviour, IResettable
     {
         [SerializeField] private ItemActionTypeEnum _actionType;
 
@@ -21,7 +22,17 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
             {
                 _executeAction = value;
             }
-        }        
+        }
+
+        void OnEnable()
+        {
+            GameplayResetter.OnGameplayReset += ResetObject;            
+        }
+
+        void OnDisable()
+        {
+            GameplayResetter.OnGameplayReset -= ResetObject;
+        }
 
         void Awake()
         {
@@ -71,6 +82,13 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
                 default:
                     break;
             }
+        }
+
+        public void ResetObject()
+        {
+            _executeAction = false;
+
+            SetActionType();
         }
     }
 }
