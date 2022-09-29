@@ -40,7 +40,15 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 return _chargerAmmo <= 0;
             }
-        }                
+        }    
+        
+        public bool NeedToCharge 
+        {
+            get 
+            {
+                return _chargerAmmo < ChargerMaxAmmo;
+            }
+        }
 
         public Charger(short chargerMaxAmmo, float reloadTime) 
         {

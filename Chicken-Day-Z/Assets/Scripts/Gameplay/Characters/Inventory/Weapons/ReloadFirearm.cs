@@ -10,6 +10,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private Charger _charger;
 
+        public bool _watingToReload;
+
         public bool IsReloading 
         {
             get 
@@ -24,27 +26,38 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _timer = new Timer(_charger.ReloadTime);
 
-            _timer.CountDown = 0f;            
+            _timer.CountDown = 0f;
+
+            _watingToReload = false;
         }
 
         public void ReloadCharger() 
         {
-            if (_timer.TimerFinished) 
+            if (_timer.TimerFinished && _charger.NeedToCharge) 
             {
-                _charger.RefillCharger();
+                _watingToReload = true;
 
                 _timer.ResetTimer();                
-            }              
+            }            
         }
 
         public void ReloadCooldown() 
         {
             _timer.DecreaseTimer();
+
+            if (_watingToReload && _timer.TimerFinished)
+            {
+                _charger.RefillCharger();
+
+                _watingToReload = false;
+            }
         }
 
         public void ResetObject()
         {
             _timer.CountDown = 0f;
+
+            _watingToReload = false;
         }
     }
 }

@@ -50,7 +50,7 @@ namespace ChickenDayZ.UI
 
         private void HideReloadingMeassege()
         {
-            _reloadingText.text = " ";
+            _reloadingText.text = "Reload (R)";
         }
 
         void FindReloader() 
