@@ -9,7 +9,7 @@ namespace ChickenVSZombies.UI
 
         void Awake()
         {
-            _showVersionText.text = "Version v" + Application.version;
+            _showVersionText.text = "Version " + Application.version;
         }
     }
 }
