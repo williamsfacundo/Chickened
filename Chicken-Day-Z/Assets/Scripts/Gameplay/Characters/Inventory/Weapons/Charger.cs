@@ -8,6 +8,14 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private float _reloadTime;
 
+        public short ChargerAmmo 
+        {
+            get 
+            {
+                return _chargerAmmo;
+            }
+        }
+
         public short ChargerMaxAmmo 
         {
             get 
