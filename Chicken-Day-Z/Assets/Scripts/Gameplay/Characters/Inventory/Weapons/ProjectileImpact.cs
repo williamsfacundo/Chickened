@@ -41,10 +41,13 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 if (objectHealth.GetCharacterType() == _targetType) 
                 {
-                    objectHealth.ReceiveDamage(_damage);
+                    objectHealth.ReceiveDamage(_damage);                    
+                }
 
+                if (objectHealth.GetCharacterType() != CharacterTypeEnum.CHICKEN) 
+                {
                     gameObject.SetActive(false);
-                }                                
+                }
             }
             else 
             {

@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff66989379a3fb34fa46ce9a88dc577d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 70
-  _pointsGivenWhenDie: 45
+  _initialHealth: 50
+  _pointsGivenWhenDie: 50
 --- !u!114 &3668622008214068018
 MonoBehaviour:
   m_ObjectHideFlags: 0

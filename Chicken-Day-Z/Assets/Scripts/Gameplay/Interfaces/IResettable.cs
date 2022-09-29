@@ -1,6 +1,6 @@
 namespace ChickenDayZ.Gameplay.Interfaces 
 {
-    interface IResettable 
+    public interface IResettable 
     {
         void ResetObject();
     }

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 30
-  _pointsGivenWhenDie: 10
+  _pointsGivenWhenDie: 30
 --- !u!114 &6946117092686391491
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using TMPro;
 using ChickenDayZ.Gameplay.Characters.Inventory;
 using ChickenDayZ.Gameplay.Characters.Health;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
+using ChickenDayZ.Gameplay.Controllers;
 
 namespace ChickenDayZ.UI 
 {
@@ -15,9 +16,19 @@ namespace ChickenDayZ.UI
 
         private ReloadFirearm _reloadFirearm;
 
-        private void Start()
+        void OnEnable()
         {
-            _reloadFirearm = ((Firearm)FindObjectOfType<ChickenHealth>().gameObject.GetComponent<CharacterInventory>().EquippedItem).ReloadFirearmMechanic;
+            GameplayResetter.OnGameplayReset += FindReloader;
+        }
+
+        void OnDisable()
+        {
+            GameplayResetter.OnGameplayReset += FindReloader;
+        }
+
+        void Start()
+        {
+            FindReloader();
         }
 
         private void Update()
@@ -32,14 +43,19 @@ namespace ChickenDayZ.UI
             }           
         }
 
-        void ShowReloadingMeassege() 
+        private void ShowReloadingMeassege() 
         {
             _reloadingText.text = _reloadingMeassege;
         }
 
-        void HideReloadingMeassege()
+        private void HideReloadingMeassege()
         {
             _reloadingText.text = " ";
+        }
+
+        void FindReloader() 
+        {
+            _reloadFirearm = ((Firearm)FindObjectOfType<ChickenHealth>().gameObject.GetComponent<CharacterInventory>().EquippedItem).ReloadFirearmMechanic;
         }
     }
 }

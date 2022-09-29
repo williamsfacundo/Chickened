@@ -34,9 +34,9 @@ namespace ChickenDayZ.Gameplay.Characters.Health
             GameplayResetter.OnGameplayReset -= ResetObject;
         }
 
-        private void Start()
+        void Start()
         {
-            ResetObject();
+            _health = _initialHealth;
         }
 
         public void ReceiveDamage(float value)

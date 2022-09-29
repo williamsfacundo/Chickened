@@ -19,9 +19,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             _chickenScore = FindObjectOfType<ChickenScore>();           
         }
 
-        private void Start()
-        {
+        void Start()
+        {            
             ZombiesInstances++;
+
+            ResetObject();
         }
 
         public override void HealthReachedZero()

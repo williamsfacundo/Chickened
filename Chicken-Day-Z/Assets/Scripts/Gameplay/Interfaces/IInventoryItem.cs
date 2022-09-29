@@ -2,7 +2,7 @@ using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Gameplay.Interfaces 
 {   
-    public interface IInventoryItem
+    public interface IInventoryItem : IResettable
     {
         InventoryItemEnum GetInventoryItemType();
     }    

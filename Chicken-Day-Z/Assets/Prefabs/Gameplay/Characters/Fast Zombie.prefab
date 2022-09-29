@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff66989379a3fb34fa46ce9a88dc577d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 10
-  _pointsGivenWhenDie: 10
+  _initialHealth: 15
+  _pointsGivenWhenDie: 25
 --- !u!114 &-5679270098415894285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _zombieInitialDamage: 5
-  _zombieAttackCooldownTime: 0.6
+  _zombieAttackCooldownTime: 0.5
 --- !u!50 &2811523339669616404
 Rigidbody2D:
   serializedVersion: 4

@@ -48,11 +48,20 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             _reloadFirearmMechanic = new ReloadFirearm(_charger);
 
             _fireFirearmMechanic = new FireFirearm(projectilePrefab, _charger, _canyon, character, _reloadFirearmMechanic);            
-        }
+        }        
 
         public InventoryItemEnum GetInventoryItemType() 
         {
             return InventoryItemEnum.FIREARM;
-        }        
+        }
+
+        public void ResetObject()
+        {
+            _charger.ResetObject();
+
+            _fireFirearmMechanic.ResetObject();
+
+            _reloadFirearmMechanic.ResetObject();
+        }
     }
 }

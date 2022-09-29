@@ -40,7 +40,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
 
         public void ResetObject()
         {
-            SetEquippedItem(_initialInventoryItem);
+            _equippedItem.ResetObject();
         }
 
         private void SetEquippedItem(InventoryItemEnum inventoryItem) 

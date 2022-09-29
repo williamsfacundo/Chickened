@@ -1,6 +1,8 @@
+using ChickenDayZ.Gameplay.Interfaces;
+
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
 {
-    public class Charger
+    public class Charger : IResettable
     {
         private short _chargerAmmo;
 
@@ -55,6 +57,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         }
 
         public void RefillCharger() 
+        {
+            _chargerAmmo = _chargerMaxAmmo;
+        }
+
+        public void ResetObject()
         {
             _chargerAmmo = _chargerMaxAmmo;
         }

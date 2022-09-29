@@ -1,11 +1,11 @@
 using UnityEngine;
 
-
 using ChickenDayZ.General;
+using ChickenDayZ.Gameplay.Interfaces;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
 {
-    public class FireFirearm
+    public class FireFirearm : IResettable
     {
         private ProjectileMovement[] _projectiles;
 
@@ -33,10 +33,12 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _timer = new Timer(_canyon.FireRate);
 
+            _timer.CountDown = 0;
+
             _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];
 
             InstanciateProjectiles(projectilePrefab);
-        }
+        }        
 
         public void ActivateProjectile() 
         {
@@ -98,6 +100,21 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
                 _projectiles[i].gameObject.SetActive(false);
             }
+        }
+        
+        private void DesactivateProjectiles() 
+        {
+            for (short i = 0; i < _projectiles.Length; i++)
+            {
+                _projectiles[i].gameObject.SetActive(false);
+            }
+        }
+
+        public void ResetObject()
+        {
+            DesactivateProjectiles();
+
+            _timer.CountDown = 0;
         }
     }
 }

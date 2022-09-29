@@ -1,8 +1,10 @@
 using ChickenDayZ.General;
 
+using ChickenDayZ.Gameplay.Interfaces;
+
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
 {
-    public class ReloadFirearm
+    public class ReloadFirearm : IResettable
     {
         private Timer _timer;
 
@@ -38,6 +40,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public void ReloadCooldown() 
         {
             _timer.DecreaseTimer();
+        }
+
+        public void ResetObject()
+        {
+            _timer.CountDown = 0f;
         }
     }
 }
