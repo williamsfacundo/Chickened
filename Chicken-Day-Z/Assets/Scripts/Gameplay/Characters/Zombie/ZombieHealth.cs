@@ -12,7 +12,17 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         
         private ChickenScore _chickenScore;             
         
-        public static short ZombiesInstances = 0; 
+        public static short ZombiesActiveInstances = 0;
+
+        void OnEnable()
+        {
+            ZombiesActiveInstances++;
+        }
+
+        void OnDisable()
+        {
+            ZombiesActiveInstances--;
+        }
 
         void Awake()
         {
@@ -20,9 +30,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         }
 
         void Start()
-        {            
-            ZombiesInstances++;
-
+        {
             ResetObject();
         }
 
@@ -30,19 +38,12 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             _chickenScore?.AddScore(_pointsGivenWhenDie);
 
-            DeactivateZombie();
+            gameObject.SetActive(false);
         }
 
         public override CharacterTypeEnum GetCharacterType()
         {
             return CharacterTypeEnum.ZOMBIE;
-        }
-
-        public void DeactivateZombie() 
-        {
-            Destroy(gameObject);
-
-            ZombiesInstances--;
-        }
+        }        
     }
 }
