@@ -1,3 +1,5 @@
+using System;
+
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
@@ -11,6 +13,8 @@ namespace ChickenDayZ.Gameplay.Characters.Health
         [SerializeField] private float _initialHealth;
 
         private float _health;
+                
+        public event Action OnHealthChanged;
 
         public float Health
         {
@@ -42,6 +46,8 @@ namespace ChickenDayZ.Gameplay.Characters.Health
         public void ReceiveDamage(float value)
         {
             _health -= value;
+
+            OnHealthChanged?.Invoke();
 
             if (_health <= 0f)
             {

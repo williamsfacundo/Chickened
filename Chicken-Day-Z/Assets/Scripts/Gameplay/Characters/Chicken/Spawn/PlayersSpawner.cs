@@ -14,8 +14,8 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
         [SerializeField] private GameObject[] _playersSpawnPositions;
 
         [SerializeField] private GameObject _cameraPrefab;
-
-        public static event Action OnPlayersInstanciated;
+       
+        public static event Action<GameObject> OnPlayersInstantiated;
 
         private const short MaxPlayers = 2;
 
@@ -23,12 +23,12 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 
         private GameObject[] _players;
 
-        private void OnEnable()
+        void OnEnable()
         {
             GameplayResetter.OnGameplayReset += ResetObject;
         }
 
-        private void OnDisable()
+        void OnDisable()
         {
             GameplayResetter.OnGameplayReset -= ResetObject;
         }
@@ -37,9 +37,12 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
         {
             InstanciatePlayers();
 
-            SetPlayersPositions();
+            SetPlayersPositions();                       
+        }
 
-            InvokeOnPlayersInstanciated();
+        void Start()
+        {
+            OnPlayersInstantiated?.Invoke(_players[0]);
         }
 
         public static void SetInitialAmountOfPlayers(short value)
@@ -91,14 +94,6 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
             {
                 _players[i].transform.position = _playersSpawnPositions[i].transform.position;
             }
-        }
-
-        private void InvokeOnPlayersInstanciated() 
-        {
-            if (OnPlayersInstanciated != null) 
-            {
-                OnPlayersInstanciated.Invoke();
-            }
-        }
+        }        
     }
 }

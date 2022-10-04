@@ -10,15 +10,22 @@ namespace ChickenDayZ.UI
 
         private EggBaseHealth _baseHealth;
         
-        private void Start()
+        void Awake()
         {
             _baseHealth = FindObjectOfType<EggBaseHealth>();
+
+            _baseHealth.OnHealthChanged += UpdateBaseHealthText;
         }
 
-        private void Update()
+        void OnDestroy()
+        {
+            _baseHealth.OnHealthChanged -= UpdateBaseHealthText;
+        }
+
+        void Start()
         {
             UpdateBaseHealthText();
-        }
+        }        
 
         private void UpdateBaseHealthText()
         {

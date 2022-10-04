@@ -11,21 +11,25 @@ namespace ChickenDayZ.UI
     {
         [SerializeField] private TMP_Text _showBulletsLeftText;
         
-        private CharacterInventory _characterInventory;
+        private Charger _charger;
 
         private void Start()
-        {
-            _characterInventory = FindObjectOfType<ChickenHealth>().gameObject.GetComponent<CharacterInventory>();
+        {            
+            _charger = ((Firearm)FindObjectOfType<ChickenHealth>().gameObject.GetComponent<CharacterInventory>().EquippedItem).Charger;
+
+            _charger.OnAmmoChanged += UpdateBulletsLeftText;
+
+            UpdateBulletsLeftText();
         }
 
-        private void Update()
+        void OnDestroy()
         {
-            UpdateBulletsLeftText();
+            _charger.OnAmmoChanged -= UpdateBulletsLeftText;
         }
 
         private void UpdateBulletsLeftText()
         {            
-            _showBulletsLeftText.text = "Bullets Left: " + ((Firearm)_characterInventory.EquippedItem).Charger.ChargerAmmo;
+            _showBulletsLeftText.text = "Bullets Left: " + _charger.ChargerAmmo;
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 using ChickenDayZ.General;
 
 using ChickenDayZ.Gameplay.Interfaces;
@@ -11,6 +13,10 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         private Charger _charger;
 
         public bool _watingToReload;
+
+        public event Action OnStartReloading;
+
+        public event Action OnFinishedReloading;
 
         public bool IsReloading 
         {
@@ -37,7 +43,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 _watingToReload = true;
 
-                _timer.ResetTimer();                
+                _timer.ResetTimer();
+
+                OnStartReloading?.Invoke();
             }            
         }
 
@@ -50,6 +58,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                 _charger.RefillCharger();
 
                 _watingToReload = false;
+
+                OnFinishedReloading?.Invoke();
             }
         }
 

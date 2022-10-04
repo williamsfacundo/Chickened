@@ -4,7 +4,7 @@ using TMPro;
 using ChickenDayZ.Gameplay.Characters.Inventory;
 using ChickenDayZ.Gameplay.Characters.Health;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
-using ChickenDayZ.Gameplay.Controllers;
+using ChickenDayZ.Gameplay.Characters.Chicken.Spawn;
 
 namespace ChickenDayZ.UI 
 {
@@ -12,50 +12,78 @@ namespace ChickenDayZ.UI
     {
         [SerializeField] private TMP_Text _reloadingText;
 
-        private const string _reloadingMeassege = "(RELOADING)";
+        [SerializeField] private string _reloadingMeassege = "(RELOADING)";
+
+        [SerializeField] private string _waitingReloadMeassege = "Reload (R)";
 
         private ReloadFirearm _reloadFirearm;
 
+        private GameObject _chicken;
+
+        Firearm auxFirearm;
+
         void OnEnable()
         {
-            GameplayResetter.OnGameplayReset += FindReloader;
+            PlayersSpawner.OnPlayersInstantiated += FindChicken;            
         }
 
         void OnDisable()
         {
-            GameplayResetter.OnGameplayReset += FindReloader;
+            PlayersSpawner.OnPlayersInstantiated -= FindChicken;            
+        }        
+
+        void OnDestroy()
+        {
+            if (_reloadFirearm != null) 
+            {
+                _reloadFirearm.OnStartReloading -= ShowReloadingMessage;
+
+                _reloadFirearm.OnFinishedReloading -= HideReloadingMessage;
+            }            
         }
 
         void Start()
         {
-            FindReloader();
+            _reloadingText.text = _waitingReloadMeassege;
         }
 
-        private void Update()
-        {
-            if (_reloadFirearm.IsReloading) 
-            {
-                ShowReloadingMeassege();
-            }
-            else 
-            {
-                HideReloadingMeassege();
-            }           
-        }
-
-        private void ShowReloadingMeassege() 
+        private void ShowReloadingMessage() 
         {
             _reloadingText.text = _reloadingMeassege;
         }
 
-        private void HideReloadingMeassege()
+        private void HideReloadingMessage()
         {
-            _reloadingText.text = "Reload (R)";
+            _reloadingText.text = _waitingReloadMeassege;
         }
 
-        void FindReloader() 
+        private void FindChicken(GameObject chicken) 
         {
-            _reloadFirearm = ((Firearm)FindObjectOfType<ChickenHealth>().gameObject.GetComponent<CharacterInventory>().EquippedItem).ReloadFirearmMechanic;
+            _chicken = chicken;
+            
+            FindChickenFirearm();
+
+            FindChickenReloadMechanic();
+        }
+
+        private void FindChickenFirearm() 
+        {
+            if (_chicken != null)
+            {
+                auxFirearm = ((Firearm)_chicken.GetComponent<CharacterInventory>().EquippedItem);               
+            }            
+        }
+
+        private void FindChickenReloadMechanic() 
+        {
+            if (auxFirearm != null)
+            {
+                _reloadFirearm = auxFirearm.ReloadFirearmMechanic;
+
+                _reloadFirearm.OnStartReloading += ShowReloadingMessage; //message
+
+                _reloadFirearm.OnFinishedReloading += HideReloadingMessage;
+            }
         }
     }
 }

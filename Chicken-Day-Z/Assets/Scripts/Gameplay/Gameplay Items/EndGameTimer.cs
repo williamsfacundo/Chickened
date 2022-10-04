@@ -1,20 +1,21 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Controllers;
+using ChickenDayZ.General;
 
 namespace ChickenDayZ.GameplayItems 
 {
     public class EndGameTimer : MonoBehaviour
     {        
         [SerializeField] private float _gameplayDuration;       
-
-        private float _endGameTimer; //In order not to repeat so many times timer creat a class timer
+        
+        private Timer _endGameTimer;
 
         public float Timer 
         {
             get 
             {
-                return _endGameTimer;
+                return _endGameTimer.CountDown;
             }
         }
 
@@ -28,10 +29,10 @@ namespace ChickenDayZ.GameplayItems
             GameplayResetter.OnGameplayReset -= ResetTimer;
         }
 
-        void Start()
+        void Awake()
         {
-            ResetTimer();
-        }
+            _endGameTimer = new Timer(_gameplayDuration);
+        }       
 
         void Update()
         {
@@ -40,9 +41,9 @@ namespace ChickenDayZ.GameplayItems
 
         private void EndGame()
         {
-            _endGameTimer -= Time.deltaTime;
+            _endGameTimer.DecreaseTimer();
 
-            if (_endGameTimer <= 0f)
+            if (_endGameTimer.CountDown <= 0f)
             {
                 GameplayResetter.ResetGameplay();               
             }
@@ -50,7 +51,7 @@ namespace ChickenDayZ.GameplayItems
 
         private void ResetTimer() 
         {
-            _endGameTimer = _gameplayDuration;
+            _endGameTimer.ResetTimer();
         }
     }
 }

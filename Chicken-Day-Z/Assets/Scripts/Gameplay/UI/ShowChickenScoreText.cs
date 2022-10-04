@@ -15,11 +15,15 @@ namespace ChickenDayZ.UI
         void Start()
         {
             _chickenScore = FindObjectOfType<ChickenScore>();
+
+            _chickenScore.OnScoreChanged += UpdateScoreText;
+
+            UpdateScoreText();
         }
 
-        void Update()
+        void OnDestroy()
         {
-            UpdateScoreText();            
+            _chickenScore.OnScoreChanged -= UpdateScoreText;
         }
 
         private void UpdateScoreText()

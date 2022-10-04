@@ -23,6 +23,17 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private ZombieHealth[] _zombieInstances;
 
+        //Arreglo de gameobjects (0 -> _normalZombiePrefab, 0 -> _fatZombiePrefab)
+
+        //Nocion de que ronda se encuentra la partida
+        //Cuantos zombies de cada tipo puedo tener (maximo)
+        //Arreglo donde se encuentren todos los zombies (separado por "secciones" para cada tipo)
+        //Una factoria que devuelva zombies dependiendo que tipo se le pide
+        //Algo que se comunique con la factoria y sepa que zombie pedir (en caso de que ya no haya espacio para x tipo pedir otro)
+        //Forma de activar y desactivar zombies para no hacer instantiate y destroy
+        //Algo que mejore las stats de los zombies y aumente la "dificultar de la ronda"
+        //Resetearlo cuando el gameplay arranca de cero
+
         private float _newZombieSpawnTimer;
 
         void Start()
@@ -89,7 +100,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             short aux = 0;
 
-            if (_newZombieSpawnTimer == 0f)
+            if (_newZombieSpawnTimer <= 0f)
             {
                 Vector3 spawnPosition = GetRandomSpawnPoint();
 
@@ -133,7 +144,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             short index = GetZombieInstancesNullIndex();
 
-            _zombieInstances[index] = Instantiate(zombie, position, Quaternion.identity).GetComponent<ZombieHealth>();
+            _zombieInstances[index] = Instantiate(zombie, position, Quaternion.identity).GetComponent<ZombieHealth>();            
 
             return index;
         }

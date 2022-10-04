@@ -1,3 +1,5 @@
+using System;
+
 using ChickenDayZ.Gameplay.Interfaces;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
@@ -7,8 +9,10 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         private short _chargerAmmo;
 
         private short _chargerMaxAmmo;
+        
+        private float _reloadTime;       
 
-        private float _reloadTime;
+        public event Action OnAmmoChanged;
 
         public short ChargerAmmo 
         {
@@ -62,16 +66,20 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public void DecreaseCharger(short value) 
         {
             _chargerAmmo -= value;
+
+            OnAmmoChanged?.Invoke();
         }
 
         public void RefillCharger() 
         {
             _chargerAmmo = _chargerMaxAmmo;
+
+            OnAmmoChanged?.Invoke();
         }
 
         public void ResetObject()
         {
-            _chargerAmmo = _chargerMaxAmmo;
+            RefillCharger();
         }
     }
 }

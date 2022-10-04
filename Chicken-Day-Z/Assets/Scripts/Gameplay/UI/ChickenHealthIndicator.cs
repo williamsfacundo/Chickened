@@ -14,11 +14,15 @@ namespace ChickenDayZ.UI
         void Start()
         {
             _chickenHealth = FindObjectOfType<ChickenHealth>();
+
+            _chickenHealth.OnHealthChanged += UpdateChickenHealthText;
+
+            UpdateChickenHealthText();
         }
 
-        void Update()
+        void OnDestroy()
         {
-            UpdateChickenHealthText();            
+            _chickenHealth.OnHealthChanged -= UpdateChickenHealthText;
         }
 
         private void UpdateChickenHealthText() 

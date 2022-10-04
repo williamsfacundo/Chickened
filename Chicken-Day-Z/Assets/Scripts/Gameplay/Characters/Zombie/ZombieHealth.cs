@@ -6,7 +6,7 @@ using ChickenDayZ.Gameplay.Characters.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie 
 {
-    public class ZombieHealth : ObjectHealth
+    public class ZombieHealth : ObjectHealth //tengo que activar o desactivar los zombies
     {
         [SerializeField] private float _pointsGivenWhenDie;
         
