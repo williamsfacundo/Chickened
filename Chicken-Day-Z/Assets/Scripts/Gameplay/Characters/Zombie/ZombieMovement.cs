@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+
 using ChickenDayZ.Gameplay.EggBase;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
@@ -14,11 +16,15 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private bool _isZombieCollidingWithTarget;
 
+        public event Action OnTargetChanged;  
+
         public GameObject Target
         {
             set 
             {
                 _target = value;
+
+                OnTargetChanged?.Invoke();
             }
             get
             {

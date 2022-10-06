@@ -4,6 +4,7 @@ using UnityEngine;
 using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Interfaces;
+using ChickenDayZ.Gameplay.Characters.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
@@ -12,6 +13,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         [SerializeField] private GameObject[] _zombiePrefabs;        
 
         [SerializeField] private GameObject[] _spawnPoints;
+
+        [SerializeField] private GameObject _eggBase;
 
         [SerializeField] [Range(1, 100)] private short[] _zombieSpawnPercentages; //In total must reached 100
         
@@ -36,6 +39,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         private const short NullIndex = -1;
 
         private GameObject[] _zombieInstances;
+
+        private GameObject _chicken;
 
         private Timer _timerBeforeRoundStarts;
 
@@ -69,6 +74,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             OnRoundChanged?.Invoke();
 
             _zombiesLeftToSpawn = _initialZombiesToSpawned;
+
+            _chicken = FindObjectOfType<ChickenHealth>().gameObject;
 
             CheckIfPercentagesAreRight();
 
@@ -227,6 +234,20 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                         
                         _zombieInstances[i].transform.position = GetRandomSpawnPosition();
 
+                        int aux = UnityEngine.Random.Range(1, 3);
+
+                        switch (aux) 
+                        {
+                            case 1:
+
+                                _zombieInstances[i].GetComponent<ZombieMovement>().Target = _chicken;
+                                break;
+
+                                _zombieInstances[i].GetComponent<ZombieMovement>().Target = _eggBase;
+                            case 2:
+                                break;
+                        }
+                        
                         _zombieInstances[i].SetActive(true);
 
                         _zombiesLeftToSpawn -= 1;

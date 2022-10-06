@@ -1,7 +1,6 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Health;
-using ChickenDayZ.Gameplay.EggBase;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
@@ -27,9 +26,19 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             _zombieMovement = gameObject.GetComponent<ZombieMovement>();
         }
 
+        void OnEnable()
+        {
+            _zombieMovement.OnTargetChanged += UpdateTargetHealth;
+        }
+
+        void OnDisable()
+        {
+            _zombieMovement.OnTargetChanged += UpdateTargetHealth;
+        }
+
         void Start()
         {
-            _objectHealth = _zombieMovement.Target.GetComponent<ObjectHealth>();
+            UpdateTargetHealth();
 
             _zombieDamage = _zombieInitialDamage;
 
@@ -90,6 +99,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _attackCooldownTimer = _zombieAttackCooldownTime;
             }
+        }
+
+        private void UpdateTargetHealth() 
+        {
+            _objectHealth = _zombieMovement.Target.GetComponent<ObjectHealth>();
         }
     }
 }
