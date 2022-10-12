@@ -11,6 +11,8 @@ namespace ChickenDayZ.General
             set
             {
                 _time = value;
+
+                ResetTimer();
             }
             get
             {

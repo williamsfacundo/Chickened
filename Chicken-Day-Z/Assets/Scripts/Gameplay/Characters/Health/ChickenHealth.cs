@@ -9,12 +9,10 @@ namespace ChickenDayZ.Gameplay.Characters.Health
         {
             return CharacterTypeEnum.CHICKEN;
         }
-
+        
         public override void HealthReachedZero() 
         {
-            GameplayResetter.ResetGameplay();            
-        }        
-
-
+            GameplayResetter.ResetGameplay();
+        }
     }
 }

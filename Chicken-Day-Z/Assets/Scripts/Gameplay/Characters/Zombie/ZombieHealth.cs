@@ -31,7 +31,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Start()
         {
-            ResetObject();
+            ResetObject();            
         }
 
         public override void HealthReachedZero()

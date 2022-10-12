@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
@@ -15,7 +16,19 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
 
         [SerializeField] private float _characterInitialMoveSpeed;
 
+        public event Action OnCharacterChangedMoveState;
+
+        public bool _lastState;
+
         private IMoves _moveMechanic;
+
+        public IMoves MoveMechanic 
+        {
+            get 
+            {
+                return _moveMechanic;
+            }
+        }
 
         void OnEnable()
         {
@@ -30,11 +43,15 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
         private void Awake()
         {
             SelectMoveMechanic();
-        }
+
+            _lastState = _moveMechanic.IsMoving();
+        }        
 
         void Update()
         {
             CalculateDirectionFuntionCall();
+
+            MoveStateChanged();
         }
 
         void FixedUpdate()
@@ -45,6 +62,8 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
         public void ResetObject()
         {
             _moveMechanic.ResetObject();
+
+            _lastState = _moveMechanic.IsMoving();
         }
 
         private void MoveFuntionCall()
@@ -84,6 +103,16 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
                 default:
                     break;
             }
+        }
+
+        private void MoveStateChanged() 
+        {
+            if (_lastState != _moveMechanic.IsMoving()) 
+            {
+                OnCharacterChangedMoveState?.Invoke();
+
+                _lastState = _moveMechanic.IsMoving();
+            }            
         }
     }
 }

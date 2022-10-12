@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
@@ -61,5 +62,8 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
         public abstract void CalculateMoveDirection();
 
         public abstract void Move();
+
+        public abstract bool IsMoving();
+        
     }
 }

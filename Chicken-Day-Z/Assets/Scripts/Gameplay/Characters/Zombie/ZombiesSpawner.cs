@@ -243,8 +243,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                                 _zombieInstances[i].GetComponent<ZombieMovement>().Target = _chicken;
                                 break;
 
-                                _zombieInstances[i].GetComponent<ZombieMovement>().Target = _eggBase;
                             case 2:
+                                _zombieInstances[i].GetComponent<ZombieMovement>().Target = _eggBase;
                                 break;
                         }
                         
@@ -308,9 +308,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 
-            _timerForNextZombie.ResetTimer();
-
-            //Multiplicadores de dificultad
+            _timerForNextZombie.ResetTimer();            
         }
     }
 }

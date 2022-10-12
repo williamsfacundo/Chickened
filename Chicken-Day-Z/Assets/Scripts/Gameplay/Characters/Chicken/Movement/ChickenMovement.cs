@@ -23,6 +23,11 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Movement
         public override void CalculateMoveDirection()
         {
             MoveDirection = _movementInput.GetDirectionOnInputDetection();            
-        }        
+        }
+
+        public override bool IsMoving()
+        {
+            return MoveDirection != Vector2.zero;
+        }
     }
 }
