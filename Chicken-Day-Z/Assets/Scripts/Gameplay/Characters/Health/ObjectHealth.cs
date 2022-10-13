@@ -45,19 +45,23 @@ namespace ChickenDayZ.Gameplay.Characters.Health
 
         public void ReceiveDamage(float value)
         {
-            _health -= value;
-
-            OnHealthChanged?.Invoke();
+            _health -= value;            
 
             if (_health <= 0f)
             {
+                _health = 0f;
+
                 HealthReachedZero();
             }
+
+            OnHealthChanged?.Invoke();
         }
 
         public void ResetObject()
         {
             _health = _initialHealth;
+
+            OnHealthChanged?.Invoke();
         }
 
         public abstract void HealthReachedZero();
