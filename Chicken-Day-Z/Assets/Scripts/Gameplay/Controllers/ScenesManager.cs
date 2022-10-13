@@ -19,6 +19,8 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         [SerializeField] private Canvas _gameplayCanvas;
 
+        [SerializeField] private KeyCode _pauseKey;
+
         void Awake()
         {
             InitialConfigurations();
@@ -32,6 +34,11 @@ namespace ChickenDayZ.Gameplay.Controllers
         void OnDisable()
         {
             GameplayResetter.OnGameplayReset -= GameplayToEndGame;
+        }
+
+        void Update()
+        {
+            PauseGame();
         }
 
         public void MainMenuToGameplay() 
@@ -97,6 +104,46 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_mainMenuCanvas, true);
         }
 
+        public void GameplayToPause()
+        {
+            SetTimeScale(0f);
+            ChangeCanvasState(_pauseCanvas, true);
+            ChangeCanvasState(_gameplayCanvas, false);
+        }
+
+        public void PauseToGameplay()
+        {
+            SetTimeScale(1f);
+            ChangeCanvasState(_pauseCanvas, false);
+            ChangeCanvasState(_gameplayCanvas, true);
+        }
+
+        public void PauseToGameplayWithRestart()
+        {
+            SetTimeScale(1f);
+
+            GameplayResetter.OnGameplayReset -= GameplayToEndGame;
+
+            GameplayResetter.ResetGameplay();
+
+            GameplayResetter.OnGameplayReset += GameplayToEndGame;
+
+            ChangeCanvasState(_pauseCanvas, false);
+            ChangeCanvasState(_gameplayCanvas, true);
+        }
+
+        public void PauseToMainMenu()
+        {
+            GameplayResetter.OnGameplayReset -= GameplayToEndGame;
+
+            GameplayResetter.ResetGameplay();
+
+            GameplayResetter.OnGameplayReset += GameplayToEndGame;
+
+            ChangeCanvasState(_pauseCanvas, false);
+            ChangeCanvasState(_mainMenuCanvas, true);
+        }
+
         public void ChangeFullScreen() 
         {
             Screen.fullScreen = !Screen.fullScreen;            
@@ -130,6 +177,14 @@ namespace ChickenDayZ.Gameplay.Controllers
         private void SetTimeScale(float value) 
         {
             Time.timeScale = value;
+        }
+
+        private void PauseGame() 
+        {
+            if (Input.GetKeyDown(_pauseKey) && _gameplayCanvas.gameObject.activeSelf) 
+            {
+                GameplayToPause();
+            }
         }
     }
 }
