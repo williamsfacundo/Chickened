@@ -2,7 +2,7 @@ using System;
 
 namespace ChickenDayZ.Gameplay.Controllers 
 {
-    public class GameplayResetter
+    public static class GameplayResetter
     {
         public static event Action OnGameplayReset;
 

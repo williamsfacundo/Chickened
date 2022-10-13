@@ -19,10 +19,20 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         [SerializeField] private Canvas _gameplayCanvas;
 
-        private void Awake()
+        void Awake()
         {
             InitialConfigurations();
-        }       
+        }
+
+        void OnEnable()
+        {
+            GameplayResetter.OnGameplayReset += GameplayToEndGame;
+        }
+
+        void OnDisable()
+        {
+            GameplayResetter.OnGameplayReset -= GameplayToEndGame;
+        }
 
         public void MainMenuToGameplay() 
         {
@@ -65,6 +75,26 @@ namespace ChickenDayZ.Gameplay.Controllers
         {
             ChangeCanvasState(_mainMenuCanvas, true);
             ChangeCanvasState(_tutorialCanvas, false);            
+        }
+
+        public void GameplayToEndGame() 
+        {
+            SetTimeScale(0f);
+            ChangeCanvasState(_gameOverCanvas, true);
+            ChangeCanvasState(_gameplayCanvas, false);
+        }
+
+        public void EndGameToGameplay() 
+        {
+            SetTimeScale(1f);
+            ChangeCanvasState(_gameOverCanvas, false);
+            ChangeCanvasState(_gameplayCanvas, true);
+        }
+
+        public void EndGameToMainMenu()
+        {           
+            ChangeCanvasState(_gameOverCanvas, false);
+            ChangeCanvasState(_mainMenuCanvas, true);
         }
 
         public void ChangeFullScreen() 
