@@ -41,6 +41,8 @@ namespace ChickenDayZ.Gameplay.Characters.Health
         void Start()
         {
             _health = _initialHealth;
+
+            OnHealthChanged();
         }
 
         public void ReceiveDamage(float value)
