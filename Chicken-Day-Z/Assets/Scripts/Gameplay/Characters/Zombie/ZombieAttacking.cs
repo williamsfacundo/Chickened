@@ -89,9 +89,9 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             }
         }
 
-        private void OnCollisionStay2D(Collision2D collision)
+        /*private void OnCollisionStay2D(Collision2D collision)
         {
-            if (collision.transform.tag == "Player" && _attackCooldownTimer == 0f)
+            if (collision.gameObject == _zombieMovement && _attackCooldownTimer == 0f)
             {
                 ChickenHealth chicken = collision.gameObject.GetComponent<ChickenHealth>();
 
@@ -99,7 +99,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _attackCooldownTimer = _zombieAttackCooldownTime;
             }
-        }
+        }*/
 
         private void UpdateTargetHealth() 
         {

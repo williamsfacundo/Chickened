@@ -66,17 +66,19 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.transform.tag == "Base")
+            if (collision.transform.tag == "Base" || collision.transform.tag == "Player")
             {
                 _isZombieCollidingWithTarget = true;
+
+                Target = collision.gameObject;
             }
         }
 
         void OnCollisionExit2D(Collision2D collision)
         {
-            if (collision.transform.tag == "Base")
+            if (collision.transform.tag == "Base" || collision.transform.tag == "Player")
             {
-                _isZombieCollidingWithTarget = false;
+                _isZombieCollidingWithTarget = false;                
             }
         }
 
