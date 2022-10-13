@@ -31,9 +31,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _canyon = canyon;
 
-            _timer = new Timer(_canyon.FireRate);
-
-            _timer.CountDown = 0;
+            _timer = new Timer(_canyon.FireRate);            
 
             _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];
 
@@ -114,7 +112,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         {
             DesactivateProjectiles();
 
-            _timer.CountDown = 0;
+            _timer.ResetTimer();
         }
     }
 }
