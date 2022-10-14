@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
@@ -12,6 +13,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
         [SerializeField] private FirearmStats _firearmStats;
 
         [SerializeField] private InventoryItemEnum _initialInventoryItem;
+
+        public event Action OnEquippedItemSelected;
 
         private IInventoryItem _equippedItem;
 
@@ -33,9 +36,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
             GameplayResetter.OnGameplayReset -= ResetObject;
         }
 
-        void Awake()
+        void Start()
         {
             SetEquippedItem(_initialInventoryItem);
+
+            OnEquippedItemSelected?.Invoke();
         }
 
         public void ResetObject()
