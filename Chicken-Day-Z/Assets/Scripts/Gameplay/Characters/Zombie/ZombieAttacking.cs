@@ -4,14 +4,14 @@ using ChickenDayZ.Gameplay.Characters.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
-    [RequireComponent(typeof(ZombieMovement))]
+    [RequireComponent(typeof(ZombieTarget))]
     public class ZombieAttacking : MonoBehaviour
     {
         [SerializeField] private float _zombieInitialDamage;
 
         [SerializeField] private float _zombieAttackCooldownTime;
 
-        private ZombieMovement _zombieMovement;
+        private ZombieTarget _zombieTarget;
 
         private ObjectHealth _objectHealth;
 
@@ -23,17 +23,17 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Awake()
         {
-            _zombieMovement = gameObject.GetComponent<ZombieMovement>();
+            _zombieTarget = gameObject.GetComponent<ZombieTarget>();
         }
 
         void OnEnable()
         {
-            //_zombieMovement.OnTargetChanged += UpdateTargetHealth;
+            _zombieTarget.OnTargetChanged += UpdateTargetHealth;
         }
 
         void OnDisable()
         {
-            //_zombieMovement.OnTargetChanged += UpdateTargetHealth;
+            _zombieTarget.OnTargetChanged += UpdateTargetHealth;
         }
 
         void Start()
@@ -58,10 +58,10 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void EnterAttackModeIfZombieIsInTarget()
         {
-            /*if (_zombieMovement.IsZombieCollidingWithTarget && _attackCooldownTimer <= 0f)
+            if (_zombieTarget.IsZombieCollidingWithTarget && _attackCooldownTimer <= 0f)
             {
                 _inAttackMode = true;
-            }*/
+            }
         }
 
         private void AttackTargetIfIsInAttackMode()
@@ -91,7 +91,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void UpdateTargetHealth() 
         {
-            //_objectHealth = _zombieMovement.Target.GetComponent<ObjectHealth>();
+            _objectHealth = _zombieTarget.Target.GetComponent<ObjectHealth>();
         }
     }
 }

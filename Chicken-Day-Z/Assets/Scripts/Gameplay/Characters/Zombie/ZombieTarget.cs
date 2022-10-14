@@ -9,7 +9,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         
         private GameObject _target;
 
-        private bool _isZombieCollidingWithTarget;
+        private bool _isZombieCollidingWithTarget;        
 
         public GameObject Target
         {

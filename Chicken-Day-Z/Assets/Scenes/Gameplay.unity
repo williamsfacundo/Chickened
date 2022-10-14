@@ -235,7 +235,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.9
-  m_PointLightOuterRadius: 20
+  m_PointLightOuterRadius: 2.4
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -2138,7 +2138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2471,7 +2471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5534,7 +5534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6077,7 +6077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9867,7 +9867,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237645108}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 796fd3a64aa1c6f4bb3175c888bc00b3, type: 3}
   m_Name: 
@@ -10074,7 +10074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2566736119316091310, guid: 4ceed1b2c86bcf941b14d3ac0d882992, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14125,7 +14125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1813227644
 MonoBehaviour:
   m_ObjectHideFlags: 0
