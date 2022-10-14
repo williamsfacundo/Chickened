@@ -1,11 +1,12 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Movement;
-using ChickenDayZ.Gameplay.Characters.Chicken.Movement;
+using ChickenDayZ.Gameplay.Interfaces;
 
-namespace ChickenDayZ.Animations 
+namespace ChickenDayZ.Animations
 {
-    [RequireComponent(typeof(CharacterAnimationsManager), typeof(CharacterLookDirectionCalculator))]
+    [RequireComponent(typeof(CharacterAnimationsManager), 
+        typeof(CharacterLookDirectionCalculator), typeof(CharacterMovementController))]
     public class CharacterPlayAnimation : MonoBehaviour
     {
         [SerializeField] private string[] _idleAnimationsNames;
@@ -18,7 +19,7 @@ namespace ChickenDayZ.Animations
 
         private CharacterMovementController _characterMovementController;
 
-        private ChickenMovement _chickenMovement;
+        private IMoves _characterMovement;
 
         void Awake()
         {
@@ -26,9 +27,12 @@ namespace ChickenDayZ.Animations
 
             _characterLookDirectionCalculator = GetComponent<CharacterLookDirectionCalculator>();
 
-            _characterMovementController = GetComponent<CharacterMovementController>();
+            _characterMovementController = GetComponent<CharacterMovementController>();            
+        }
 
-            _chickenMovement = (ChickenMovement)_characterMovementController.MoveMechanic;
+        void Start()
+        {
+            _characterMovement = _characterMovementController.MoveMechanic;
         }
 
         void OnEnable()
@@ -56,7 +60,7 @@ namespace ChickenDayZ.Animations
             {
                 case CharacterLookDirection.BACK_RIGHT:
 
-                    if (_chickenMovement.IsMoving()) 
+                    if (_characterMovement.IsMoving()) 
                     {
                         return _moveAnimationsNames[0];
                     }
@@ -67,7 +71,7 @@ namespace ChickenDayZ.Animations
                     
                 case CharacterLookDirection.BACK:
 
-                    if (_chickenMovement.IsMoving())
+                    if (_characterMovement.IsMoving())
                     {
                         return _moveAnimationsNames[1];
                     }
@@ -78,7 +82,7 @@ namespace ChickenDayZ.Animations
                     
                 case CharacterLookDirection.BACK_LEFT:
 
-                    if (_chickenMovement.IsMoving())
+                    if (_characterMovement.IsMoving())
                     {
                         return _moveAnimationsNames[2];
                     }
@@ -89,7 +93,7 @@ namespace ChickenDayZ.Animations
                     
                 case CharacterLookDirection.FRONT_LEFT:
 
-                    if (_chickenMovement.IsMoving())
+                    if (_characterMovement.IsMoving())
                     {
                         return _moveAnimationsNames[3];
                     }
@@ -100,7 +104,7 @@ namespace ChickenDayZ.Animations
                     
                 case CharacterLookDirection.FRONT:
 
-                    if (_chickenMovement.IsMoving())
+                    if (_characterMovement.IsMoving())
                     {
                         return _moveAnimationsNames[4];
                     }
@@ -111,7 +115,7 @@ namespace ChickenDayZ.Animations
 
                 case CharacterLookDirection.FRONT_RIGHT:
 
-                    if (_chickenMovement.IsMoving())
+                    if (_characterMovement.IsMoving())
                     {
                         return _moveAnimationsNames[5];
                     }
@@ -122,7 +126,7 @@ namespace ChickenDayZ.Animations
 
                 default:
 
-                    if (_chickenMovement.IsMoving())
+                    if (_characterMovement.IsMoving())
                     {
                         return _moveAnimationsNames[0];
                     }

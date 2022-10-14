@@ -2,15 +2,15 @@ using UnityEngine;
 using TMPro;
 
 using ChickenDayZ.Gameplay.Characters.Inventory;
-using ChickenDayZ.Gameplay.Characters.Health;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
-using ChickenDayZ.Gameplay.Characters.Chicken.Spawn;
 
 namespace ChickenDayZ.UI 
 {
     public class ShowReloadingText : MonoBehaviour
     {
         [SerializeField] private TMP_Text _reloadingText;
+        
+        [SerializeField] private GameObject _chicken;
 
         [SerializeField] private string _reloadingMeassege = "(RELOADING)";
 
@@ -18,19 +18,7 @@ namespace ChickenDayZ.UI
 
         private ReloadFirearm _reloadFirearm;
 
-        private GameObject _chicken;
-
-        Firearm auxFirearm;
-
-        void OnEnable()
-        {
-            PlayersSpawner.OnPlayersInstantiated += FindChicken;            
-        }
-
-        void OnDisable()
-        {
-            PlayersSpawner.OnPlayersInstantiated -= FindChicken;            
-        }        
+        Firearm auxFirearm;                
 
         void OnDestroy()
         {
@@ -45,6 +33,8 @@ namespace ChickenDayZ.UI
         void Start()
         {
             _reloadingText.text = _waitingReloadMeassege;
+
+            FindChicken();
         }
 
         private void ShowReloadingMessage() 
@@ -57,10 +47,8 @@ namespace ChickenDayZ.UI
             _reloadingText.text = _waitingReloadMeassege;
         }
 
-        private void FindChicken(GameObject chicken) 
-        {
-            _chicken = chicken;
-            
+        private void FindChicken() 
+        {           
             FindChickenFirearm();
 
             FindChickenReloadMechanic();
@@ -80,7 +68,7 @@ namespace ChickenDayZ.UI
             {
                 _reloadFirearm = auxFirearm.ReloadFirearmMechanic;
 
-                _reloadFirearm.OnStartReloading += ShowReloadingMessage; //message
+                _reloadFirearm.OnStartReloading += ShowReloadingMessage; 
 
                 _reloadFirearm.OnFinishedReloading += HideReloadingMessage;
             }

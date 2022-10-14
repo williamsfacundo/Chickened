@@ -37,13 +37,7 @@ public class CharacterLookDirectionCalculator : MonoBehaviour
 
     void Start()
     {
-        _camera = Camera.main;        
-
-        CalculateCharacterLookDirection();
-
-        _characterOldLookDirection = _characterCurrentLookDirection;
-
-        OnCharacterLookDirectionChanged?.Invoke();
+        _camera = Camera.main;       
     }
 
     private void Update()
