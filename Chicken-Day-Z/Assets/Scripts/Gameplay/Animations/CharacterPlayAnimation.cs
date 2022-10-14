@@ -51,90 +51,47 @@ namespace ChickenDayZ.Animations
 
         void SetAnimation()
         {
-            _characterAnimationsManager.ChangeAnimation(GetTheCorrectAnimation());
+            _characterAnimationsManager.ChangeAnimation(AnimationSelector());
         }
 
-        string GetTheCorrectAnimation() 
+        string AnimationSelector() 
         {
             switch (_characterLookDirectionCalculator.CharacterLookDirection)
             {
                 case CharacterLookDirection.BACK_RIGHT:
 
-                    if (_characterMovement.IsMoving()) 
-                    {
-                        return _moveAnimationsNames[0];
-                    }
-                    else 
-                    {
-                        return _idleAnimationsNames[0];
-                    }                    
-                    
+                    return GetAnimation(0);
                 case CharacterLookDirection.BACK:
 
-                    if (_characterMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[1];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[1];
-                    }                    
-                    
+                    return GetAnimation(1);
                 case CharacterLookDirection.BACK_LEFT:
 
-                    if (_characterMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[2];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[2];
-                    }                                        
-                    
+                    return GetAnimation(2);
                 case CharacterLookDirection.FRONT_LEFT:
 
-                    if (_characterMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[3];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[3];
-                    }                   
-                    
+                    return GetAnimation(3);
                 case CharacterLookDirection.FRONT:
 
-                    if (_characterMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[4];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[4];
-                    }
-
+                    return GetAnimation(4);
                 case CharacterLookDirection.FRONT_RIGHT:
 
-                    if (_characterMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[5];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[5];
-                    }
-
+                    return GetAnimation(5);
                 default:
 
-                    if (_characterMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[0];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[0];
-                    }
-            }           
+                    return GetAnimation(0);                    
+            }            
+        }
+
+        private string GetAnimation(short index) 
+        {
+            if (_characterMovement.IsMoving())
+            {
+                return _moveAnimationsNames[index];
+            }
+            else
+            {
+                return _idleAnimationsNames[index];
+            }
         }
     }
 }
