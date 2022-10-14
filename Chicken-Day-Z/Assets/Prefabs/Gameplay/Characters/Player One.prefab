@@ -18,13 +18,14 @@ GameObject:
   - component: {fileID: -680385895603658655}
   - component: {fileID: 1509960062886962435}
   - component: {fileID: 2925036642796539345}
+  - component: {fileID: 2738475259618834853}
+  - component: {fileID: 800683266072672751}
+  - component: {fileID: 2853528212605133771}
+  - component: {fileID: 4548758258070621498}
   - component: {fileID: 7480977285595935392}
   - component: {fileID: 7480977285595935395}
   - component: {fileID: 3521646903989923705}
   - component: {fileID: 3191821783297729655}
-  - component: {fileID: 800683266072672751}
-  - component: {fileID: 2738475259618834853}
-  - component: {fileID: 2853528212605133771}
   m_Layer: 0
   m_Name: Player One
   m_TagString: Player
@@ -205,6 +206,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7a04d613a4a1b4483ba29e5773421a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2738475259618834853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd12d477e503b3d4e849d515c46550e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _idleAnimationsNames:
+  - Anim_Soldado_Idle_Back_Right
+  - Anim_Soldado_Idle_Back
+  - Anim_Soldado_Idle_Back_Left
+  - Anim_Soldado_Idle_Front_Left
+  - Anim_Soldado_Idle_Front
+  - Anim_Soldado_Idle_Front_Right
+  _moveAnimationsNames:
+  - Soldado_Walking_Back_Right
+  - Soldado_Walking_Back
+  - Soldado_Walking_Back_Left
+  - Soldado_Walking_Front_Left
+  - Soldado_Walking_Front
+  - Soldado_Walking_Front_Right
+--- !u!114 &800683266072672751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7be539e7841d304293a9de2a657e312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2853528212605133771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0430435994a7664ba6029c17e4c41ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4548758258070621498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9282574f34f4eb48ad51b4b8abf2277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playersSpawnPosition: {fileID: 0}
 --- !u!50 &7480977285595935392
 Rigidbody2D:
   serializedVersion: 4
@@ -277,53 +341,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &800683266072672751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7480977285595935396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7be539e7841d304293a9de2a657e312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2738475259618834853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7480977285595935396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd12d477e503b3d4e849d515c46550e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _idleAnimationsNames:
-  - Anim_Soldado_Idle_Back_Right
-  - Anim_Soldado_Idle_Back
-  - Anim_Soldado_Idle_Back_Left
-  - Anim_Soldado_Idle_Front_Left
-  - Anim_Soldado_Idle_Front
-  - Anim_Soldado_Idle_Front_Right
-  _moveAnimationsNames:
-  - Soldado_Walking_Back_Right
-  - Soldado_Walking_Back
-  - Soldado_Walking_Back_Left
-  - Soldado_Walking_Front_Left
-  - Soldado_Walking_Front
-  - Soldado_Walking_Front_Right
---- !u!114 &2853528212605133771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7480977285595935396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0430435994a7664ba6029c17e4c41ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
