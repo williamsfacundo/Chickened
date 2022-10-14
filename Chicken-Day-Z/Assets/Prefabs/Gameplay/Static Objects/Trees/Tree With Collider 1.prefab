@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2566736119316091311}
   - component: {fileID: -3929314678323886394}
   m_Layer: 0
-  m_Name: Tree With Collider
+  m_Name: Tree With Collider 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,9 +98,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.12646627, y: -2.8132846}
   m_SpriteTilingProperty:
-    border: {x: 5.8199997, y: 0.77, z: 5.93, w: 1.62}
+    border: {x: 5.8199997, y: 0.7704627, z: 5.93, w: 1.6209735}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 14.4, y: 7.8}
+    oldSize: {x: 14.4, y: 7.804687}
     newSize: {x: 14.4, y: 7.804687}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
