@@ -240,11 +240,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                         {
                             case 1:
 
-                                _zombieInstances[i].GetComponent<ZombieMovement>().Target = _chicken;
+                                //_zombieInstances[i].GetComponent<ZombieMovement>().Target = _chicken;
                                 break;
 
                             case 2:
-                                _zombieInstances[i].GetComponent<ZombieMovement>().Target = _eggBase;
+                                //_zombieInstances[i].GetComponent<ZombieMovement>().Target = _eggBase;
                                 break;
                         }
                         
