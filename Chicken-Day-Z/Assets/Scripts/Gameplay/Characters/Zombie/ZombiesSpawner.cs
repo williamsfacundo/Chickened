@@ -4,7 +4,7 @@ using UnityEngine;
 using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Interfaces;
-using ChickenDayZ.Gameplay.Characters.Health;
+using ChickenDayZ.Gameplay.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
@@ -75,7 +75,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _zombiesLeftToSpawn = _initialZombiesToSpawned;
 
-            _chicken = FindObjectOfType<ChickenHealth>().gameObject;
+            //_chicken = FindObjectOfType<ChickenHealth>().gameObject;            
 
             CheckIfPercentagesAreRight();
 
@@ -96,7 +96,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             if (_timerBeforeRoundStarts.TimerFinished) 
             {
-                if (_zombiesLeftToSpawn > 0) 
+                /*if (_zombiesLeftToSpawn > 0) 
                 {
                     _timerForNextZombie.DecreaseTimer();
 
@@ -109,7 +109,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 {
                     //Funcion next round que setea lo necesario para la siguiente ronda
                     NextRound();
-                }                
+                }*/                
             }
             else 
             {
@@ -230,7 +230,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 {
                     if (_zombieInstances[i].activeSelf == false) 
                     {
-                        _zombieInstances[i].GetComponent<ZombieHealth>().ResetObject();
+                        //_zombieInstances[i].GetComponent<ZombieHealth>().ResetObject();
                         
                         _zombieInstances[i].transform.position = GetRandomSpawnPosition();
 

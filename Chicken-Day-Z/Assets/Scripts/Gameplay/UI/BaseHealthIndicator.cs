@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using ChickenDayZ.Gameplay.EggBase;
+using ChickenDayZ.Gameplay.Health;
 
 namespace ChickenDayZ.UI 
 {
@@ -8,18 +8,18 @@ namespace ChickenDayZ.UI
     {
         [SerializeField] private TMP_Text _showBaseHealthText;
 
-        private EggBaseHealth _baseHealth;
+        //private EggBaseHealth _baseHealth;
         
-        void Awake()
+        /*void Awake()
         {
             _baseHealth = FindObjectOfType<EggBaseHealth>();
 
             _baseHealth.OnHealthChanged += UpdateBaseHealthText;
-        }
+        }*/
 
         void OnDestroy()
         {
-            _baseHealth.OnHealthChanged -= UpdateBaseHealthText;
+            //_baseHealth.OnHealthChanged -= UpdateBaseHealthText;
         }
 
         void Start()
@@ -29,7 +29,7 @@ namespace ChickenDayZ.UI
 
         private void UpdateBaseHealthText()
         {
-            _showBaseHealthText.text = "Base Health: " + _baseHealth.Health;
+            //_showBaseHealthText.text = "Base Health: " + _baseHealth.Health;
         }
     }
 }

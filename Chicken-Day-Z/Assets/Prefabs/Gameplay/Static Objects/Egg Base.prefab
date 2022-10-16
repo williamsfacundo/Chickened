@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2289700471523330053}
   - component: {fileID: -8785635382961607879}
   - component: {fileID: 2289700471523330050}
-  - component: {fileID: 5882696409296521420}
+  - component: {fileID: 315667781507815796}
   m_Layer: 0
   m_Name: Egg Base
   m_TagString: Base
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5882696409296521420
+--- !u!114 &315667781507815796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2289700471523330049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322272145a3f81646ba9a194559a7b23, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 200

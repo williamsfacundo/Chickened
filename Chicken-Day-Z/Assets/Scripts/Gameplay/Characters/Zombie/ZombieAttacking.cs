@@ -1,6 +1,6 @@
     using UnityEngine;
 
-using ChickenDayZ.Gameplay.Characters.Health;
+using ChickenDayZ.Gameplay.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {

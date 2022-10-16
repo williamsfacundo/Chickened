@@ -1,6 +1,6 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.Characters.Health;
+using ChickenDayZ.Gameplay.Health;
 using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
@@ -39,7 +39,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             if (objectHealth != null) 
             {
-                if (objectHealth.GetCharacterType() == _targetType) 
+                /*if (objectHealth.GetCharacterType() == _targetType) 
                 {
                     objectHealth.ReceiveDamage(_damage);                    
                 }
@@ -47,7 +47,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                 if (objectHealth.GetCharacterType() != CharacterTypeEnum.CHICKEN) 
                 {
                     gameObject.SetActive(false);
-                }
+                }*/
             }
             else 
             {
