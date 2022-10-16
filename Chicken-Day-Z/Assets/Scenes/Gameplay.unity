@@ -10858,6 +10858,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1400326961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7480977285595935396, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+  m_PrefabInstance: {fileID: 1434480555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1420642652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2566736119316091310, guid: 40298e7fb9189e7479a279d169f538dd, type: 3}
@@ -10940,10 +10945,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1430123742, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4548758258070621498, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: _playersSpawnPosition
       value: 
@@ -16556,6 +16557,10 @@ PrefabInstance:
       propertyPath: _showBaseHealthText
       value: 
       objectReference: {fileID: 162381210}
+    - target: {fileID: 5369343324173608449, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
+      propertyPath: _chicken
+      value: 
+      objectReference: {fileID: 1400326961}
     - target: {fileID: 5369343324173608449, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
       propertyPath: _showBulletsLeftText
       value: 

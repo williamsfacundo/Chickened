@@ -38,9 +38,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
 
         void Start()
         {
-            SetEquippedItem(_initialInventoryItem);
-
-            OnEquippedItemSelected?.Invoke();
+            SetEquippedItem(_initialInventoryItem);           
         }
 
         public void ResetObject()
@@ -60,8 +58,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
                             
                             _equippedItem = new Firearm(_firearmStats.ProjectilePrefab,
                                 new Charger(_firearmStats.ChargerMaxAmmo, _firearmStats.ReloadTime),
-                                new Canyon(_firearmStats.FireRate, _firearmStats.Damage, _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.FireCapacity),
+                                new Canyon(_firearmStats.FireRate, _firearmStats.Damage, 
+                                _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.FireCapacity),
                                 gameObject);
+
+                            OnEquippedItemSelected?.Invoke();
 
                             break;
                         default:
