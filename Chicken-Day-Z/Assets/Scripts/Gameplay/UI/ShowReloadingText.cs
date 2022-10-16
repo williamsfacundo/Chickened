@@ -4,40 +4,63 @@ using TMPro;
 using ChickenDayZ.Gameplay.Characters.Inventory;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
 
-namespace ChickenDayZ.UI 
+namespace ChickenDayZ.UI
 {
     public class ShowReloadingText : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _reloadingText;
-        
         [SerializeField] private GameObject _chicken;
+        
+        [SerializeField] private TMP_Text _reloadingText;
 
-        [SerializeField] private string _reloadingMeassege = "(RELOADING)";
+        [SerializeField] private string _reloadingMeassege;
 
-        [SerializeField] private string _waitingReloadMeassege = "Reload (R)";
+        [SerializeField] private string _waitingReloadMeassege;
 
+        private CharacterInventory _chickenInventory;        
+        
         private ReloadFirearm _reloadFirearm;
 
-        Firearm auxFirearm;                
+        private const short SerializeFieldObjectsCount = 2;
 
-        void OnDestroy()
+        void Awake()
         {
-            if (_reloadFirearm != null) 
-            {
-                _reloadFirearm.OnStartReloading -= ShowReloadingMessage;
+            DestroyScriptIfAnySerializedFieldObjectIsMissing();
 
-                _reloadFirearm.OnFinishedReloading -= HideReloadingMessage;
+            SetCharacterInventory();
+        }
+
+        void OnEnable()
+        {
+            if (_chickenInventory != null) 
+            {
+                _chickenInventory.OnEquippedItemSelected += SetChickenReloadMechanic;
+            }
+        }
+
+        void OnDisable()
+        {
+            if (_chickenInventory != null) 
+            {
+                _chickenInventory.OnEquippedItemSelected -= SetChickenReloadMechanic;
             }            
         }
 
         void Start()
         {
-            _reloadingText.text = _waitingReloadMeassege;
-
-            FindChicken();
+            _reloadingText.text = _waitingReloadMeassege;            
         }
 
-        private void ShowReloadingMessage() 
+        void OnDestroy()
+        {
+            if (_reloadFirearm != null)
+            {
+                _reloadFirearm.OnStartReloading -= ShowReloadingMessage;
+
+                _reloadFirearm.OnFinishedReloading -= HideReloadingMessage;
+            }
+        }
+
+        private void ShowReloadingMessage()
         {
             _reloadingText.text = _reloadingMeassege;
         }
@@ -47,30 +70,44 @@ namespace ChickenDayZ.UI
             _reloadingText.text = _waitingReloadMeassege;
         }
 
-        private void FindChicken() 
+        private void SetCharacterInventory() 
+        {            
+            _chickenInventory = _chicken.GetComponent<CharacterInventory>();
+
+            if (_chickenInventory == null) 
+            {
+                Debug.LogError("Chicken has no inventory, deleting script!");
+
+                Destroy(this);                
+            }
+        }       
+
+        private void SetChickenReloadMechanic()
         {           
-            FindChickenFirearm();
-
-            FindChickenReloadMechanic();
-        }
-
-        private void FindChickenFirearm() 
-        {
-            if (_chicken != null)
+            if (_chickenInventory.EquippedItem is Firearm)
             {
-                auxFirearm = ((Firearm)_chicken.GetComponent<CharacterInventory>().EquippedItem);               
-            }            
-        }
+                Firearm firearm = ((Firearm)_chickenInventory.EquippedItem);
 
-        private void FindChickenReloadMechanic() 
-        {
-            if (auxFirearm != null)
-            {
-                _reloadFirearm = auxFirearm.ReloadFirearmMechanic;
+                _reloadFirearm = firearm.ReloadFirearmMechanic;                
 
-                _reloadFirearm.OnStartReloading += ShowReloadingMessage; 
+                _reloadFirearm.OnStartReloading += ShowReloadingMessage;
 
                 _reloadFirearm.OnFinishedReloading += HideReloadingMessage;
+            }
+        }
+
+        private void DestroyScriptIfAnySerializedFieldObjectIsMissing()
+        {
+            Object[] objects = new Object[SerializeFieldObjectsCount];
+
+            objects[0] = _chicken;
+            objects[1] = _reloadingText;
+
+            if (ObjectFunctions.IsNullObjectInArray(objects))
+            {
+                Debug.LogError("Missing referenced objects, deleting script!");
+
+                Destroy(this);
             }
         }
     }

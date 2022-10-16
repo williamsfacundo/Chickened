@@ -3,7 +3,6 @@ using TMPro;
 
 using ChickenDayZ.Gameplay.Characters.Inventory;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
-using ChickenDayZ.General;
 
 namespace ChickenDayZ.UI 
 {
@@ -24,11 +23,14 @@ namespace ChickenDayZ.UI
             DestroyScriptIfAnySerializedFieldObjectIsMissing();
 
             SetInventory();
-        }
+        }        
 
         void OnEnable()
-        {            
-            _chickenInventory.OnEquippedItemSelected += SetCharger;
+        {
+            if (_chickenInventory != null) 
+            {
+                _chickenInventory.OnEquippedItemSelected += SetCharger;
+            }
         }
 
         void OnDisable()
@@ -47,16 +49,28 @@ namespace ChickenDayZ.UI
             }            
         }
 
+        private void SetInventory()
+        {
+            _chickenInventory = _chicken.GetComponent<CharacterInventory>();
+
+            if (_chickenInventory == null)
+            {
+                Debug.LogError("Missing inventory in chicken, deleting script!");
+
+                Destroy(this);
+            }
+        }
+
         private void SetCharger() 
         {
             if (_chickenInventory.EquippedItem is Firearm)
             {
                 _charger = ((Firearm)_chickenInventory.EquippedItem).Charger;
-            }
 
-            _charger.OnAmmoChanged += UpdateBulletsLeftText;
+                _charger.OnAmmoChanged += UpdateBulletsLeftText;
 
-            UpdateBulletsLeftText();
+                UpdateBulletsLeftText();
+            }                      
         }
 
         private void UpdateBulletsLeftText()
@@ -77,18 +91,6 @@ namespace ChickenDayZ.UI
 
                 Destroy(this);
             }
-        }
-
-        private void SetInventory() 
-        {
-            _chickenInventory = _chicken.GetComponent<CharacterInventory>();
-
-            if (_chickenInventory == null)
-            {
-                Debug.LogError("Missing inventory in chicken, deleting script!");
-
-                Destroy(this);
-            }
-        }        
+        }                
     }
 }
