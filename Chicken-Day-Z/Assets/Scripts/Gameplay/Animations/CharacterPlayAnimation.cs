@@ -2,11 +2,13 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Movement;
 using ChickenDayZ.Gameplay.Interfaces;
+using ChickenDayZ.Gameplay.Characters.LookingDirection;
+using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Animations
 {
     [RequireComponent(typeof(CharacterAnimationsManager), 
-        typeof(CharacterLookDirectionCalculator), typeof(CharacterMovementController))]
+        typeof(ChickenLookDirectionCalculator), typeof(CharacterMovementController))]
     public class CharacterPlayAnimation : MonoBehaviour
     {
         [SerializeField] private string[] _idleAnimationsNames;
@@ -25,7 +27,7 @@ namespace ChickenDayZ.Animations
         {
             _characterAnimationsManager = GetComponent<CharacterAnimationsManager>();
 
-            _characterLookDirectionCalculator = GetComponent<CharacterLookDirectionCalculator>();
+            _characterLookDirectionCalculator = GetComponent<ChickenLookDirectionCalculator>();
 
             _characterMovementController = GetComponent<CharacterMovementController>();            
         }
@@ -58,22 +60,22 @@ namespace ChickenDayZ.Animations
         {
             switch (_characterLookDirectionCalculator.CharacterLookDirection)
             {
-                case CharacterLookDirection.BACK_RIGHT:
+                case CharacterLookDirectionEnum.BACK_RIGHT:
 
                     return GetAnimation(0);
-                case CharacterLookDirection.BACK:
+                case CharacterLookDirectionEnum.BACK:
 
                     return GetAnimation(1);
-                case CharacterLookDirection.BACK_LEFT:
+                case CharacterLookDirectionEnum.BACK_LEFT:
 
                     return GetAnimation(2);
-                case CharacterLookDirection.FRONT_LEFT:
+                case CharacterLookDirectionEnum.FRONT_LEFT:
 
                     return GetAnimation(3);
-                case CharacterLookDirection.FRONT:
+                case CharacterLookDirectionEnum.FRONT:
 
                     return GetAnimation(4);
-                case CharacterLookDirection.FRONT_RIGHT:
+                case CharacterLookDirectionEnum.FRONT_RIGHT:
 
                     return GetAnimation(5);
                 default:

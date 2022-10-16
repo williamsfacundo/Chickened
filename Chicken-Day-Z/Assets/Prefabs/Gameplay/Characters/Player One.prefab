@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2925036642796539345}
   - component: {fileID: 2738475259618834853}
   - component: {fileID: 800683266072672751}
-  - component: {fileID: 2853528212605133771}
+  - component: {fileID: 6266846075603150994}
   - component: {fileID: 4548758258070621498}
   - component: {fileID: 7480977285595935392}
   - component: {fileID: 7480977285595935395}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7be539e7841d304293a9de2a657e312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2853528212605133771
+--- !u!114 &6266846075603150994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7480977285595935396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0430435994a7664ba6029c17e4c41ce, type: 3}
+  m_Script: {fileID: 11500000, guid: c88ce18ec74895d4a9e9a871cbc7b30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &4548758258070621498
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527268684578124632, guid: c491cf59f8d64ed49bcd19632fafdf09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2527268684578124632, guid: c491cf59f8d64ed49bcd19632fafdf09, type: 3}
       propertyPath: m_LocalPosition.z
