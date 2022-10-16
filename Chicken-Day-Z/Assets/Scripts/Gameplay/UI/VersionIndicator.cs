@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-namespace ChickenVSZombies.UI 
+namespace ChickenDayZ.UI 
 {
     public class VersionIndicator : MonoBehaviour
     {
