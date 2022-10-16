@@ -3,6 +3,7 @@ using TMPro;
 
 using ChickenDayZ.Gameplay.Characters.Inventory;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
+using ChickenDayZ.General;
 
 namespace ChickenDayZ.UI 
 {
@@ -16,9 +17,11 @@ namespace ChickenDayZ.UI
 
         private Charger _charger;
 
+        private const short SerializeFieldObjectsCount = 2;
+
         void Awake()
         {
-            CheckIfAnySerializedFieldObjectIsMissing();
+            DestroyScriptIfAnySerializedFieldObjectIsMissing();
 
             SetInventory();
         }
@@ -61,9 +64,14 @@ namespace ChickenDayZ.UI
             _showBulletsLeftText.text = "Bullets Left: " + _charger.ChargerAmmo;
         }
 
-        private void CheckIfAnySerializedFieldObjectIsMissing() 
+        private void DestroyScriptIfAnySerializedFieldObjectIsMissing() 
         {
-            if (ObjectIsNull(_chicken) || ObjectIsNull(_showBulletsLeftText))
+            Object[] objects = new Object[SerializeFieldObjectsCount];
+
+            objects[0] = _chicken;
+            objects[1] = _showBulletsLeftText;
+
+            if (ObjectFunctions.IsNullObjectInArray(objects))
             {
                 Debug.LogError("Missing referenced objects, deleting script!");
 
@@ -75,17 +83,12 @@ namespace ChickenDayZ.UI
         {
             _chickenInventory = _chicken.GetComponent<CharacterInventory>();
 
-            if (ObjectIsNull(_chickenInventory))
+            if (_chickenInventory == null)
             {
                 Debug.LogError("Missing inventory in chicken, deleting script!");
 
                 Destroy(this);
             }
-        }
-
-        private bool ObjectIsNull(Object @object) 
-        {
-            return @object == null;
-        }
+        }        
     }
 }
