@@ -9,7 +9,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
     {
         private float _damage;
 
-        private CharacterTypeEnum _targetType;
+        //private MainObjectTypeEnum _targetType;
 
         public float Damage 
         {
@@ -19,17 +19,17 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
-        public CharacterTypeEnum TargetType
+        /*public MainObjectTypeEnum TargetType
         {
             set
             {
                 _targetType = value;
             }
-        }
+        }*/
 
         private void Start()
         {
-            _targetType = CharacterTypeEnum.ZOMBIE;
+            //_targetType = MainObjectTypeEnum.ZOMBIE;
             _damage = 10f;
         }
 

@@ -4,7 +4,7 @@ using ChickenDayZ.Gameplay.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
-    [RequireComponent(typeof(ZombieTarget))]
+    //[RequireComponent(typeof(ZombieTarget))]
     public class ZombieAttacking : MonoBehaviour
     {
         [SerializeField] private float _zombieInitialDamage;
