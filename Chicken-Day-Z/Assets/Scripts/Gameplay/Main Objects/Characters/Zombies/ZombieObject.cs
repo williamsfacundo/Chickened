@@ -4,7 +4,7 @@ namespace ChickenDayZ.Gameplay.MainObjects
 {
     public abstract class ZombieObject : CharacterObject
     {
-        private ZombieObjectTypeEnum _zombieObjectType;
+        private ZombieObjectTypeEnum _zombieObjectType;        
 
         public ZombieObjectTypeEnum ZombieObjectType
         {
