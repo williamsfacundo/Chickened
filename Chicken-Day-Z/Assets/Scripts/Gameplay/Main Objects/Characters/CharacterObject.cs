@@ -1,7 +1,7 @@
 using ChickenDayZ.Gameplay.StatsScripts;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
-namespace ChickenDayZ.Gameplay.MainObjects 
+namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {    
     public abstract class CharacterObject : MainObject
     {

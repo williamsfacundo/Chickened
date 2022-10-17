@@ -1,6 +1,6 @@
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
-namespace ChickenDayZ.Gameplay.MainObjects 
+namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {
     public class NormalZombieObject : ZombieObject
     {
