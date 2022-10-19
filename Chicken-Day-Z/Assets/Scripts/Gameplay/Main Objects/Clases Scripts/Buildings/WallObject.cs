@@ -1,10 +1,8 @@
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
-
 namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
 {
     public class WallObject : BuildingObject
     {        
-        private WallObject() : base(BuildingObjectTypeEnum.WALL)
+        private WallObject()
         {
 
         }
@@ -17,11 +15,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
         public override void RoundResset()
         {
 
-        }
-
-        public override string GetId()
-        {
-            return MainObjectsIds.WallId;
         }
     }
 }

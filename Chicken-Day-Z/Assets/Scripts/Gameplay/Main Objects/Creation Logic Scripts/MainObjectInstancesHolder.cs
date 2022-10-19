@@ -1,18 +1,21 @@
+using UnityEngine;
 using System.Collections.Generic;
 
-using ChickenDayZ.Gameplay.MainObjects;
 using ChickenDayZ.Gameplay.MainObjects.Interfaces;
 
-namespace ChickenDayZ.Gameplay.Logic
+namespace ChickenDayZ.Gameplay.MainObjects.Logic
 {   
-    public class MainObjectInstancesHolder : IObjectRessetable
+    public class MainObjectInstancesHolder : MonoBehaviour, IObjectRessetable
     {
-        private List<MainObject> _mainObjects;        
+        private List<MainObject> _mainObjects;
 
-        public MainObjectInstancesHolder(List<MainObject> mainObjects) 
+        public List<MainObject> MainObjects 
         {
-            SetMainObjects(mainObjects);
-        }
+            get
+            {
+                return _mainObjects;
+            }            
+        }       
 
         public void GameplayResset()
         {
@@ -30,7 +33,7 @@ namespace ChickenDayZ.Gameplay.Logic
             }
         }
 
-        private void SetMainObjects(List<MainObject> mainObjects) 
+        public void SetMainObjects(List<MainObject> mainObjects) 
         {
             _mainObjects = new List<MainObject>();
 

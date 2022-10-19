@@ -1,5 +1,4 @@
 using ChickenDayZ.Gameplay.StatsScripts;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
 {
@@ -17,12 +16,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
             {
                 return _health;
             }
-        }
-
-        private EggObject() : base(BuildingObjectTypeEnum.EGG)
-        {
-                        
-        }
+        }        
 
         public override void GameplayResset()
         {
@@ -32,11 +26,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
         public override void RoundResset()
         {
             _health.RoundResset();
-        }
-
-        public override string GetId()
-        {
-            return MainObjectsIds.EggId;
-        }
+        }        
     }
 }

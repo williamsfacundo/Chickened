@@ -1,12 +1,10 @@
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
-
 namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
 {
     public class TreeObject : BuildingObject
     {
-        private TreeObject() : base(BuildingObjectTypeEnum.TREE)
+        private TreeObject() 
         {
-
+            
         }
 
         public override void GameplayResset()
@@ -17,10 +15,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.BuildingObjects
         public override void RoundResset()
         {
 
-        }
-        public override string GetId()
-        {
-            return MainObjectsIds.TreeId;
-        }
+        }       
     }
 }

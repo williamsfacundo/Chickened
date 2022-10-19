@@ -1,5 +1,4 @@
 using ChickenDayZ.Gameplay.StatsScripts;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {    
@@ -7,9 +6,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
     {
         private ObjectHealthStats _health;
         
-        private CharacterObjectInventory _characterInventory;
-
-        private CharacterObjectTypeEnum _characterObjectType;
+        private CharacterObjectInventory _characterInventory;        
 
         public ObjectHealthStats Health
         {            
@@ -25,20 +22,10 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             {
                 return _characterInventory;
             }
-        }
+        }               
 
-        public CharacterObjectTypeEnum CharacterObjectType 
+        protected CharacterObject()
         {
-            get 
-            {
-                return _characterObjectType;
-            }
-        }
-
-        protected CharacterObject(CharacterObjectTypeEnum characterObjectType) : base(MainObjectTypeEnum.CHARACTER)
-        {
-            _characterObjectType = characterObjectType;
-
             _health = new ObjectHealthStats();
 
             _characterInventory = new CharacterObjectInventory();

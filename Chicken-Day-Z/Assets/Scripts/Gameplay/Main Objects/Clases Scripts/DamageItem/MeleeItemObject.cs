@@ -4,7 +4,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.DamageItem
 {
     public class MeleeItemObject : DamageItemObject
     {
-        private MeleeItemObject() : base(DamageItemObjectTypeEnum.MELEE_ITEM) 
+        private MeleeItemObject()
         {
 
         } 
@@ -17,11 +17,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.DamageItem
         public override void RoundResset()
         {
 
-        }
-
-        public override string GetId()
-        {
-            return MainObjectsIds.MeleeItemId;
-        }
+        }        
     }
 }

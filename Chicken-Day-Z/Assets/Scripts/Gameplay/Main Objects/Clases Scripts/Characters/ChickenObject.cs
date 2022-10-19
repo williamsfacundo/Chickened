@@ -1,10 +1,8 @@
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
-
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {
     public class ChickenObject : CharacterObject
     {
-        private ChickenObject() : base(CharacterObjectTypeEnum.CHICKEN) 
+        private ChickenObject()
         {
 
         }
@@ -17,10 +15,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         public override void RoundResset() 
         {
             
-        }
-        public override string GetId()
-        {
-            return MainObjectsIds.ChickenId;
         }
     }
 }

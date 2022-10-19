@@ -1,12 +1,14 @@
 using UnityEngine;
 
+using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+
 namespace ChickenDayZ.Gameplay.ScripObjctsConfig 
 {
     [CreateAssetMenu(fileName = "Instantiation Config", menuName = "ScriptableObjects/Main Object/Creation")]
     public class MainObjectInstantiationConfig : ScriptableObject
     {
-        public short Count;
+        [Range(1, 100)] public short Count;
 
-        public GameObject Prefab;
+        public MainObjectsIdsEnum MainObjectId;
     }
 }

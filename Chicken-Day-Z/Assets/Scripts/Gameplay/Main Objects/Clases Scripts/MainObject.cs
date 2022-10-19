@@ -10,30 +10,25 @@ namespace ChickenDayZ.Gameplay.MainObjects
 {
     public abstract class MainObject : MonoBehaviour, IObjectRessetable 
     {
-        private MainObjectTypeEnum _mainObjectType;
+        [SerializeField] private MainObjectsIdsEnum _id;
 
         private List<BehaviourScript> _behaviourScripts;
-
-        public MainObjectTypeEnum MainObjectType
-        {           
+        public MainObjectsIdsEnum Id 
+        {
             get 
             {
-                return _mainObjectType;
+                return _id;
             }
-        }       
+        }             
 
-        protected MainObject(MainObjectTypeEnum mainObjectType) 
+        protected MainObject() 
         {
-            _mainObjectType = mainObjectType;
-
             _behaviourScripts = new List<BehaviourScript>();            
         }
 
         public abstract void GameplayResset();
 
-        public abstract void RoundResset();
-
-        public abstract string GetId();
+        public abstract void RoundResset();        
 
         public void AddBehaviourScript(BehaviourScript behaviourScript)
         { 

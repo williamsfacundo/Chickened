@@ -1,30 +1,26 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-using ChickenDayZ.Gameplay.MainObjects;
 using ChickenDayZ.Gameplay.ScripObjctsConfig;
 
-namespace ChickenDayZ.Gameplay.Logic
-{
-    public class StartingMainObjectsInScene
-    {
-        private MainObjectInstantiationConfig[] _mainObjectCreationConfigs;
+namespace ChickenDayZ.Gameplay.MainObjects.Logic
+{    
+    public class StartingMainObjectsInScene : MonoBehaviour
+    {        
+        [SerializeField] private MainObjectInstantiationConfig[] _mainObjectCreationConfigs;
 
-        public StartingMainObjectsInScene()
-        {
-            _mainObjectCreationConfigs = null;
-        }
+        private MainObjectsInstantiator _mainObjectsInstantiator;       
 
-        public StartingMainObjectsInScene(MainObjectInstantiationConfig[] mainObjectCreationConfig) 
+        void Awake()
         {
-            _mainObjectCreationConfigs = mainObjectCreationConfig;
+            _mainObjectsInstantiator = GetComponent<MainObjectsInstantiator>();
         }
 
         public List<MainObject> GetMainObjects()
         {
             MainObject[] mainObjectsInScene = FindMainObjects();
 
-            MainObject[] mainObjectsCreated = InstanciateMainObjects(_mainObjectCreationConfigs);
+            MainObject[] mainObjectsCreated = InstanciateMainObjects();
 
             if (mainObjectsInScene == null && mainObjectsCreated == null) 
             {
@@ -54,57 +50,47 @@ namespace ChickenDayZ.Gameplay.Logic
 
         private MainObject[] FindMainObjects()
         {
-            MainObject[] _mainObjects = GameObject.FindObjectsOfType<MainObject>();
+            MainObject[] _mainObjects = FindObjectsOfType<MainObject>();
 
             return _mainObjects;
         }
 
-        private MainObject[] InstanciateMainObjects(MainObjectInstantiationConfig[] _mainObjectConfigs)
+        private MainObject[] InstanciateMainObjects()
         {
-            if (_mainObjectConfigs == null)
+
+            if (_mainObjectCreationConfigs == null)
             {
                 return null;
             }
 
-            short amountOfMainObjects = 0;
-            
+            MainObject[] _mainObjects;
+
             GameObject prefab;
-
-            for (short i = 0; i < _mainObjectConfigs.Length; i++) 
-            {
-                prefab = _mainObjectConfigs[i].Prefab;
-
-                if (prefab.GetComponent<MainObject>() != null) 
-                {
-                    amountOfMainObjects += _mainObjectConfigs[i].Count;
-                }
-                else 
-                {
-                    Debug.Log("Prefab given doesnt have a MainObject Script!");
-                }                
-            }
-
-            if (amountOfMainObjects == 0) 
-            {
-                return null;
-            }
-
-            MainObject[] _mainObjects = new MainObject[amountOfMainObjects];
 
             GameObject gameObject;
 
-            for (short i = 0; i < _mainObjectConfigs.Length; i++)
-            {
-                prefab = _mainObjectConfigs[i].Prefab;
+            short amountOfMainObjects = 0;
+            
 
-                if (prefab.GetComponent<MainObject>() != null)
+            for (short i = 0; i < _mainObjectCreationConfigs.Length; i++) 
+            {
+                amountOfMainObjects += _mainObjectCreationConfigs[i].Count;
+            }
+
+            _mainObjects = new MainObject[amountOfMainObjects];
+
+            for (short i = 0; i < _mainObjectCreationConfigs.Length; i++)
+            {
+                prefab = _mainObjectsInstantiator.GetCorrectPrefab(_mainObjectCreationConfigs[i].MainObjectId);
+
+                if (prefab != null) 
                 {
-                    for (short v = 0; v < _mainObjectConfigs[i].Count; v++)
+                    for (short v = 0; v < _mainObjectCreationConfigs[i].Count; v++)
                     {
-                        gameObject = GameObject.Instantiate(prefab);
+                        gameObject = Instantiate(prefab);
 
                         _mainObjects[v] = gameObject.GetComponent<MainObject>();
-                    }                   
+                    }
                 }                
             }
 

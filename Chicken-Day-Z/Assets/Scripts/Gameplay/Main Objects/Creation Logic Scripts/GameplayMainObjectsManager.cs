@@ -1,43 +1,82 @@
-using System;
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.ScripObjctsConfig;
-using ChickenDayZ.Gameplay.MainObjects.Interfaces;
-
-namespace ChickenDayZ.Gameplay.Logic 
-{
-    public class GameplayMainObjectsManager : MonoBehaviour, IObjectRessetable
+namespace ChickenDayZ.Gameplay.MainObjects.Logic
+{    
+    [RequireComponent(typeof(MainObjectsInstantiator), 
+        typeof(StartingMainObjectsInScene), typeof(MainObjectInstancesHolder))]
+    [RequireComponent(typeof(MainObjectsDefiner))]
+    public class GameplayMainObjectsManager : MonoBehaviour
     {
-        [SerializeField] private MainObjectInstantiationConfig[] _mainObjectsCreationConfigs;        
-        
-        private MainObjectInstancesHolder _mainObjectInstancesHolder;
-
-        public event Action OnMainObjectsInstantiated;
+        private MainObjectsInstantiator mainObjectsInstantiator;
+        private StartingMainObjectsInScene startingMainObjectsInScene;
+        private MainObjectInstancesHolder mainObjectInstancesHolder;
+        private MainObjectsDefiner mainObjectsDefiner;
 
         void Start()
         {
-            SetMainObjectInstancesHolder();
+            bool objectsFound = FindNecessaryScriptsForCreatingMainObjects();
 
-            //Hasta aca los objetos son cascarones sin vida y hay que darsela            
+            if (objectsFound) 
+            {
+                CreatMainObjects();
+            }
+
+            Destroy(this);
         }
 
-        private void SetMainObjectInstancesHolder() 
+        bool FindNecessaryScriptsForCreatingMainObjects() 
         {
-            StartingMainObjectsInScene _startingMainObjectsInScene = new StartingMainObjectsInScene(_mainObjectsCreationConfigs);            
+            mainObjectsInstantiator = FindObjectOfType<MainObjectsInstantiator>();
 
-            _mainObjectInstancesHolder = new MainObjectInstancesHolder(_startingMainObjectsInScene.GetMainObjects());
+            if (mainObjectsInstantiator == null) 
+            {
+                Debug.LogError("Cant find MainObjectsInstantiator in scene!");
 
-            OnMainObjectsInstantiated?.Invoke();
+                return false;
+            }
+            
+            startingMainObjectsInScene = FindObjectOfType<StartingMainObjectsInScene>();
+
+            if (startingMainObjectsInScene == null)
+            {
+                Debug.LogError("Cant find StartingMainObjectsInScene in scene!");
+
+                return false;
+            }
+
+            mainObjectInstancesHolder = FindObjectOfType<MainObjectInstancesHolder>();
+
+            if (mainObjectInstancesHolder == null)
+            {
+                Debug.LogError("Cant find MainObjectInstancesHolder in scene!");
+
+                return false;
+            }
+
+            mainObjectsDefiner = FindObjectOfType<MainObjectsDefiner>();
+
+            if (mainObjectsDefiner == null)
+            {
+                Debug.LogError("Cant find MainObjectsDefiner in scene!");
+
+                return false;
+            }
+
+            return true;
         }
 
-        public void GameplayResset()
+        void CreatMainObjects() 
         {
-            _mainObjectInstancesHolder.GameplayResset();
-        }
+            bool mainObjectsInstantiatorCreated = mainObjectsInstantiator.SetMainObjectsInstantiator();
 
-        public void RoundResset()
-        {
-            _mainObjectInstancesHolder.RoundResset();
-        }
+            if (!mainObjectsInstantiatorCreated) 
+            {
+                return;
+            }
+
+            mainObjectInstancesHolder.SetMainObjects(startingMainObjectsInScene.GetMainObjects());
+
+            mainObjectsDefiner.DefineMainObjects(mainObjectInstancesHolder.MainObjects);
+        }        
     }
 }

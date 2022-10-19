@@ -1,5 +1,3 @@
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
-
 using ChickenDayZ.Gameplay.StatsScripts;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CombatItem 
@@ -26,7 +24,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.CombatItem
             }
         }
 
-        private FirearmObject() : base(CombatItemObjectTypeEnum.FIREARM)
+        private FirearmObject()
         {
             _firearmCharger = new FirearmCharger();
 
@@ -41,11 +39,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CombatItem
         public override void RoundResset()
         {
             
-        }
-
-        public override string GetId()
-        {
-            return MainObjectsIds.FirearmItemId;
         }
     }
 }
