@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2811523339669616407}
   - component: {fileID: 2811523339669616405}
   - component: {fileID: 3484924348982428427}
+  - component: {fileID: 825523558196541053}
   m_Layer: 0
   m_Name: Fat Zombie
   m_TagString: Untagged
@@ -194,3 +195,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756169bb7485de8458aba330bfa1c102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &825523558196541053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4781c560f17f4e44984f59e332429cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: 6

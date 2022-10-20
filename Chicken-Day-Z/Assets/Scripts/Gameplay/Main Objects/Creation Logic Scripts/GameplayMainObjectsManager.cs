@@ -14,58 +14,15 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
 
         void Start()
         {
-            bool objectsFound = FindNecessaryScriptsForCreatingMainObjects();
+            mainObjectsInstantiator = GetComponent<MainObjectsInstantiator>();
+            startingMainObjectsInScene = GetComponent<StartingMainObjectsInScene>();
+            mainObjectInstancesHolder = GetComponent<MainObjectInstancesHolder>();
+            mainObjectsDefiner = GetComponent<MainObjectsDefiner>();
 
-            if (objectsFound) 
-            {
-                CreatMainObjects();
-            }
+            CreateMainObjects();
+        }        
 
-            Destroy(this);
-        }
-
-        bool FindNecessaryScriptsForCreatingMainObjects() 
-        {
-            mainObjectsInstantiator = FindObjectOfType<MainObjectsInstantiator>();
-
-            if (mainObjectsInstantiator == null) 
-            {
-                Debug.LogError("Cant find MainObjectsInstantiator in scene!");
-
-                return false;
-            }
-            
-            startingMainObjectsInScene = FindObjectOfType<StartingMainObjectsInScene>();
-
-            if (startingMainObjectsInScene == null)
-            {
-                Debug.LogError("Cant find StartingMainObjectsInScene in scene!");
-
-                return false;
-            }
-
-            mainObjectInstancesHolder = FindObjectOfType<MainObjectInstancesHolder>();
-
-            if (mainObjectInstancesHolder == null)
-            {
-                Debug.LogError("Cant find MainObjectInstancesHolder in scene!");
-
-                return false;
-            }
-
-            mainObjectsDefiner = FindObjectOfType<MainObjectsDefiner>();
-
-            if (mainObjectsDefiner == null)
-            {
-                Debug.LogError("Cant find MainObjectsDefiner in scene!");
-
-                return false;
-            }
-
-            return true;
-        }
-
-        void CreatMainObjects() 
+        private void CreateMainObjects() 
         {
             bool mainObjectsInstantiatorCreated = mainObjectsInstantiator.SetMainObjectsInstantiator();
 

@@ -10,15 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 2811523339669616401}
   - component: {fileID: 2811523339669616400}
-  - component: {fileID: 3668622008214068018}
-  - component: {fileID: 346120353000518287}
-  - component: {fileID: -4343658154888055254}
+  - component: {fileID: -5679270098415894285}
+  - component: {fileID: -829709356541455412}
+  - component: {fileID: -4676793232761440564}
+  - component: {fileID: 204030324013087467}
   - component: {fileID: 2811523339669616404}
   - component: {fileID: 2811523339669616407}
-  - component: {fileID: 2811523339669616405}
-  - component: {fileID: 3484924348982428427}
+  - component: {fileID: -6282361303463779313}
   m_Layer: 0
-  m_Name: Fat Zombie
+  m_Name: Fast Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 3
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1615129303
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9129530647493026108, guid: 6785c3a66efd3c94abf86ad1c4973c10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d201fef3ab4f7a409ef7e1af71fcd7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3668622008214068018
+--- !u!114 &-5679270098415894285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc8d39d76a6ec746ae12eaba245a6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieMoveVelocity: 0.1
---- !u!114 &346120353000518287
+  _zombieMoveVelocity: 0.5
+--- !u!114 &-829709356541455412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbb04c6eba0b86439adff4fc789558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieInitialDamage: 15
-  _zombieAttackCooldownTime: 1.5
---- !u!114 &-4343658154888055254
+  _zombieInitialDamage: 5
+  _zombieAttackCooldownTime: 0.5
+--- !u!114 &-4676793232761440564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 0
+  _initialHealth: 30
+--- !u!114 &204030324013087467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756169bb7485de8458aba330bfa1c102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &2811523339669616404
 Rigidbody2D:
   serializedVersion: 4
@@ -163,26 +175,10 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: -0.04}
+  m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
-  m_Radius: 0.46
---- !u!58 &2811523339669616405
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811523339669616403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: -0.39}
-  serializedVersion: 2
-  m_Radius: 0.52
---- !u!114 &3484924348982428427
+  m_Radius: 0.45
+--- !u!114 &-6282361303463779313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,6 +187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2811523339669616403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756169bb7485de8458aba330bfa1c102, type: 3}
+  m_Script: {fileID: 11500000, guid: 4781c560f17f4e44984f59e332429cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 5
