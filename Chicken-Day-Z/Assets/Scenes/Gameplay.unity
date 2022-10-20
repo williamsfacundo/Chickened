@@ -259,6 +259,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2566736119316091310, guid: 71ed6985e4b61b6458f32f4e152bf344, type: 3}
   m_PrefabInstance: {fileID: 19069132}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &28460499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8918536373265363627, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+  m_PrefabInstance: {fileID: 1873821135}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b669d2c0d678ebb41a8f0d9c67b6026c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &36218755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15044,6 +15055,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8918536373265363625, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectCreationConfigs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918536373265363625, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectCreationConfigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b7b070076573db04a94bc527557efc42, type: 2}
+    - target: {fileID: 8918536373265363625, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectCreationConfigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91f1a2d064870024c9b042a5dbc5ed94, type: 2}
+    - target: {fileID: 8918536373265363625, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectCreationConfigs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 54c8ab6ead133fc419051a30b864ff2e, type: 2}
+    - target: {fileID: 8918536373265363626, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectsPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918536373265363626, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectsPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2811523339669616403, guid: ee315913efbc5194b90073ca50b10983, type: 3}
+    - target: {fileID: 8918536373265363626, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectsPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2811523339669616403, guid: b4d2030b790e22442974655902985910, type: 3}
+    - target: {fileID: 8918536373265363626, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectsPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2811523339669616403, guid: 1451e077e21def54e9e7610447cc64b6, type: 3}
+    - target: {fileID: 8918536373265363626, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
+      propertyPath: _mainObjectsPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 7480977285595935396, guid: 4367e92eb2c998f429b74dd6fcf26c37, type: 3}
     - target: {fileID: 8918536373265363797, guid: fc5ac0dcfc6d55b44b78347f255bc237, type: 3}
       propertyPath: m_Name
       value: Main Objects Start Config
@@ -17119,12 +17166,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656721, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _chicken
+      value: 
+      objectReference: {fileID: 1400326961}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _eggBase
       value: 
       objectReference: {fileID: 1380183817}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _initialRoundZombiesToKill
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _spawnPoints.Array.data[0]
       value: 
@@ -17141,6 +17196,14 @@ PrefabInstance:
       propertyPath: _spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1560873809}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _gameplayMainObjectsManager
+      value: 
+      objectReference: {fileID: 28460499}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _nextRoundSpawnTimesDecreasePercentage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656727, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: m_RootOrder
       value: 2

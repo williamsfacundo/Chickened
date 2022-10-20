@@ -16,58 +16,74 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
             _mainObjectsInstantiator = GetComponent<MainObjectsInstantiator>();
         }
 
-        public List<MainObject> GetMainObjects()
+        public GameObject[] GetMainObjects()
         {
-            MainObject[] mainObjectsInScene = FindMainObjects();
+            GameObject[] mainObjectsInScene = FindMainObjects();
 
-            MainObject[] mainObjectsCreated = InstanciateMainObjects();
+            GameObject[] mainObjectsCreated = InstanciateMainObjects();
 
             if (mainObjectsInScene == null && mainObjectsCreated == null) 
             {
                 return null;
             }
 
-            List<MainObject> mainObjects = new List<MainObject>();
+            GameObject[] mainObjects = new GameObject[mainObjectsInScene.Length + mainObjectsCreated.Length];
 
-            if (mainObjectsInScene != null) 
+            short index = 0;
+
+            if (mainObjectsInScene != null)
             {
-                for (short i = 0; i < mainObjectsInScene.Length; i++)
+                for (short i = index; i < mainObjectsInScene.Length; i++)
                 {
-                    mainObjects.Add(mainObjectsInScene[i]);
+                    mainObjects[i] = mainObjectsInScene[i];
+
+                    index++;
                 }
             }
 
-            if (mainObjectsCreated != null) 
+            if (mainObjectsCreated != null)
             {
-                for (short i = 0; i < mainObjectsCreated.Length; i++)
+                for (short i = index; i < mainObjectsCreated.Length; i++)
                 {
-                    mainObjects.Add(mainObjectsCreated[i]);
+                    mainObjects[i] = mainObjectsCreated[i];
+
+                    index++;
                 }
-            }            
+            }
 
             return mainObjects;
         }
 
-        private MainObject[] FindMainObjects()
+        private GameObject[] FindMainObjects()
         {
-            MainObject[] _mainObjects = FindObjectsOfType<MainObject>();
+            MainObject[] mainObjects = FindObjectsOfType<MainObject>();
 
-            return _mainObjects;
+            if (mainObjects == null) 
+            {
+                return null;
+            }
+
+            GameObject[] gameObjects = new GameObject[mainObjects.Length];
+
+            for (short i = 0; i < gameObjects.Length; i++) 
+            {
+                gameObjects[i] = mainObjects[i].gameObject;
+            }            
+
+            return gameObjects;
         }
 
-        private MainObject[] InstanciateMainObjects()
+        private GameObject[] InstanciateMainObjects()
         {
 
             if (_mainObjectCreationConfigs == null)
             {
                 return null;
-            }
-
-            MainObject[] _mainObjects;
+            }            
 
             GameObject prefab;
 
-            GameObject gameObject;
+            GameObject[] gameObject;
 
             short amountOfMainObjects = 0;
             
@@ -77,7 +93,9 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
                 amountOfMainObjects += _mainObjectCreationConfigs[i].Count;
             }
 
-            _mainObjects = new MainObject[amountOfMainObjects];
+            gameObject = new GameObject[amountOfMainObjects];
+
+            short index = 0;
 
             for (short i = 0; i < _mainObjectCreationConfigs.Length; i++)
             {
@@ -87,14 +105,14 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
                 {
                     for (short v = 0; v < _mainObjectCreationConfigs[i].Count; v++)
                     {
-                        gameObject = Instantiate(prefab);
+                        gameObject[index] = Instantiate(prefab);
 
-                        _mainObjects[v] = gameObject.GetComponent<MainObject>();
+                        index++;
                     }
                 }                
             }
 
-            return _mainObjects;
+            return gameObject;
         }       
     }
 }

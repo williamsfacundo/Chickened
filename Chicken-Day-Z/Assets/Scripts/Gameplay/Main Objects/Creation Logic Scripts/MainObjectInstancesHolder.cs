@@ -41,6 +41,16 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
             {
                 _mainObjects.Add(mainObjects[i]);
             }
-        }                
+        }
+
+        public void SetMainObjects(GameObject[] mainObjects)
+        {
+            _mainObjects = new List<MainObject>();
+
+            for (short i = 0; i < mainObjects.Length; i++)
+            {
+                _mainObjects.Add(mainObjects[i].GetComponent<MainObject>());
+            }                        
+        }
     }
 }

@@ -12,7 +12,8 @@ namespace ChickenDayZ.Gameplay.MainObjects
     {
         [SerializeField] private MainObjectsIdsEnum _id;
 
-        private List<BehaviourScript> _behaviourScripts;
+        private List<BehaviourScript> _behaviourScripts;        
+
         public MainObjectsIdsEnum Id 
         {
             get 
@@ -24,7 +25,7 @@ namespace ChickenDayZ.Gameplay.MainObjects
         protected MainObject() 
         {
             _behaviourScripts = new List<BehaviourScript>();            
-        }
+        }       
 
         public abstract void GameplayResset();
 
