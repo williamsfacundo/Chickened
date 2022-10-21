@@ -44,9 +44,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private const short MaxPercentagesValue = 100;
 
-        private const short InitialRound = 1;
-
-        private const short NullIndex = -1;
+        private const short InitialRound = 1;        
 
         private short _round;
 

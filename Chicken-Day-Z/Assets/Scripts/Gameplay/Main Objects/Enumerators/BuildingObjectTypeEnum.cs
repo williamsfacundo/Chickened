@@ -1,4 +1,7 @@
-namespace ChickenDayZ.Gameplay.MainObjects.Enumerators
+namespace ChickenDayZ.Gameplay.MainObjects.Enumerators 
 {
-    public enum BuildingObjectTypeEnum { EGG, WALL, TREE }    
+    public enum BuildingObjectTypeEnum 
+    {
+        EGG 
+    }
 }

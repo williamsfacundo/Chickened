@@ -1,4 +1,8 @@
 namespace ChickenDayZ.Gameplay.MainObjects.Enumerators
 {
-    public enum CombatItemObjectTypeEnum { FIREARM, MELEE_WEAPON } 
+    public enum CombatItemObjectTypeEnum 
+    { 
+        FIREARM, 
+        MELEE_WEAPON 
+    } 
 }

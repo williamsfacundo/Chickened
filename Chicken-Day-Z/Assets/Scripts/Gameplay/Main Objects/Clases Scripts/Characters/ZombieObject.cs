@@ -4,10 +4,15 @@ using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {   
-
     public class ZombieObject : CharacterObject
     {
-        [SerializeField] private ZombieObjectTypeEnum _zombieType;
+        [SerializeField] private ZombieObjectTypeEnum _defineZombieType;
+
+        private ZombieObjectTypeEnum _zombieType;
+
+        private static short _zombiesTotalInstances = 0;
+        
+        private static short _zombiesActiveInstances = 0;
 
         public ZombieObjectTypeEnum ZombieType 
         {
@@ -17,23 +22,47 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             }
         }
 
-        public static short ZombiesTotalInstances = 0;
-        
-        public static short ZombiesActiveInstances = 0;
+        public static short ZombiesTotalInstances 
+        {
+            get 
+            {
+                return _zombiesTotalInstances;
+            }
+        }
+
+        public static short ZombiesActiveInstances 
+        {
+            get
+            {
+                return _zombiesActiveInstances;
+            }
+        }
+
+        void Awake()
+        {
+            _zombieType =_defineZombieType;
+
+            _zombiesTotalInstances += 1;
+        }
 
         void OnEnable()
         {
-            ZombiesActiveInstances += 1;
+            _zombiesActiveInstances += 1;
         }
 
         void OnDisable()
         {
-            ZombiesActiveInstances -= 1;
+            _zombiesActiveInstances -= 1;
         }
 
-        private ZombieObject()
+        void OnDestroy()
         {
-            ZombiesTotalInstances += 1;
+            _zombiesTotalInstances -= 1;
+        }
+
+        private ZombieObject() : base(CharacterObjectTypeEnum.ZOMBIE)
+        {
+            
         }
 
         public override void GameplayResset()

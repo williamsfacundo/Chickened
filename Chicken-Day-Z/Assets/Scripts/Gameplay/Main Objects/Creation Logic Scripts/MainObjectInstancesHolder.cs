@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.MainObjects.Interfaces;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Logic
@@ -15,7 +16,21 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
             {
                 return _mainObjects;
             }            
-        }       
+        }
+
+        void OnEnable()
+        {
+            GameplayResetter.OnGameplayReset += GameplayResset;
+
+            GameplayResetter.OnRoundReset += RoundResset;
+        }
+
+        void OnDisable() 
+        {
+            GameplayResetter.OnGameplayReset -= GameplayResset;
+
+            GameplayResetter.OnRoundReset -= RoundResset;
+        }
 
         public void GameplayResset()
         {

@@ -7,27 +7,28 @@ namespace ChickenDayZ.UI
 {
     public class ChickenHealthIndicator : MonoBehaviour
     {
+        [SerializeField] private ObjectHealth _chickenHealth;
+
         [SerializeField] private TMP_Text _showChickenHealthText;
 
-        //private ChickenHealth _chickenHealth;
-
-        void Start()
+        void Awake()
         {
-            //_chickenHealth = FindObjectOfType<ChickenHealth>();
-
-            //_chickenHealth.OnHealthChanged += UpdateChickenHealthText;
-
-            UpdateChickenHealthText();
+            _chickenHealth.OnCurrentHealthChanged += UpdateBaseHealthText;
         }
 
         void OnDestroy()
         {
-            //_chickenHealth.OnHealthChanged -= UpdateChickenHealthText;
+            _chickenHealth.OnCurrentHealthChanged -= UpdateBaseHealthText;
         }
 
-        private void UpdateChickenHealthText() 
+        void Start()
         {
-            //_showChickenHealthText.text = "Chicken Health: " + _chickenHealth.Health;
+            UpdateBaseHealthText();
+        }
+
+        private void UpdateBaseHealthText()
+        {
+            _showChickenHealthText.text = "Base Health: " + _chickenHealth.CurrentHealth;
         }
     }
 }

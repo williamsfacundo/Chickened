@@ -35,10 +35,10 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
         {
             for (short i = 0; i < _mainObjects.Length; i++) 
             {
-                if (_mainObjects[i].Id == id) 
+                /*if (_mainObjects[i].Id == id) 
                 {
                     return _mainObjectsPrefabs[i];
-                }
+                }*/
             }
 
             Debug.Log("Id doesnt match any MainObjects!");
@@ -54,12 +54,12 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
                 {
                     if (i != v) 
                     {
-                        if (_mainObjects[i].Id == _mainObjects[v].Id) 
+                        /*if (_mainObjects[i].Id == _mainObjects[v].Id) 
                         {
                             Debug.LogError("MainObject " + (i + 1) + " and MainObject " + (v + 1) + " have same id!");
 
                             return false;
-                        }
+                        }*/
                     }
                 }
             }

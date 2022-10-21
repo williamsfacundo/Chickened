@@ -5,6 +5,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
 {
     public class MainObjectsDefiner : MonoBehaviour
     {
+        //Pasarle los scriptable objects correspondientes
+
         public void DefineMainObjects(List<MainObject> mainObjects) 
         {
             for (short i = 0; i < mainObjects.Count; i++)
@@ -15,7 +17,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
         
         private void DefineMainObject(MainObject mainObject) 
         {
-            switch (mainObject.Id)
+            /*switch (mainObject.Id)
             {
                 case Enumerators.MainObjectsIdsEnum.EGG:
                     break;
@@ -41,7 +43,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
                     break;
                 default:
                     break;
-            }
+            }*/
         }
     }
 }

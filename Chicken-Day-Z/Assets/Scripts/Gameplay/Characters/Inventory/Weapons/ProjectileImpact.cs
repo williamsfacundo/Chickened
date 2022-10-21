@@ -1,15 +1,13 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Health;
-using ChickenDayZ.Gameplay.Enumerators;
+using ChickenDayZ.Gameplay.MainObjects.Characters;
 
 namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons 
 {
     public class ProjectileImpact : MonoBehaviour
     {
-        private float _damage;
-
-        //private MainObjectTypeEnum _targetType;
+        private float _damage = 10;        
 
         public float Damage 
         {
@@ -17,42 +15,32 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 _damage = value;
             }
-        }
-
-        /*public MainObjectTypeEnum TargetType
-        {
-            set
-            {
-                _targetType = value;
-            }
-        }*/
+        }        
 
         private void Start()
-        {
-            //_targetType = MainObjectTypeEnum.ZOMBIE;
-            _damage = 10f;
+        {            
+            _damage = 10f;  
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            ObjectHealth objectHealth = collision.gameObject.GetComponent<ObjectHealth>();
+            ZombieObject zombieObject = collision.gameObject.GetComponent<ZombieObject>();
 
-            if (objectHealth != null) 
+            if (zombieObject != null) 
             {
-                /*if (objectHealth.GetCharacterType() == _targetType) 
-                {
-                    objectHealth.ReceiveDamage(_damage);                    
-                }
+                ObjectHealth objectHealth = zombieObject.gameObject.GetComponent<ObjectHealth>();
 
-                if (objectHealth.GetCharacterType() != CharacterTypeEnum.CHICKEN) 
-                {
-                    gameObject.SetActive(false);
-                }*/
+                objectHealth.ReceiveDamage(_damage);
+
+                gameObject.SetActive(false);
             }
             else 
             {
-                gameObject.SetActive(false);
-            }            
+                if (collision.gameObject.tag != "Player") 
+                {
+                    gameObject.SetActive(false);
+                }
+            }                      
         }
     }
 }

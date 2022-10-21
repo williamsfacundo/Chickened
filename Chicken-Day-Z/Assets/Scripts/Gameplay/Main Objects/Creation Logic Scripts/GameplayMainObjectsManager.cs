@@ -50,6 +50,10 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
 
             _mainObjectInstancesHolder.SetMainObjects(_startingMainObjectsInScene.GetMainObjects());
 
+            //Antes de definir a los main objects abria que notificar que estos fueron creados
+            //Para que asi los objetos de la UI y capaz otros mas se pongan como observadores de
+            //sus variables y cuando se definan estos sean notificados de los cambios que se van a realizar en las mismas
+
             _mainObjectsDefiner.DefineMainObjects(_mainObjectInstancesHolder.MainObjects);
 
             OnZombiesCreated?.Invoke();

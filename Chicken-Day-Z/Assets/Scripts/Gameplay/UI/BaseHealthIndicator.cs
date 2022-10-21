@@ -1,25 +1,24 @@
 using UnityEngine;
 using TMPro;
+
 using ChickenDayZ.Gameplay.Health;
 
 namespace ChickenDayZ.UI 
 {
     public class BaseHealthIndicator : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _showBaseHealthText;
+        [SerializeField] private ObjectHealth _baseHealth;
 
-        //private EggBaseHealth _baseHealth;
+        [SerializeField] private TMP_Text _showBaseHealthText;        
         
-        /*void Awake()
+        void Awake()
         {
-            _baseHealth = FindObjectOfType<EggBaseHealth>();
-
-            _baseHealth.OnHealthChanged += UpdateBaseHealthText;
-        }*/
+            _baseHealth.OnCurrentHealthChanged += UpdateBaseHealthText;            
+        }
 
         void OnDestroy()
         {
-            //_baseHealth.OnHealthChanged -= UpdateBaseHealthText;
+            _baseHealth.OnCurrentHealthChanged -= UpdateBaseHealthText;
         }
 
         void Start()
@@ -29,7 +28,7 @@ namespace ChickenDayZ.UI
 
         private void UpdateBaseHealthText()
         {
-            //_showBaseHealthText.text = "Base Health: " + _baseHealth.Health;
+            _showBaseHealthText.text = "Base Health: " + _baseHealth.CurrentHealth;
         }
     }
 }
