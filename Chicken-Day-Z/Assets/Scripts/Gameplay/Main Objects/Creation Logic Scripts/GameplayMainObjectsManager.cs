@@ -1,14 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace ChickenDayZ.Gameplay.MainObjects.Logic
+using ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators;
+
+namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 {    
-    [RequireComponent(typeof(MainObjectsInstantiator), 
+    [RequireComponent(typeof(MainObjectsInstantiatorManager), 
         typeof(StartingMainObjectsInScene), typeof(MainObjectInstancesHolder))]
     [RequireComponent(typeof(MainObjectsDefiner))]
     public class GameplayMainObjectsManager : MonoBehaviour
     {
-        private MainObjectsInstantiator _mainObjectsInstantiator;
+        private MainObjectsInstantiatorManager _mainObjectsInstantiator;
 
         private StartingMainObjectsInScene _startingMainObjectsInScene;
 
@@ -28,7 +30,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
 
         void Start()
         {
-            _mainObjectsInstantiator = GetComponent<MainObjectsInstantiator>();
+            _mainObjectsInstantiator = GetComponent<MainObjectsInstantiatorManager>();
 
             _startingMainObjectsInScene = GetComponent<StartingMainObjectsInScene>();
 

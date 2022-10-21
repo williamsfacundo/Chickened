@@ -1,4 +1,9 @@
 namespace ChickenDayZ.Gameplay.MainObjects.Enumerators
 { 
-    public enum ZombieObjectTypeEnum { NORMAL, FAST, FAT }    
+    public enum ZombieObjectTypeEnum 
+    { 
+        NORMAL, 
+        FAST, 
+        FAT 
+    }    
 }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ChickenDayZ.Gameplay.MainObjects.Logic
+namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 {
     public class MainObjectsDefiner : MonoBehaviour
     {

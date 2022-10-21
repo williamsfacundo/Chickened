@@ -9,6 +9,6 @@ namespace ChickenDayZ.Gameplay.ScripObjctsConfig
     {
         [Range(1, 100)] public short Count;
 
-        public MainObjectsIdsEnum MainObjectId;
+        //public MainObjectsIdsEnum MainObjectId;
     }
 }

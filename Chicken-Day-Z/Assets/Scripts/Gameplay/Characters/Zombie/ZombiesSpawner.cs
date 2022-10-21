@@ -5,7 +5,7 @@ using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Interfaces;
 
-using ChickenDayZ.Gameplay.MainObjects.Logic;
+using ChickenDayZ.Gameplay.MainObjects.CreationLogic;
 using ChickenDayZ.Gameplay.MainObjects.Characters;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 using ChickenDayZ.Gameplay.Health;

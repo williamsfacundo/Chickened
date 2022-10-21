@@ -1,19 +1,19 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 using ChickenDayZ.Gameplay.ScripObjctsConfig;
+using ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators;
 
-namespace ChickenDayZ.Gameplay.MainObjects.Logic
+namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 {    
     public class StartingMainObjectsInScene : MonoBehaviour
     {        
         [SerializeField] private MainObjectInstantiationConfig[] _mainObjectCreationConfigs;
 
-        private MainObjectsInstantiator _mainObjectsInstantiator;       
+        private MainObjectsInstantiatorManager _mainObjectsInstantiator;       
 
         void Awake()
         {
-            _mainObjectsInstantiator = GetComponent<MainObjectsInstantiator>();
+            _mainObjectsInstantiator = GetComponent<MainObjectsInstantiatorManager>();
         }
 
         public GameObject[] GetMainObjects()
@@ -81,7 +81,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
                 return null;
             }            
 
-            GameObject prefab;
+            GameObject prefab = null;
 
             GameObject[] gameObject;
 
@@ -99,7 +99,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Logic
 
             for (short i = 0; i < _mainObjectCreationConfigs.Length; i++)
             {
-                prefab = _mainObjectsInstantiator.GetCorrectPrefab(_mainObjectCreationConfigs[i].MainObjectId);
+                //prefab = _mainObjectsInstantiator.GetCorrectPrefab(_mainObjectCreationConfigs[i].MainObjectId);
 
                 if (prefab != null) 
                 {

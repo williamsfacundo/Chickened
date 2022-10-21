@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.MainObjects.Interfaces;
 
-namespace ChickenDayZ.Gameplay.MainObjects.Logic
+namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 {   
     public class MainObjectInstancesHolder : MonoBehaviour, IObjectRessetable
     {
