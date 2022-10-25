@@ -8,7 +8,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
         typeof(BuildingObjectsInstantiator), typeof(MeleeWeaponObjectsInstantiator))]
     [RequireComponent(typeof(HealthPowerUpObjectsInstantiator), typeof(MeleeItemObjectsInstantiator),
         typeof(ChickenObjectsInstantiator))]
-    [RequireComponent(typeof(ZombieObjectsInstantiator), typeof(ProjectileObjectsInstantiator))]
+    [RequireComponent(typeof(ZombieObjectsInstantiator), typeof(ProjectileObjectsInstantiator), 
+        typeof(GunPowerUpObjectsInstantiator))]
     public class MainObjectsInstantiatorManager : MonoBehaviour
     {
         private FirearmObjectsInstantiator _firearmObjectsInstantiator;
@@ -27,6 +28,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
 
         private ProjectileObjectsInstantiator _projectileObjectsInstantiator;
 
+        private GunPowerUpObjectsInstantiator _gunPowerUpObjectsInstantiator;
+
         void Awake()
         {
             _firearmObjectsInstantiator = GetComponent<FirearmObjectsInstantiator>();
@@ -42,6 +45,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             _zombieObjectsInstantiator = GetComponent<ZombieObjectsInstantiator>();
 
             _projectileObjectsInstantiator = GetComponent<ProjectileObjectsInstantiator>();
+
+            _gunPowerUpObjectsInstantiator = GetComponent<GunPowerUpObjectsInstantiator>();
         }
 
         public bool SetMainObjectsInstantiator() 
@@ -64,9 +69,14 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             return _meleeWeaponObjectsInstantiator.InstantiateMeleeWeaponObject(meleeWeaponItemObjectType);
         }
 
-        public GameObject InstantiatePowerUpObject(HealthPowerUpObjectTypeEnum healthPowerUpObjectType)
+        public GameObject InstantiateHealthPowerUpObject(HealthPowerUpObjectTypeEnum healthPowerUpObjectType)
         {
             return _healthPowerUpObjectsInstantiator.InstantiateHealthPowerUpObject(healthPowerUpObjectType);
+        }
+
+        public GameObject InstantiateGunPowerUpObject()
+        {
+            return _gunPowerUpObjectsInstantiator.InstantiateGunPowerUpObject();
         }
 
         public GameObject InstantiateProjectileObject(ProjectileObjectTypeEnum projectileObjectType)
