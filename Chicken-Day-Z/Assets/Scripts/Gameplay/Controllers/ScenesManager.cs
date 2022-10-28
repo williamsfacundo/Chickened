@@ -19,6 +19,8 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         [SerializeField] private Canvas _gameplayCanvas;
 
+        [SerializeField] private Canvas _mapCanvas;
+
         [SerializeField] private KeyCode _pauseKey;
 
         void Awake()
@@ -41,11 +43,18 @@ namespace ChickenDayZ.Gameplay.Controllers
             PauseGame();
         }
 
-        public void MainMenuToGameplay() 
+        public void MainMenuToMap() 
         {
             ChangeCanvasState(_mainMenuCanvas, false);
-            ChangeCanvasState(_gameplayCanvas, true);
+            ChangeCanvasState(_mapCanvas, true);
 
+        }
+
+        public void MapToGameplay()
+        {
+            ChangeCanvasState(_mapCanvas, false);
+            ChangeCanvasState(_gameplayCanvas, true);            
+            
             SetTimeScale(1f);
         }
 
@@ -163,6 +172,7 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_settingsCanvas, false);
             ChangeCanvasState(_tutorialCanvas, false);
             ChangeCanvasState(_gameplayCanvas, false);
+            ChangeCanvasState(_mapCanvas, false);
 
             Screen.fullScreen = true;
 

@@ -15,7 +15,7 @@ namespace ChickenDayZ.GameplayItems
         {
             if (Input.GetKeyDown(_exitKey))
             {
-                Application.Quit();
+                //Application.Quit();
             }
         }
     }
