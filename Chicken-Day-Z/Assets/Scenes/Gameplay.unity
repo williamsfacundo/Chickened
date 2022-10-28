@@ -282,6 +282,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1654362150216748573, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: _gameplayCanvas
+      value: 
+      objectReference: {fileID: 1281163951}
     - target: {fileID: 1654362150216748574, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -349,6 +353,10 @@ PrefabInstance:
     - target: {fileID: 4920566460960758450, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MapToGameplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333442731137739536, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_Name
+      value: Gameplay Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6837509730054154232, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -448,6 +456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+--- !u!223 &1281163951 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5333442731137739549, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+  m_PrefabInstance: {fileID: 1281163950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1417109156
 PrefabInstance:
   m_ObjectHideFlags: 0
