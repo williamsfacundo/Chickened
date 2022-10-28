@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053335087397070093, guid: ae516008f8e78584c9a4ac7672891f15, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4053335087756496264, guid: ae516008f8e78584c9a4ac7672891f15, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2457,6 +2457,10 @@ PrefabInstance:
     - target: {fileID: 7435675824422837651, guid: 87f5246ca65a4074b9bc6fd57bcd113f, type: 3}
       propertyPath: m_Name
       value: Gameplay Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435675824422837651, guid: 87f5246ca65a4074b9bc6fd57bcd113f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7435675824422837663, guid: 87f5246ca65a4074b9bc6fd57bcd113f, type: 3}
       propertyPath: m_Pivot.x
