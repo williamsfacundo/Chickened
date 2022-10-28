@@ -1,13 +1,13 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.ScripObjctsConfig;
-using ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators;
+//using ChickenDayZ.Gameplay.ScripObjctsConfig;
+//using ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 {    
     public class StartingMainObjectsInScene : MonoBehaviour
     {        
-        [SerializeField] private MainObjectInstantiationConfig[] _mainObjectCreationConfigs;
+        /*[SerializeField] private MainObjectInstantiationConfig[] _mainObjectCreationConfigs;
 
         private MainObjectsInstantiatorManager _mainObjectsInstantiator;       
 
@@ -85,8 +85,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 
             GameObject[] gameObject;
 
-            short amountOfMainObjects = 0;
-            
+            short amountOfMainObjects = 0;            
 
             for (short i = 0; i < _mainObjectCreationConfigs.Length; i++) 
             {
@@ -113,6 +112,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
             }
 
             return gameObject;
-        }       
+        }*/       
     }
 }

@@ -14,7 +14,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
     public class ZombiesSpawner : MonoBehaviour, IResettable
     {
-        [SerializeField] private GameplayMainObjectsManager _gameplayMainObjectsManager;
+        //[SerializeField] private GameplayMainObjectsManager _gameplayMainObjectsManager;
 
         [SerializeField] private GameObject[] _spawnPoints;
 
@@ -60,12 +60,12 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Awake()
         {
-            if (_gameplayMainObjectsManager == null)
+            /*if (_gameplayMainObjectsManager == null)
             {
                 Debug.LogError("GameplayMainObjectsManager cant be null!");
 
                 Destroy(this);
-            }
+            }*/
 
             if (_eggBase == null)
             {
@@ -86,14 +86,14 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             GameplayResetter.OnGameplayReset += ResetObject;
 
-            _gameplayMainObjectsManager.OnZombiesCreated += SetZombieObjects;
+            //_gameplayMainObjectsManager.OnZombiesCreated += SetZombieObjects;
         }
 
         void OnDisable()
         {
             GameplayResetter.OnGameplayReset += ResetObject;
 
-            _gameplayMainObjectsManager.OnZombiesCreated -= SetZombieObjects;
+            //_gameplayMainObjectsManager.OnZombiesCreated -= SetZombieObjects;
         }
 
         private void Start()
@@ -159,13 +159,13 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             _zombieObjects = new GameObject[ZombieObject.ZombiesActiveInstances];
 
-            for (short i = 0; i < _gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects.Count; i++)
-            {
-                if (_gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects[i] is ZombieObject)
-                {
-                    _zombieObjects[i] = _gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects[i].gameObject;
-                }
-            }
+            //for (short i = 0; i < _gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects.Count; i++)
+            //{
+            //    if (_gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects[i] is ZombieObject)
+            //    {
+            //        _zombieObjects[i] = _gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects[i].gameObject;
+            //    }
+            //}
 
             for (short i = 0; i < _zombieObjects.Length; i++)
             {

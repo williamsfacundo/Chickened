@@ -1,13 +1,13 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.DamageItem;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+//using ChickenDayZ.Gameplay.MainObjects.DamageItem;
+//using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
 {
     public class MeleeItemObjectsInstantiator : MonoBehaviour
     {       
-        [SerializeField] private GameObject[] _meleeItemObjectsPrefabs;
+        /*[SerializeField] private GameObject[] _meleeItemObjectsPrefabs;
 
         public bool SetMeleeItemObjectsInstantiator()
         {
@@ -72,6 +72,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             }
 
             return allPrefabsHaveMeleeItemObjects;
-        }
+        }*/
     }
 }

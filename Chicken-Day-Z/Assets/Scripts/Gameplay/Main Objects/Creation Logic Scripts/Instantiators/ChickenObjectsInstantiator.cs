@@ -1,13 +1,13 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.Characters;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+//using ChickenDayZ.Gameplay.MainObjects.Characters;
+//using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
 {
     public class ChickenObjectsInstantiator : MonoBehaviour
     {       
-        [SerializeField] private GameObject[] _chickenObjectsPrefabs;
+        /*[SerializeField] private GameObject[] _chickenObjectsPrefabs;
 
         public bool SetChickenObjectsInstantiator()
         {
@@ -72,6 +72,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             }
 
             return allPrefabsHaveChickenObject;
-        }
+        }*/
     }
 }

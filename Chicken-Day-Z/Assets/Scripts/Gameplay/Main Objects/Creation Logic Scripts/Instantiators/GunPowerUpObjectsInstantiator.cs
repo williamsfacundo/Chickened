@@ -1,12 +1,12 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.PowerUp;
+//using ChickenDayZ.Gameplay.MainObjects.PowerUp;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators 
 {
     public class GunPowerUpObjectsInstantiator : MonoBehaviour
     {
-        [SerializeField] private GameObject _gunPowerUpPrefabs;
+        /*[SerializeField] private GameObject _gunPowerUpPrefabs;
 
         public bool SetGunPowerUpObjectObjectsInstantiator()
         {
@@ -44,6 +44,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             }
 
             return true;
-        }
+        }*/
     }
 }

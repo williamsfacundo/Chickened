@@ -1,18 +1,18 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+//using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
 {
-    [RequireComponent(typeof(FirearmObjectsInstantiator), 
-        typeof(BuildingObjectsInstantiator), typeof(MeleeWeaponObjectsInstantiator))]
-    [RequireComponent(typeof(HealthPowerUpObjectsInstantiator), typeof(MeleeItemObjectsInstantiator),
-        typeof(ChickenObjectsInstantiator))]
-    [RequireComponent(typeof(ZombieObjectsInstantiator), typeof(ProjectileObjectsInstantiator), 
-        typeof(GunPowerUpObjectsInstantiator))]
+    //[RequireComponent(typeof(FirearmObjectsInstantiator), 
+    //    typeof(BuildingObjectsInstantiator), typeof(MeleeWeaponObjectsInstantiator))]
+    //[RequireComponent(typeof(HealthPowerUpObjectsInstantiator), typeof(MeleeItemObjectsInstantiator),
+    //    typeof(ChickenObjectsInstantiator))]
+    //[RequireComponent(typeof(ZombieObjectsInstantiator), typeof(ProjectileObjectsInstantiator), 
+    //    typeof(GunPowerUpObjectsInstantiator))]
     public class MainObjectsInstantiatorManager : MonoBehaviour
     {
-        private FirearmObjectsInstantiator _firearmObjectsInstantiator;
+        /*private FirearmObjectsInstantiator _firearmObjectsInstantiator;
 
         private BuildingObjectsInstantiator _buildingObjectsInstantiator;
 
@@ -97,6 +97,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
         public GameObject InstantiateMeleeItemObject(MeleeItemObjectTypeEnum meleeItemObjectType)
         {
             return _meleeItemObjectsInstantiator.InstantiateMeleeItemObject(meleeItemObjectType);
-        }
+        }*/
     }       
 }

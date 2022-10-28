@@ -1,13 +1,13 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.PowerUp;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+//using ChickenDayZ.Gameplay.MainObjects.PowerUp;
+//using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators 
 {
     public class HealthPowerUpObjectsInstantiator : MonoBehaviour
     {
-        [SerializeField] private GameObject[] _healthPowerUpPrefabs;
+        /*[SerializeField] private GameObject[] _healthPowerUpPrefabs;
 
         public bool SetHealthPowerUpObjectsInstantiator()
         {
@@ -72,6 +72,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             }
 
             return allPrefabsHaveHealthPowerUpObject;
-        }
+        }*/
     }
 }

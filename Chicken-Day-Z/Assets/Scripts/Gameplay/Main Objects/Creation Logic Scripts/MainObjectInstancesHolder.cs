@@ -1,14 +1,14 @@
 using UnityEngine;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
-using ChickenDayZ.Gameplay.Controllers;
-using ChickenDayZ.Gameplay.MainObjects.Interfaces;
+//using ChickenDayZ.Gameplay.Controllers;
+//using ChickenDayZ.Gameplay.MainObjects.Interfaces;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
 {   
-    public class MainObjectInstancesHolder : MonoBehaviour, IObjectRessetable
+    public class MainObjectInstancesHolder : MonoBehaviour//, IObjectRessetable
     {
-        private List<MainObject> _mainObjects;
+        /*private List<MainObject> _mainObjects;
 
         public List<MainObject> MainObjects 
         {
@@ -66,6 +66,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
             {
                 _mainObjects.Add(mainObjects[i].GetComponent<MainObject>());
             }                        
-        }
+        }*/
     }
 }

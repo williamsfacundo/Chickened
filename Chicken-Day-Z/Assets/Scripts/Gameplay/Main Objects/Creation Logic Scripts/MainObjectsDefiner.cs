@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using UnityEngine;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
@@ -7,7 +7,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
     {
         //Pasarle los scriptable objects correspondientes
 
-        public void DefineMainObjects(List<MainObject> mainObjects) 
+        /*public void DefineMainObjects(List<MainObject> mainObjects) 
         {
             for (short i = 0; i < mainObjects.Count; i++)
             {
@@ -18,6 +18,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic
         private void DefineMainObject(MainObject mainObject) 
         {
             
-        }
+        }*/
     }
 }

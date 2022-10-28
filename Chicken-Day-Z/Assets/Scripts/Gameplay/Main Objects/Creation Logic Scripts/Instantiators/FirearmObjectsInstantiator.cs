@@ -1,13 +1,13 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.CombatItem;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+//using ChickenDayZ.Gameplay.MainObjects.CombatItem;
+//using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators 
 {
     public class FirearmObjectsInstantiator : MonoBehaviour
     {
-        [SerializeField] private GameObject[] _firearmObjectsPrefabs;        
+        /*[SerializeField] private GameObject[] _firearmObjectsPrefabs;        
 
         public bool SetFirearmObjectsInstantiator()
         {
@@ -72,6 +72,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.CreationLogic.Instantiators
             }
 
             return allPrefabsHaveMainObjects;
-        }
+        }*/
     }
 }
