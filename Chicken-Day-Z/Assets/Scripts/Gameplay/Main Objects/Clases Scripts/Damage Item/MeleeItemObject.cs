@@ -21,21 +21,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.DamageItem
         void Awake()
         {
             _meleeItemObjectType = _defineMeleeItemObjectType;
-        }
-
-        private MeleeItemObject()
-        {
-
-        } 
-
-        public override void GameplayResset()
-        {
-
-        }
-
-        public override void RoundResset()
-        {
-
-        }        
+        }      
     }
 }

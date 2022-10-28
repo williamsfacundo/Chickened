@@ -7,16 +7,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.Buildings
         private EggObject() : base(BuildingObjectTypeEnum.EGG)
         {
 
-        }
-
-        public override void GameplayResset()
-        {
-            
-        }
-
-        public override void RoundResset()
-        {
-            
-        }        
+        }       
     }
 }

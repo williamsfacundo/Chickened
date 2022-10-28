@@ -6,7 +6,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.DamageItem
     {
         protected DamageItemObject() : base(MainObjectTypeEnum.DAMAGE_ITEM)
         {
-                                                                                                            
+                                                                                                                        
         }
     }
 }

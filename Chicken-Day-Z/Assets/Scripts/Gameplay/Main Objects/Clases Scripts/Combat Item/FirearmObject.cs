@@ -52,15 +52,5 @@ namespace ChickenDayZ.Gameplay.MainObjects.CombatItem
         {
                                                 
         }
-
-        public override void GameplayResset()
-        {
-            _firearmCharger.GameplayResset();
-        }
-
-        public override void RoundResset()
-        {
-            
-        }
     }
 }

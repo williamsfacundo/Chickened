@@ -22,20 +22,5 @@ namespace ChickenDayZ.Gameplay.MainObjects.DamageItem
         {
             _projectileObjectType = _defineProjectileObjectType;            
         }
-
-        private ProjectileObject()
-        {
-            
-        }
-
-        public override void GameplayResset()
-        {
-
-        }
-
-        public override void RoundResset()
-        {
-
-        }
     }
 }

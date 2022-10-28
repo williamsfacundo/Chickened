@@ -27,15 +27,5 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         {
 
         }
-
-        public override void GameplayResset()
-        {
-
-        }
-
-        public override void RoundResset()
-        {
-
-        }
     }
 }

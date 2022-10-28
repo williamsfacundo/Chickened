@@ -64,15 +64,5 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         {
             
         }
-
-        public override void GameplayResset()
-        {
-
-        }
-
-        public override void RoundResset()
-        {
-
-        }
     }
 }
