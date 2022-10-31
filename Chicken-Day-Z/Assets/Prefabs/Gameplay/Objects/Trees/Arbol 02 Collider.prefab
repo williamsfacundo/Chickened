@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6670995272688434838}
   - component: {fileID: 6670995272688434839}
-  - component: {fileID: 6368367235920787802}
+  - component: {fileID: 7941103540901206257}
   m_Layer: 0
   m_Name: Arbol 02 Collider
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &6368367235920787802
+--- !u!68 &7941103540901206257
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,19 +96,24 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15, y: -2.7}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.84, y: 0}
-  - {x: 0, y: 0}
-  - {x: -0.12, y: -0.17}
-  - {x: 0.12, y: -0.42}
-  - {x: 0.24, y: -0.42}
-  - {x: 0.36, y: -0.3}
-  - {x: 0.48, y: -0.42}
-  - {x: 0.6, y: -0.42}
-  - {x: 0.84, y: -0.12}
-  - {x: 0.84, y: 0}
+  - {x: -0.84, y: -4.6}
+  - {x: 0.89, y: -4.6}
+  - {x: 1.08, y: -4.88}
+  - {x: 0.95, y: -5}
+  - {x: 0.66, y: -5}
+  - {x: 0.72, y: -5.43}
+  - {x: 0.48, y: -5.43}
+  - {x: 0.24, y: -5.07}
+  - {x: -0.18, y: -5.07}
+  - {x: -0.43, y: -5.43}
+  - {x: -0.67, y: -5.43}
+  - {x: -0.53, y: -4.95}
+  - {x: -1, y: -4.95}
+  - {x: -1, y: -4.7}
+  - {x: -0.84, y: -4.6}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
