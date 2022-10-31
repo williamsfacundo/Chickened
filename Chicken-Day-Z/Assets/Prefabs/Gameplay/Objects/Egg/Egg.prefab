@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1532401960205222302}
   - component: {fileID: 1532401960205222303}
-  - component: {fileID: 1657627040547774108}
-  - component: {fileID: 5581154794712062799}
   - component: {fileID: 2614486539697112441}
+  - component: {fileID: -7185216608769660769}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -439346585
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eddb335078cd93649b67bac04d9d417e, type: 3}
+  m_Sprite: {fileID: 4532994380988841453, guid: a2688f02507d244429030dbc78b8a529, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,38 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1657627040547774108
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532401960205222300}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.19}
-  serializedVersion: 2
-  m_Radius: 0.37
---- !u!58 &5581154794712062799
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532401960205222300}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0.23}
-  serializedVersion: 2
-  m_Radius: 0.19
 --- !u!114 &2614486539697112441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +96,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf6b3c6ddf8ff54db6a90971e7f758a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!68 &-7185216608769660769
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532401960205222300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.12, y: 0.9}
+  - {x: 0.18, y: 0.9}
+  - {x: 0.6, y: 0.24}
+  - {x: 0.6, y: -0.18}
+  - {x: 0.78, y: -0.18}
+  - {x: 0.78, y: -0.49}
+  - {x: 0.72, y: -0.72}
+  - {x: 0.54, y: -0.9}
+  - {x: -0.48, y: -0.9}
+  - {x: -0.66, y: -0.72}
+  - {x: -0.72, y: -0.49}
+  - {x: -0.72, y: -0.18}
+  - {x: -0.54, y: -0.18}
+  - {x: -0.54, y: 0.24}
+  - {x: -0.12, y: 0.9}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
