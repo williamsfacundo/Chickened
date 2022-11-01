@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Pistol" ID="{9C73D185-FECD-4596-B2FD-B7F1ECCDD27A}" ShortID="406378508">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Pistol 9mm Glock 1-001" ID="{40E77FE8-E01E-4ED6-9FE2-9F859D7EBE88}" ShortID="788261692">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pistol 9mm Glock 1-001" ID="{70B53BBC-8190-4A10-8D92-CA2D337D92A9}">
+									<Language>SFX</Language>
+									<AudioFile>Pistol 9mm Glock 1-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="344487911"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pistol 9mm Glock 1-001" ID="{70B53BBC-8190-4A10-8D92-CA2D337D92A9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pistol 9mm Glock 1-002" ID="{BDEBEF40-EF5E-4BC4-A83B-F8D73C86D8EB}" ShortID="205370164">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pistol 9mm Glock 1-002" ID="{4C60633B-E17B-4900-B6A7-704366FB206B}">
+									<Language>SFX</Language>
+									<AudioFile>Pistol 9mm Glock 1-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="196082848"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pistol 9mm Glock 1-002" ID="{4C60633B-E17B-4900-B6A7-704366FB206B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pistol 9mm Glock 1-003" ID="{50CF3E7A-7E82-4A56-8CDC-09B55A770F52}" ShortID="50436881">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pistol 9mm Glock 1-003" ID="{738FCB31-96EC-4542-96F0-E65F8987A487}">
+									<Language>SFX</Language>
+									<AudioFile>Pistol 9mm Glock 1-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1029540244"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pistol 9mm Glock 1-003" ID="{738FCB31-96EC-4542-96F0-E65F8987A487}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pistol 9mm Glock 1-004" ID="{0AA4D46B-EFEC-4852-A21F-3370469A0FBF}" ShortID="1035565630">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pistol 9mm Glock 1-004" ID="{8716B4EC-77D7-45FA-B532-8A607E597688}">
+									<Language>SFX</Language>
+									<AudioFile>Pistol 9mm Glock 1-004.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="244982631"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pistol 9mm Glock 1-004" ID="{8716B4EC-77D7-45FA-B532-8A607E597688}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pistol 9mm Glock 1-005" ID="{147D55CD-FBB5-4927-8810-23037706C362}" ShortID="236593589">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pistol 9mm Glock 1-005" ID="{62ACDCB7-073C-43B2-A69B-21AF182EBC31}">
+									<Language>SFX</Language>
+									<AudioFile>Pistol 9mm Glock 1-005.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1061936875"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pistol 9mm Glock 1-005" ID="{62ACDCB7-073C-43B2-A69B-21AF182EBC31}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<Sound Name="Pistol Reload 1-001" ID="{4FFD0EC9-CF6F-4533-BF5B-FC5D164F9245}" ShortID="676173277">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Pistol Reload 1-001" ID="{E336ECD0-5445-4921-98EA-9F1C3F161210}">
+							<Language>SFX</Language>
+							<AudioFile>Pistol Reload 1-001.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="118072745"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Pistol Reload 1-001" ID="{E336ECD0-5445-4921-98EA-9F1C3F161210}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Zombies Die" ID="{D8B1185D-75A5-432D-BB4D-BC3F3CE78BA2}" ShortID="226056492">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Zombie Die 01" ID="{097BEE52-B866-4E35-8561-0C06A699A716}" ShortID="56848541">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Die 01" ID="{AD6F757C-10A6-43BF-8EF1-D1BB80DB2C72}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Die 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="12311827"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Die 01" ID="{AD6F757C-10A6-43BF-8EF1-D1BB80DB2C72}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Die 02" ID="{143350AA-D2A6-448F-82E1-D2A1F0C0396A}" ShortID="112583271">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Die 02" ID="{35C3264C-F6CD-4C11-AA52-AF828CEB47B6}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Die 02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="708788791"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Die 02" ID="{35C3264C-F6CD-4C11-AA52-AF828CEB47B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Die 04" ID="{B28F42C2-D0FF-42E6-B3C1-61DCD785CFAC}" ShortID="382328532">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Die 04" ID="{1D34F8E3-3235-49F8-ADC8-193C1871EFF6}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Die 04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="159850908"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Die 04" ID="{1D34F8E3-3235-49F8-ADC8-193C1871EFF6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Die 05" ID="{2B936922-01C9-4431-993D-C28CB4FE1972}" ShortID="451505087">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Die 05" ID="{8294FED4-A778-4C1B-85D7-AE04151244B2}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Die 05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="163918667"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Die 05" ID="{8294FED4-A778-4C1B-85D7-AE04151244B2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Die 06" ID="{00777CE6-BD7B-4FD8-957F-8EDFD7325A90}" ShortID="551865544">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Die 06" ID="{6AC5CFA4-6E70-49B8-AA28-FB88D71C5006}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Die 06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="395896696"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Die 06" ID="{6AC5CFA4-6E70-49B8-AA28-FB88D71C5006}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Die 09" ID="{B525885A-FF05-4A68-A233-942B3D2C33C3}" ShortID="783838020">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Die 09" ID="{32F2C34E-549E-443D-A1F4-F12F44CFBBE5}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Die 09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="598141099"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Die 09" ID="{32F2C34E-549E-443D-A1F4-F12F44CFBBE5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Zombies Impact" ID="{A1EFC709-BB54-4741-B388-28AC890102DC}" ShortID="48997323">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Zombie Impact 01" ID="{180976AE-18AC-4606-8466-07E2375EEFF5}" ShortID="373078979">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 01" ID="{4D02541C-05B2-4F1D-BA54-4DADB321C057}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="355425558"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 01" ID="{4D02541C-05B2-4F1D-BA54-4DADB321C057}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 02" ID="{E58CAABF-A3B5-462D-A731-8D77993BC611}" ShortID="149447573">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 02" ID="{3F04AD21-8CAB-493B-9E25-4BFCD6D3037E}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="656209100"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 02" ID="{3F04AD21-8CAB-493B-9E25-4BFCD6D3037E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 03" ID="{CDB3D8F9-BDBB-4F43-94DE-5E368B249874}" ShortID="972670322">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 03" ID="{21EA26E4-F88F-4A2C-906C-CEC8C79A1664}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="567421063"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 03" ID="{21EA26E4-F88F-4A2C-906C-CEC8C79A1664}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 04" ID="{751B4DB4-C2D5-4580-8A85-343B2D2E9D1C}" ShortID="378675833">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 04" ID="{E2155944-43C3-4340-9621-A76459FB8372}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1046129648"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 04" ID="{E2155944-43C3-4340-9621-A76459FB8372}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 05" ID="{EEE11DC1-C21E-4C29-9052-C8205DDF989D}" ShortID="1016301821">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 05" ID="{CF57AB33-9395-4F13-A59C-3FDFE2FE00A4}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="32735913"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 05" ID="{CF57AB33-9395-4F13-A59C-3FDFE2FE00A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 06" ID="{0342A2D1-A6AF-4CF3-A447-770EF9C767F9}" ShortID="1031178555">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 06" ID="{048693B9-6F29-44BC-BEF9-660D90A9481D}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="904365897"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 06" ID="{048693B9-6F29-44BC-BEF9-660D90A9481D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 07" ID="{299B2B20-8028-476F-AD95-BCBAB1B8B076}" ShortID="14074565">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 07" ID="{04A83F37-986E-437F-9BA8-250A07D16FDA}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="768041405"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 07" ID="{04A83F37-986E-437F-9BA8-250A07D16FDA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Zombie Impact 08" ID="{2ADBB05F-686D-4802-8E83-6AB32434BA12}" ShortID="224620157">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Zombie Impact 08" ID="{E55ACA80-F17A-48E0-96D2-B8307ABB152B}">
+									<Language>SFX</Language>
+									<AudioFile>Zombie Impact 08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="330718458"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Zombie Impact 08" ID="{E55ACA80-F17A-48E0-96D2-B8307ABB152B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

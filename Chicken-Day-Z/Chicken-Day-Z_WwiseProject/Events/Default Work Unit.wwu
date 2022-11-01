@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3D68FC5D-8BA9-4EFE-AD6D-09B381DC022D}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{3D68FC5D-8BA9-4EFE-AD6D-09B381DC022D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_mainMenuBGM" ID="{D89AAC22-D475-4215-B991-C76EEBD7D894}">
+					<ChildrenList>
+						<Action Name="" ID="{04DC6C94-695D-4CB2-B51D-A5C85E347E2C}" ShortID="102229858">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mainMenuBGM" ID="{2D59302B-E788-47B9-A8F9-AC0502FC7F22}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_mainMenuBGM" ID="{ABC4811C-3105-4A9C-BDE2-A243E12300DC}">
+					<ChildrenList>
+						<Action Name="" ID="{24FD5108-4BB6-4C2B-A85E-A4BF7C057FA6}" ShortID="660229928">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mainMenuBGM" ID="{2D59302B-E788-47B9-A8F9-AC0502FC7F22}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Pistol_LV1" ID="{C0CE7614-B719-483C-8481-0EE1F22855BD}">
+					<ChildrenList>
+						<Action Name="" ID="{1D771B1B-0D3F-4369-A6DC-A6082D26585A}" ShortID="904276377">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pistol" ID="{9C73D185-FECD-4596-B2FD-B7F1ECCDD27A}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Pistol_Reload_LV1" ID="{1C1D5663-24F4-4074-8ABB-8DB865296935}">
+					<ChildrenList>
+						<Action Name="" ID="{588752BE-1672-4482-A98B-4757355AFF47}" ShortID="210588761">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pistol Reload 1-001" ID="{4FFD0EC9-CF6F-4533-BF5B-FC5D164F9245}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Zombies_Die" ID="{842D25EE-B8BD-473D-9BE0-545A4623E257}">
+					<ChildrenList>
+						<Action Name="" ID="{E2487886-79F4-4C2F-92F5-7337CDAAE599}" ShortID="1005092991">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Zombies Die" ID="{D8B1185D-75A5-432D-BB4D-BC3F3CE78BA2}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Zombies_Impact" ID="{F41DD9E1-4548-45AD-AB11-A31541819E2A}">
+					<ChildrenList>
+						<Action Name="" ID="{B09502DC-4DF2-46D3-A1D3-52A7C6220CFD}" ShortID="681316363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Zombies Impact" ID="{A1EFC709-BB54-4741-B388-28AC890102DC}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
