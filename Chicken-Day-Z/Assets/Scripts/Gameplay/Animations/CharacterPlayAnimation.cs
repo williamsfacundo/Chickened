@@ -1,11 +1,14 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Characters.Movement;
-using ChickenDayZ.Gameplay.Characters.Chicken.Movement;
+using ChickenDayZ.Gameplay.Interfaces;
+using ChickenDayZ.Gameplay.Characters.LookingDirection;
+using ChickenDayZ.Gameplay.Enumerators;
 
-namespace ChickenDayZ.Animations 
+namespace ChickenDayZ.Animations
 {
-    [RequireComponent(typeof(CharacterAnimationsManager), typeof(CharacterLookDirectionCalculator))]
+    [RequireComponent(typeof(CharacterAnimationsManager), 
+        typeof(ChickenLookDirectionCalculator), typeof(CharacterMovementController))]
     public class CharacterPlayAnimation : MonoBehaviour
     {
         [SerializeField] private string[] _idleAnimationsNames;
@@ -18,17 +21,20 @@ namespace ChickenDayZ.Animations
 
         private CharacterMovementController _characterMovementController;
 
-        private ChickenMovement _chickenMovement;
+        private IMoves _characterMovement;
 
         void Awake()
         {
             _characterAnimationsManager = GetComponent<CharacterAnimationsManager>();
 
-            _characterLookDirectionCalculator = GetComponent<CharacterLookDirectionCalculator>();
+            _characterLookDirectionCalculator = GetComponent<ChickenLookDirectionCalculator>();
 
-            _characterMovementController = GetComponent<CharacterMovementController>();
+            _characterMovementController = GetComponent<CharacterMovementController>();            
+        }
 
-            _chickenMovement = (ChickenMovement)_characterMovementController.MoveMechanic;
+        void Start()
+        {
+            _characterMovement = _characterMovementController.MoveMechanic;
         }
 
         void OnEnable()
@@ -47,90 +53,47 @@ namespace ChickenDayZ.Animations
 
         void SetAnimation()
         {
-            _characterAnimationsManager.ChangeAnimation(GetTheCorrectAnimation());
+            _characterAnimationsManager.ChangeAnimation(AnimationSelector());
         }
 
-        string GetTheCorrectAnimation() 
+        string AnimationSelector() 
         {
             switch (_characterLookDirectionCalculator.CharacterLookDirection)
             {
-                case CharacterLookDirection.BACK_RIGHT:
+                case CharacterLookDirectionEnum.BACK_RIGHT:
 
-                    if (_chickenMovement.IsMoving()) 
-                    {
-                        return _moveAnimationsNames[0];
-                    }
-                    else 
-                    {
-                        return _idleAnimationsNames[0];
-                    }                    
-                    
-                case CharacterLookDirection.BACK:
+                    return GetAnimation(0);
+                case CharacterLookDirectionEnum.BACK:
 
-                    if (_chickenMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[1];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[1];
-                    }                    
-                    
-                case CharacterLookDirection.BACK_LEFT:
+                    return GetAnimation(1);
+                case CharacterLookDirectionEnum.BACK_LEFT:
 
-                    if (_chickenMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[2];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[2];
-                    }                                        
-                    
-                case CharacterLookDirection.FRONT_LEFT:
+                    return GetAnimation(2);
+                case CharacterLookDirectionEnum.FRONT_LEFT:
 
-                    if (_chickenMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[3];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[3];
-                    }                   
-                    
-                case CharacterLookDirection.FRONT:
+                    return GetAnimation(3);
+                case CharacterLookDirectionEnum.FRONT:
 
-                    if (_chickenMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[4];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[4];
-                    }
+                    return GetAnimation(4);
+                case CharacterLookDirectionEnum.FRONT_RIGHT:
 
-                case CharacterLookDirection.FRONT_RIGHT:
-
-                    if (_chickenMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[5];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[5];
-                    }
-
+                    return GetAnimation(5);
                 default:
 
-                    if (_chickenMovement.IsMoving())
-                    {
-                        return _moveAnimationsNames[0];
-                    }
-                    else
-                    {
-                        return _idleAnimationsNames[0];
-                    }
-            }           
+                    return GetAnimation(0);                    
+            }            
+        }
+
+        private string GetAnimation(short index) 
+        {
+            if (_characterMovement.IsMoving())
+            {
+                return _moveAnimationsNames[index];
+            }
+            else
+            {
+                return _idleAnimationsNames[index];
+            }
         }
     }
 }

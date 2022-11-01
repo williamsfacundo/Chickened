@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(ZombieTarget))]
+    //[RequireComponent(typeof(Rigidbody2D), typeof(ZombieTarget))]
     public class ZombieMovement : MonoBehaviour
     {
         [SerializeField] private float _zombieMoveVelocity;        

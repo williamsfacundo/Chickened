@@ -6,12 +6,16 @@ namespace ChickenDayZ.Gameplay.Controllers
     {
         public static event Action OnGameplayReset;
 
+        public static event Action OnRoundReset;
+
         public static void ResetGameplay()
         {
-            if (OnGameplayReset != null) 
-            {     
-                OnGameplayReset.Invoke();
-            }
+            OnGameplayReset?.Invoke();
+        }
+
+        public static void ResetRound()
+        {
+            OnRoundReset?.Invoke();
         }
     }
 }

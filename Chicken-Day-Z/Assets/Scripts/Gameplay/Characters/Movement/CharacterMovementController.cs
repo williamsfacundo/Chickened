@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
-using ChickenDayZ.Gameplay.Characters.Chicken.Movement;
 using ChickenDayZ.Gameplay.Enumerators;
 using ChickenDayZ.Gameplay.Characters.Chicken.Movement.Input;
 using ChickenDayZ.Gameplay.Controllers;
@@ -96,7 +95,7 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
             {
                 case MoveMechanicsEnum.PLAYER_ONE:
 
-                    _moveMechanic = new ChickenMovement(new KeyboardMovementInput(new AxisMovement("Horizontal", "Vertical")),
+                    _moveMechanic = new Chicken.Movement.ChickenMovement(new KeyboardMovementInput(new AxisMovement("Horizontal", "Vertical")),
                         gameObject.GetComponent<Rigidbody2D>(), _characterInitialMoveSpeed);
 
                     break;

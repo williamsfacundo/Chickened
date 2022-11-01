@@ -12,7 +12,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
     {
         [SerializeField] private ItemActionTypeEnum _actionType;
 
-        private IItemAction _itemAction; //Porque no hacer que este script tome multiples acciones        
+        CharacterInventory _characterInventory;
+
+        private IItemAction _itemAction;        
 
         private bool _executeAction;
 
@@ -24,19 +26,23 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
             }
         }
 
+        void Awake()
+        {
+            _characterInventory = GetComponent<CharacterInventory>();                       
+        }
+
         void OnEnable()
         {
-            GameplayResetter.OnGameplayReset += ResetObject;            
+            GameplayResetter.OnGameplayReset += ResetObject;
+
+            _characterInventory.OnEquippedItemSelected += SetActionType;
         }
 
         void OnDisable()
         {
             GameplayResetter.OnGameplayReset -= ResetObject;
-        }
 
-        void Awake()
-        {
-            SetActionType();            
+            _characterInventory.OnEquippedItemSelected -= SetActionType;
         }
 
         private void Start()
@@ -58,24 +64,22 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
         private void SetActionType() 
         {
-            CharacterInventory characterInventory = GetComponent<CharacterInventory>();
-
             switch (_actionType)
             {
                 case ItemActionTypeEnum.FIRE_FIREARM:                    
 
-                    if (characterInventory.EquippedItem is Firearm) 
+                    if (_characterInventory.EquippedItem is Firearm) 
                     {
-                        _itemAction = new CharacterFireFirearmAction(((Firearm)characterInventory.EquippedItem).FireFirearmMechanic);
+                        _itemAction = new CharacterFireFirearmAction(((Firearm)_characterInventory.EquippedItem).FireFirearmMechanic);
                     }
                     
                     break;
 
                 case ItemActionTypeEnum.RELOAD_FIREARM:                    
 
-                    if (characterInventory.EquippedItem is Firearm)
+                    if (_characterInventory.EquippedItem is Firearm)
                     {
-                        _itemAction = new CharacterReloadFirearmAction(((Firearm)characterInventory.EquippedItem).ReloadFirearmMechanic);
+                        _itemAction = new CharacterReloadFirearmAction(((Firearm)_characterInventory.EquippedItem).ReloadFirearmMechanic);
                     }
 
                     break;
@@ -86,9 +90,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
         public void ResetObject()
         {
-            _executeAction = false;
-
-            SetActionType();
+            _executeAction = false;            
         }
     }
 }

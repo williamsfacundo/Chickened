@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2811523339669616401}
   - component: {fileID: 2811523339669616400}
-  - component: {fileID: 2811523339669616406}
   - component: {fileID: 3668622008214068018}
   - component: {fileID: 346120353000518287}
+  - component: {fileID: -4343658154888055254}
   - component: {fileID: 2811523339669616404}
   - component: {fileID: 2811523339669616407}
   - component: {fileID: 2811523339669616405}
+  - component: {fileID: 3484924348982428427}
   m_Layer: 0
   m_Name: Fat Zombie
   m_TagString: Untagged
@@ -88,20 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2811523339669616406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811523339669616403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff66989379a3fb34fa46ce9a88dc577d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialHealth: 50
-  _pointsGivenWhenDie: 50
 --- !u!114 &3668622008214068018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +116,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _zombieInitialDamage: 15
   _zombieAttackCooldownTime: 1.5
+--- !u!114 &-4343658154888055254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialHealth: 0
 --- !u!50 &2811523339669616404
 Rigidbody2D:
   serializedVersion: 4
@@ -182,3 +182,15 @@ CircleCollider2D:
   m_Offset: {x: -0.03, y: -0.39}
   serializedVersion: 2
   m_Radius: 0.52
+--- !u!114 &3484924348982428427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756169bb7485de8458aba330bfa1c102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

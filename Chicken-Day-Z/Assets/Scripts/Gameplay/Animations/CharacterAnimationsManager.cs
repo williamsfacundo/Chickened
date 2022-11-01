@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace ChickenDayZ.Animations 
 {
     [RequireComponent(typeof(Animator))]

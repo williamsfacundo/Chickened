@@ -5,7 +5,11 @@ namespace ChickenDayZ.Gameplay.Controllers
     public class ScenesManager : MonoBehaviour
     {
 
-        [SerializeField] private Canvas _creditsCanvas;
+        [SerializeField] private Canvas _creditsCanvas1;
+
+        [SerializeField] private Canvas _creditsCanvas2;
+
+        [SerializeField] private Canvas _creditsCanvas3;
 
         [SerializeField] private Canvas _gameOverCanvas;
 
@@ -18,6 +22,8 @@ namespace ChickenDayZ.Gameplay.Controllers
         [SerializeField] private Canvas _tutorialCanvas;
 
         [SerializeField] private Canvas _gameplayCanvas;
+
+        [SerializeField] private Canvas _mapCanvas;
 
         [SerializeField] private KeyCode _pauseKey;
 
@@ -41,11 +47,18 @@ namespace ChickenDayZ.Gameplay.Controllers
             PauseGame();
         }
 
-        public void MainMenuToGameplay() 
+        public void MainMenuToMap() 
         {
             ChangeCanvasState(_mainMenuCanvas, false);
-            ChangeCanvasState(_gameplayCanvas, true);
+            ChangeCanvasState(_mapCanvas, true);
 
+        }
+
+        public void MapToGameplay()
+        {
+            ChangeCanvasState(_mapCanvas, false);
+            ChangeCanvasState(_gameplayCanvas, true);            
+            
             SetTimeScale(1f);
         }
 
@@ -60,10 +73,10 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_mainMenuCanvas, false);
             ChangeCanvasState(_settingsCanvas, true);
         }
-        public void MainMenuToCredits()
+        public void MainMenuToCredits1()
         {
             ChangeCanvasState(_mainMenuCanvas, false);
-            ChangeCanvasState(_creditsCanvas, true);
+            ChangeCanvasState(_creditsCanvas1, true);
         }
 
         public void SettingsToMainMenu()
@@ -72,10 +85,46 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_settingsCanvas, false);
         }
 
-        public void CreditsToMainMenu()
+        public void Credits1ToMainMenu()
         {
             ChangeCanvasState(_mainMenuCanvas, true);
-            ChangeCanvasState(_creditsCanvas, false);
+            ChangeCanvasState(_creditsCanvas1, false);
+        }
+
+        public void Credits2ToMainMenu()
+        {
+            ChangeCanvasState(_mainMenuCanvas, true);
+            ChangeCanvasState(_creditsCanvas2, false);
+        }
+
+        public void Credits3ToMainMenu()
+        {
+            ChangeCanvasState(_mainMenuCanvas, true);
+            ChangeCanvasState(_creditsCanvas3, false);
+        }
+
+        public void Credits1ToCredits2()
+        {
+            ChangeCanvasState(_creditsCanvas2, true);
+            ChangeCanvasState(_creditsCanvas1, false);
+        }
+
+        public void Credits2ToCredits3()
+        {
+            ChangeCanvasState(_creditsCanvas3, true);
+            ChangeCanvasState(_creditsCanvas2, false);
+        }
+
+        public void Credits2ToCredits1()
+        {
+            ChangeCanvasState(_creditsCanvas1, true);
+            ChangeCanvasState(_creditsCanvas2, false);
+        }
+
+        public void Credits3ToCredits2()
+        {
+            ChangeCanvasState(_creditsCanvas2, true);
+            ChangeCanvasState(_creditsCanvas3, false);
         }
 
         public void TutorialToMainMenu()
@@ -156,13 +205,16 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         private void InitialConfigurations() 
         {
-            ChangeCanvasState(_creditsCanvas, false);
+            ChangeCanvasState(_creditsCanvas1, false);
+            ChangeCanvasState(_creditsCanvas2, false);
+            ChangeCanvasState(_creditsCanvas3, false);
             ChangeCanvasState(_gameOverCanvas, false);
             ChangeCanvasState(_mainMenuCanvas, true);
             ChangeCanvasState(_pauseCanvas, false);
             ChangeCanvasState(_settingsCanvas, false);
             ChangeCanvasState(_tutorialCanvas, false);
             ChangeCanvasState(_gameplayCanvas, false);
+            ChangeCanvasState(_mapCanvas, false);
 
             Screen.fullScreen = true;
 
