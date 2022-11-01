@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 5812d78f9db45954bb6b9f56f0197d02
+guid: b2e9f2236ee04804ab241724ebb45268
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4583626543095954467
-    second: Anim_Soldado_Walking_FRONT-sheet_0
+      213: 4124627360905365114
+    second: Anim_Zombie03_Caminata Espalda_0
   - first:
-      213: 2700853979738009853
-    second: Anim_Soldado_Walking_FRONT-sheet_1
+      213: -5222923647410374779
+    second: Anim_Zombie03_Caminata Espalda_1
   - first:
-      213: -6574943680469277174
-    second: Anim_Soldado_Walking_FRONT-sheet_2
+      213: 501723450724077124
+    second: Anim_Zombie03_Caminata Espalda_2
   - first:
-      213: 8056892917064773680
-    second: Anim_Soldado_Walking_FRONT-sheet_3
+      213: -3926025143575829584
+    second: Anim_Zombie03_Caminata Espalda_3
   - first:
-      213: -7087230199908325194
-    second: Anim_Soldado_Walking_FRONT-sheet_4
+      213: -2127312135975174695
+    second: Anim_Zombie03_Caminata Espalda_4
   - first:
-      213: -4449813028055877091
-    second: Anim_Soldado_Walking_FRONT-sheet_5
+      213: -767181436607651925
+    second: Anim_Zombie03_Caminata Espalda_5
+  - first:
+      213: -1175727459624220438
+    second: Anim_Zombie03_Caminata Espalda_6
+  - first:
+      213: -7559673827271498375
+    second: Anim_Zombie03_Caminata Espalda_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Anim_Soldado_Walking_FRONT-sheet_0
+      name: Anim_Zombie03_Caminata Espalda_0
       rect:
         serializedVersion: 2
         x: 0
@@ -123,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c394c4e005c9f30800000000000000
-      internalID: 4583626543095954467
+      spriteID: a760f954bbe9d3930800000000000000
+      internalID: 4124627360905365114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Walking_FRONT-sheet_1
+      name: Anim_Zombie03_Caminata Espalda_1
       rect:
         serializedVersion: 2
         x: 192
@@ -144,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df0fb74826c5b7520800000000000000
-      internalID: 2700853979738009853
+      spriteID: 587fd1b6d927487b0800000000000000
+      internalID: -5222923647410374779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Walking_FRONT-sheet_2
+      name: Anim_Zombie03_Caminata Espalda_2
       rect:
         serializedVersion: 2
         x: 384
@@ -165,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a06ed63ee8b11c4a0800000000000000
-      internalID: -6574943680469277174
+      spriteID: 44e44e7f1da76f600800000000000000
+      internalID: 501723450724077124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Walking_FRONT-sheet_3
+      name: Anim_Zombie03_Caminata Espalda_3
       rect:
         serializedVersion: 2
         x: 576
@@ -186,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 030b10bbb65dfcf60800000000000000
-      internalID: 8056892917064773680
+      spriteID: 0b329e1dee4f389c0800000000000000
+      internalID: -3926025143575829584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Walking_FRONT-sheet_4
+      name: Anim_Zombie03_Caminata Espalda_4
       rect:
         serializedVersion: 2
         x: 768
@@ -207,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b82b05dea915ad90800000000000000
-      internalID: -7087230199908325194
+      spriteID: 9dd72d022e44a72e0800000000000000
+      internalID: -2127312135975174695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Walking_FRONT-sheet_5
+      name: Anim_Zombie03_Caminata Espalda_5
       rect:
         serializedVersion: 2
         x: 960
@@ -228,8 +234,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1af2d980a61f32c0800000000000000
-      internalID: -4449813028055877091
+      spriteID: baf1ab05c8c6a55f0800000000000000
+      internalID: -767181436607651925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Zombie03_Caminata Espalda_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae80d60da1afeafe0800000000000000
+      internalID: -1175727459624220438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Zombie03_Caminata Espalda_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9752aabf4b4a61790800000000000000
+      internalID: -7559673827271498375
       vertices: []
       indices: 
       edges: []
