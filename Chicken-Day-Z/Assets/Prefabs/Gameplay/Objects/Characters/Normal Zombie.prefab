@@ -10,15 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 2811523339669616401}
   - component: {fileID: 2811523339669616400}
-  - component: {fileID: -5679270098415894285}
-  - component: {fileID: -829709356541455412}
-  - component: {fileID: -4676793232761440564}
-  - component: {fileID: 204030324013087467}
+  - component: {fileID: 6946117092686391491}
+  - component: {fileID: 5139383335364678124}
+  - component: {fileID: -7420021758886791320}
+  - component: {fileID: 2440452425569718449}
+  - component: {fileID: 4111055611184446068}
   - component: {fileID: 2811523339669616404}
   - component: {fileID: 2811523339669616407}
-  - component: {fileID: -6282361303463779313}
+  - component: {fileID: 2811523339669616405}
   m_Layer: 0
-  m_Name: Fast Zombie
+  m_Name: Normal Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,8 +33,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2811523339669616403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.436, y: -0.758, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -75,10 +76,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1615129303
-  m_SortingLayer: 2
+  m_SortingLayerID: -439346585
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5d201fef3ab4f7a409ef7e1af71fcd7c, type: 3}
+  m_Sprite: {fileID: 1630085832313498838, guid: e70c581929008804d96de442643ca3a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5679270098415894285
+--- !u!114 &6946117092686391491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc8d39d76a6ec746ae12eaba245a6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieMoveVelocity: 0.5
---- !u!114 &-829709356541455412
+  _zombieMoveVelocity: 0.2
+--- !u!114 &5139383335364678124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,9 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbb04c6eba0b86439adff4fc789558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieInitialDamage: 5
-  _zombieAttackCooldownTime: 0.5
---- !u!114 &-4676793232761440564
+  _zombieInitialDamage: 10
+  _zombieAttackCooldownTime: 1
+--- !u!114 &-7420021758886791320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 30
---- !u!114 &204030324013087467
+  _initialHealth: 0
+--- !u!114 &2440452425569718449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,6 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756169bb7485de8458aba330bfa1c102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4111055611184446068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4781c560f17f4e44984f59e332429cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defineZombieType: 0
 --- !u!50 &2811523339669616404
 Rigidbody2D:
   serializedVersion: 4
@@ -175,19 +189,22 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: 0.08}
   serializedVersion: 2
   m_Radius: 0.45
---- !u!114 &-6282361303463779313
-MonoBehaviour:
+--- !u!58 &2811523339669616405
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2811523339669616403}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4781c560f17f4e44984f59e332429cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _id: 5
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.34}
+  serializedVersion: 2
+  m_Radius: 0.42

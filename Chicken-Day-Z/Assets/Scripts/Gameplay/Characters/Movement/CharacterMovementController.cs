@@ -17,7 +17,7 @@ namespace ChickenDayZ.Gameplay.Characters.Movement
 
         public event Action OnCharacterChangedMoveState;
 
-        public bool _lastState;
+        private bool _lastState;
 
         private IMoves _moveMechanic;
 

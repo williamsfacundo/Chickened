@@ -7,7 +7,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 {
     public class PlayerSpawnPosition : MonoBehaviour, IResettable
     {
-        [SerializeField] private GameObject _playersSpawnPosition;        
+        private Vector3 _playersSpawnPosition;        
         
         void OnEnable()
         {
@@ -31,14 +31,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
         
         private void SetPlayerPosition() 
         {
-            if (_playersSpawnPosition != null)
-            {
-                gameObject.transform.position = _playersSpawnPosition.gameObject.transform.position;
-            }
-            else
-            {
-                Debug.LogError("No spawn position assigned!");
-            }
+            _playersSpawnPosition = gameObject.transform.position;
         }        
     }
 }

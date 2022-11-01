@@ -1,6 +1,5 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.StatsScripts;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.CombatItem 
@@ -9,11 +8,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.CombatItem
     {
         [SerializeField] private FirearmObjectTypeEnum _defineFirearmObjectType;
 
-        private FirearmObjectTypeEnum _firearmObjectType;
-
-        private FirearmCharger _firearmCharger;
-
-        private FirearmCanyon _firearmCanyon;
+        private FirearmObjectTypeEnum _firearmObjectType;       
 
         public FirearmObjectTypeEnum FirearmObjectType 
         {
@@ -21,31 +16,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.CombatItem
             {
                 return _firearmObjectType;
             }
-        }
-
-        public FirearmCharger FirearmCharger 
-        {
-            get 
-            {
-                return _firearmCharger;
-            }
-        }
-
-        public FirearmCanyon FirearmCanyon 
-        {
-            get 
-            {
-                return _firearmCanyon;
-            }
-        }
+        }        
 
         void Awake()
         {
-            _firearmObjectType = _defineFirearmObjectType;
-
-            _firearmCharger = new FirearmCharger();
-
-            _firearmCanyon = new FirearmCanyon();
+            _firearmObjectType = _defineFirearmObjectType;            
         }
 
         private FirearmObject() : base(CombatItemObjectTypeEnum.FIREARM)

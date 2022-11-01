@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   FirearmType: 0
-  ProjectilePrefab: {fileID: 2532317757173228274, guid: 9b067a4b1f48901449edc474b59d27bb, type: 3}
+  ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
   ChargerMaxAmmo: 25
   ReloadTime: 2
   FireRate: 0.2

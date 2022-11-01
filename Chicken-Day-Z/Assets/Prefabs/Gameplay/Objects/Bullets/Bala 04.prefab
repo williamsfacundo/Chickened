@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2938389782413985535}
   - component: {fileID: 2938389782413985534}
   - component: {fileID: 648750295925550458}
+  - component: {fileID: 5419386875464529571}
+  - component: {fileID: 8311457704163116621}
+  - component: {fileID: -4705238843390361637}
   m_Layer: 0
   m_Name: Bala 04
   m_TagString: Untagged
@@ -69,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -439346585
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fa69d3215dcb6d44986465ff3c163654, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,3 +102,40 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.18
+--- !u!114 &5419386875464529571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938389782413985533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6e570108863b4f830a6ed6c5ec8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8311457704163116621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938389782413985533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7265f9710cbba224aaebf9873b57266a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4705238843390361637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938389782413985533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d0b1b5fe433e44bb01f78837a5c4d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defineProjectileObjectType: 0
