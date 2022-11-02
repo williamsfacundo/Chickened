@@ -1,40 +1,51 @@
 using System;
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.General;
-using ChickenDayZ.Gameplay.Interfaces;
-
-using ChickenDayZ.Gameplay.MainObjects.CreationLogic;
-using ChickenDayZ.Gameplay.MainObjects.Characters;
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 using ChickenDayZ.Gameplay.Health;
+using ChickenDayZ.Gameplay.Interfaces;
+using ChickenDayZ.Gameplay.Controllers;
+using ChickenDayZ.Gameplay.MainObjects.Characters;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {
     public class ZombiesSpawner : MonoBehaviour, IResettable
     {
-        //[SerializeField] private GameplayMainObjectsManager _gameplayMainObjectsManager;
-
         [SerializeField] private GameObject[] _spawnPoints;
 
         [SerializeField] private GameObject _eggBase;
 
         [SerializeField] private GameObject _chicken;
 
+        [SerializeField] private GameObject _normalZombie;
+
+        [SerializeField] private GameObject _fastZombie;
+
+        [SerializeField] private GameObject _fatZombie;
+
         [SerializeField] [Range(1, 100)] private short[] _zombieSpawnPercentages; //In total must reached 100, guardar esta info en el zombie
         
         [SerializeField] private float _timeBeforeRoundStarts;
 
-        [SerializeField] private float _minNextZombieSpawnTime; //Each round this number decreases
+        [SerializeField] private float _minNextZombieSpawnTime; 
 
-        [SerializeField] private float _maxNextZombieSpawnTime; //Each round this number decreases
+        [SerializeField] private float _maxNextZombieSpawnTime; 
                                                                 
         [SerializeField] private short _initialRoundZombiesToKill;
 
-        [SerializeField] [Range(1, 100)] private short _nextRoundSpawnTimesDecreasePercentage; //How much the numbers above will decrease        
+        [SerializeField] [Range(1, 100)] private short _nextRoundSpawnTimesDecreasePercentage;
 
-        private GameObject[] _zombieObjects;
+        [SerializeField] private short _maxNormalZombies;
+
+        [SerializeField] private short _maxFastZombies;
+        
+        [SerializeField] private short _maxFatZombies;
+
+        private GameObject[] _normalZombies;
+
+        private GameObject[] _fastZombies;
+
+        private GameObject[] _fatZombies;
 
         public event Action OnRoundChanged;
 
@@ -60,13 +71,6 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Awake()
         {
-            /*if (_gameplayMainObjectsManager == null)
-            {
-                Debug.LogError("GameplayMainObjectsManager cant be null!");
-
-                Destroy(this);
-            }*/
-
             if (_eggBase == null)
             {
                 Debug.LogError("EggBase cant be null!");
@@ -79,25 +83,44 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 Debug.LogError("Chicken cant be null!");
 
                 Destroy(this);
-            }                                    
+            }
+
+            if (_normalZombie == null)
+            {
+                Debug.LogError("Normal Zombie cant be null!");
+
+                Destroy(this);
+            }
+
+            if (_fastZombie == null)
+            {
+                Debug.LogError("Fast Zombie cant be null!");
+
+                Destroy(this);
+            }
+
+            if (_fatZombie == null)
+            {
+                Debug.LogError("Fat Zombie cant be null!");
+
+                Destroy(this);
+            }
         }
 
         void OnEnable()
         {
-            GameplayResetter.OnGameplayReset += ResetObject;
-
-            //_gameplayMainObjectsManager.OnZombiesCreated += SetZombieObjects;
+            GameplayResetter.OnGameplayReset += ResetObject;            
         }
 
         void OnDisable()
         {
-            GameplayResetter.OnGameplayReset += ResetObject;
-
-            //_gameplayMainObjectsManager.OnZombiesCreated -= SetZombieObjects;
+            GameplayResetter.OnGameplayReset += ResetObject;            
         }
 
         private void Start()
         {
+            SetZombieObjects();
+
             _timerBeforeRoundStarts = new Timer(_timeBeforeRoundStarts);
 
             _timerForNextZombie = new Timer(UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime));
@@ -147,30 +170,58 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             OnRoundChanged?.Invoke();
 
-            _zombiesLeftToKill = _initialRoundZombiesToKill;
+            _zombiesLeftToKill = _initialRoundZombiesToKill;            
 
-            for (short i = 0; i < _zombieObjects.Length; i++) 
+            for (short i = 0; i < _normalZombies.Length; i++) 
             {
-                _zombieObjects[i].SetActive(false);
+                _normalZombies[i].SetActive(false);
+            }
+
+            for (short i = 0; i < _fastZombies.Length; i++)
+            {
+                _fastZombies[i].SetActive(false);
+            }
+
+            for (short i = 0; i < _fatZombies.Length; i++)
+            {
+                _fatZombies[i].SetActive(false);
             }
         }
 
         private void SetZombieObjects()
         {
-            _zombieObjects = new GameObject[ZombieObject.ZombiesActiveInstances];
+            _normalZombies = new GameObject[_maxNormalZombies];
 
-            //for (short i = 0; i < _gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects.Count; i++)
-            //{
-            //    if (_gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects[i] is ZombieObject)
-            //    {
-            //        _zombieObjects[i] = _gameplayMainObjectsManager.MainObjectInstancesHolder.MainObjects[i].gameObject;
-            //    }
-            //}
+            _fastZombies = new GameObject[_maxFastZombies];
 
-            for (short i = 0; i < _zombieObjects.Length; i++)
+            _fatZombies = new GameObject[_maxFatZombies];
+
+            for (short i = 0; i < _normalZombies.Length; i++) 
             {
-                _zombieObjects[i].gameObject.SetActive(false);
+                _normalZombies[i] = Instantiate(_normalZombie);
+
+                _normalZombies[i].SetActive(false);
+
+                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }
+
+            for (short i = 0; i < _fastZombies.Length; i++)
+            {
+                _fastZombies[i] = Instantiate(_fastZombie);
+
+                _normalZombies[i].SetActive(false);
+
+                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+            }
+
+            for (short i = 0; i < _fatZombies.Length; i++)
+            {
+                _fatZombies[i] = Instantiate(_fatZombie);
+
+                _normalZombies[i].SetActive(false);
+
+                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+            }            
         }
 
         private void CheckIfPercentagesAreRight()
@@ -228,12 +279,38 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             for (short i = 0; i < 100; i++) 
             {
-                random = UnityEngine.Random.Range(1, ZombieObject.ZombiesTotalInstances);
+                random = UnityEngine.Random.Range(1, 100);
 
-                if (!_zombieObjects[random].activeSelf)
+                if (random > 1 && random < _zombieSpawnPercentages[0]) 
                 {
-                    return _zombieObjects[random];
+                    for (short v = 0; v < _normalZombies.Length; i++) 
+                    {
+                        if (!_normalZombies[v].activeSelf) 
+                        {
+                            return _normalZombies[v];
+                        }
+                    }
                 }
+                else if (random > _zombieSpawnPercentages[0] && random < _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1]) 
+                {
+                    for (short v = 0; v < _fastZombies.Length; i++)
+                    {
+                        if (!_fastZombies[v].activeSelf)
+                        {
+                            return _fastZombies[v];
+                        }
+                    }
+                }
+                else if (random > _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] && random < _zombieSpawnPercentages[1] + _zombieSpawnPercentages[2]) 
+                {
+                    for (short v = 0; v < _fatZombies.Length; i++)
+                    {
+                        if (!_fatZombies[v].activeSelf)
+                        {
+                            return _fatZombies[v];
+                        }
+                    }
+                }               
             }            
 
             return null;

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveMechanicEnum: 0
-  _characterInitialMoveSpeed: 2
+  _characterInitialMoveSpeed: 4
 --- !u!114 &-8390087879077635849
 MonoBehaviour:
   m_ObjectHideFlags: 0

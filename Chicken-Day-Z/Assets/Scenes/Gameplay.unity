@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &45750009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1532401959217641517, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
+  m_PrefabInstance: {fileID: 1093126732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &350705354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,21 +135,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7480977285595935393, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: _characterInitialMoveSpeed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.84
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -802,10 +803,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombies Spawn
       objectReference: {fileID: 0}
-    - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -816,7 +813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -850,8 +847,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _chicken
+      value: 
+      objectReference: {fileID: 1928961616}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _eggBase
+      value: 
+      objectReference: {fileID: 45750009}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _maxFatZombies
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _maxFastZombies
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _maxNormalZombies
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _timeBeforeRoundStarts
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+--- !u!1 &1928961616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7480977285595935396, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+  m_PrefabInstance: {fileID: 350705354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8024113891485433960
 PrefabInstance:
   m_ObjectHideFlags: 0
