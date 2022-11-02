@@ -130,17 +130,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7480977285595935393, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+      propertyPath: _characterInitialMoveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.41
+      value: -2.84
       objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -177,10 +181,6 @@ PrefabInstance:
     - target: {fileID: 7480977285595935396, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_Name
       value: Chicken
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480977285595935396, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a15d289507929e54d9720a2dfd896f11, type: 3}

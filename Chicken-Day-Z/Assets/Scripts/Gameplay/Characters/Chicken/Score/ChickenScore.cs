@@ -33,6 +33,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Score
         {
             ResetScore();
         }
+
         public void ResetScore() 
         {
             _score = 0;

@@ -21,17 +21,22 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Spawn
 
         void Start()
         {
-            SetPlayerPosition();
+            SetPlayersSpawnPosition();
         }        
 
         public void ResetObject()
         {
             SetPlayerPosition();
-        }        
-        
-        private void SetPlayerPosition() 
+        }
+
+        private void SetPlayersSpawnPosition()
         {
             _playersSpawnPosition = gameObject.transform.position;
+        }
+
+        private void SetPlayerPosition() 
+        {
+            gameObject.transform.position = _playersSpawnPosition;
         }        
     }
 }

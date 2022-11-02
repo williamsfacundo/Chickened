@@ -10,7 +10,6 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Input
 
         [SerializeField] private KeyCode _reloadKey;
 
-        // Update is called once per frame
         void Update()
         {
             ReloadInput();
