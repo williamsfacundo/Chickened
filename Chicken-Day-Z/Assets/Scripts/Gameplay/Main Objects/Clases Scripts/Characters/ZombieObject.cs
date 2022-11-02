@@ -1,9 +1,11 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+using ChickenDayZ.Gameplay.Characters.Zombie;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {   
+    [RequireComponent(typeof(ZombieTarget), typeof(ZombieAttacking), typeof(ZombieMovement))]
     public class ZombieObject : CharacterObject
     {
         [SerializeField] private ZombieObjectTypeEnum _defineZombieType;

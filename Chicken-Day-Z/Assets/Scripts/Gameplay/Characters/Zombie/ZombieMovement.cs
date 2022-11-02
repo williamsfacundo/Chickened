@@ -1,8 +1,7 @@
 using UnityEngine;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
-{
-    //[RequireComponent(typeof(Rigidbody2D), typeof(ZombieTarget))]
+{    
     public class ZombieMovement : MonoBehaviour
     {
         [SerializeField] private float _zombieMoveVelocity;        
@@ -23,7 +22,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             _rb2D.velocity = Vector2.zero;
         }
 
-        void Update()
+        void LateUpdate()
         {
             CounterRigidBody2DForces();
         }
@@ -35,7 +34,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void MoveTowardsTheTarget()
         {
-            if (!_zombieTarget.IsZombieCollidingWithTarget)
+            if (!_zombieTarget.IsZombieCollidingWithTarget && _zombieTarget.Target != null)
             {
                 _rb2D.MovePosition(gameObject.transform.position +
                     _zombieTarget.CalculateDirectionToMoveTowardsTheTarget() * Time.deltaTime * _zombieMoveVelocity);

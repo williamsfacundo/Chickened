@@ -7,7 +7,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 {
     public class ProjectileImpact : MonoBehaviour
     {
-        private float _damage = 10;        
+        [SerializeField] private float _damage;        
 
         public float Damage 
         {
@@ -15,12 +15,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 _damage = value;
             }
+            get 
+            {
+                return _damage;
+            }
         }        
-
-        private void Start()
-        {            
-            _damage = 10f;  
-        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -36,7 +35,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
             else 
             {
-                if (collision.gameObject.tag != "Player") 
+                if (collision.GetComponent<ChickenObject>() == null) 
                 {
                     gameObject.SetActive(false);
                 }
