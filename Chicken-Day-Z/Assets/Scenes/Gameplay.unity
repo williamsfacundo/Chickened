@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken
       objectReference: {fileID: 0}
+    - target: {fileID: 7480977285595935396, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
 --- !u!1001 &1093126732
@@ -447,6 +451,10 @@ PrefabInstance:
     - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_Name
       value: Zombies Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_RootOrder
