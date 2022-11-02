@@ -202,7 +202,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _normalZombies[i].SetActive(false);
 
-                //_normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }
 
             for (short i = 0; i < _fastZombies.Length; i++)
@@ -211,7 +211,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _fastZombies[i].SetActive(false);
 
-                //_fastZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                _fastZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }
 
             for (short i = 0; i < _fatZombies.Length; i++)
@@ -220,7 +220,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _fatZombies[i].SetActive(false);
 
-                //_normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }            
         }
 

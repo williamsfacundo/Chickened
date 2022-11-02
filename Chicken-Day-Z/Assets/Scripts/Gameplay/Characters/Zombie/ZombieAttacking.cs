@@ -3,8 +3,7 @@
 using ChickenDayZ.Gameplay.Health;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
-{
-    //[RequireComponent(typeof(ZombieTarget))]
+{   
     public class ZombieAttacking : MonoBehaviour
     {
         [SerializeField] private float _zombieInitialDamage;
@@ -13,7 +12,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private ZombieTarget _zombieTarget;
 
-        private ObjectHealth _objectHealth;
+        private ObjectHealth _targetHealth;
 
         private float _zombieDamage;
 
@@ -38,7 +37,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Start()
         {
-            UpdateTargetHealth();
+            //UpdateTargetHealth();
 
             _zombieDamage = _zombieInitialDamage;
 
@@ -68,7 +67,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             if (_inAttackMode)
             {
-                _objectHealth.ReceiveDamage(_zombieDamage);
+                _targetHealth.ReceiveDamage(_zombieDamage);
 
                 _attackCooldownTimer = _zombieAttackCooldownTime;
 
@@ -90,8 +89,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         }        
 
         private void UpdateTargetHealth() 
-        {
-            _objectHealth = _zombieTarget.Target.GetComponent<ObjectHealth>();
+        {            
+            _targetHealth = _zombieTarget.Target.GetComponent<ObjectHealth>();
         }
     }
 }

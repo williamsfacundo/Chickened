@@ -58,6 +58,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         public Vector3 CalculateDirectionToMoveTowardsTheTarget()
         {
+            if (_target == null) 
+            {
+                return Vector3.zero;
+            }
+
             return Vector3.Normalize(_target.gameObject.transform.position - gameObject.transform.position);
         }       
     }
