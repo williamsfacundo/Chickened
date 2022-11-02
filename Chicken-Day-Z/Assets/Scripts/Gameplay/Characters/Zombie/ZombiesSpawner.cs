@@ -119,7 +119,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void Start()
         {
-            SetZombieObjects();
+            SetwZombieObjects();
 
             _timerBeforeRoundStarts = new Timer(_timeBeforeRoundStarts);
 
@@ -188,7 +188,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             }
         }
 
-        private void SetZombieObjects()
+        private void SetwZombieObjects()
         {
             _normalZombies = new GameObject[_maxNormalZombies];
 
@@ -202,25 +202,25 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _normalZombies[i].SetActive(false);
 
-                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                //_normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }
 
             for (short i = 0; i < _fastZombies.Length; i++)
             {
                 _fastZombies[i] = Instantiate(_fastZombie);
 
-                _normalZombies[i].SetActive(false);
+                _fastZombies[i].SetActive(false);
 
-                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                //_fastZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }
 
             for (short i = 0; i < _fatZombies.Length; i++)
             {
                 _fatZombies[i] = Instantiate(_fatZombie);
 
-                _normalZombies[i].SetActive(false);
+                _fatZombies[i].SetActive(false);
 
-                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                //_normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
             }            
         }
 
