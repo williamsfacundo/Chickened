@@ -14,8 +14,28 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_MAINMENUBGM = 1063700270U;
+        static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
+        static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;
+        static const AkUniqueID PLAY_ZOMBIES_DIE = 16750680U;
+        static const AkUniqueID PLAY_ZOMBIES_IMPACT = 297923524U;
         static const AkUniqueID STOP_MAINMENUBGM = 1323942960U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSICREGION
+        {
+            static const AkUniqueID GROUP = 239549482U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID MAINMENU = 3604647259U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSICREGION
+
+    } // namespace STATES
 
     namespace BANKS
     {
