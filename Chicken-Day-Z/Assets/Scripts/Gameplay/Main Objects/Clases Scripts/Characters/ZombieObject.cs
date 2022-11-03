@@ -1,15 +1,19 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+using ChickenDayZ.Gameplay.Health;
 using ChickenDayZ.Gameplay.Characters.Zombie;
+using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {   
     [RequireComponent(typeof(ZombieTarget), typeof(ZombieAttacking), typeof(ZombieMovement))]
+    [RequireComponent(typeof(ObjectHealth))]
     public class ZombieObject : CharacterObject
     {
         [SerializeField] private ZombieObjectTypeEnum _defineZombieType;
 
+        private ObjectHealth _objectHealth;
+        
         private ZombieObjectTypeEnum _zombieType;
 
         private static short _zombiesTotalInstances = 0;
@@ -42,6 +46,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
         void Awake()
         {
+            _objectHealth = GetComponent<ObjectHealth>();
+
             _zombieType =_defineZombieType;
 
             _zombiesTotalInstances += 1;
@@ -49,11 +55,15 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
         void OnEnable()
         {
+            _objectHealth.OnHealthReachedZero += DeactivateZombie;
+
             _zombiesActiveInstances += 1;
         }
 
         void OnDisable()
         {
+            _objectHealth.OnHealthReachedZero -= DeactivateZombie;
+
             _zombiesActiveInstances -= 1;
         }
 
@@ -65,6 +75,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         private ZombieObject() : base(CharacterObjectTypeEnum.ZOMBIE)
         {
             
+        }
+
+        void DeactivateZombie() 
+        {
+            gameObject.SetActive(false);
         }
     }
 }

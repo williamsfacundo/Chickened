@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527268684578124633, guid: c491cf59f8d64ed49bcd19632fafdf09, type: 3}
       propertyPath: m_Intensity
-      value: 1.5
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 2527268684578124633, guid: c491cf59f8d64ed49bcd19632fafdf09, type: 3}
       propertyPath: m_FalloffIntensity

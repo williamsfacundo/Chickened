@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc8d39d76a6ec746ae12eaba245a6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieMoveVelocity: 0.5
+  _zombieMoveVelocity: 2
 --- !u!114 &-829709356541455412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 30
+  _initialHealth: 10
 --- !u!114 &204030324013087467
 MonoBehaviour:
   m_ObjectHideFlags: 0

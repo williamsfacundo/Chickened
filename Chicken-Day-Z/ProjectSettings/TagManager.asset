@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Base
   - Zombie
+  - Chest
   layers:
   - Default
   - TransparentFX

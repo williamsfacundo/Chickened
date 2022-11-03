@@ -266,48 +266,47 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                         zombie.GetComponent<ZombieTarget>().Target = _eggBase;
                         break;
                 }
-            }            
+            }
+            else 
+            {
+                _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
+            }
         }
 
         private GameObject GetRandomZombie() 
         {
-            int random;            
+            int random = UnityEngine.Random.Range(1, 100);
 
-            for (short i = 0; i < 100; i++) 
+            if (random > 1 && random < _zombieSpawnPercentages[0])
             {
-                random = UnityEngine.Random.Range(1, 100);
-
-                if (random > 1 && random < _zombieSpawnPercentages[0]) 
+                for (short v = 0; v < _normalZombies.Length; v++)
                 {
-                    for (short v = 0; v < _normalZombies.Length; v++) 
+                    if (!_normalZombies[v].activeSelf)
                     {
-                        if (!_normalZombies[v].activeSelf) 
-                        {
-                            return _normalZombies[v];
-                        }
+                        return _normalZombies[v];
                     }
                 }
-                else if (random > _zombieSpawnPercentages[0] && random < _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1]) 
+            }
+            else if (random > _zombieSpawnPercentages[0] && random < _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1])
+            {
+                for (short v = 0; v < _fastZombies.Length; v++)
                 {
-                    for (short v = 0; v < _fastZombies.Length; v++)
+                    if (!_fastZombies[v].activeSelf)
                     {
-                        if (!_fastZombies[v].activeSelf)
-                        {
-                            return _fastZombies[v];
-                        }
+                        return _fastZombies[v];
                     }
                 }
-                else if (random > _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] && random < _zombieSpawnPercentages[1] + _zombieSpawnPercentages[2]) 
+            }
+            else if (random > _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] && random < _zombieSpawnPercentages[1] + _zombieSpawnPercentages[2])
+            {
+                for (short v = 0; v < _fatZombies.Length; v++)
                 {
-                    for (short v = 0; v < _fatZombies.Length; v++)
+                    if (!_fatZombies[v].activeSelf)
                     {
-                        if (!_fatZombies[v].activeSelf)
-                        {
-                            return _fatZombies[v];
-                        }
+                        return _fatZombies[v];
                     }
-                }               
-            }            
+                }
+            }
 
             return null;
         }        

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc8d39d76a6ec746ae12eaba245a6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieMoveVelocity: 0.1
+  _zombieMoveVelocity: 0.6
 --- !u!114 &346120353000518287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbb04c6eba0b86439adff4fc789558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieInitialDamage: 15
-  _zombieAttackCooldownTime: 1.5
+  _zombieInitialDamage: 20
+  _zombieAttackCooldownTime: 2
 --- !u!114 &-4343658154888055254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 50
+  _initialHealth: 40
 --- !u!114 &3484924348982428427
 MonoBehaviour:
   m_ObjectHideFlags: 0
