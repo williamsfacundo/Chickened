@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2683082185225636675
 Transform:
   m_ObjectHideFlags: 0
@@ -41,11 +41,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2740053826361592638, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.2
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 2740053826361592638, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.6
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 2740053826996660712, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_Name
@@ -97,27 +97,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2740053827028127773, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29
+      value: -24.85
       objectReference: {fileID: 0}
     - target: {fileID: 2740053827028127773, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.3
+      value: -11.28
       objectReference: {fileID: 0}
     - target: {fileID: 2740053827955554764, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.8
+      value: -16.56
       objectReference: {fileID: 0}
     - target: {fileID: 2740053827955554764, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.1
+      value: 20.59
       objectReference: {fileID: 0}
     - target: {fileID: 2740053828098084022, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.8
+      value: 37.19
       objectReference: {fileID: 0}
     - target: {fileID: 2740053828098084022, guid: df7206699a071f04886a458604f2aff5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.1
+      value: -4.74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df7206699a071f04886a458604f2aff5, type: 3}
@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _initialRoundZombiesToKill
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _spawnPoints.Array.data[0]

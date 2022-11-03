@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2811523339669616405}
   m_Layer: 0
   m_Name: Fat Zombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
