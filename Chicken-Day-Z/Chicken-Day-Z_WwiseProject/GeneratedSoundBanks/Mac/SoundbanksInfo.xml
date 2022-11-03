@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Documentos\Image Campus\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Documentos\Image Campus\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Documentos\Image Campus\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Documentos\Image Campus\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="665152472">
+		<SoundBank Id="534561221" Language="SFX" Hash="830424199">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>

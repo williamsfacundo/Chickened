@@ -16,6 +16,16 @@
 						<MusicSegment Name="PLACEHOLDER Virtutes instrumenti-kevin macleod" ID="{83960511-6E4C-4D35-8ED2-28F02CB88D25}" ShortID="404834553">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="263035.328798186"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PlaybackSpeed" Type="Real64">
+									<ValueList>
+										<Value>0.85</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
