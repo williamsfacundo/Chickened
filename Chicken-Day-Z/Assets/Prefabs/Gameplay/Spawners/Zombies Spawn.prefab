@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2683082185225636675
 Transform:
   m_ObjectHideFlags: 0
@@ -182,8 +182,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2811523339669616403, guid: c859bc1f8e76fda4091dc2f7955aa6d4, type: 3}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
-      propertyPath: _timeBeforeRoundStarts
+      propertyPath: _maxFatZombies
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _maxFastZombies
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _maxNormalZombies
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _timeBeforeRoundStarts
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxNextZombieSpawnTime
@@ -214,16 +226,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _timeBeforeFirstRoundStarts
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _zombieSpawnPercentages.Array.data[0]
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _zombieSpawnPercentages.Array.data[1]
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _zombieSpawnPercentages.Array.data[2]
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _nextRoundSpawnTimesDecreasePercentage

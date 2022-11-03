@@ -25,15 +25,15 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         [SerializeField] [Range(1, 100)] private short[] _zombieSpawnPercentages; //In total must reached 100, guardar esta info en el zombie
         
-        [SerializeField] private float _timeBeforeRoundStarts;
+        [SerializeField] [Range(1, 30)] private float _timeBeforeRoundStarts;
+
+        [SerializeField] [Range(1, 5)] private float _timeBeforeFirstRoundStarts;
 
         [SerializeField] private float _minNextZombieSpawnTime; 
 
         [SerializeField] private float _maxNextZombieSpawnTime; 
                                                                 
-        [SerializeField] private short _initialRoundZombiesToKill;
-
-        [SerializeField] [Range(1, 100)] private short _nextRoundSpawnTimesDecreasePercentage;
+        [SerializeField] private short _initialRoundZombiesToKill;        
 
         [SerializeField] private short _maxNormalZombies;
 
@@ -63,6 +63,12 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         public short Round 
         {
+            set 
+            {
+                _round = value;
+
+                OnRoundChanged?.Invoke();
+            }
             get 
             {
                 return _round;
@@ -114,20 +120,18 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void OnDisable()
         {
-            GameplayResetter.OnGameplayReset += ResetObject;            
+            GameplayResetter.OnGameplayReset -= ResetObject;            
         }
 
         private void Start()
         {
-            SetwZombieObjects();
+            SetZombieObjects();
 
-            _timerBeforeRoundStarts = new Timer(_timeBeforeRoundStarts);
+            _timerBeforeRoundStarts = new Timer(_timeBeforeFirstRoundStarts);
 
             _timerForNextZombie = new Timer(UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime));
 
-            _round = InitialRound;            
-
-            OnRoundChanged?.Invoke();            
+            Round = InitialRound;                        
 
             _zombiesLeftToKill = _initialRoundZombiesToKill;                       
 
@@ -160,15 +164,13 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         public void ResetObject()
         {
-            _timerBeforeRoundStarts.ResetTimer();
+            _timerBeforeRoundStarts.Time = _timeBeforeFirstRoundStarts;
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 
             _timerForNextZombie.ResetTimer();
 
-            _round = InitialRound;
-
-            OnRoundChanged?.Invoke();
+            Round = InitialRound;            
 
             _zombiesLeftToKill = _initialRoundZombiesToKill;            
 
@@ -188,7 +190,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             }
         }
 
-        private void SetwZombieObjects()
+        private void SetZombieObjects()
         {
             _normalZombies = new GameObject[_maxNormalZombies];
 
@@ -200,27 +202,21 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             {
                 _normalZombies[i] = Instantiate(_normalZombie);
 
-                _normalZombies[i].SetActive(false);
-
-                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                _normalZombies[i].SetActive(false);                
             }
 
             for (short i = 0; i < _fastZombies.Length; i++)
             {
                 _fastZombies[i] = Instantiate(_fastZombie);
 
-                _fastZombies[i].SetActive(false);
-
-                _fastZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                _fastZombies[i].SetActive(false);                
             }
 
             for (short i = 0; i < _fatZombies.Length; i++)
             {
                 _fatZombies[i] = Instantiate(_fatZombie);
 
-                _fatZombies[i].SetActive(false);
-
-                _normalZombies[i].GetComponent<ZombieTarget>().Target = _eggBase;
+                _fatZombies[i].SetActive(false);                
             }            
         }
 
@@ -283,7 +279,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 if (random > 1 && random < _zombieSpawnPercentages[0]) 
                 {
-                    for (short v = 0; v < _normalZombies.Length; i++) 
+                    for (short v = 0; v < _normalZombies.Length; v++) 
                     {
                         if (!_normalZombies[v].activeSelf) 
                         {
@@ -293,7 +289,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 }
                 else if (random > _zombieSpawnPercentages[0] && random < _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1]) 
                 {
-                    for (short v = 0; v < _fastZombies.Length; i++)
+                    for (short v = 0; v < _fastZombies.Length; v++)
                     {
                         if (!_fastZombies[v].activeSelf)
                         {
@@ -303,7 +299,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 }
                 else if (random > _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] && random < _zombieSpawnPercentages[1] + _zombieSpawnPercentages[2]) 
                 {
-                    for (short v = 0; v < _fatZombies.Length; i++)
+                    for (short v = 0; v < _fatZombies.Length; v++)
                     {
                         if (!_fatZombies[v].activeSelf)
                         {
@@ -325,13 +321,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void NextRound() 
         {
-            _round += 1;
+            Round += 1;            
 
-            OnRoundChanged?.Invoke();
+            _zombiesLeftToKill = (short)(_initialRoundZombiesToKill * Round);
 
-            _zombiesLeftToKill = (short)(_initialRoundZombiesToKill * _round);
-
-            _timerBeforeRoundStarts.ResetTimer();
+            _timerBeforeRoundStarts.Time = _timeBeforeFirstRoundStarts;
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 

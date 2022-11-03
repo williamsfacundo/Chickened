@@ -510,13 +510,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2683082184778688940, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082184778688940, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_Name
       value: Zombies Spawn
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_RootOrder
@@ -562,6 +570,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2683082185436836495, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185436836495, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.28
+      objectReference: {fileID: 0}
     - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: _chicken
       value: 
@@ -571,20 +587,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 45750009}
     - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _maxFatZombies
-      value: 10
+      propertyPath: _initialRoundZombiesToKill
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _maxFastZombies
-      value: 10
+    - target: {fileID: 2683082186406452062, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.56
       objectReference: {fileID: 0}
-    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _maxNormalZombies
-      value: 30
+    - target: {fileID: 2683082186406452062, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.59
       objectReference: {fileID: 0}
-    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _timeBeforeRoundStarts
-      value: 1
+    - target: {fileID: 2683082186515443236, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082186515443236, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
