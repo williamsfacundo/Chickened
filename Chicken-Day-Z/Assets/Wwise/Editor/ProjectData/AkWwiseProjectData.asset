@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585341485446466533
+    m_lastTime: -8585341480619949013
     List:
     - name: Play_mainMenuBGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -224,8 +224,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
     GuidInternal: 
-    m_lastTime: -8585341580333963037
-    List: []
+    m_lastTime: -8585341480620074042
+    List:
+    - name: MusicRegion
+      guid: d968fd35f0a2d94c89589dd518399b8c
+      id: 239549482
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
+      - ElementName: MusicRegion
+        ObjectType: 9
+        guid: d968fd35f0a2d94c89589dd518399b8c
+      Path: States\Default Work Unit\MusicRegion
+      values:
+      - name: ingame
+        guid: 39e2a63c6dc8104e919b3665e26e3206
+        id: 984691642
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
+        - ElementName: MusicRegion
+          ObjectType: 9
+          guid: d968fd35f0a2d94c89589dd518399b8c
+        - ElementName: ingame
+          ObjectType: 8
+          guid: 39e2a63c6dc8104e919b3665e26e3206
+      - name: mainMenu
+        guid: ad673d541238bb4e9fbd2fc37443b26f
+        id: 3604647259
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
+        - ElementName: MusicRegion
+          ObjectType: 9
+          guid: d968fd35f0a2d94c89589dd518399b8c
+        - ElementName: mainMenu
+          ObjectType: 8
+          guid: ad673d541238bb4e9fbd2fc37443b26f
+      - name: None
+        guid: ee43296c6df51746adf7c248a4fddc0a
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
+        - ElementName: MusicRegion
+          ObjectType: 9
+          guid: d968fd35f0a2d94c89589dd518399b8c
+        - ElementName: None
+          ObjectType: 8
+          guid: ee43296c6df51746adf7c248a4fddc0a
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -255,7 +321,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000
+  ExpandedWaapiItemIds: 05000000060000000d0000000e0000000f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -21,6 +21,22 @@ namespace AK
         static const AkUniqueID STOP_MAINMENUBGM = 1323942960U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace MUSICREGION
+        {
+            static const AkUniqueID GROUP = 239549482U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID MAINMENU = 3604647259U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSICREGION
+
+    } // namespace STATES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
