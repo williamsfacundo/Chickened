@@ -491,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527268684578124633, guid: c491cf59f8d64ed49bcd19632fafdf09, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2527268684578124633, guid: c491cf59f8d64ed49bcd19632fafdf09, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
@@ -582,6 +582,10 @@ PrefabInstance:
     - target: {fileID: 879014131753888741, guid: 7c6acd20999e8ed4bbef755e0de1930c, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 879014131753888742, guid: 7c6acd20999e8ed4bbef755e0de1930c, type: 3}
+      propertyPath: orthographic size
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6acd20999e8ed4bbef755e0de1930c, type: 3}
