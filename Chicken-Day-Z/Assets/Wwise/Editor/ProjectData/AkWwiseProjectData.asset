@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585341580342732988
+    m_lastTime: -8585341485446466533
     List:
     - name: Play_mainMenuBGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -255,7 +255,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

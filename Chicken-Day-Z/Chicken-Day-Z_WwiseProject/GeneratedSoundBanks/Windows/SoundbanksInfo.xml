@@ -11,16 +11,20 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="2472885640">
+		<SoundBank Id="534561221" Language="SFX" Hash="2103831249">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1063700270" Name="Play_mainMenuBGM" ObjectPath="\Events\Default Work Unit\Play_mainMenuBGM" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="918013845" Language="SFX">
-							<ShortName>PLACEHOLDER Virtutes instrumenti-kevin macleod.wav</ShortName>
-							<Path>SFX\PLACEHOLDER Virtutes instrumenti-kevin macleod_D79FB2B7.wem</Path>
+						<File Id="157120102" Language="SFX">
+							<ShortName>CHICKENED_BGM_PartA.wav</ShortName>
+							<Path>SFX\CHICKENED_BGM_PartA_D79FB2B7.wem</Path>
+						</File>
+						<File Id="194565583" Language="SFX">
+							<ShortName>CHICKENED_BGM_Intro.wav</ShortName>
+							<Path>SFX\CHICKENED_BGM_Intro_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

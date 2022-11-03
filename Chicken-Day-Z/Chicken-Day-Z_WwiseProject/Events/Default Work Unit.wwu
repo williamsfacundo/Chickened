@@ -8,7 +8,7 @@
 						<Action Name="" ID="{04DC6C94-695D-4CB2-B51D-A5C85E347E2C}" ShortID="102229858">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="mainMenuBGM" ID="{2D59302B-E788-47B9-A8F9-AC0502FC7F22}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
+									<ObjectRef Name="GameplayBGM" ID="{D85DADF7-6496-4100-914B-4ED9B59B5994}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
