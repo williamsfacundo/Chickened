@@ -1,44 +1,70 @@
 using UnityEngine;
 using TMPro;
 
+using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Characters.Zombie;
 
 namespace ChickenDayZ.UI 
 {
     public class RoundIndicator : MonoBehaviour
     {
-        /*[SerializeField] private TMP_Text _showRoundText;
+        [SerializeField] private ZombiesSpawner _zombiesSpawner;
+        
+        [SerializeField] private TMP_Text _showRoundText;
 
-        private ZombiesSpawner _zombiesSpawner;
+        [SerializeField] [Range(1f, 5f)] private float _timeForTextToBanish;
+
+        private Timer _timerToBanishText;
 
         private void Awake()
         {
-            _zombiesSpawner = FindObjectOfType<ZombiesSpawner>();
+            _timerToBanishText = new Timer(_timeForTextToBanish);
 
             if (_zombiesSpawner == null) 
             {
-                Debug.LogError("Zombie spawner couldnt be found!");
+                Debug.LogError("Assing a zombie spawner!");
             }
-        }
-
-        void Start()
-        {
-            UpdateRoundText();
-        }
+        }                               
 
         void OnEnable()
         {
-            _zombiesSpawner.OnRoundChanged += UpdateRoundText;
+            if (_zombiesSpawner != null) 
+            {
+                _zombiesSpawner.OnRoundChanged += ShowRoundText;
+            }
         }
 
         void OnDisable()
         {
-            _zombiesSpawner.OnRoundChanged -= UpdateRoundText;
+            if (_zombiesSpawner != null)
+            {
+                _zombiesSpawner.OnRoundChanged -= ShowRoundText;
+            }
         }
 
-        private void UpdateRoundText() 
+        void Update()
         {
-            _showRoundText.text = "Round " + _zombiesSpawner.Round;
-        }*/
+            if (!_timerToBanishText.TimerFinished) 
+            {
+                _timerToBanishText.DecreaseTimer();
+
+                if (_timerToBanishText.TimerFinished) 
+                {
+                    HideRoundText();
+                }
+            }
+        }        
+
+        private void ShowRoundText() 
+        {
+            _showRoundText.text = "ROUND " + _zombiesSpawner.Round;
+
+            _timerToBanishText.ResetTimer();
+        }
+
+        private void HideRoundText() 
+        {
+            _showRoundText.text = " ";
+        }
     }
 }
