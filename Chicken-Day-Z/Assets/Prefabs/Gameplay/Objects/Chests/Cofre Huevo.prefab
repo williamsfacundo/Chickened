@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3323283001576501794}
   - component: {fileID: 3323283001576501797}
   - component: {fileID: 8796506082623147817}
+  - component: {fileID: 2057671686616821904}
   m_Layer: 0
   m_Name: Cofre Huevo
   m_TagString: Chest
@@ -109,3 +110,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.17}
   m_EdgeRadius: 0
+--- !u!50 &2057671686616821904
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323283001576501796}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
