@@ -33,11 +33,15 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         private void OnEnable()
         {
             _objectHealth.OnHealthReachedZero += GameplayResetter.ResetGameplay;
+
+            GameplayResetter.OnGameplayReset += _objectHealth.ResetCurrentHealth;
         }
 
         private void OnDisable()
         {
             _objectHealth.OnHealthReachedZero -= GameplayResetter.ResetGameplay;
+
+            GameplayResetter.OnGameplayReset -= _objectHealth.ResetCurrentHealth;
         }
 
         private ChickenObject() : base(CharacterObjectTypeEnum.CHICKEN)

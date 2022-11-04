@@ -18,12 +18,16 @@ namespace ChickenDayZ.Gameplay.MainObjects.Buildings
 
         void OnEnable()
         {
-            _objectHealth.OnHealthReachedZero += GameplayResetter.ResetGameplay;            
+            _objectHealth.OnHealthReachedZero += GameplayResetter.ResetGameplay;
+
+            GameplayResetter.OnGameplayReset += _objectHealth.ResetCurrentHealth;
         }
 
         void OnDisable()
         {
             _objectHealth.OnHealthReachedZero -= GameplayResetter.ResetGameplay;
+
+            GameplayResetter.OnGameplayReset -= _objectHealth.ResetCurrentHealth;
         }
 
         private EggObject() : base(BuildingObjectTypeEnum.EGG)
