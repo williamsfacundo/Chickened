@@ -539,8 +539,8 @@
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{72BA44C5-DDBE-4312-993E-337927D671DC}">
 											<PropertyList>
-												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 											</PropertyList>
 											<TransitionInfo>
 												<SourceFadeOut>
