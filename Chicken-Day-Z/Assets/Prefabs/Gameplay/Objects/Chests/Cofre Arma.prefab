@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7174796553470254205}
   - component: {fileID: 4470202645405893364}
   - component: {fileID: 7539348224075831808}
+  - component: {fileID: 4061560962419776868}
   m_Layer: 0
   m_Name: Cofre Arma
   m_TagString: Chest
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &4061560962419776868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174796553470254204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc6bca1c070d2549b5c8a69d0a92847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

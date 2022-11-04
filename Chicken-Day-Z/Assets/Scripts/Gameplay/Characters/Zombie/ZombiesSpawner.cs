@@ -5,6 +5,7 @@ using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Health;
 using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Controllers;
+using ChickenDayZ.Gameplay.MainObjects.PowerUp;
 using ChickenDayZ.Gameplay.MainObjects.Characters;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
@@ -25,7 +26,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         [SerializeField] [Range(1, 100)] private short[] _zombieSpawnPercentages; //In total must reached 100, guardar esta info en el zombie
         
-        [SerializeField] [Range(1, 30)] private float _timeBeforeRoundStarts;
+        [SerializeField] [Range(1, 45)] private float _timeBeforeRoundStarts;
 
         [SerializeField] [Range(1, 5)] private float _timeBeforeFirstRoundStarts;
 
@@ -324,11 +325,13 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _zombiesLeftToKill = (short)(_initialRoundZombiesToKill * Round);
 
-            _timerBeforeRoundStarts.Time = _timeBeforeFirstRoundStarts;
+            _timerBeforeRoundStarts.Time = _timeBeforeRoundStarts;
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 
-            _timerForNextZombie.ResetTimer();            
+            _timerForNextZombie.ResetTimer();
+
+            PowerUpObject.PowerUpAvailable = true;
         }
     }
 }

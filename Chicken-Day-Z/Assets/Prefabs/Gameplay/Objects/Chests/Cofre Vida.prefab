@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7445620070919275763}
   - component: {fileID: -6775948985219288312}
   - component: {fileID: 3234144751233501352}
+  - component: {fileID: 8686921090722473649}
   m_Layer: 0
   m_Name: Cofre Vida
   m_TagString: Chest
@@ -131,3 +132,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8686921090722473649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445620070919275762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b4e6e1ee74b7d4baea332ed27a9bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defineHealthPowerUpObjectTypeEnum: 0
+  _healthIncreasedPercentage: 0
+  _objectHealth: {fileID: 0}

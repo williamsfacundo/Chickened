@@ -55,6 +55,16 @@ namespace ChickenDayZ.Gameplay.Health
             }
         }
 
+        void OnEnable()
+        {
+            OnMaxHealthChanged += ResetCurrentHealth;
+        }
+
+        void OnDisable()
+        {
+            OnMaxHealthChanged -= ResetCurrentHealth;
+        }
+
         void Start()
         {
             ResetObject();            

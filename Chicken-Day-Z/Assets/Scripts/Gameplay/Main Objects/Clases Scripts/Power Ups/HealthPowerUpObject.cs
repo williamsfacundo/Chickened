@@ -1,5 +1,7 @@
 using UnityEngine;
 
+using ChickenDayZ.Gameplay.Health;
+
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.PowerUp 
@@ -8,7 +10,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
     {
         [SerializeField] private HealthPowerUpObjectTypeEnum _defineHealthPowerUpObjectTypeEnum;
 
-        public HealthPowerUpObjectTypeEnum _healthPowerUpObjectTypeEnum;
+        [SerializeField] [Range(0f, 1f)] private float _healthIncreasedPercentage;
+
+        [SerializeField] private ObjectHealth _objectHealth;
+
+        private HealthPowerUpObjectTypeEnum _healthPowerUpObjectTypeEnum;
 
         public HealthPowerUpObjectTypeEnum HealthPowerUpObjectTypeEnum 
         {
@@ -23,9 +29,31 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             _healthPowerUpObjectTypeEnum = _defineHealthPowerUpObjectTypeEnum;
         }
 
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
+            {
+                UsePowerUp();
+            }
+        }        
+
         private HealthPowerUpObject() : base(PowerUpObjectTypeEnum.HEALTH) 
         {
-
+            
         }
+
+        protected override void UsePowerUp() 
+        {
+            if (PowerUpAvailable) 
+            {
+                PowerUpLevel += 1;
+
+                float healthIncreased = _objectHealth.InitialHealth * _healthIncreasedPercentage * PowerUpLevel;
+
+                _objectHealth.MaxHealth += healthIncreased;
+
+                PowerUpAvailable = false;
+            }           
+        }       
     }
 }

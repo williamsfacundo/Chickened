@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5212257824599784256, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
+      propertyPath: _initialHealth
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
 --- !u!4 &1532401959217641519 stripped
@@ -227,6 +231,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1532401960205222302, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
   m_PrefabInstance: {fileID: 996325809}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5212257823951913713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5212257824599784256, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
+  m_PrefabInstance: {fileID: 996325809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1087417095118966603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,6 +296,14 @@ PrefabInstance:
     - target: {fileID: 3323283001576501796, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
       propertyPath: m_Name
       value: Cofre Huevo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+      propertyPath: _objectHealth
+      value: 
+      objectReference: {fileID: 5212257823951913713}
+    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+      propertyPath: _healthIncreasedPercentage
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
@@ -405,6 +428,14 @@ PrefabInstance:
     - target: {fileID: 3323283001576501796, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
       propertyPath: m_Name
       value: Cofre Huevo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+      propertyPath: _objectHealth
+      value: 
+      objectReference: {fileID: 5212257823951913713}
+    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+      propertyPath: _healthIncreasedPercentage
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
@@ -534,6 +565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8686921090722473649, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+      propertyPath: _healthIncreasedPercentage
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
 --- !u!4 &5571028111648478716 stripped
@@ -595,6 +630,10 @@ PrefabInstance:
     - target: {fileID: 7445620070919275764, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686921090722473649, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+      propertyPath: _healthIncreasedPercentage
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
@@ -720,6 +759,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8686921090722473649, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+      propertyPath: _healthIncreasedPercentage
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
 --- !u!4 &718128920546030474 stripped
@@ -781,6 +824,14 @@ PrefabInstance:
     - target: {fileID: 3323283001576501796, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
       propertyPath: m_Name
       value: Cofre Huevo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+      propertyPath: _objectHealth
+      value: 
+      objectReference: {fileID: 5212257823951913713}
+    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+      propertyPath: _healthIncreasedPercentage
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
