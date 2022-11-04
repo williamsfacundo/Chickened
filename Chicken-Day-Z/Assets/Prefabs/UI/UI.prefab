@@ -2137,34 +2137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1654362150216748574}
     m_Modifications:
-    - target: {fileID: 5369343324173608448, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _baseHealth
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608448, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _showBaseHealthText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608449, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _chicken
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608449, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _showBulletsLeftText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608450, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _chickenHealth
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608450, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _showChickenHealthText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608451, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _showRoundText
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5369343324173608455, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2208,22 +2180,6 @@ PrefabInstance:
     - target: {fileID: 5369343324173608455, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608460, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _scoreText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608461, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _chicken
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608461, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _reloadingText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369343324173608462, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
-      propertyPath: _showVersionText
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5369343324173608463, guid: 08c7a6ec6cdd6924095ed00cb45188e9, type: 3}
       propertyPath: m_Name
