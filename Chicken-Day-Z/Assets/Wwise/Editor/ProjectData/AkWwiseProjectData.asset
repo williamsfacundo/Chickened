@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: 1476cec019b73c4884810ee1f22855bd
       Path: Events\Default Work Unit\Play_Pistol_LV1
       maxAttenuation: 0
-      maxDuration: 1.284354
-      minDuration: 0.655057
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Pistol_Reload_LV1
       guid: 63561d1cf42474408abb8db865296935
       id: 183297547
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 63561d1cf42474408abb8db865296935
       Path: Events\Default Work Unit\Play_Pistol_Reload_LV1
       maxAttenuation: 0
-      maxDuration: 2.8
-      minDuration: 2.8
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Zombies_Die
       guid: ee252d84bdb83d479be0545a4623e257
       id: 16750680
@@ -162,8 +162,8 @@ MonoBehaviour:
         guid: ee252d84bdb83d479be0545a4623e257
       Path: Events\Default Work Unit\Play_Zombies_Die
       maxAttenuation: 0
-      maxDuration: 1.332812
-      minDuration: 1.132132
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Zombies_Impact
       guid: e1d91df44845ad45ab11a31541819e2a
       id: 297923524
@@ -179,8 +179,8 @@ MonoBehaviour:
         guid: e1d91df44845ad45ab11a31541819e2a
       Path: Events\Default Work Unit\Play_Zombies_Impact
       maxAttenuation: 0
-      maxDuration: 1.175896
-      minDuration: 0.857823
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_mainMenuBGM
       guid: 1c81c4ab05319c4abde2a243e12300dc
       id: 1323942960
@@ -196,8 +196,8 @@ MonoBehaviour:
         guid: 1c81c4ab05319c4abde2a243e12300dc
       Path: Events\Default Work Unit\Stop_mainMenuBGM
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
