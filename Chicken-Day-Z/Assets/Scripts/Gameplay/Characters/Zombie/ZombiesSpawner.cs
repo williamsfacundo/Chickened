@@ -26,7 +26,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         [SerializeField] [Range(1, 100)] private short[] _zombieSpawnPercentages; //In total must reached 100, guardar esta info en el zombie
         
-        [SerializeField] [Range(1, 45)] private float _timeBeforeRoundStarts;
+        [SerializeField] [Range(1, 45)] private float _timeBeforeRoundStarts;   
 
         [SerializeField] [Range(1, 5)] private float _timeBeforeFirstRoundStarts;
 
