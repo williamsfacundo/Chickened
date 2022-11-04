@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirearmType: 0
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
-  ChargerMaxAmmo: 12
+  ChargerMaxAmmo: 16
   ReloadTime: 2
   FireRate: 0.4
   Damage: 10
-  BulletMoveSpeed: 10
-  Range: 12
+  BulletMoveSpeed: 20
+  Range: 8
   FireCapacity: 1

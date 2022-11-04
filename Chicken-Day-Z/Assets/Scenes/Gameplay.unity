@@ -128,6 +128,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1532401959217641517, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
   m_PrefabInstance: {fileID: 1093126732}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &292886026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2805415102074375044, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+  m_PrefabInstance: {fileID: 1281163950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &350705354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -490,6 +501,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1654362150344095469, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: _chicken
+      value: 
+      objectReference: {fileID: 1928961616}
+    - target: {fileID: 1654362150344095469, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: _showBulletsLeftText
+      value: 
+      objectReference: {fileID: 292886026}
     - target: {fileID: 4920566461234778570, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_IsActive
       value: 0

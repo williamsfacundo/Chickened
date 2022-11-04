@@ -8,7 +8,7 @@ namespace ChickenDayZ.UI
 {
     public class BulletsLeftIndicator : MonoBehaviour
     {
-        /*[SerializeField] private GameObject _chicken;
+        [SerializeField] private GameObject _chicken;
 
         [SerializeField] private TMP_Text _showBulletsLeftText;
 
@@ -75,7 +75,7 @@ namespace ChickenDayZ.UI
 
         private void UpdateBulletsLeftText()
         {            
-            _showBulletsLeftText.text = "Bullets Left: " + _charger.ChargerAmmo;
+            _showBulletsLeftText.text = _charger.ChargerAmmo + " / " + _charger.ChargerMaxAmmo;
         }
 
         private void DestroyScriptIfAnySerializedFieldObjectIsMissing() 
@@ -91,6 +91,6 @@ namespace ChickenDayZ.UI
 
                 Destroy(this);
             }
-        }*/                
+        }                
     }
 }
