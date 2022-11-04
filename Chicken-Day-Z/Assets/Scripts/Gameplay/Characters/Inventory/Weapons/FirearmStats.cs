@@ -9,6 +9,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
     {
         public FirearmTypeEnum FirearmType;
 
+        public Sprite _sprite;
+
         public GameObject ProjectilePrefab;
 
         public short ChargerMaxAmmo;

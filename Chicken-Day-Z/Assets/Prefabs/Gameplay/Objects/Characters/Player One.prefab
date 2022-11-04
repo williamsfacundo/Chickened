@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 150
+  _initialHealth: 60
 --- !u!114 &7480977285595935393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c57ee4ac23e5994faa5d3d70ca6ad99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _firearmSpriteRenderer: {fileID: 3595562619768637622}
   _firearmStats: {fileID: 11400000, guid: 2b4c8ded93924a5448b79fdc481fccca, type: 2}
   _initialInventoryItem: 0
 --- !u!114 &7324721198159398488
@@ -416,6 +417,11 @@ PrefabInstance:
 --- !u!4 &3595562619768637621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3595562619766330755, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
+  m_PrefabInstance: {fileID: 2350390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3595562619768637622 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3595562619766330752, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
   m_PrefabInstance: {fileID: 2350390}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2527268685865977734
