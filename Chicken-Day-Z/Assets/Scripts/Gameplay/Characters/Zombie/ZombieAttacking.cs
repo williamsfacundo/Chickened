@@ -32,13 +32,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void OnDisable()
         {
-            _zombieTarget.OnTargetChanged += UpdateTargetHealth;
+            _zombieTarget.OnTargetChanged -= UpdateTargetHealth;
         }
 
         void Start()
         {
-            //UpdateTargetHealth();
-
             _zombieDamage = _zombieInitialDamage;
 
             _attackCooldownTimer = 0f;
@@ -91,6 +89,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         private void UpdateTargetHealth() 
         {            
             _targetHealth = _zombieTarget.Target.GetComponent<ObjectHealth>();
+
+            _attackCooldownTimer = 0f;
         }
     }
 }

@@ -10,7 +10,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
     [RequireComponent(typeof(ObjectHealth))]
     public class ZombieObject : CharacterObject
     {
+        [SerializeField] [Range(50, 150)] private short _scoreGivenWhenKilled;
+
         [SerializeField] private ZombieObjectTypeEnum _defineZombieType;
+
+        private ChickenObject _chickenObject;
 
         private ObjectHealth _objectHealth;
         
@@ -46,6 +50,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
         void Awake()
         {
+            _chickenObject = FindObjectOfType<ChickenObject>();
+
             _objectHealth = GetComponent<ObjectHealth>();
 
             _zombieType =_defineZombieType;
@@ -57,12 +63,16 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         {
             _objectHealth.OnHealthReachedZero += DeactivateZombie;
 
+            _objectHealth.OnHealthReachedZero += AddScoreToPlayer;
+
             _zombiesActiveInstances += 1;
         }
 
         void OnDisable()
         {
             _objectHealth.OnHealthReachedZero -= DeactivateZombie;
+
+            _objectHealth.OnHealthReachedZero -= AddScoreToPlayer;
 
             _zombiesActiveInstances -= 1;
         }
@@ -80,6 +90,14 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         void DeactivateZombie() 
         {
             gameObject.SetActive(false);
+        }
+
+        void AddScoreToPlayer() 
+        {
+            if (_chickenObject != null) 
+            {
+                _chickenObject.ChickenScore.Score += _scoreGivenWhenKilled;
+            }
         }
     }
 }

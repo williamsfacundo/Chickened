@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc8d39d76a6ec746ae12eaba245a6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieMoveVelocity: 1
+  _zombieMoveVelocity: 2
 --- !u!114 &5139383335364678124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _zombieInitialDamage: 10
-  _zombieAttackCooldownTime: 1.2
+  _zombieAttackCooldownTime: 2
 --- !u!114 &-7420021758886791320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4781c560f17f4e44984f59e332429cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scoreGivenWhenKilled: 100
   _defineZombieType: 0
 --- !u!50 &2811523339669616404
 Rigidbody2D:

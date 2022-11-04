@@ -150,17 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &244124869 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4171003936169709124, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-  m_PrefabInstance: {fileID: 1281163950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &350705354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -225,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5212257823951913713, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
+      propertyPath: _initialHealth
+      value: 280
+      objectReference: {fileID: 0}
     - target: {fileID: 8892972975006789525, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -441,6 +434,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1654362150216748573, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: _scoreText
+      value: 
+      objectReference: {fileID: 1596559336}
     - target: {fileID: 1654362150216748574, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -494,57 +491,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1928961616}
     - target: {fileID: 1654362150344095470, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-      propertyPath: _healthBar
-      value: 
-      objectReference: {fileID: 1374883167}
-    - target: {fileID: 1654362150344095470, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 45750012}
     - target: {fileID: 1654362150344095471, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-      propertyPath: _showRoundText
-      value: 
-      objectReference: {fileID: 1281163951}
-    - target: {fileID: 1654362150344095471, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _zombiesSpawner
       value: 
       objectReference: {fileID: 29431179}
-    - target: {fileID: 1654362150344095471, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-      propertyPath: _timeForTextToBanish
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8898457349544007025, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-      propertyPath: _healthBar
+    - target: {fileID: 2989741380685708811, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_text
       value: 
-      objectReference: {fileID: 244124869}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333442731137739536, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725097031528584027, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8898457349544007025, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 1928961633}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
---- !u!114 &1281163951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6735785330238187024, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-  m_PrefabInstance: {fileID: 1281163950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1374883167 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4374648297095558600, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-  m_PrefabInstance: {fileID: 1281163950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1554138891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -609,15 +580,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 45750009}
     - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _timeBeforeRoundStarts
-      value: 3
+      propertyPath: _maxFatZombies
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _maxNextZombieSpawnTime
-      value: 5
+      propertyPath: _maxFastZombies
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _maxNormalZombies
+      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+--- !u!114 &1596559336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8725097032216050694, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+  m_PrefabInstance: {fileID: 1281163950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1928961616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7480977285595935396, guid: a15d289507929e54d9720a2dfd896f11, type: 3}

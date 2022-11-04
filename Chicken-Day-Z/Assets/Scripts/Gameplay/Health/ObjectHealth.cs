@@ -7,7 +7,7 @@ namespace ChickenDayZ.Gameplay.Health
 {
     public class ObjectHealth : MonoBehaviour, IDamageable, IResettable
     {
-        [SerializeField] [Range(1, 200)] private float _initialHealth;
+        [SerializeField] [Range(1, 280)] private float _initialHealth;
 
         public event Action OnCurrentHealthChanged;
 

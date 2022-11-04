@@ -13,21 +13,17 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Score
 
         public float Score 
         {
+            set 
+            {
+                _score = value;
+
+                OnScoreChanged?.Invoke();
+            }
             get 
             {
                 return _score;
             }
-        }
-
-        void OnEnable()
-        {
-            GameplayResetter.OnGameplayReset += ResetScore;                        
-        }
-
-        void OnDisable()
-        {
-            GameplayResetter.OnGameplayReset -= ResetScore;
-        }
+        }        
 
         private void Start()
         {
@@ -36,16 +32,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Score
 
         public void ResetScore() 
         {
-            _score = 0;
-
-            OnScoreChanged?.Invoke();
-        }
-
-        public void AddScore(float value) 
-        {
-            _score += value;
-
-            OnScoreChanged?.Invoke();
-        }        
+            Score = 0;            
+        }                
     }
 }

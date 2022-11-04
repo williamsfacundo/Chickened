@@ -1,4 +1,7 @@
 using UnityEngine;
+using TMPro;
+
+using ChickenDayZ.Gameplay.MainObjects.Characters;
 
 namespace ChickenDayZ.Gameplay.Controllers 
 {
@@ -23,13 +26,19 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         [SerializeField] private Canvas _gameplayCanvas;
 
-        [SerializeField] private Canvas _mapCanvas;
+        [SerializeField] private TMP_Text _scoreText;
 
+        [SerializeField] private Canvas _mapCanvas;
+        
         [SerializeField] private KeyCode _pauseKey;
+
+        private ChickenObject chicken;
 
         void Awake()
         {
             InitialConfigurations();
+
+            chicken = FindObjectOfType<ChickenObject>();
         }
 
         void OnEnable()
@@ -137,7 +146,11 @@ namespace ChickenDayZ.Gameplay.Controllers
         {
             SetTimeScale(0f);
             ChangeCanvasState(_gameOverCanvas, true);
-            ChangeCanvasState(_gameplayCanvas, false);
+            ChangeCanvasState(_gameplayCanvas, false);            
+
+            _scoreText.text = chicken.ChickenScore.Score + "";
+
+            chicken.ChickenScore.ResetScore();
         }
 
         public void EndGameToGameplay() 
@@ -179,6 +192,8 @@ namespace ChickenDayZ.Gameplay.Controllers
 
             ChangeCanvasState(_pauseCanvas, false);
             ChangeCanvasState(_gameplayCanvas, true);
+
+            chicken.ChickenScore.ResetScore();
         }
 
         public void PauseToMainMenu()
@@ -191,6 +206,8 @@ namespace ChickenDayZ.Gameplay.Controllers
 
             ChangeCanvasState(_pauseCanvas, false);
             ChangeCanvasState(_mainMenuCanvas, true);
+
+            chicken.ChickenScore.ResetScore();
         }
 
         public void ChangeFullScreen() 
@@ -237,6 +254,6 @@ namespace ChickenDayZ.Gameplay.Controllers
             {
                 GameplayToPause();
             }
-        }
+        }     
     }
 }

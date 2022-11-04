@@ -3,15 +3,18 @@ using UnityEngine;
 using ChickenDayZ.Gameplay.Health;
 using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+using ChickenDayZ.Gameplay.Characters.Chicken.Score;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {
-    [RequireComponent(typeof(ObjectHealth))]
+    [RequireComponent(typeof(ObjectHealth), typeof(ChickenScore))]
     public class ChickenObject : CharacterObject
     {
         public PlayerObjectTypeEnum _definePlayersObjectTypeEnum;
 
         private PlayerObjectTypeEnum _playersObjectTypeEnum;
+
+        private ChickenScore _chickenScore;
 
         private ObjectHealth _objectHealth;
         
@@ -23,11 +26,21 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             }
         }
 
+        public ChickenScore ChickenScore 
+        {
+            get 
+            {
+                return _chickenScore;
+            }
+        }
+
         void Awake()
         {
             _playersObjectTypeEnum = _definePlayersObjectTypeEnum;
 
             _objectHealth = GetComponent<ObjectHealth>();
+
+            _chickenScore = GetComponent<ChickenScore>();
         }
 
         private void OnEnable()
