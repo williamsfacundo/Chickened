@@ -12,9 +12,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
     {
         [SerializeField] private SpriteRenderer _firearmSpriteRenderer;
 
-        [SerializeField] private FirearmStats _firearmStats;
+        [SerializeField] private FirearmStats _initialFirearmStats;
 
-        [SerializeField] private InventoryItemEnum _initialInventoryItem;
+        private FirearmStats _firearmStats;        
 
         public event Action OnEquippedItemSelected;
 
@@ -25,6 +25,20 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
             get 
             {
                 return _firearmSpriteRenderer;
+            }
+        }
+
+        public FirearmStats FirearmStats 
+        {
+            set 
+            {
+                _firearmStats = value;
+
+                SetEquippedItem();
+            }
+            get 
+            {
+                return _firearmStats;
             }
         }
 
@@ -48,43 +62,38 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
 
         void Start()
         {
-            SetEquippedItem(_initialInventoryItem);           
+            FirearmStats = _initialFirearmStats;
         }
 
         public void ResetObject()
         {
-            _equippedItem.ResetObject();
+            if (FirearmStats != _initialFirearmStats) 
+            {
+                FirearmStats = _initialFirearmStats;
+            }
+            else 
+            {
+                _equippedItem.ResetObject();
+            }
+            
         }
 
-        private void SetEquippedItem(InventoryItemEnum inventoryItem) 
+        private void SetEquippedItem() 
         {
-            switch (inventoryItem)
+            if (_equippedItem != null) 
             {
-                case InventoryItemEnum.FIREARM:
+                ((Firearm)_equippedItem).FireFirearmMechanic.DestroyBullets();
+            }
 
-                    switch (_firearmStats.FirearmType)
-                    {
-                        case FirearmTypeEnum.RIFLE:
-                            
-                            _equippedItem = new Firearm(_firearmStats.ProjectilePrefab,
+            _equippedItem = new Firearm(_firearmStats.ProjectilePrefab,
                                 new Charger(_firearmStats.ChargerMaxAmmo, _firearmStats.ReloadTime),
-                                new Canyon(_firearmStats.FireRate, _firearmStats.Damage, 
+                                new Canyon(_firearmStats.FireRate, _firearmStats.Damage,
                                 _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.FireCapacity),
                                 gameObject);
 
-                            _firearmSpriteRenderer.sprite = _firearmStats._sprite;
+            _firearmSpriteRenderer.sprite = _firearmStats._sprite;
 
-                            OnEquippedItemSelected?.Invoke();
-
-                            break;
-                        default:
-                            break;
-                    }                    
-                    
-                    break;
-                default:
-                    break;
-            }
+            OnEquippedItemSelected?.Invoke();
         }     
     }
 }

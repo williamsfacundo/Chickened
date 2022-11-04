@@ -29,6 +29,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             _healthPowerUpObjectTypeEnum = _defineHealthPowerUpObjectTypeEnum;
         }
 
+        void Start()
+        {
+            PowerUpLevel = 0;
+        }
+
         private void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))

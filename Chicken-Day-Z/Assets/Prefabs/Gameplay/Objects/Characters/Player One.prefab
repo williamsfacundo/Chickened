@@ -142,8 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firearmSpriteRenderer: {fileID: 3595562619768637622}
-  _firearmStats: {fileID: 11400000, guid: 2b4c8ded93924a5448b79fdc481fccca, type: 2}
-  _initialInventoryItem: 0
+  _initialFirearmStats: {fileID: 11400000, guid: 2b4c8ded93924a5448b79fdc481fccca, type: 2}
 --- !u!114 &7324721198159398488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +363,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7480977285595935394}
     m_Modifications:
+    - target: {fileID: 3595562619766330752, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595562619766330752, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3595562619766330753, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
       propertyPath: m_Name
       value: Arma_Revolver_lvl_1

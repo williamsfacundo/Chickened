@@ -36,7 +36,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];
 
             InstanciateProjectiles(projectilePrefab);
-        }        
+        }
+        
+
 
         public void ActivateProjectile() 
         {
@@ -65,6 +67,18 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public void FireFirearmCoolDown() 
         {
             _timer.DecreaseTimer();
+        }
+
+        public void DestroyBullets() 
+        {
+
+            if (_projectiles != null) 
+            {
+                for (short i = 0; i < _projectiles.Length; i++)
+                {
+                    GameObject.Destroy(_projectiles[i].gameObject);
+                }
+            }            
         }
 
         private Vector3 CalculateProjectileDirection(Vector3 playerPosition) 

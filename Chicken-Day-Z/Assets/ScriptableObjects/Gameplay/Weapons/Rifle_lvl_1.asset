@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fb9a0b303737445b9b37318768fd3f, type: 3}
-  m_Name: Pistol_lvl_1
+  m_Name: Rifle_lvl_1
   m_EditorClassIdentifier: 
   FirearmType: 0
-  _sprite: {fileID: 21300000, guid: 3cbdd918d10b5944cbd256c18db1e012, type: 3}
+  _sprite: {fileID: 21300000, guid: 2cdc49998041eee44a6bba4ac9ab7f35, type: 3}
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
   ChargerMaxAmmo: 16
   ReloadTime: 2
   FireRate: 0.4
   Damage: 10
-  BulletMoveSpeed: 15
-  Range: 5
+  BulletMoveSpeed: 20
+  Range: 8
   FireCapacity: 1
