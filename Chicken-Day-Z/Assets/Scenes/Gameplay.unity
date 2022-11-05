@@ -561,6 +561,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
+      propertyPath: _maxNextZombieSpawnTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: _initialRoundZombiesToKill
       value: 5
       objectReference: {fileID: 0}
