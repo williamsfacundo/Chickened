@@ -3,26 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{3D68FC5D-8BA9-4EFE-AD6D-09B381DC022D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_mainMenuBGM" ID="{D89AAC22-D475-4215-B991-C76EEBD7D894}">
+				<Event Name="Play_BGM" ID="{D89AAC22-D475-4215-B991-C76EEBD7D894}">
 					<ChildrenList>
 						<Action Name="" ID="{04DC6C94-695D-4CB2-B51D-A5C85E347E2C}" ShortID="102229858">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="PlayBGM" ID="{D71DE5F9-D272-42AE-B0B1-BA23E369465D}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_mainMenuBGM" ID="{ABC4811C-3105-4A9C-BDE2-A243E12300DC}">
-					<ChildrenList>
-						<Action Name="" ID="{24FD5108-4BB6-4C2B-A85E-A4BF7C057FA6}" ShortID="660229928">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mainMenuBGM" ID="{2D59302B-E788-47B9-A8F9-AC0502FC7F22}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
+									<ObjectRef Name="BGM" ID="{D71DE5F9-D272-42AE-B0B1-BA23E369465D}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -72,12 +58,15 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Intro_Audio" ID="{913E2977-CDFB-4C46-959D-A1933D510B3F}">
+				<Event Name="Stop_BGM" ID="{129409A5-4B58-4E91-9483-371228926F52}">
 					<ChildrenList>
-						<Action Name="" ID="{8D94944F-7F0E-4DB2-8436-7881117D411B}" ShortID="486171053">
+						<Action Name="" ID="{77390293-8819-4FCD-9AF4-22FBD372B13A}" ShortID="345546818">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Intro Audio" ID="{0B226D3E-925F-4CE7-82F2-EB010A4EBFE8}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+									<ObjectRef Name="BGM" ID="{D71DE5F9-D272-42AE-B0B1-BA23E369465D}" WorkUnitID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

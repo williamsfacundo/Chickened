@@ -530,36 +530,6 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
-				<Sound Name="Intro Audio" ID="{0B226D3E-925F-4CE7-82F2-EB010A4EBFE8}" ShortID="769935273">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Intro Audio" ID="{93B46CA7-90B7-4B83-9567-49D516EA3BD2}">
-							<Language>SFX</Language>
-							<AudioFile>Intro Audio.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="613100044"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="Intro Audio" ID="{93B46CA7-90B7-4B83-9567-49D516EA3BD2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

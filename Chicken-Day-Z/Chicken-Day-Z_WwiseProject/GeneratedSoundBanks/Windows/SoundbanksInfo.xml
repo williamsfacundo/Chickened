@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="716269338">
+		<SoundBank Id="534561221" Language="SFX" Hash="1286725863">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3897668283" Name="Play_Intro_Audio" ObjectPath="\Events\Default Work Unit\Play_Intro_Audio" DurationType="OneShot" DurationMin="57.109341" DurationMax="57.109341">
+				<Event Id="3126765036" Name="Play_BGM" ObjectPath="\Events\Default Work Unit\Play_BGM" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="613100044" Language="SFX">
+						<File Id="103729780" Language="SFX">
 							<ShortName>Intro Audio.wav</ShortName>
-							<Path>SFX\Intro Audio_10C4C929.wem</Path>
+							<Path>SFX\Intro Audio_D79FB2B7.wem</Path>
 						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1063700270" Name="Play_mainMenuBGM" ObjectPath="\Events\Default Work Unit\Play_mainMenuBGM" DurationType="Infinite">
-					<IncludedMemoryFiles>
 						<File Id="157120102" Language="SFX">
 							<ShortName>CHICKENED_BGM_PartA.wav</ShortName>
 							<Path>SFX\CHICKENED_BGM_PartA_D79FB2B7.wem</Path>
@@ -49,6 +45,16 @@
 						<SwitchContainer SwitchValue="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}">
 							<Media>
 								<File Id="918013845"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}">
+							<Media>
+								<File Id="918013845"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{900AD062-182D-43C0-8E8A-21E9AF6929C4}">
+							<Media>
+								<File Id="103729780"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -149,7 +155,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1323942960" Name="Stop_mainMenuBGM" ObjectPath="\Events\Default Work Unit\Stop_mainMenuBGM" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1073466678" Name="Stop_BGM" ObjectPath="\Events\Default Work Unit\Stop_BGM" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<StateGroups>
 				<StateGroup Id="239549482" Name="MusicRegion" ObjectPath="\States\Default Work Unit\MusicRegion" GUID="{35FD68D9-A2F0-4CD9-8958-9DD518399B8C}">
@@ -157,6 +163,7 @@
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicRegion\None" GUID="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}"/>
 						<State Id="3604647259" Name="mainMenu" ObjectPath="\States\Default Work Unit\MusicRegion\mainMenu" GUID="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}"/>
 						<State Id="984691642" Name="ingame" ObjectPath="\States\Default Work Unit\MusicRegion\ingame" GUID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
+						<State Id="1125500713" Name="intro" ObjectPath="\States\Default Work Unit\MusicRegion\intro" GUID="{900AD062-182D-43C0-8E8A-21E9AF6929C4}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>

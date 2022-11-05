@@ -94,28 +94,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585339799681983521
+    m_lastTime: -8585339777893177766
     List:
-    - name: Play_Intro_Audio
-      guid: 77293e91fbcd464c959da1933d510b3f
-      id: 3897668283
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Play_Intro_Audio
-        ObjectType: 3
-        guid: 77293e91fbcd464c959da1933d510b3f
-      Path: Events\Default Work Unit\Play_Intro_Audio
-      maxAttenuation: 0
-      maxDuration: 57.10934
-      minDuration: 57.10934
-    - name: Play_mainMenuBGM
+    - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
-      id: 1063700270
+      id: 3126765036
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -123,10 +106,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Play_mainMenuBGM
+      - ElementName: Play_BGM
         ObjectType: 3
         guid: 22ac9ad875d41542b991c76eebd7d894
-      Path: Events\Default Work Unit\Play_mainMenuBGM
+      Path: Events\Default Work Unit\Play_BGM
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -198,9 +181,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.175896
       minDuration: 0.857823
-    - name: Stop_mainMenuBGM
-      guid: 1c81c4ab05319c4abde2a243e12300dc
-      id: 1323942960
+    - name: Stop_BGM
+      guid: a5099412584b914e9483371228926f52
+      id: 1073466678
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -208,10 +191,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Stop_mainMenuBGM
+      - ElementName: Stop_BGM
         ObjectType: 3
-        guid: 1c81c4ab05319c4abde2a243e12300dc
-      Path: Events\Default Work Unit\Stop_mainMenuBGM
+        guid: a5099412584b914e9483371228926f52
+      Path: Events\Default Work Unit\Stop_BGM
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -241,7 +224,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
     GuidInternal: 
-    m_lastTime: -8585340760542840986
+    m_lastTime: -8585339783618149067
     List:
     - name: MusicRegion
       guid: d968fd35f0a2d94c89589dd518399b8c
@@ -274,6 +257,22 @@ MonoBehaviour:
         - ElementName: ingame
           ObjectType: 8
           guid: 39e2a63c6dc8104e919b3665e26e3206
+      - name: intro
+        guid: 62d00a902d18c0438e8a21e9af6929c4
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
+        - ElementName: MusicRegion
+          ObjectType: 9
+          guid: d968fd35f0a2d94c89589dd518399b8c
+        - ElementName: intro
+          ObjectType: 8
+          guid: 62d00a902d18c0438e8a21e9af6929c4
       - name: mainMenu
         guid: ad673d541238bb4e9fbd2fc37443b26f
         id: 3604647259
@@ -338,7 +337,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0100000005000000060000000d0000000e0000000f0000007e0000007f000000a3000000a4000000a5000000ba000000bb000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
