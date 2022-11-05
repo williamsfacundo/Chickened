@@ -78,6 +78,8 @@ namespace ChickenDayZ.Gameplay.Health
             {
                 CurrentHealth = 0f;
 
+                AkSoundEngine.PostEvent("Play_Zombies_Die", gameObject);
+
                 OnHealthReachedZero?.Invoke();
             }
         }               

@@ -5,27 +5,39 @@ Event	ID	Name			Wwise Object Path	Notes
 	1063700270	Play_mainMenuBGM			\Default Work Unit\Play_mainMenuBGM	
 	1323942960	Stop_mainMenuBGM			\Default Work Unit\Stop_mainMenuBGM	
 	1493776129	Play_Pistol_LV1			\Default Work Unit\Play_Pistol_LV1	
+	3897668283	Play_Intro_Audio			\Default Work Unit\Play_Intro_Audio	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	239549482	MusicRegion			\Default Work Unit\MusicRegion	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicRegion			
+	984691642	ingame	MusicRegion			
+	3604647259	mainMenu	MusicRegion			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	12311827	Zombie Die 01	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 01		103458
-	32735913	Zombie Impact 05	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 05		75724
-	118072745	Pistol Reload 1-001	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol Reload 1-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol Reload 1-001		247024
-	159850908	Zombie Die 04	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 04		106114
-	163918667	Zombie Die 05	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 05		114214
-	196082848	Pistol 9mm Glock 1-002	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-002		113344
-	244982631	Pistol 9mm Glock 1-004	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-004		78828
-	330718458	Zombie Impact 08	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 08		90254
-	344487911	Pistol 9mm Glock 1-001	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-001		115616
-	355425558	Zombie Impact 01	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 01		86040
-	395896696	Zombie Die 06	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 06		99918
-	567421063	Zombie Impact 03	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 03		81534
-	598141099	Zombie Die 09	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 09		107038
-	656209100	Zombie Impact 02	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 02		75724
-	708788791	Zombie Die 02	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 02		117618
-	768041405	Zombie Impact 07	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 07		75724
-	904365897	Zombie Impact 06	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 06		79232
-	918013845	PLACEHOLDER Virtutes instrumenti-kevin macleod	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\PLACEHOLDER Virtutes instrumenti-kevin macleod_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\mainMenuBGM\PLACEHOLDER Virtutes instrumenti-kevin macleod\PLACEHOLDER Virtutes instrumenti-kevin macleod		46399496
-	1029540244	Pistol 9mm Glock 1-003	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-003		103608
-	1046129648	Zombie Impact 04	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 04		103778
-	1061936875	Pistol 9mm Glock 1-005	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-005		84138
+	12311827	Zombie Die 01	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 01		103458
+	32735913	Zombie Impact 05	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 05		75724
+	118072745	Pistol Reload 1-001	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol Reload 1-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol Reload 1-001		247024
+	157120102	CHICKENED_BGM_PartA	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\CHICKENED_BGM_PartA_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\PlayBGM\ingameBGM\CHICKENED_BGM_PartA\CHICKENED_BGM_PartA		10421232
+	159850908	Zombie Die 04	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 04		106114
+	163918667	Zombie Die 05	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 05		114214
+	194565583	CHICKENED_BGM_Intro	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\CHICKENED_BGM_Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\PlayBGM\ingameBGM\CHICKENED_BGM_Intro\CHICKENED_BGM_Intro		1628372
+	196082848	Pistol 9mm Glock 1-002	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-002		113344
+	244982631	Pistol 9mm Glock 1-004	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-004		78828
+	330718458	Zombie Impact 08	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 08		90254
+	344487911	Pistol 9mm Glock 1-001	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-001		115616
+	355425558	Zombie Impact 01	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 01		86040
+	395896696	Zombie Die 06	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 06		99918
+	567421063	Zombie Impact 03	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 03		81534
+	598141099	Zombie Die 09	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 09		107038
+	613100044	Intro Audio	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Intro Audio_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Intro Audio		10074152
+	656209100	Zombie Impact 02	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 02		75724
+	708788791	Zombie Die 02	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Die 02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 02		117618
+	768041405	Zombie Impact 07	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 07		75724
+	904365897	Zombie Impact 06	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 06		79232
+	918013845	PLACEHOLDER Virtutes instrumenti-kevin macleod	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\PLACEHOLDER Virtutes instrumenti-kevin macleod_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\PlayBGM\mainMenuBGM\PLACEHOLDER Virtutes instrumenti-kevin macleod\PLACEHOLDER Virtutes instrumenti-kevin macleod		46399496
+	1029540244	Pistol 9mm Glock 1-003	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-003		103608
+	1046129648	Zombie Impact 04	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Zombie Impact 04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 04		103778
+	1061936875	Pistol 9mm Glock 1-005	D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Mac\SFX\Pistol 9mm Glock 1-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-005		84138
 

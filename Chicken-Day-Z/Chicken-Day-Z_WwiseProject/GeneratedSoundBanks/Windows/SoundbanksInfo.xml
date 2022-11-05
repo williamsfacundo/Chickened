@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="1813799000">
+		<SoundBank Id="534561221" Language="SFX" Hash="1245912051">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1063700270" Name="Play_mainMenuBGM" ObjectPath="\Events\Default Work Unit\Play_mainMenuBGM" DurationType="Infinite">
+				<Event Id="3126765036" Name="Play_BGM" ObjectPath="\Events\Default Work Unit\Play_BGM" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="157120102" Language="SFX">
 							<ShortName>CHICKENED_BGM_PartA.wav</ShortName>
@@ -26,9 +26,13 @@
 							<ShortName>CHICKENED_BGM_Intro.wav</ShortName>
 							<Path>SFX\CHICKENED_BGM_Intro_D79FB2B7.wem</Path>
 						</File>
-						<File Id="918013845" Language="SFX">
-							<ShortName>PLACEHOLDER Virtutes instrumenti-kevin macleod.wav</ShortName>
-							<Path>SFX\PLACEHOLDER Virtutes instrumenti-kevin macleod_D79FB2B7.wem</Path>
+						<File Id="379085472" Language="SFX">
+							<ShortName>CHICKENEDIntroAndMenuMusic_intro.wav</ShortName>
+							<Path>SFX\CHICKENEDIntroAndMenuMusic_intro_D79FB2B7.wem</Path>
+						</File>
+						<File Id="512980114" Language="SFX">
+							<ShortName>CHICKENEDIntroAndMenuMusic_PartA.wav</ShortName>
+							<Path>SFX\CHICKENEDIntroAndMenuMusic_PartA_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -40,7 +44,12 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}">
 							<Media>
-								<File Id="918013845"/>
+								<File Id="512980114"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{900AD062-182D-43C0-8E8A-21E9AF6929C4}">
+							<Media>
+								<File Id="379085472"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -141,7 +150,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1323942960" Name="Stop_mainMenuBGM" ObjectPath="\Events\Default Work Unit\Stop_mainMenuBGM" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1073466678" Name="Stop_BGM" ObjectPath="\Events\Default Work Unit\Stop_BGM" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<StateGroups>
 				<StateGroup Id="239549482" Name="MusicRegion" ObjectPath="\States\Default Work Unit\MusicRegion" GUID="{35FD68D9-A2F0-4CD9-8958-9DD518399B8C}">
@@ -149,6 +158,7 @@
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicRegion\None" GUID="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}"/>
 						<State Id="3604647259" Name="mainMenu" ObjectPath="\States\Default Work Unit\MusicRegion\mainMenu" GUID="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}"/>
 						<State Id="984691642" Name="ingame" ObjectPath="\States\Default Work Unit\MusicRegion\ingame" GUID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
+						<State Id="1125500713" Name="intro" ObjectPath="\States\Default Work Unit\MusicRegion\intro" GUID="{900AD062-182D-43C0-8E8A-21E9AF6929C4}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
