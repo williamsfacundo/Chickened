@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 563341392}
   - component: {fileID: 563341395}
   - component: {fileID: 563341394}
-  - component: {fileID: 563341393}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -232,35 +231,6 @@ MonoBehaviour:
   groupIdInternal: 0
   valueGuidInternal: 
   groupGuidInternal: 
---- !u!114 &563341393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563341388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80ceee662f02334faab1ead38928cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 958ca0ea
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1b7bbecd4a2fc37418864c75bea3a470, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &563341394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +394,7 @@ GameObject:
   - component: {fileID: 1140127913}
   - component: {fileID: 1140127912}
   - component: {fileID: 1140127911}
+  - component: {fileID: 1140127914}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -506,6 +477,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1140127914}
+        m_TargetAssemblyTypeName: SetState, Assembly-CSharp
+        m_MethodName: ClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1140127912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +527,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140127909}
   m_CullTransparentMesh: 1
+--- !u!114 &1140127914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140127909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eedaab2d2709344790404967242d3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7c3481f86cc02d8418adffe627f6b24c, type: 2}
 --- !u!1 &1385140940
 GameObject:
   m_ObjectHideFlags: 0

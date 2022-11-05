@@ -11,17 +11,13 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="1286725863">
+		<SoundBank Id="534561221" Language="SFX" Hash="1245912051">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3126765036" Name="Play_BGM" ObjectPath="\Events\Default Work Unit\Play_BGM" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="103729780" Language="SFX">
-							<ShortName>Intro Audio.wav</ShortName>
-							<Path>SFX\Intro Audio_D79FB2B7.wem</Path>
-						</File>
 						<File Id="157120102" Language="SFX">
 							<ShortName>CHICKENED_BGM_PartA.wav</ShortName>
 							<Path>SFX\CHICKENED_BGM_PartA_D79FB2B7.wem</Path>
@@ -30,9 +26,13 @@
 							<ShortName>CHICKENED_BGM_Intro.wav</ShortName>
 							<Path>SFX\CHICKENED_BGM_Intro_D79FB2B7.wem</Path>
 						</File>
-						<File Id="918013845" Language="SFX">
-							<ShortName>PLACEHOLDER Virtutes instrumenti-kevin macleod.wav</ShortName>
-							<Path>SFX\PLACEHOLDER Virtutes instrumenti-kevin macleod_D79FB2B7.wem</Path>
+						<File Id="379085472" Language="SFX">
+							<ShortName>CHICKENEDIntroAndMenuMusic_intro.wav</ShortName>
+							<Path>SFX\CHICKENEDIntroAndMenuMusic_intro_D79FB2B7.wem</Path>
+						</File>
+						<File Id="512980114" Language="SFX">
+							<ShortName>CHICKENEDIntroAndMenuMusic_PartA.wav</ShortName>
+							<Path>SFX\CHICKENEDIntroAndMenuMusic_PartA_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -44,17 +44,12 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}">
 							<Media>
-								<File Id="918013845"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}">
-							<Media>
-								<File Id="918013845"/>
+								<File Id="512980114"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{900AD062-182D-43C0-8E8A-21E9AF6929C4}">
 							<Media>
-								<File Id="103729780"/>
+								<File Id="379085472"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
