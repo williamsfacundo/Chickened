@@ -40,7 +40,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         
 
 
-        public void ActivateProjectile() 
+        public void ActivateProjectile(GameObject gameObject) 
         {
             if (_timer.TimerFinished && !_charger.IsEmpty && !_reloadFirearm.IsReloading) 
             {
@@ -55,6 +55,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                         _projectiles[i].Direction = CalculateProjectileDirection(_character.transform.position);
 
                         _timer.ResetTimer();
+
+                        AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);                                      
 
                         _charger.DecreaseCharger(_canyon.FireCapacity);                        
 
