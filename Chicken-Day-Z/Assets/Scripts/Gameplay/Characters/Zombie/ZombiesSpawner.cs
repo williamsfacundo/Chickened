@@ -26,9 +26,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         [SerializeField] [Range(1, 100)] private short[] _zombieSpawnPercentages; //In total must reached 100, guardar esta info en el zombie
         
-        [SerializeField] [Range(1, 45)] private float _timeBeforeRoundStarts;   
-
-        [SerializeField] [Range(1, 5)] private float _timeBeforeFirstRoundStarts;
+        [SerializeField] [Range(1, 45)] private float _timeBeforeRoundStarts;       
 
         [SerializeField] private float _minNextZombieSpawnTime; 
 
@@ -49,6 +47,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         private GameObject[] _fatZombies;
 
         public event Action OnRoundChanged;
+
+        public event Action OnTimerBeforeRoundStartsChanged;
 
         private Timer _timerBeforeRoundStarts;
 
@@ -73,6 +73,14 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             get 
             {
                 return _round;
+            }
+        }
+
+        public Timer TimerBeforeRoundStarts 
+        {            
+            get 
+            {
+                return _timerBeforeRoundStarts;
             }
         }
 
@@ -128,7 +136,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             SetZombieObjects();
 
-            _timerBeforeRoundStarts = new Timer(_timeBeforeFirstRoundStarts);
+            _timerBeforeRoundStarts = new Timer(_timeBeforeRoundStarts);
+
+            _timerBeforeRoundStarts.CountDown = 0f;
+
+            OnTimerBeforeRoundStartsChanged?.Invoke();
 
             _timerForNextZombie = new Timer(UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime));
 
@@ -160,12 +172,16 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             else 
             {
                 _timerBeforeRoundStarts.DecreaseTimer();
+
+                OnTimerBeforeRoundStartsChanged?.Invoke();
             }            
         }
 
         public void ResetObject()
         {
-            _timerBeforeRoundStarts.Time = _timeBeforeFirstRoundStarts;
+            _timerBeforeRoundStarts.CountDown = 0f;
+
+            OnTimerBeforeRoundStartsChanged?.Invoke();
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 
@@ -325,7 +341,9 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _zombiesLeftToKill = (short)(_initialRoundZombiesToKill * Round);
 
-            _timerBeforeRoundStarts.Time = _timeBeforeRoundStarts;
+            _timerBeforeRoundStarts.ResetTimer();
+
+            OnTimerBeforeRoundStartsChanged?.Invoke();
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 

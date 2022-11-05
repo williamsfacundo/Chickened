@@ -15,10 +15,10 @@ MonoBehaviour:
   FirearmType: 0
   _sprite: {fileID: 21300000, guid: c0bc59b2bb647c3488da3f99cf98a5d7, type: 3}
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
-  ChargerMaxAmmo: 35
-  ReloadTime: 2
-  FireRate: 0.6
-  Damage: 30
+  ChargerMaxAmmo: 45
+  ReloadTime: 0.8
+  FireRate: 0.3
+  Damage: 20
   BulletMoveSpeed: 20
-  Range: 15
+  Range: 9
   FireCapacity: 1

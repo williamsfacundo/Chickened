@@ -16,9 +16,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: 3cbdd918d10b5944cbd256c18db1e012, type: 3}
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
   ChargerMaxAmmo: 8
-  ReloadTime: 2.5
-  FireRate: 1
-  Damage: 10
-  BulletMoveSpeed: 8
-  Range: 5
+  ReloadTime: 1
+  FireRate: 0.5
+  Damage: 5
+  BulletMoveSpeed: 20
+  Range: 7
   FireCapacity: 1

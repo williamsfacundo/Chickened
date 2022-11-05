@@ -9,7 +9,7 @@ namespace ChickenDayZ.Animations
 {
     [RequireComponent(typeof(CharacterAnimationsManager), 
         typeof(ChickenLookDirectionCalculator), typeof(CharacterMovementController))]
-    public class CharacterPlayAnimation : MonoBehaviour
+    public class ChickenPlayAnimation : MonoBehaviour
     {
         [SerializeField] private string[] _idleAnimationsNames;
 

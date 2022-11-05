@@ -63,7 +63,12 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                         break;
                     }                                        
                 }
-            }            
+            }
+
+            if (_charger.IsEmpty) 
+            {
+                _reloadFirearm.ReloadCharger();
+            }
         }
 
         public void FireFirearmCoolDown() 
