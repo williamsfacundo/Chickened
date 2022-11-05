@@ -31,6 +31,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
                 objectHealth.ReceiveDamage(_damage);
 
+                AkSoundEngine.PostEvent("Play_Zombies_Impact", gameObject);
+                
                 gameObject.SetActive(false);
             }
             else 

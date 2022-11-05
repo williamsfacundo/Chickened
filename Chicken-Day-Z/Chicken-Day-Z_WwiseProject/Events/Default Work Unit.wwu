@@ -72,6 +72,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Intro_Audio" ID="{913E2977-CDFB-4C46-959D-A1933D510B3F}">
+					<ChildrenList>
+						<Action Name="" ID="{8D94944F-7F0E-4DB2-8436-7881117D411B}" ShortID="486171053">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro Audio" ID="{0B226D3E-925F-4CE7-82F2-EB010A4EBFE8}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

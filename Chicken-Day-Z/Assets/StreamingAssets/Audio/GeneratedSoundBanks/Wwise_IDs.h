@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_INTRO_AUDIO = 3897668283U;
         static const AkUniqueID PLAY_MAINMENUBGM = 1063700270U;
         static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
         static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;

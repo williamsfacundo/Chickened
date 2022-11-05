@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Documentos\Image Campus\Chickened\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="732069995">
+		<SoundBank Id="534561221" Language="SFX" Hash="716269338">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3897668283" Name="Play_Intro_Audio" ObjectPath="\Events\Default Work Unit\Play_Intro_Audio" DurationType="OneShot" DurationMin="57.109341" DurationMax="57.109341">
+					<IncludedMemoryFiles>
+						<File Id="613100044" Language="SFX">
+							<ShortName>Intro Audio.wav</ShortName>
+							<Path>SFX\Intro Audio_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1063700270" Name="Play_mainMenuBGM" ObjectPath="\Events\Default Work Unit\Play_mainMenuBGM" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="157120102" Language="SFX">
