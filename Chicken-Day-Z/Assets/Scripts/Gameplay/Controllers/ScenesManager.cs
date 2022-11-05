@@ -22,7 +22,9 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         [SerializeField] private Canvas _settingsCanvas;
 
-        [SerializeField] private Canvas _tutorialCanvas;
+        [SerializeField] private Canvas _tutorialCanvas1;
+
+        [SerializeField] private Canvas _tutorialCanvas2;
 
         [SerializeField] private Canvas _gameplayCanvas;
 
@@ -74,7 +76,7 @@ namespace ChickenDayZ.Gameplay.Controllers
         public void MainMenuToTutorial()
         {
             ChangeCanvasState(_mainMenuCanvas, false);
-            ChangeCanvasState(_tutorialCanvas, true);            
+            ChangeCanvasState(_tutorialCanvas1, true);            
         }
 
         public void MainMenuToSettings()
@@ -139,7 +141,25 @@ namespace ChickenDayZ.Gameplay.Controllers
         public void TutorialToMainMenu()
         {
             ChangeCanvasState(_mainMenuCanvas, true);
-            ChangeCanvasState(_tutorialCanvas, false);            
+            ChangeCanvasState(_tutorialCanvas1, false);            
+        }
+
+        public void Tutorial1ToTutorial2()
+        {
+            ChangeCanvasState(_tutorialCanvas1, false);
+            ChangeCanvasState(_tutorialCanvas2, true);
+        }
+
+        public void Tutorial2ToTutorial1()
+        {
+            ChangeCanvasState(_tutorialCanvas2, false);
+            ChangeCanvasState(_tutorialCanvas1, true);
+        }
+
+        public void Tutorial2ToMainMenu()
+        {
+            ChangeCanvasState(_tutorialCanvas2, false);
+            ChangeCanvasState(_mainMenuCanvas, true);
         }
 
         public void GameplayToEndGame() 
@@ -229,7 +249,8 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_mainMenuCanvas, true);
             ChangeCanvasState(_pauseCanvas, false);
             ChangeCanvasState(_settingsCanvas, false);
-            ChangeCanvasState(_tutorialCanvas, false);
+            ChangeCanvasState(_tutorialCanvas1, false);
+            ChangeCanvasState(_tutorialCanvas2, false);
             ChangeCanvasState(_gameplayCanvas, false);
             ChangeCanvasState(_mapCanvas, false);
 

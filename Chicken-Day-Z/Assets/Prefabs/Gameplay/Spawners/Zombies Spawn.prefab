@@ -423,23 +423,23 @@ PrefabInstance:
       objectReference: {fileID: 2811523339669616403, guid: c859bc1f8e76fda4091dc2f7955aa6d4, type: 3}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxFatZombies
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxFastZombies
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxNormalZombies
-      value: 26
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _timeBeforeRoundStarts
-      value: 3
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxNextZombieSpawnTime
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _minNextZombieSpawnTime
@@ -451,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _initialRoundZombiesToKill
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _spawnPoints.Array.data[0]
@@ -507,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 4027394150719719489}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _timeBeforeFirstRoundStarts
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _zombieSpawnPercentages.Array.data[0]
