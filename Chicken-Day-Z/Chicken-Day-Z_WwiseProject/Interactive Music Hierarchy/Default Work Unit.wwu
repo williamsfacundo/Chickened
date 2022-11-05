@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{ECAF04CF-9017-415F-BA50-A72BA27BF491}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="PlayBGM" ID="{D71DE5F9-D272-42AE-B0B1-BA23E369465D}" ShortID="785146666">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="130"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
@@ -242,7 +245,7 @@
 							<ChildrenList>
 								<MusicSegment Name="CHICKENED_BGM_PartA" ID="{0CCCA936-76D7-43C0-96CF-5197FDFA8E29}" ShortID="941545346">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="59076.9160997733"/>
+										<Property Name="EndPosition" Type="Real64" Value="63310.8589515437"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -288,7 +291,7 @@
 																				<MusicClip Name="CHICKENED_BGM_PartA" ID="{91DC0A4F-C37B-4AB2-AEB8-6A856C22B167}">
 																					<PropertyList>
 																						<Property Name="BeginTrimOffset" Type="Real64" Value="3.41060513164848E-13"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="59076.9160997732"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="60923.0769230769"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
@@ -306,7 +309,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>59.0769160997732</XPos>
+																										<XPos>60.92308</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -325,7 +328,7 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>59.0769160997732</XPos>
+																										<XPos>60.92308</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -344,8 +347,8 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>59.0769160997732</XPos>
-																										<YPos>0</YPos>
+																										<XPos>60.92308</XPos>
+																										<YPos>-0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -376,7 +379,7 @@
 													<MusicCue Name="Exit Cue" ID="{68BB1E18-69DA-4175-9CF7-137884F6FEE8}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="59076.9160997732"/>
+															<Property Name="TimeMs" Type="Real64" Value="59076.9230769231"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -386,7 +389,7 @@
 								</MusicSegment>
 								<MusicSegment Name="CHICKENED_BGM_Intro" ID="{13CE3F4B-6553-44B0-9799-DD77D4FD2EFB}" ShortID="610050345">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="9230.77097505669"/>
+										<Property Name="EndPosition" Type="Real64" Value="12476.1901270276"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -431,11 +434,70 @@
 																			<Local>
 																				<MusicClip Name="CHICKENED_BGM_Intro" ID="{460D0DFF-DB7E-44D7-A3D2-266B6D824B4F}">
 																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="9230.77097505669"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="11538.4615384616"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="CHICKENED_BGM_Intro" ID="{6F58CFF1-3FD0-4B25-8607-611A4F2B6274}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{B01EBED6-89DC-402F-86BF-069CBA51FA2D}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>11.53846</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{51B038CB-2D44-4336-8E0C-35179D043046}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>11.53846</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{130ABF82-39D5-4308-A49E-751A29219DC6}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>11.53846</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -460,7 +522,7 @@
 													<MusicCue Name="Exit Cue" ID="{CCCF0F28-8563-4ACF-BA93-BCFE29688E20}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="9230.77097505669"/>
+															<Property Name="TimeMs" Type="Real64" Value="9230.76923076923"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -477,8 +539,8 @@
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{72BA44C5-DDBE-4312-993E-337927D671DC}">
 											<PropertyList>
-												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 											</PropertyList>
 											<TransitionInfo>
 												<SourceFadeOut>
