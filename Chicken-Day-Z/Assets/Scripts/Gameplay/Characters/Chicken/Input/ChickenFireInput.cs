@@ -17,7 +17,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Input
 
         private void FireInput()
         {
-            if (UnityEngine.Input.GetMouseButtonDown(_fireMouseButton))
+            if (UnityEngine.Input.GetMouseButton(_fireMouseButton))
             {
                 if (_itemActionController != null)
                 {
