@@ -7,7 +7,7 @@ using ChickenDayZ.Gameplay.Characters.Zombie;
 
 namespace ChickenDayZ.Animations 
 {
-    [RequireComponent(typeof(CharacterAnimationsManager),
+    [RequireComponent(typeof(AnimationsManager),
         typeof(ZombieLookDirectionCalculator))]
     public class ZombiePlayAnimation : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace ChickenDayZ.Animations
 
         private CharacterLookDirectionCalculator _characterLookDirectionCalculator;
 
-        private CharacterAnimationsManager _characterAnimationsManager;
+        private AnimationsManager _characterAnimationsManager;
 
         //private CharacterMovementController _characterMovementController;
 
@@ -25,7 +25,7 @@ namespace ChickenDayZ.Animations
 
         void Awake()
         {
-            _characterAnimationsManager = GetComponent<CharacterAnimationsManager>();
+            _characterAnimationsManager = GetComponent<AnimationsManager>();
 
             _characterLookDirectionCalculator = GetComponent<ZombieLookDirectionCalculator>();
 

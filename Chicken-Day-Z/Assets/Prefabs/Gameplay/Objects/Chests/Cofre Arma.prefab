@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 4470202645405893364}
   - component: {fileID: 7539348224075831808}
   - component: {fileID: 4061560962419776868}
+  - component: {fileID: 7967520234149536073}
+  - component: {fileID: 7374025703698583487}
+  - component: {fileID: -4109230967369062605}
   m_Layer: 0
   m_Name: Cofre Arma
   m_TagString: Chest
@@ -144,3 +147,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc6bca1c070d2549b5c8a69d0a92847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _firearmStats: []
+  _characterInventory: {fileID: 0}
+--- !u!95 &7967520234149536073
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174796553470254204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ecf7e54db63df934e96fed4cf23f1c0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7374025703698583487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174796553470254204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa141fbcb2f15d4981ad523a0b9a251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4109230967369062605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174796553470254204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b2e5c2f7a0e7649b03653dcf3d1b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerUpObject: {fileID: 4061560962419776868}
+  _openChestAnimationNames: Cofre_Anims_ABRIR_Armas
+  _closedChestAnimationsNames: Cofre-Anims-_CERRADO - Armas

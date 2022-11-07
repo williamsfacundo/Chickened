@@ -7,7 +7,7 @@ using ChickenDayZ.Gameplay.Enumerators;
 
 namespace ChickenDayZ.Animations
 {
-    [RequireComponent(typeof(CharacterAnimationsManager), 
+    [RequireComponent(typeof(AnimationsManager), 
         typeof(ChickenLookDirectionCalculator), typeof(CharacterMovementController))]
     public class ChickenPlayAnimation : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace ChickenDayZ.Animations
 
         private CharacterLookDirectionCalculator _characterLookDirectionCalculator;
 
-        private CharacterAnimationsManager _characterAnimationsManager;        
+        private AnimationsManager _characterAnimationsManager;        
 
         private CharacterMovementController _characterMovementController;
 
@@ -25,7 +25,7 @@ namespace ChickenDayZ.Animations
 
         void Awake()
         {
-            _characterAnimationsManager = GetComponent<CharacterAnimationsManager>();
+            _characterAnimationsManager = GetComponent<AnimationsManager>();
 
             _characterLookDirectionCalculator = GetComponent<ChickenLookDirectionCalculator>();
 
@@ -51,12 +51,12 @@ namespace ChickenDayZ.Animations
             _characterMovementController.OnCharacterChangedMoveState -= SetAnimation;
         }                     
 
-        void SetAnimation()
+        private void SetAnimation()
         {
             _characterAnimationsManager.ChangeAnimation(AnimationSelector());
         }
 
-        string AnimationSelector() 
+        private string AnimationSelector() 
         {
             switch (_characterLookDirectionCalculator.CharacterLookDirection)
             {

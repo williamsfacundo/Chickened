@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: -6775948985219288312}
   - component: {fileID: 3234144751233501352}
   - component: {fileID: 8686921090722473649}
+  - component: {fileID: 8251507995405896887}
+  - component: {fileID: 7832711177279903664}
+  - component: {fileID: 2098161667422838411}
   m_Layer: 0
   m_Name: Cofre Vida
   m_TagString: Chest
@@ -147,3 +150,49 @@ MonoBehaviour:
   _defineHealthPowerUpObjectTypeEnum: 0
   _healthIncreasedPercentage: 0
   _objectHealth: {fileID: 0}
+--- !u!95 &8251507995405896887
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445620070919275762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ecf7e54db63df934e96fed4cf23f1c0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7832711177279903664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445620070919275762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa141fbcb2f15d4981ad523a0b9a251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2098161667422838411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445620070919275762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b2e5c2f7a0e7649b03653dcf3d1b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerUpObject: {fileID: 8686921090722473649}
+  _openChestAnimationNames: Cofre_Anims_ABRIR_Vida
+  _closedChestAnimationsNames: Cofre-Anims-_CERRADO - Vida

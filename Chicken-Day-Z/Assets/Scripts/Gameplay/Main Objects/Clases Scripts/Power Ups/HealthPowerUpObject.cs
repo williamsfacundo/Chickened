@@ -38,6 +38,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         {
             if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
             {
+                CallOnPowerUpInteracted();
+                
                 UsePowerUp();
             }
         }        

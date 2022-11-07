@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 8796506082623147817}
   - component: {fileID: 2057671686616821904}
   - component: {fileID: 8024384339923500648}
+  - component: {fileID: 1639072467222952494}
+  - component: {fileID: 6496141887089978661}
+  - component: {fileID: 4135952224869999786}
   m_Layer: 0
   m_Name: Cofre Huevo
   m_TagString: Chest
@@ -147,3 +150,49 @@ MonoBehaviour:
   _defineHealthPowerUpObjectTypeEnum: 0
   _healthIncreasedPercentage: 0
   _objectHealth: {fileID: 0}
+--- !u!95 &1639072467222952494
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323283001576501796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ecf7e54db63df934e96fed4cf23f1c0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6496141887089978661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323283001576501796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa141fbcb2f15d4981ad523a0b9a251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4135952224869999786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323283001576501796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b2e5c2f7a0e7649b03653dcf3d1b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerUpObject: {fileID: 8024384339923500648}
+  _openChestAnimationNames: Cofre_Anims_ABRIR_Huevo
+  _closedChestAnimationsNames: Cofre-Anims-_CERRADO - Huevo

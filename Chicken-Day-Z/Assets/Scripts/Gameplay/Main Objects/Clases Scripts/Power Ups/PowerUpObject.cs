@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Controllers;
@@ -7,6 +8,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 {
     public abstract class PowerUpObject : MainObject
     {
+        public event Action OnPowerUpInteracted;
+
         protected const KeyCode _usePowerUpInput = KeyCode.E;
 
         private static bool _powerUpAvailable = false;
@@ -67,6 +70,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             _powerUpLevel = 0;
 
             _powerUpAvailable = false;
+        }
+
+        protected void CallOnPowerUpInteracted() 
+        {
+            OnPowerUpInteracted?.Invoke();
         }
 
         protected abstract void UsePowerUp();

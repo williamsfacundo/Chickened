@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ChickenDayZ.Animations 
 {
     [RequireComponent(typeof(Animator))]
-    public class CharacterAnimationsManager : MonoBehaviour
+    public class AnimationsManager : MonoBehaviour
     {
         private Animator _animator;
 
@@ -16,13 +16,13 @@ namespace ChickenDayZ.Animations
 
         public void ChangeAnimation(string newAnimation) 
         {
-            if (_currentAnimationName != null) 
+            /*if (_currentAnimationName != null) 
             {
                 if (_currentAnimationName == newAnimation)
                 {
                     return;
                 }
-            }            
+            }*/            
             
             _currentAnimationName = newAnimation;
 
