@@ -3,7 +3,7 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Interfaces;
 
-namespace ChickenDayZ.Gameplay.Health 
+namespace ChickenDayZ.Gameplay.Health    
 {
     public class ObjectHealth : MonoBehaviour, IDamageable, IResettable
     {
@@ -19,23 +19,23 @@ namespace ChickenDayZ.Gameplay.Health
 
         private float _currentHealth;
 
-        public float InitialHealth 
-        {            
-            get 
+        public float InitialHealth
+        {
+            get
             {
                 return _initialHealth;
             }
         }
 
-        public float MaxHealth 
+        public float MaxHealth
         {
-            set 
+            set
             {
                 _maxHealth = value;
 
                 OnMaxHealthChanged?.Invoke();
             }
-            get 
+            get
             {
                 return _maxHealth;
             }
@@ -43,7 +43,7 @@ namespace ChickenDayZ.Gameplay.Health
 
         public float CurrentHealth
         {
-            set 
+            set
             {
                 _currentHealth = value;
 
@@ -67,10 +67,10 @@ namespace ChickenDayZ.Gameplay.Health
 
         void Start()
         {
-            ResetObject();            
+            ResetObject();
         }
 
-        public void ReceiveDamage(float value)
+        public virtual void ReceiveDamage(float value)
         {
             CurrentHealth -= value;
 
@@ -78,22 +78,27 @@ namespace ChickenDayZ.Gameplay.Health
             {
                 CurrentHealth = 0f;
 
-                AkSoundEngine.PostEvent("Play_Zombies_Die", gameObject);
+                PlayDeathSound();               
 
                 OnHealthReachedZero?.Invoke();
             }
-        }               
+        }
 
-        public void ResetObject() 
+        public void ResetObject()
         {
             MaxHealth = InitialHealth;
 
             CurrentHealth = InitialHealth;
         }
-        
-        public void ResetCurrentHealth() 
+
+        public void ResetCurrentHealth()
         {
             CurrentHealth = MaxHealth;
+        }
+        
+        protected virtual void PlayDeathSound() 
+        {
+
         }
     }
 }

@@ -268,7 +268,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 zombie.transform.position = GetRandomSpawnPosition();
 
-                zombie.GetComponent<ObjectHealth>().ResetObject();
+                zombie.GetComponent<ObjectHealth>().ResetCurrentHealth();
 
                 int aux = UnityEngine.Random.Range(1, 3);
 
