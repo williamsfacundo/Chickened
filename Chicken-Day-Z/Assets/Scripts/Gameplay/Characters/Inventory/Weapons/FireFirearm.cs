@@ -67,7 +67,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             if (_charger.IsEmpty) 
             {
-                _reloadFirearm.ReloadCharger();
+                _reloadFirearm.ReloadCharger(gameObject);
             }
         }
 

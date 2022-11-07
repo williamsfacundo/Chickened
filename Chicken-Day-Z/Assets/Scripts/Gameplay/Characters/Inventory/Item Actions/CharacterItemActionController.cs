@@ -84,7 +84,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
                     if (_characterInventory.EquippedItem is Firearm)
                     {
-                        _itemAction = new CharacterReloadFirearmAction(((Firearm)_characterInventory.EquippedItem).ReloadFirearmMechanic);
+                        _itemAction = new CharacterReloadFirearmAction(((Firearm)_characterInventory.EquippedItem).ReloadFirearmMechanic, gameObject);
                     }
 
                     break;
