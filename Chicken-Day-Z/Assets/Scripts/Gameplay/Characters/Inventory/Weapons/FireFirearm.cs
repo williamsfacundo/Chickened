@@ -37,8 +37,6 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             InstanciateProjectiles(projectilePrefab);
         }
-        
-
 
         public void ActivateProjectile(GameObject gameObject) 
         {
