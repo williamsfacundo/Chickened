@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: -680385895603658655}
   - component: {fileID: 2925036642796539345}
   - component: {fileID: 2738475259618834853}
-  - component: {fileID: 800683266072672751}
   - component: {fileID: 6266846075603150994}
   - component: {fileID: 4548758258070621498}
   - component: {fileID: 5598873944086128991}
@@ -27,6 +26,7 @@ GameObject:
   - component: {fileID: 7480977285595935395}
   - component: {fileID: 3521646903989923705}
   - component: {fileID: 3191821783297729655}
+  - component: {fileID: 7947369889486973665}
   m_Layer: 0
   m_Name: Player One
   m_TagString: Player
@@ -235,18 +235,6 @@ MonoBehaviour:
   - Soldado_Walking_Front_Left
   - Soldado_Walking_Front
   - Soldado_Walking_Front_Right
---- !u!114 &800683266072672751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7480977285595935396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7be539e7841d304293a9de2a657e312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6266846075603150994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +344,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7947369889486973665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa141fbcb2f15d4981ad523a0b9a251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2350390
 PrefabInstance:
   m_ObjectHideFlags: 0

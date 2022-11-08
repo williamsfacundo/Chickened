@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbb04c6eba0b86439adff4fc789558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombieInitialDamage: 10
-  _zombieAttackCooldownTime: 3
+  _initialDamage: 10
+  _attackCooldownTime: 1.5
 --- !u!114 &2440452425569718449
 MonoBehaviour:
   m_ObjectHideFlags: 0

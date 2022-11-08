@@ -66,7 +66,5 @@ public class WeaponRotation : MonoBehaviour
         {
             _spriteRenderer.flipY = false;
         }
-
-        Debug.Log(transform.rotation.eulerAngles.z);
     }
 }
