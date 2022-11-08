@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defineHealthPowerUpObjectTypeEnum: 0
-  _healthIncreasedPercentage: 0
+  _healthIncreasedPercentage: 0.5
   _objectHealth: {fileID: 0}
 --- !u!95 &1639072467222952494
 Animator:
@@ -160,7 +160,7 @@ Animator:
   m_GameObject: {fileID: 3323283001576501796}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ecf7e54db63df934e96fed4cf23f1c0c, type: 2}
+  m_Controller: {fileID: 22100000, guid: 320ad77835875ce4f908e868701c7f1d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -193,6 +193,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b2e5c2f7a0e7649b03653dcf3d1b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _powerUpObject: {fileID: 8024384339923500648}
-  _openChestAnimationNames: Cofre_Anims_ABRIR_Huevo
-  _closedChestAnimationsNames: Cofre-Anims-_CERRADO - Huevo

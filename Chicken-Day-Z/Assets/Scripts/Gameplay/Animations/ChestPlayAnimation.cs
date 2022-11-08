@@ -2,48 +2,42 @@ using UnityEngine;
 using ChickenDayZ.Gameplay.MainObjects.PowerUp;
 
 namespace ChickenDayZ.Animations 
-{
-    [RequireComponent(typeof(AnimationsManager))]
+{    
+    [RequireComponent(typeof(PowerUpObject), typeof(Animator))]
     public class ChestPlayAnimation : MonoBehaviour
     {
-        [SerializeField] private PowerUpObject _powerUpObject;        
+        private Animator _animator;
 
-        [SerializeField] private string _openChestAnimationNames;
-
-        [SerializeField] private string _closedChestAnimationsNames;
-
-        private AnimationsManager _chestAnimationsManager;
+        private PowerUpObject _powerUpObject; 
+                
 
         void Awake()
         {
-            _chestAnimationsManager = GetComponent<AnimationsManager>();
+            _animator = GetComponent<Animator>();
+
+            _powerUpObject = GetComponent<PowerUpObject>();            
         }
 
-        void OnEnable()
+        void Start()
         {
             _powerUpObject.OnPowerUpInteracted += SetAnimation;
         }
 
-        void OnDisable()
+        void OnDestroy()
         {
             _powerUpObject.OnPowerUpInteracted -= SetAnimation;
         }
 
         private void SetAnimation()
         {
-            _chestAnimationsManager.ChangeAnimation(GetAnimation());
-        }
-
-        private string GetAnimation()
-        {
             if (PowerUpObject.PowerUpAvailable) 
             {
-                return _openChestAnimationNames;
+                _animator.SetTrigger("Opened");
             }
             else 
             {
-                return _closedChestAnimationsNames;
+                _animator.SetTrigger("Blocked");
             }            
-        }
+        }        
     }
 }

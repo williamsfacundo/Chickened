@@ -23,6 +23,10 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
                 return _healthPowerUpObjectTypeEnum;
             }
         }
+        private HealthPowerUpObject() : base(PowerUpObjectTypeEnum.HEALTH) 
+        {
+            
+        }
 
         void Awake()
         {
@@ -32,22 +36,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         void Start()
         {
             PowerUpLevel = 0;
-        }
 
-        private void OnCollisionStay2D(Collision2D collision)
-        {
-            if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
-            {
-                CallOnPowerUpInteracted();
-                
-                UsePowerUp();
-            }
+            ChestInteracted = false;
+
+            _cooldownTimer = new General.Timer(1f);
         }        
-
-        private HealthPowerUpObject() : base(PowerUpObjectTypeEnum.HEALTH) 
-        {
-            
-        }
 
         protected override void UsePowerUp() 
         {
@@ -59,7 +52,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
                 _objectHealth.MaxHealth += healthIncreased;
 
-                PowerUpAvailable = false;
+                PowerUpAvailable = false;                
             }           
         }       
     }

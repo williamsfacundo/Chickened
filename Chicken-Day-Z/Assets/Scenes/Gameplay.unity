@@ -234,66 +234,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 161350881639033535, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
-    - target: {fileID: 184551253585794143, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Armas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1285711912367908829, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
     - target: {fileID: 1598006868001788367, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 1928961633}
-    - target: {fileID: 1848850447208723813, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
-    - target: {fileID: 2026717409155218377, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
     - target: {fileID: 3000742948184036252, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
       propertyPath: _characterInventory
       value: 
       objectReference: {fileID: 1596559336}
-    - target: {fileID: 3015697964463881275, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Vida
-      objectReference: {fileID: 0}
-    - target: {fileID: 3090855998861300261, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
-    - target: {fileID: 3307831110442218555, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Huevo
-      objectReference: {fileID: 0}
-    - target: {fileID: 3923359529569102817, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Huevo
-      objectReference: {fileID: 0}
-    - target: {fileID: 3970563429864312707, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Vida
-      objectReference: {fileID: 0}
-    - target: {fileID: 4160342442093814183, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Armas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4664020645261222237, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Huevo
-      objectReference: {fileID: 0}
-    - target: {fileID: 5063450555911663111, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
     - target: {fileID: 5122850560961862640, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
       propertyPath: _characterInventory
       value: 
@@ -306,22 +254,6 @@ PrefabInstance:
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 1928961633}
-    - target: {fileID: 6269085216157329867, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Armas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6379157836862758335, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
-    - target: {fileID: 8026279902951817177, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
-    - target: {fileID: 8339906304095644149, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: _openChestAnimationNames
-      value: Cofre-Anims-_ABRIR - Vida
-      objectReference: {fileID: 0}
     - target: {fileID: 8892972975006789525, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -374,10 +306,6 @@ PrefabInstance:
       propertyPath: _characterInventory
       value: 
       objectReference: {fileID: 1596559336}
-    - target: {fileID: 9181439470122250161, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45cf0b654ac2a8548a4d7d7148400375, type: 3}
 --- !u!1 &1275762192
@@ -688,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_RootOrder
@@ -752,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: _initialRoundZombiesToKill
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}

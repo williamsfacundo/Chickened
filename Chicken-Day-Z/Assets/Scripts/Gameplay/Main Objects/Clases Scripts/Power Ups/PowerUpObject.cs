@@ -3,6 +3,7 @@ using UnityEngine;
 
 using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
+using ChickenDayZ.General;
 
 namespace ChickenDayZ.Gameplay.MainObjects.PowerUp 
 {
@@ -14,7 +15,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
         private static bool _powerUpAvailable = false;
 
+        private bool _chestInteracted;
+
         private short _powerUpLevel;
+
+        protected Timer _cooldownTimer;
 
         public static bool PowerUpAvailable 
         {
@@ -25,6 +30,19 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             get 
             {
                 return _powerUpAvailable;
+            }
+        }
+
+        protected bool ChestInteracted 
+        {
+            set 
+            {
+                _chestInteracted = value;
+
+            }
+            get 
+            {
+                return _chestInteracted;
             }
         }
 
@@ -63,7 +81,39 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         void OnDisable()
         {
             GameplayResetter.OnGameplayReset -= ResetPowerUp;
-        }       
+        }
+
+        void Update()
+        {
+            if (_chestInteracted) 
+            {
+                if (!_cooldownTimer.TimerFinished)
+                {
+                    _cooldownTimer.DecreaseTimer();
+                }
+                else
+                {
+                    _cooldownTimer.ResetTimer();
+
+                    _chestInteracted = false;
+                }
+            }            
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (!_chestInteracted) 
+            {
+                if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
+                {
+                    CallOnPowerUpInteracted();
+
+                    UsePowerUp();
+
+                    _chestInteracted = true;
+                }
+            }
+        }
 
         private void ResetPowerUp() 
         {

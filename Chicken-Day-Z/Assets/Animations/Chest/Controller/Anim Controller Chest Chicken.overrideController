@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Anim Controller Chest Chicken
+  m_Controller: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b0cd305ea66174b4587c416f17ed347b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5b7114cefc188d94cb5c3d7fdd21a982, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 541bc5b341bb22a49afd79a3e65a6525, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 63c9305677213074ab2638b82c540749, type: 2}

@@ -10,27 +10,21 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
     {
         [SerializeField] private FirearmStats[] _firearmStats;
 
-        [SerializeField] private CharacterInventory _characterInventory;
+        [SerializeField] private CharacterInventory _characterInventory;         
 
         private GunPowerUpObject() : base(PowerUpObjectTypeEnum.GUN)
         {
 
-        }
+        }        
 
         void Start()
         {
             PowerUpLevel = 0;
-        }
 
-        private void OnCollisionStay2D(Collision2D collision)
-        {
-            if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
-            {
-                CallOnPowerUpInteracted();
-                
-                UsePowerUp();
-            }
-        }                
+            ChestInteracted = false;
+
+            _cooldownTimer = new General.Timer(1f);
+        }                        
 
         protected override void UsePowerUp()
         {
@@ -42,7 +36,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
                     PowerUpLevel += 1;
                 
-                    PowerUpAvailable = false;
+                    PowerUpAvailable = false;                    
                 }
             }
         }

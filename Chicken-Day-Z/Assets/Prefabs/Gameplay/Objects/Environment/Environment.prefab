@@ -317,10 +317,6 @@ PrefabInstance:
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 5212257823951913713}
-    - target: {fileID: 8024384339923500648, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
-      propertyPath: _healthIncreasedPercentage
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
 --- !u!4 &2380684972035898729 stripped
@@ -680,10 +676,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8686921090722473649, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
-      propertyPath: _healthIncreasedPercentage
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
 --- !u!4 &6022416302868604484 stripped
@@ -924,34 +916,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4254868344041164141}
     m_Modifications:
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6ebc40ab97278854888aef8e462da8d5, type: 2}
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 5daef1436da056a4fab241e6dcef1b26, type: 2}
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: f599c9d4e8c733a46a95fa9fbab2400f, type: 2}
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
-    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: _firearmStats.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: 50481c165e4a3944e8e2768443649109, type: 2}
     - target: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: m_RootOrder
       value: 0
