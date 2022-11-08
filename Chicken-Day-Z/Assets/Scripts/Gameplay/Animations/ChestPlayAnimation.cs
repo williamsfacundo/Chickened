@@ -8,8 +8,7 @@ namespace ChickenDayZ.Animations
     {
         private Animator _animator;
 
-        private PowerUpObject _powerUpObject; 
-                
+        private PowerUpObject _powerUpObject;                 
 
         void Awake()
         {
@@ -30,7 +29,7 @@ namespace ChickenDayZ.Animations
 
         private void SetAnimation()
         {
-            if (PowerUpObject.PowerUpAvailable) 
+            if (PowerUpObject.PowerUpAvailable && !_powerUpObject.IsChestBlocked) 
             {
                 _animator.SetTrigger("Opened");
             }

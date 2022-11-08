@@ -15,20 +15,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         private GunPowerUpObject() : base(PowerUpObjectTypeEnum.GUN)
         {
 
-        }        
-
-        void Start()
-        {
-            PowerUpLevel = 0;
-
-            ChestInteracted = false;
-
-            _cooldownTimer = new General.Timer(1f);
-        }                        
+        }                             
 
         protected override void UsePowerUp()
         {
-            if (PowerUpAvailable)
+            if (PowerUpAvailable && !IsChestBlocked)
             {
                 if (PowerUpLevel < _firearmStats.Length) 
                 {
@@ -36,7 +27,9 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
                     PowerUpLevel += 1;
                 
-                    PowerUpAvailable = false;                    
+                    PowerUpAvailable = false;
+
+                    IsChestBlocked = true;                    
                 }
             }
         }

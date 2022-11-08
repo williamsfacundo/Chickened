@@ -6,7 +6,7 @@ public class WeaponRotation : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
-    Camera camera;
+    private Camera _camera;
 
     private Vector3 _mouseLocation;
 
@@ -22,7 +22,7 @@ public class WeaponRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = Camera.main;
+        _camera = Camera.main;
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class WeaponRotation : MonoBehaviour
 
     private void SetPosition()     
     {
-        _mouseLocation = camera.ScreenToWorldPoint(Input.mousePosition);
+        _mouseLocation = _camera.ScreenToWorldPoint(Input.mousePosition);
 
         _mouseLocation.z = 0f;
 

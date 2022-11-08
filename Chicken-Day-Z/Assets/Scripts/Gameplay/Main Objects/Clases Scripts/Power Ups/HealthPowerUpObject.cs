@@ -1,9 +1,7 @@
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Health;
-
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
-
 namespace ChickenDayZ.Gameplay.MainObjects.PowerUp 
 {
     public class HealthPowerUpObject : PowerUpObject
@@ -31,28 +29,22 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         void Awake()
         {
             _healthPowerUpObjectTypeEnum = _defineHealthPowerUpObjectTypeEnum;
-        }
-
-        void Start()
-        {
-            PowerUpLevel = 0;
-
-            ChestInteracted = false;
-
-            _cooldownTimer = new General.Timer(1f);
-        }        
+        }                
 
         protected override void UsePowerUp() 
         {
-            if (PowerUpAvailable) 
+            if (PowerUpAvailable && !IsChestBlocked) 
             {
-                PowerUpLevel += 1;
 
                 float healthIncreased = _objectHealth.InitialHealth * _healthIncreasedPercentage * PowerUpLevel;
 
                 _objectHealth.MaxHealth += healthIncreased;
 
-                PowerUpAvailable = false;                
+                PowerUpLevel += 1;
+                
+                PowerUpAvailable = false;
+
+                IsChestBlocked = true;                
             }           
         }       
     }

@@ -9,7 +9,13 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 {
     public abstract class PowerUpObject : MainObject
     {
+        [SerializeField] [Range(0.1f, 2f)] private float _interactedCooldownTime;
+        
+        [SerializeField] [Range(0.1f, 180f)] private float _chestBlockedTime;
+
         public event Action OnPowerUpInteracted;
+
+        public event Action OnBlockedChestTimerChanged;
 
         protected const KeyCode _usePowerUpInput = KeyCode.E;
 
@@ -17,9 +23,29 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
         private bool _chestInteracted;
 
+        private bool _isChestBlocked;
+
         private short _powerUpLevel;
 
-        protected Timer _cooldownTimer;
+        private Timer _interactedCooldownTimer;
+
+        private Timer _blockedChestTimer;
+
+        public float InteractedCooldownTime 
+        {
+            get 
+            {
+                return _interactedCooldownTime;
+            }
+        }
+
+        public float ChestBlockedTime 
+        {
+            get 
+            {
+                return _chestBlockedTime;
+            }
+        }
 
         public static bool PowerUpAvailable 
         {
@@ -33,11 +59,35 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             }
         }
 
+        public bool IsChestBlocked 
+        {
+            set 
+            {
+                _isChestBlocked = value;
+
+                if (_isChestBlocked == true) 
+                {
+                    _blockedChestTimer.ResetTimer();
+
+                    OnBlockedChestTimerChanged?.Invoke();
+                }
+            }
+            get           
+            {
+                return _isChestBlocked;
+            }
+        }
+
         protected bool ChestInteracted 
         {
             set 
             {
                 _chestInteracted = value;
+
+                if (_chestInteracted == true) 
+                {
+                    _interactedCooldownTimer.ResetTimer();
+                }
 
             }
             get 
@@ -56,7 +106,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             {
                 return _powerUpLevel;
             }
-        }
+        }        
 
         private PowerUpObjectTypeEnum _powerUpObjectType;
 
@@ -83,26 +133,59 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             GameplayResetter.OnGameplayReset -= ResetPowerUp;
         }
 
+        void Start()
+        {
+            PowerUpLevel = 0;
+
+            ChestInteracted = false;
+
+            IsChestBlocked = false;
+
+            _interactedCooldownTimer = new Timer(InteractedCooldownTime);
+
+            _interactedCooldownTimer.CountDown = 0f;
+
+            _blockedChestTimer = new Timer(ChestBlockedTime);
+
+            _blockedChestTimer.CountDown = 0f;
+
+            OnBlockedChestTimerChanged?.Invoke();
+        }
+
         void Update()
         {
-            if (_chestInteracted) 
+            if (ChestInteracted) 
             {
-                if (!_cooldownTimer.TimerFinished)
+                if (_interactedCooldownTimer.TimerFinished)
                 {
-                    _cooldownTimer.DecreaseTimer();
+                    ChestInteracted = false;
                 }
                 else
                 {
-                    _cooldownTimer.ResetTimer();
-
-                    _chestInteracted = false;
+                    _interactedCooldownTimer.DecreaseTimer();
                 }
-            }            
+            }
+
+            if (IsChestBlocked) 
+            {
+                if (_blockedChestTimer.TimerFinished)
+                {
+                    OnBlockedChestTimerChanged?.Invoke();
+
+                    IsChestBlocked = false;
+                }
+                else
+                {
+                    _blockedChestTimer.DecreaseTimer();
+
+                    OnBlockedChestTimerChanged?.Invoke();
+                }
+            }
         }
 
         private void OnCollisionStay2D(Collision2D collision)
         {
-            if (!_chestInteracted) 
+            if (!ChestInteracted) 
             {
                 if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
                 {
@@ -110,12 +193,17 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
                     UsePowerUp();
 
-                    _chestInteracted = true;
+                    ChestInteracted = true;
                 }
             }
         }
 
-        private void ResetPowerUp() 
+        public float GetBlockedChestTimerCountDown()
+        {
+            return _blockedChestTimer.CountDown;
+        }
+
+        private void ResetPowerUp() //Hacer bien el reset de todas las variables
         {
             _powerUpLevel = 0;
 
