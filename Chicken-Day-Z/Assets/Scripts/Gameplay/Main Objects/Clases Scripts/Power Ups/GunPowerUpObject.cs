@@ -10,7 +10,9 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
     {
         [SerializeField] private FirearmStats[] _firearmStats;
 
-        [SerializeField] private CharacterInventory _characterInventory;         
+        [SerializeField] private CharacterInventory _characterInventory;
+
+        private static short _powerUpLevel;
 
         private GunPowerUpObject() : base(PowerUpObjectTypeEnum.GUN)
         {
@@ -21,17 +23,22 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         {
             if (PowerUpAvailable && !IsChestBlocked)
             {
-                if (PowerUpLevel < _firearmStats.Length) 
+                if (_powerUpLevel < _firearmStats.Length) 
                 {
-                    _characterInventory.FirearmStats = _firearmStats[PowerUpLevel];
+                    _characterInventory.FirearmStats = _firearmStats[_powerUpLevel];
 
-                    PowerUpLevel += 1;
+                    _powerUpLevel += 1;
                 
                     PowerUpAvailable = false;
 
                     IsChestBlocked = true;                    
                 }
             }
+        }
+
+        protected override void ResetPowerUpLevel() 
+        {
+            _powerUpLevel = 0;
         }
     }
 }

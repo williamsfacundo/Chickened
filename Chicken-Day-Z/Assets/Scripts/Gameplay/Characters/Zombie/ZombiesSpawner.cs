@@ -294,6 +294,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             int random = UnityEngine.Random.Range(1, 100);
 
+            Debug.Log(random);
+
             if (random > 1 && random < _zombieSpawnPercentages[0])
             {
                 for (short v = 0; v < _normalZombies.Length; v++)

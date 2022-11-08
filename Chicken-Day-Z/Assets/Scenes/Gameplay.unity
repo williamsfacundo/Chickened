@@ -157,26 +157,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3595562619768637622, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595562619768637622, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595562619768637622, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8eca3a7111a4eb642908756caad88919, type: 3}
-    - target: {fileID: 3595562619768637622, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480977285595935393, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-      propertyPath: _characterInitialMoveSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7480977285595935394, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -529,7 +509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1452929185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,24 +565,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1487335837 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3595562619768637623, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
-  m_PrefabInstance: {fileID: 350705354}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1487335840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487335837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dfe9d33e5045ce42a32549ba04c14f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offset: 1
 --- !u!1001 &1554138891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,10 +575,6 @@ PrefabInstance:
     - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_Name
       value: Zombies Spawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683082185225636674, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2683082185225636675, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
       propertyPath: m_RootOrder
@@ -670,14 +628,6 @@ PrefabInstance:
       propertyPath: _eggBase
       value: 
       objectReference: {fileID: 45750009}
-    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _maxNextZombieSpawnTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683082185601387138, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
-      propertyPath: _initialRoundZombiesToKill
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e3bd24f37b0b73419b8897f4da8131c, type: 3}
 --- !u!114 &1596559336 stripped

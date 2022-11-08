@@ -394,22 +394,6 @@ Transform:
   m_Father: {fileID: 1919027352962229130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1096796994
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5571028111648478714}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.38
 --- !u!1 &7791156007027940484
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,10 +733,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5175100723238353039}
     m_Modifications:
-    - target: {fileID: 1639072467222952494, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
     - target: {fileID: 3323283001576501794, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -975,11 +955,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
---- !u!1 &5571028111648478714 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7445620070919275762, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
-  m_PrefabInstance: {fileID: 3027664200453083400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5571028111648478716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7445620070919275764, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
@@ -1328,10 +1303,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cofre Arma (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7967520234149536073, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5c8af725303bc9745a84a15895310977, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
 --- !u!4 &2077402081649466094 stripped

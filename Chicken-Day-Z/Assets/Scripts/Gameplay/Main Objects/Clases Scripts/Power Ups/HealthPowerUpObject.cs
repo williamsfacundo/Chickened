@@ -14,6 +14,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
         private HealthPowerUpObjectTypeEnum _healthPowerUpObjectTypeEnum;
 
+        private static short _powerUpLevel;
+
         public HealthPowerUpObjectTypeEnum HealthPowerUpObjectTypeEnum 
         {
             get 
@@ -35,17 +37,21 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         {
             if (PowerUpAvailable && !IsChestBlocked) 
             {
-
-                float healthIncreased = _objectHealth.InitialHealth * _healthIncreasedPercentage * PowerUpLevel;
+                float healthIncreased = _objectHealth.InitialHealth * _healthIncreasedPercentage;
 
                 _objectHealth.MaxHealth += healthIncreased;
 
-                PowerUpLevel += 1;
+                _powerUpLevel += 1;
                 
                 PowerUpAvailable = false;
 
                 IsChestBlocked = true;                
             }           
-        }       
+        }
+
+        protected override void ResetPowerUpLevel()
+        {
+            _powerUpLevel = 0;
+        }
     }
 }

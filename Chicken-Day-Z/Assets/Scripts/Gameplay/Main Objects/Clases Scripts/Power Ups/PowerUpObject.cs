@@ -23,9 +23,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
         private bool _chestInteracted;
 
-        private bool _isChestBlocked;
-
-        private short _powerUpLevel;
+        private bool _isChestBlocked;        
 
         private Timer _interactedCooldownTimer;
 
@@ -94,19 +92,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             {
                 return _chestInteracted;
             }
-        }
-
-        protected short PowerUpLevel 
-        {
-            set 
-            {
-                _powerUpLevel = value;
-            }
-            get 
-            {
-                return _powerUpLevel;
-            }
-        }        
+        }                
 
         private PowerUpObjectTypeEnum _powerUpObjectType;
 
@@ -135,21 +121,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
         void Start()
         {
-            PowerUpLevel = 0;
-
-            ChestInteracted = false;
-
-            IsChestBlocked = false;
-
             _interactedCooldownTimer = new Timer(InteractedCooldownTime);
-
-            _interactedCooldownTimer.CountDown = 0f;
-
+            
             _blockedChestTimer = new Timer(ChestBlockedTime);
 
-            _blockedChestTimer.CountDown = 0f;
-
-            OnBlockedChestTimerChanged?.Invoke();
+            ResetPowerUp();
         }
 
         void Update()
@@ -205,9 +181,19 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
 
         private void ResetPowerUp() //Hacer bien el reset de todas las variables
         {
-            _powerUpLevel = 0;
+            ResetPowerUpLevel();
 
-            _powerUpAvailable = false;
+            ChestInteracted = false;
+
+            IsChestBlocked = false;
+
+            PowerUpAvailable = false;
+
+            _interactedCooldownTimer.CountDown = 0f;
+
+            _blockedChestTimer.CountDown = 0f;
+
+            OnBlockedChestTimerChanged?.Invoke();
         }
 
         protected void CallOnPowerUpInteracted() 
@@ -216,5 +202,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         }
 
         protected abstract void UsePowerUp();
+
+        protected abstract void ResetPowerUpLevel();
     }
 }
