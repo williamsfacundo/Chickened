@@ -292,7 +292,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private GameObject GetRandomZombie() 
         {
-            int random = UnityEngine.Random.Range(1, 100);
+            int random = UnityEngine.Random.Range(1, 100);            
 
             Debug.Log(random);
 
@@ -316,7 +316,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                     }
                 }
             }
-            else if (random > _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] && random < _zombieSpawnPercentages[1] + _zombieSpawnPercentages[2])
+            else if (random > _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] && random < _zombieSpawnPercentages[0] + _zombieSpawnPercentages[1] + _zombieSpawnPercentages[2])
             {
                 for (short v = 0; v < _fatZombies.Length; v++)
                 {
