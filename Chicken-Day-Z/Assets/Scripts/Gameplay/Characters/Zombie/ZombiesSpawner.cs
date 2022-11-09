@@ -292,9 +292,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private GameObject GetRandomZombie() 
         {
-            int random = UnityEngine.Random.Range(1, 100);            
-
-            Debug.Log(random);
+            int random = UnityEngine.Random.Range(1, 100);           
 
             if (random > 1 && random < _zombieSpawnPercentages[0])
             {
