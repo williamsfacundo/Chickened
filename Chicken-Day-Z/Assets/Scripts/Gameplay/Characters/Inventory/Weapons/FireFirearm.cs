@@ -46,6 +46,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                 {
                     if (!_projectiles[i].gameObject.activeSelf) 
                     {
+                        _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false; 
+
                         _projectiles[i].gameObject.SetActive(true);
 
                         _projectiles[i].gameObject.transform.position = _character.transform.position;
