@@ -7,7 +7,13 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 {
     public class ProjectileImpact : MonoBehaviour
     {
-        [SerializeField] private float _damage;        
+        private CharacterInventory _characterInventory;
+
+        private Firearm _chickenFirearm;
+
+        private float _damage;
+
+        private bool _projectileImpacted;
 
         public float Damage 
         {
@@ -19,29 +25,65 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 return _damage;
             }
+        }
+
+        public bool ProjectileImpacted 
+        {
+            set 
+            {
+                _projectileImpacted = value;
+            }
+            get 
+            {
+                return _projectileImpacted;
+            }
+        }
+
+        void Awake()
+        {
+            _characterInventory = FindObjectOfType<ChickenObject>().GetComponent<CharacterInventory>();            
+        }
+
+        private void Start()
+        {
+            UpdateDamage();
+
+            ProjectileImpacted = false; 
         }        
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            ZombieObject zombieObject = collision.gameObject.GetComponent<ZombieObject>();
-
-            if (zombieObject != null) 
+            if (!_projectileImpacted) 
             {
-                ObjectHealth objectHealth = zombieObject.gameObject.GetComponent<ObjectHealth>();
+                ZombieObject zombieObject = collision.gameObject.GetComponent<ZombieObject>();
 
-                objectHealth.ReceiveDamage(_damage);
-
-                AkSoundEngine.PostEvent("Play_Zombies_Impact", gameObject);
-                
-                gameObject.SetActive(false);
-            }
-            else 
-            {
-                if (collision.GetComponent<ChickenObject>() == null) 
+                if (zombieObject != null)
                 {
+                    ObjectHealth objectHealth = zombieObject.gameObject.GetComponent<ObjectHealth>();
+
+                    objectHealth.ReceiveDamage(_damage);
+
+                    AkSoundEngine.PostEvent("Play_Zombies_Impact", gameObject);
+
                     gameObject.SetActive(false);
+
+                    _projectileImpacted = true;
                 }
-            }                      
+                else
+                {
+                    if (collision.GetComponent<ChickenObject>() == null)
+                    {
+                        gameObject.SetActive(false);
+                    }
+                }                
+            }                                  
+        }
+
+        private void UpdateDamage() 
+        {
+            _chickenFirearm = (Firearm)_characterInventory.EquippedItem;
+
+            _damage = _chickenFirearm.Canyon.Damage;
         }
     }
 }

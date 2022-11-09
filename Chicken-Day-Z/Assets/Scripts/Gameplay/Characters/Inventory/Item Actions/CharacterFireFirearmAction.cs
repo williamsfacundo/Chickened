@@ -1,3 +1,5 @@
+using UnityEngine;
+
 using ChickenDayZ.Gameplay.Interfaces;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
 using ChickenDayZ.Gameplay.Enumerators;
@@ -8,14 +10,18 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
     {      
         private FireFirearm _fireFirearm;
 
-        public CharacterFireFirearmAction(FireFirearm fireFirearm)
+        private GameObject _gameObject;
+
+        public CharacterFireFirearmAction(FireFirearm fireFirearm, GameObject gameObject)
         {
             _fireFirearm = fireFirearm;
+
+            _gameObject = gameObject;
         }
 
         public void DoAction()
         {
-            _fireFirearm.ActivateProjectile();                        
+            _fireFirearm.ActivateProjectile(_gameObject);                        
         }
         
         public void ActionCoolDown() 

@@ -36,9 +36,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];
 
             InstanciateProjectiles(projectilePrefab);
-        }        
+        }
 
-        public void ActivateProjectile() 
+        public void ActivateProjectile(GameObject gameObject) 
         {
             if (_timer.TimerFinished && !_charger.IsEmpty && !_reloadFirearm.IsReloading) 
             {
@@ -46,6 +46,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                 {
                     if (!_projectiles[i].gameObject.activeSelf) 
                     {
+                        _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false; 
+
                         _projectiles[i].gameObject.SetActive(true);
 
                         _projectiles[i].gameObject.transform.position = _character.transform.position;
@@ -54,17 +56,36 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
                         _timer.ResetTimer();
 
+                        AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);                                      
+
                         _charger.DecreaseCharger(_canyon.FireCapacity);                        
 
                         break;
                     }                                        
                 }
-            }            
+            }
+
+            if (_charger.IsEmpty) 
+            {
+                _reloadFirearm.ReloadCharger(gameObject);
+            }
         }
 
         public void FireFirearmCoolDown() 
         {
             _timer.DecreaseTimer();
+        }
+
+        public void DestroyBullets() 
+        {
+
+            if (_projectiles != null) 
+            {
+                for (short i = 0; i < _projectiles.Length; i++)
+                {
+                    GameObject.Destroy(_projectiles[i].gameObject);
+                }
+            }            
         }
 
         private Vector3 CalculateProjectileDirection(Vector3 playerPosition) 

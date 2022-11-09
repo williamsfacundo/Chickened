@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5369343324173608460}
   - component: {fileID: 5369343324173608461}
   - component: {fileID: 5369343324173608462}
+  - component: {fileID: 6909493272382122244}
+  - component: {fileID: 8898457349544007025}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -76,6 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796fd3a64aa1c6f4bb3175c888bc00b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _zombiesSpawner: {fileID: 0}
+  _showRoundText: {fileID: 0}
+  _timeForTextToBanish: 3
 --- !u!114 &5369343324173608460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +117,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780e8c8edd4d90844bbba66b9667e513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6909493272382122244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5369343324173608463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e66b25a7ac370c49a42fce3d126e3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterInventory: {fileID: 0}
+  _weaponImage: {fileID: 0}
+--- !u!114 &8898457349544007025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5369343324173608463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49abab10df6825e4fbda565f6aad664a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectHealth: {fileID: 0}
+  _healthBar: {fileID: 0}

@@ -56,6 +56,11 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
             {
                 _itemAction?.DoAction();
 
+                if (_actionType == ItemActionTypeEnum.FIRE_FIREARM) 
+                {
+                    
+                }
+
                 _executeAction = false;
             }
 
@@ -70,7 +75,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
                     if (_characterInventory.EquippedItem is Firearm) 
                     {
-                        _itemAction = new CharacterFireFirearmAction(((Firearm)_characterInventory.EquippedItem).FireFirearmMechanic);
+                        _itemAction = new CharacterFireFirearmAction(((Firearm)_characterInventory.EquippedItem).FireFirearmMechanic, gameObject);
                     }
                     
                     break;
@@ -79,7 +84,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.ItemActions
 
                     if (_characterInventory.EquippedItem is Firearm)
                     {
-                        _itemAction = new CharacterReloadFirearmAction(((Firearm)_characterInventory.EquippedItem).ReloadFirearmMechanic);
+                        _itemAction = new CharacterReloadFirearmAction(((Firearm)_characterInventory.EquippedItem).ReloadFirearmMechanic, gameObject);
                     }
 
                     break;

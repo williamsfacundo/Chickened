@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 using ChickenDayZ.General;
 
@@ -37,7 +38,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             _watingToReload = false;
         }
 
-        public void ReloadCharger() 
+        public void ReloadCharger(GameObject gameObject) 
         {
             if (_timer.TimerFinished && _charger.NeedToCharge) 
             {
@@ -46,6 +47,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                 _timer.ResetTimer();
 
                 OnStartReloading?.Invoke();
+
+                AkSoundEngine.PostEvent("Play_Pistol_Reload_LV1", gameObject);
             }            
         }
 

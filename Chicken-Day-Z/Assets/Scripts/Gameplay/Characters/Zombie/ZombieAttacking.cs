@@ -5,16 +5,16 @@ using ChickenDayZ.Gameplay.Health;
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {   
     public class ZombieAttacking : MonoBehaviour
-    {
-        [SerializeField] private float _zombieInitialDamage;
+    {       
+        [SerializeField] private float _initialDamage;
 
-        [SerializeField] private float _zombieAttackCooldownTime;
+        [SerializeField] private float _attackCooldownTime;
 
-        private ZombieTarget _zombieTarget;
+        private ZombieTarget _target;
 
         private ObjectHealth _targetHealth;
 
-        private float _zombieDamage;
+        private float _damage;
 
         private float _attackCooldownTimer;
 
@@ -22,22 +22,22 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Awake()
         {
-            _zombieTarget = gameObject.GetComponent<ZombieTarget>();
+            _target = gameObject.GetComponent<ZombieTarget>();
         }
 
         void OnEnable()
         {
-            _zombieTarget.OnTargetChanged += UpdateTargetHealth;
+            _target.OnTargetChanged += UpdateTargetHealth;
         }
 
         void OnDisable()
         {
-            _zombieTarget.OnTargetChanged -= UpdateTargetHealth;
+            _target.OnTargetChanged -= UpdateTargetHealth;
         }
 
         void Start()
         {
-            _zombieDamage = _zombieInitialDamage;
+            _damage = _initialDamage;
 
             _attackCooldownTimer = 0f;
 
@@ -55,7 +55,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void EnterAttackModeIfZombieIsInTarget()
         {
-            if (_zombieTarget.IsZombieCollidingWithTarget && _attackCooldownTimer <= 0f)
+            if (_target.IsZombieCollidingWithTarget && _attackCooldownTimer <= 0f)
             {
                 _inAttackMode = true;
             }
@@ -65,9 +65,9 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             if (_inAttackMode)
             {
-                _targetHealth.ReceiveDamage(_zombieDamage);
+                _targetHealth.ReceiveDamage(_damage);
 
-                _attackCooldownTimer = _zombieAttackCooldownTime;
+                _attackCooldownTimer = _attackCooldownTime;
 
                 _inAttackMode = false;
             }
@@ -88,7 +88,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void UpdateTargetHealth() 
         {            
-            _targetHealth = _zombieTarget.Target.GetComponent<ObjectHealth>();
+            _targetHealth = _target.Target.GetComponent<ObjectHealth>();
 
             _attackCooldownTimer = 0f;
         }

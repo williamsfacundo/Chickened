@@ -21,8 +21,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Input
             {
                 if (_itemActionController != null)
                 {
-                    _itemActionController.ExecuteAction = true;
-                    AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);
+                    _itemActionController.ExecuteAction = true;                    
                 }
             }
         }

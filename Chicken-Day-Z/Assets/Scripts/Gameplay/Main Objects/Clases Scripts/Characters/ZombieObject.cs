@@ -1,13 +1,12 @@
 using UnityEngine;
 
-using ChickenDayZ.Gameplay.Health;
 using ChickenDayZ.Gameplay.Characters.Zombie;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {   
     [RequireComponent(typeof(ZombieTarget), typeof(ZombieAttacking), typeof(ZombieMovement))]
-    [RequireComponent(typeof(ObjectHealth))]
+    [RequireComponent(typeof(ZombieHealth))]
     public class ZombieObject : CharacterObject
     {
         [SerializeField] [Range(50, 150)] private short _scoreGivenWhenKilled;
@@ -16,7 +15,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
         private ChickenObject _chickenObject;
 
-        private ObjectHealth _objectHealth;
+        private ZombieHealth _zombieHealth;
         
         private ZombieObjectTypeEnum _zombieType;
 
@@ -52,7 +51,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         {
             _chickenObject = FindObjectOfType<ChickenObject>();
 
-            _objectHealth = GetComponent<ObjectHealth>();
+            _zombieHealth = GetComponent<ZombieHealth>();
 
             _zombieType =_defineZombieType;
 
@@ -61,18 +60,18 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
         void OnEnable()
         {
-            _objectHealth.OnHealthReachedZero += DeactivateZombie;
+            _zombieHealth.OnHealthReachedZero += DeactivateZombie;
 
-            _objectHealth.OnHealthReachedZero += AddScoreToPlayer;
+            _zombieHealth.OnHealthReachedZero += AddScoreToPlayer;
 
             _zombiesActiveInstances += 1;
         }
 
         void OnDisable()
         {
-            _objectHealth.OnHealthReachedZero -= DeactivateZombie;
+            _zombieHealth.OnHealthReachedZero -= DeactivateZombie;
 
-            _objectHealth.OnHealthReachedZero -= AddScoreToPlayer;
+            _zombieHealth.OnHealthReachedZero -= AddScoreToPlayer;
 
             _zombiesActiveInstances -= 1;
         }

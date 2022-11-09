@@ -1,54 +1,41 @@
 using UnityEngine;
 using TMPro;
 
+using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.Characters.Inventory;
 using ChickenDayZ.Gameplay.Characters.Inventory.Weapons;
 
 namespace ChickenDayZ.UI
 {
     public class ShowReloadingText : MonoBehaviour
-    {
-        /*[SerializeField] private GameObject _chicken;
-        
+    {       
         [SerializeField] private TMP_Text _reloadingText;
 
-        [SerializeField] private string _reloadingMeassege;
-
-        [SerializeField] private string _waitingReloadMeassege;
-
-        private CharacterInventory _chickenInventory;        
+        [SerializeField] private CharacterInventory _chickenInventory;        
+        
+        [SerializeField] private string _reloadingMeassege;        
         
         private ReloadFirearm _reloadFirearm;
 
-        private const short SerializeFieldObjectsCount = 2;
-
-        void Awake()
+        void Start()
         {
-            DestroyScriptIfAnySerializedFieldObjectIsMissing();
-
-            SetCharacterInventory();
+            HideReloadingMessage();            
         }
 
         void OnEnable()
         {
-            if (_chickenInventory != null) 
-            {
-                _chickenInventory.OnEquippedItemSelected += SetChickenReloadMechanic;
-            }
+            _chickenInventory.OnEquippedItemSelected += SetChickenReloadMechanic;
+
+            GameplayResetter.OnGameplayReset += HideReloadingMessage;
         }
 
         void OnDisable()
         {
-            if (_chickenInventory != null) 
-            {
-                _chickenInventory.OnEquippedItemSelected -= SetChickenReloadMechanic;
-            }            
-        }
+            _chickenInventory.OnEquippedItemSelected -= SetChickenReloadMechanic;
 
-        void Start()
-        {
-            _reloadingText.text = _waitingReloadMeassege;            
+            GameplayResetter.OnGameplayReset -= HideReloadingMessage;
         }
+        
 
         void OnDestroy()
         {
@@ -67,20 +54,8 @@ namespace ChickenDayZ.UI
 
         private void HideReloadingMessage()
         {
-            _reloadingText.text = _waitingReloadMeassege;
-        }
-
-        private void SetCharacterInventory() 
-        {            
-            _chickenInventory = _chicken.GetComponent<CharacterInventory>();
-
-            if (_chickenInventory == null) 
-            {
-                Debug.LogError("Chicken has no inventory, deleting script!");
-
-                Destroy(this);                
-            }
-        }       
+            _reloadingText.text = " ";
+        }               
 
         private void SetChickenReloadMechanic()
         {           
@@ -94,21 +69,6 @@ namespace ChickenDayZ.UI
 
                 _reloadFirearm.OnFinishedReloading += HideReloadingMessage;
             }
-        }
-
-        private void DestroyScriptIfAnySerializedFieldObjectIsMissing()
-        {
-            Object[] objects = new Object[SerializeFieldObjectsCount];
-
-            objects[0] = _chicken;
-            objects[1] = _reloadingText;
-
-            if (ObjectFunctions.IsNullObjectInArray(objects))
-            {
-                Debug.LogError("Missing referenced objects, deleting script!");
-
-                Destroy(this);
-            }
-        }*/
+        }        
     }
 }

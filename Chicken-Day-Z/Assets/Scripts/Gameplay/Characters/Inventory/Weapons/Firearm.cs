@@ -39,6 +39,14 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
+        public Canyon Canyon 
+        {
+            get 
+            {
+                return _canyon;
+            }
+        }
+
         public Firearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character)
         {
             _charger = charger;
