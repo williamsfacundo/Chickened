@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fb9a0b303737445b9b37318768fd3f, type: 3}
-  m_Name: Rifle_lvl_1
+  m_Name: Arma_Revolver_lvl_4
   m_EditorClassIdentifier: 
   FirearmType: 0
-  _sprite: {fileID: 21300000, guid: 2cdc49998041eee44a6bba4ac9ab7f35, type: 3}
-  ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
-  ChargerMaxAmmo: 35
-  ReloadTime: 0.8
-  FireRate: 0.3
-  Damage: 10
+  _sprite: {fileID: 21300000, guid: 8eca3a7111a4eb642908756caad88919, type: 3}
+  ProjectilePrefab: {fileID: 5180422776441524054, guid: 0288f4386fb06924ab84817a18003186, type: 3}
+  ChargerMaxAmmo: 20
+  ReloadTime: 1
+  FireRate: 0.5
+  Damage: 5
   BulletMoveSpeed: 20
-  Range: 9
+  Range: 7
   FireCapacity: 1

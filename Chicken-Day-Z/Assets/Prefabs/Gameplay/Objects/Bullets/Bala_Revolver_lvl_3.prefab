@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2189912146805219291}
   - component: {fileID: 6042209234218638617}
   m_Layer: 0
-  m_Name: Bala 01
+  m_Name: Bala_Revolver_lvl_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: -759361491
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2ff0201d5a39e443a2de1f40460a56c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 241924401fc71f94d8d5b45b40dcb98c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.36, y: 0.36}
+  m_Size: {x: 0.42, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
