@@ -29,9 +29,23 @@ namespace ChickenDayZ.Animations
 
         private void SetAnimation()
         {
-            if (PowerUpObject.PowerUpAvailable && !_powerUpObject.IsChestBlocked) 
+            if (PowerUpObject.PowerUpAvailable) 
             {
-                _animator.SetTrigger("Opened");
+                if (_powerUpObject.IsChestBlocked)
+                {
+                    _animator.SetTrigger("Blocked");
+                }
+                else 
+                {
+                    if (_powerUpObject.GetPowerUpLevel() < _powerUpObject.MaxLevel)
+                    {
+                        _animator.SetTrigger("Opened");
+                    }
+                    else
+                    {
+                        _animator.SetTrigger("Blocked");
+                    }
+                }         
             }
             else 
             {
