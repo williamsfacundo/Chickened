@@ -13,8 +13,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         
         [SerializeField] [Range(0.1f, 180f)] private float _chestBlockedTime;
 
-        [SerializeField] [Range(1, 20)] private short _maxLevel;
-
         public event Action OnPowerUpInteracted;
 
         public event Action OnBlockedChestTimerChanged;
@@ -44,15 +42,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             get 
             {
                 return _chestBlockedTime;
-            }
-        }
-
-
-        public short MaxLevel 
-        {
-            get 
-            {
-                return _maxLevel;
             }
         }
 
@@ -207,15 +196,13 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             OnBlockedChestTimerChanged?.Invoke();
         }
 
-        private void CallOnPowerUpInteracted() 
+        protected void CallOnPowerUpInteracted() 
         {
             OnPowerUpInteracted?.Invoke();
         }
 
-        public abstract short GetPowerUpLevel();
-
         protected abstract void UsePowerUp();
 
-        protected abstract void ResetPowerUpLevel();        
+        protected abstract void ResetPowerUpLevel();
     }
 }

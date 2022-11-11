@@ -16,8 +16,6 @@ public class UpdateBlockedTimer : MonoBehaviour
 
     void Start()
     {
-        _blockedTimerText.text = " ";
-
         _powerUpObject.OnBlockedChestTimerChanged += UpdateBlockedTimerText;
     }
 

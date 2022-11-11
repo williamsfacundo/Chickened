@@ -17,24 +17,22 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         private GunPowerUpObject() : base(PowerUpObjectTypeEnum.GUN)
         {
 
-        }        
-
-        public override short GetPowerUpLevel()
-        {
-            return _powerUpLevel;
-        }
+        }                             
 
         protected override void UsePowerUp()
         {
-            if (PowerUpAvailable && !IsChestBlocked && _powerUpLevel < MaxLevel)
+            if (PowerUpAvailable && !IsChestBlocked)
             {
-                _characterInventory.FirearmStats = _firearmStats[_powerUpLevel];
+                if (_powerUpLevel < _firearmStats.Length) 
+                {
+                    _characterInventory.FirearmStats = _firearmStats[_powerUpLevel];
 
-                _powerUpLevel += 1;
+                    _powerUpLevel += 1;
+                
+                    PowerUpAvailable = false;
 
-                PowerUpAvailable = false;
-
-                IsChestBlocked = true;
+                    IsChestBlocked = true;                    
+                }
             }
         }
 

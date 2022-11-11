@@ -151,7 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactedCooldownTime: 1
   _chestBlockedTime: 180
-  _maxLevel: 3
   _defineHealthPowerUpObjectTypeEnum: 0
   _healthIncreasedPercentage: 0.5
   _objectHealth: {fileID: 0}

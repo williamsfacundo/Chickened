@@ -31,16 +31,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         void Awake()
         {
             _healthPowerUpObjectTypeEnum = _defineHealthPowerUpObjectTypeEnum;
-        }
-
-        public override short GetPowerUpLevel() 
-        {
-            return _powerUpLevel;
-        }
+        }                
 
         protected override void UsePowerUp() 
         {
-            if (PowerUpAvailable && !IsChestBlocked && _powerUpLevel < MaxLevel) 
+            if (PowerUpAvailable && !IsChestBlocked) 
             {
                 float healthIncreased = _objectHealth.InitialHealth * _healthIncreasedPercentage;
 
