@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fb9a0b303737445b9b37318768fd3f, type: 3}
-  m_Name: Subfusil_lvl_2
+  m_Name: Arma_Escopeta_lvl_1
   m_EditorClassIdentifier: 
   FirearmType: 0
   _sprite: {fileID: 21300000, guid: 52f96d993894f8149b35882a9b97587b, type: 3}
-  ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
-  ChargerMaxAmmo: 30
+  ProjectilePrefab: {fileID: 5180422776441524054, guid: 2033f53a0b56c6542961e94dccc0cf25, type: 3}
+  ChargerMaxAmmo: 8
   ReloadTime: 0.8
   FireRate: 0.4
-  Damage: 10
+  Damage: 15
   BulletMoveSpeed: 20
   Range: 8
   FireCapacity: 1

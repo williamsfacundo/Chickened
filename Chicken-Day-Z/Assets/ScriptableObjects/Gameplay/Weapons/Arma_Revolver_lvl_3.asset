@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fb9a0b303737445b9b37318768fd3f, type: 3}
-  m_Name: Pistol_lvl_2
+  m_Name: Arma_Revolver_lvl_3
   m_EditorClassIdentifier: 
   FirearmType: 0
-  _sprite: {fileID: 21300000, guid: 2b59713f6e07e7a449945e3ac4bab55b, type: 3}
-  ProjectilePrefab: {fileID: 5180422776441524054, guid: 62f4540c80f8f5a4597d2a23419ee21c, type: 3}
-  ChargerMaxAmmo: 12
+  _sprite: {fileID: 21300000, guid: 8eca3a7111a4eb642908756caad88919, type: 3}
+  ProjectilePrefab: {fileID: 5180422776441524054, guid: e6718e647fe90484ca6d828221d67aa4, type: 3}
+  ChargerMaxAmmo: 16
   ReloadTime: 1
   FireRate: 0.5
   Damage: 5
