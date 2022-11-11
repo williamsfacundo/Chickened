@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 563341392}
   - component: {fileID: 563341395}
   - component: {fileID: 563341394}
-  - component: {fileID: 563341393}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -228,30 +227,6 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 8a7132b5514da684d825963a1dac8a17, type: 2}
-  valueIdInternal: 0
-  groupIdInternal: 0
-  valueGuidInternal: 
-  groupGuidInternal: 
---- !u!114 &563341393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563341388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1964db52d7f19640982a2ad10d5adf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
   valueIdInternal: 0
   groupIdInternal: 0
   valueGuidInternal: 
