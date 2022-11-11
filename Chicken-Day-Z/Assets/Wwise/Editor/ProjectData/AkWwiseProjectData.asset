@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e3f4ce82426514ab681b4da9a78fbbf
     GuidInternal: 
-    m_lastTime: -8585334675666184546
+    m_lastTime: -8585334652543699715
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585339016818344724
+    m_lastTime: -8585334660093071868
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -147,6 +147,91 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_ChickenBeingHit
+      guid: 54652762a29d0f4d8b90bdf69318fc2c
+      id: 1307705531
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_ChickenBeingHit
+        ObjectType: 3
+        guid: 54652762a29d0f4d8b90bdf69318fc2c
+      Path: Events\Default Work Unit\Play_ChickenBeingHit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ChickenDeath
+      guid: 995a017db8646843bed295a990d2a652
+      id: 3167060539
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_ChickenDeath
+        ObjectType: 3
+        guid: 995a017db8646843bed295a990d2a652
+      Path: Events\Default Work Unit\Play_ChickenDeath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_EggBeingHit
+      guid: ac19f4ea1172c241a49c91718d55f567
+      id: 946859409
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_EggBeingHit
+        ObjectType: 3
+        guid: ac19f4ea1172c241a49c91718d55f567
+      Path: Events\Default Work Unit\Play_EggBeingHit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_EggBreaking
+      guid: 6884ac28e78e2c47981d8a64badfae83
+      id: 1964645522
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_EggBreaking
+        ObjectType: 3
+        guid: 6884ac28e78e2c47981d8a64badfae83
+      Path: Events\Default Work Unit\Play_EggBreaking
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Foosteps
+      guid: c31ddffd4b3b174cbcba40e3c48c7c6c
+      id: 1946716263
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_Foosteps
+        ObjectType: 3
+        guid: c31ddffd4b3b174cbcba40e3c48c7c6c
+      Path: Events\Default Work Unit\Play_Foosteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Pistol_LV1
       guid: 1476cec019b73c4884810ee1f22855bd
       id: 1493776129
@@ -162,8 +247,8 @@ MonoBehaviour:
         guid: 1476cec019b73c4884810ee1f22855bd
       Path: Events\Default Work Unit\Play_Pistol_LV1
       maxAttenuation: 0
-      maxDuration: 1.284354
-      minDuration: 0.655057
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Pistol_Reload_LV1
       guid: 63561d1cf42474408abb8db865296935
       id: 183297547
@@ -179,8 +264,8 @@ MonoBehaviour:
         guid: 63561d1cf42474408abb8db865296935
       Path: Events\Default Work Unit\Play_Pistol_Reload_LV1
       maxAttenuation: 0
-      maxDuration: 2.8
-      minDuration: 2.8
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Zombies_Die
       guid: ee252d84bdb83d479be0545a4623e257
       id: 16750680
@@ -196,8 +281,8 @@ MonoBehaviour:
         guid: ee252d84bdb83d479be0545a4623e257
       Path: Events\Default Work Unit\Play_Zombies_Die
       maxAttenuation: 0
-      maxDuration: 1.332812
-      minDuration: 1.132132
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Zombies_Impact
       guid: e1d91df44845ad45ab11a31541819e2a
       id: 297923524
@@ -213,8 +298,8 @@ MonoBehaviour:
         guid: e1d91df44845ad45ab11a31541819e2a
       Path: Events\Default Work Unit\Play_Zombies_Impact
       maxAttenuation: 0
-      maxDuration: 1.175896
-      minDuration: 0.857823
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_BGM
       guid: a5099412584b914e9483371228926f52
       id: 1073466678
@@ -230,8 +315,8 @@ MonoBehaviour:
         guid: a5099412584b914e9483371228926f52
       Path: Events\Default Work Unit\Stop_BGM
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -244,8 +329,64 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 17acb5b497f31645bb6327beffda800f
     GuidInternal: 
-    m_lastTime: -8585341580342722987
-    List: []
+    m_lastTime: -8585334652543519662
+    List:
+    - name: EggHealth
+      guid: 79317a3129ca2143b10e5e282d2ce576
+      id: 1594264742
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 17acb5b497f31645bb6327beffda800f
+      - ElementName: EggHealth
+        ObjectType: 13
+        guid: 79317a3129ca2143b10e5e282d2ce576
+      Path: Game Parameters\Default Work Unit\EggHealth
+    - name: MusicVolumeIngameOption
+      guid: 683d1b93a2ee2f4695f7ee9aae90b4a1
+      id: 1871523704
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 17acb5b497f31645bb6327beffda800f
+      - ElementName: MusicVolumeIngameOption
+        ObjectType: 13
+        guid: 683d1b93a2ee2f4695f7ee9aae90b4a1
+      Path: Game Parameters\Default Work Unit\MusicVolumeIngameOption
+    - name: PlayerHealth
+      guid: 2461bb8ce2584e498524e4f4271db6e5
+      id: 151362964
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 17acb5b497f31645bb6327beffda800f
+      - ElementName: PlayerHealth
+        ObjectType: 13
+        guid: 2461bb8ce2584e498524e4f4271db6e5
+      Path: Game Parameters\Default Work Unit\PlayerHealth
+    - name: SFXVolumeIngameOption
+      guid: 0bdcbb5a94595448a0de4d3bc516085b
+      id: 2704578016
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 17acb5b497f31645bb6327beffda800f
+      - ElementName: SFXVolumeIngameOption
+        ObjectType: 13
+        guid: 0bdcbb5a94595448a0de4d3bc516085b
+      Path: Game Parameters\Default Work Unit\SFXVolumeIngameOption
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -258,7 +399,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
     GuidInternal: 
-    m_lastTime: -8585339016804686349
+    m_lastTime: -8585334670033965524
     List:
     - name: MusicRegion
       guid: d968fd35f0a2d94c89589dd518399b8c
@@ -275,6 +416,22 @@ MonoBehaviour:
         guid: d968fd35f0a2d94c89589dd518399b8c
       Path: States\Default Work Unit\MusicRegion
       values:
+      - name: gameOver
+        guid: 602ed105bec80142b177e8eb421bf3e5
+        id: 4158285989
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
+        - ElementName: MusicRegion
+          ObjectType: 9
+          guid: d968fd35f0a2d94c89589dd518399b8c
+        - ElementName: gameOver
+          ObjectType: 8
+          guid: 602ed105bec80142b177e8eb421bf3e5
       - name: ingame
         guid: 39e2a63c6dc8104e919b3665e26e3206
         id: 984691642
