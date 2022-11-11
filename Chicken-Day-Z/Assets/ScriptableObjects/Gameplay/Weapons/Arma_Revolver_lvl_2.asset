@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fb9a0b303737445b9b37318768fd3f, type: 3}
+  m_Name: Arma_Revolver_lvl_2
+  m_EditorClassIdentifier: 
+  FirearmType: 0
+  _sprite: {fileID: 21300000, guid: 2b59713f6e07e7a449945e3ac4bab55b, type: 3}
+  ProjectilePrefab: {fileID: 5180422776441524054, guid: fc8bef181a84cdd40b0429710d5170ee, type: 3}
+  ChargerMaxAmmo: 12
+  ReloadTime: 1
+  FireRate: 0.5
+  Damage: 5
+  BulletMoveSpeed: 20
+  Range: 7
+  FireCapacity: 1

@@ -151,13 +151,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactedCooldownTime: 1
   _chestBlockedTime: 180
+  _maxLevel: 14
   _firearmStats:
   - {fileID: 11400000, guid: 6ebc40ab97278854888aef8e462da8d5, type: 2}
   - {fileID: 11400000, guid: 5daef1436da056a4fab241e6dcef1b26, type: 2}
   - {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
-  - {fileID: 11400000, guid: f599c9d4e8c733a46a95fa9fbab2400f, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
-  - {fileID: 11400000, guid: 50481c165e4a3944e8e2768443649109, type: 2}
+  - {fileID: 0}
   _characterInventory: {fileID: 0}
 --- !u!95 &7967520234149536073
 Animator:
