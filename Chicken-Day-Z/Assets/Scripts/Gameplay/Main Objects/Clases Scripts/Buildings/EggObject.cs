@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Health;
@@ -11,9 +12,13 @@ namespace ChickenDayZ.Gameplay.MainObjects.Buildings
     {
         private ObjectHealth _objectHealth;
 
+        public static event Action<Transform> OnEggObject;
+
         void Awake()
         {
             _objectHealth = GetComponent<ObjectHealth>();
+
+            OnEggObject?.Invoke(gameObject.transform);
         }
 
         void OnEnable()
