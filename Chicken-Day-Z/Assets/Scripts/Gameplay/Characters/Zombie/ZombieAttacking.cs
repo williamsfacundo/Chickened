@@ -15,11 +15,22 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private Timer _attackCooldownTimer;
 
+        private ZombiesMovementIA _zombiesMovementIA;
+
+        private float _zombieSpeed;
+
+        void Awake()
+        {
+            _zombiesMovementIA = GetComponent<ZombiesMovementIA>();
+        }
+
         void Start()
         {
             _damage = _initialDamage;
 
             //_attackCooldownTimer = new Timer(_attackCooldownTime);
+
+            _zombieSpeed = _zombiesMovementIA.Agent.speed;
 
             _attackCooldownTimer.CountDown = 0f;            
         }
@@ -29,11 +40,29 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             DecreaseAtackCooldownTimer();
         }
 
-        void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.transform.tag == "Base" || collision.transform.tag == "Player")
+            {
+                _zombiesMovementIA.CurrentTargetIndex = _zombiesMovementIA.FindTargetIndex(collision.transform);
+            }
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.transform.tag == "Base" || collision.transform.tag == "Player")
             {
                 AttackTarget(collision.gameObject);
+
+                _zombiesMovementIA.Agent.speed = 0f;
+            }
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.transform.tag == "Base" || collision.transform.tag == "Player")
+            {
+                _zombiesMovementIA.Agent.speed = _zombieSpeed;
             }
         }
 
