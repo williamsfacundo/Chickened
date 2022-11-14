@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: f50b257df3ce9548a440c7b960fb1f0c
     GuidInternal: 
-    m_lastTime: -8585341580333938033
+    m_lastTime: -8585341000793195495
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e3f4ce82426514ab681b4da9a78fbbf
     GuidInternal: 
-    m_lastTime: -8585334652543699715
+    m_lastTime: -8585331654554933980
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: febb687e828f66419e6239b256bb2cc6
     GuidInternal: 
-    m_lastTime: -8585358899323160759
+    m_lastTime: -8585344493274775808
     List:
     - name: mainSoundBank
       guid: 02c55c68ac7fb140a09f4149e66c1bca
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585334660093071868
+    m_lastTime: -8585331654554983990
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -247,8 +247,8 @@ MonoBehaviour:
         guid: 1476cec019b73c4884810ee1f22855bd
       Path: Events\Default Work Unit\Play_Pistol_LV1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.284354
+      minDuration: 0.655057
     - name: Play_Pistol_Reload_LV1
       guid: 63561d1cf42474408abb8db865296935
       id: 183297547
@@ -264,8 +264,8 @@ MonoBehaviour:
         guid: 63561d1cf42474408abb8db865296935
       Path: Events\Default Work Unit\Play_Pistol_Reload_LV1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.8
+      minDuration: 2.8
     - name: Play_Zombies_Die
       guid: ee252d84bdb83d479be0545a4623e257
       id: 16750680
@@ -281,8 +281,8 @@ MonoBehaviour:
         guid: ee252d84bdb83d479be0545a4623e257
       Path: Events\Default Work Unit\Play_Zombies_Die
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.332812
+      minDuration: 1.132132
     - name: Play_Zombies_Impact
       guid: e1d91df44845ad45ab11a31541819e2a
       id: 297923524
@@ -298,8 +298,8 @@ MonoBehaviour:
         guid: e1d91df44845ad45ab11a31541819e2a
       Path: Events\Default Work Unit\Play_Zombies_Impact
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.175896
+      minDuration: 0.857823
     - name: Stop_BGM
       guid: a5099412584b914e9483371228926f52
       id: 1073466678
@@ -315,8 +315,8 @@ MonoBehaviour:
         guid: a5099412584b914e9483371228926f52
       Path: Events\Default Work Unit\Stop_BGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -329,7 +329,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 17acb5b497f31645bb6327beffda800f
     GuidInternal: 
-    m_lastTime: -8585334652543519662
+    m_lastTime: -8585331654554973983
     List:
     - name: EggHealth
       guid: 79317a3129ca2143b10e5e282d2ce576
@@ -399,7 +399,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
     GuidInternal: 
-    m_lastTime: -8585334670033965524
+    m_lastTime: -8585331654554923977
     List:
     - name: MusicRegion
       guid: d968fd35f0a2d94c89589dd518399b8c
@@ -511,7 +511,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4986b7c7e68e12449f5e22af29b7dfa3
     GuidInternal: 
-    m_lastTime: -8585341580333953037
+    m_lastTime: -8585341000794175668
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -525,7 +525,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d21d872082077b4a94331fed52a1a8db
     GuidInternal: 
-    m_lastTime: -8585341580333948035
+    m_lastTime: -8585341000794170658
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 0d0000000e0000000f00000010000000
