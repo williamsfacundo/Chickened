@@ -6,11 +6,11 @@ namespace ChickenDayZ.Cursor
     {
         [SerializeField] private Texture2D _cursorPrite;
 
-        // Start is called before the first frame update
+        [SerializeField] Vector2 _cursorPosition; //x=25 y=25      
+
         void Start()
-        {
-            //UnityEngine.Cursor.visible = false;
-            UnityEngine.Cursor.SetCursor(_cursorPrite, Vector2.zero, CursorMode.ForceSoftware);            
+        {            
+            UnityEngine.Cursor.SetCursor(_cursorPrite, _cursorPosition, CursorMode.ForceSoftware);            
         }        
     }
 }

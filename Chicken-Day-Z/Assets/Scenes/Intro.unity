@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cursorPrite: {fileID: 2800000, guid: f86045ada3be41d41950bda51cd4efb3, type: 3}
+  _cursorPosition: {x: 25, y: 25}
 --- !u!4 &659349508
 Transform:
   m_ObjectHideFlags: 0
