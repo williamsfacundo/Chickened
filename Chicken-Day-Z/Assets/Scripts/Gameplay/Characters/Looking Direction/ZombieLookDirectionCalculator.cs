@@ -6,16 +6,16 @@ namespace ChickenDayZ.Gameplay.Characters.LookingDirection
 {
     public class ZombieLookDirectionCalculator : CharacterLookDirectionCalculator
     {
-        private ZombieTarget _zombieTarget;
+        private ZombiesMovementIA _zombiesMovementIA;        
 
         void Awake()
         {
-            _zombieTarget = GetComponent<ZombieTarget>();
+            _zombiesMovementIA = GetComponent<ZombiesMovementIA>();
         }
 
         public override void CalculateCharacterLookDirection()
         {
-            TargetPosition = _zombieTarget.gameObject.transform.position;
+            TargetPosition = _zombiesMovementIA.Target.position;
 
             Angle = MathFunctions.AngleBetweenTwoPositions(gameObject.transform.position, TargetPosition);
 

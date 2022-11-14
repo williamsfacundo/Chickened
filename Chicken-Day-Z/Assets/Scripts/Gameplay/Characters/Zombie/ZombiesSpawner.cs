@@ -120,6 +120,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 Destroy(this);
             }
+
+            SetZombieObjects();
         }
 
         void OnEnable()
@@ -134,8 +136,6 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void Start()
         {
-            SetZombieObjects();
-
             _timerBeforeRoundStarts = new Timer(_timeBeforeRoundStarts);
 
             _timerBeforeRoundStarts.CountDown = 0f;
@@ -268,21 +268,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 zombie.transform.position = GetRandomSpawnPosition();
 
-                zombie.GetComponent<ObjectHealth>().ResetCurrentHealth();
+                zombie.GetComponent<ObjectHealth>().ResetCurrentHealth();                
 
-                int aux = UnityEngine.Random.Range(1, 3);
+                zombie.GetComponent<ZombiesMovementIA>().SetRandomTarget();
 
-                switch (aux)
-                {
-                    case 1:
-
-                        zombie.GetComponent<ZombieTarget>().Target = _chicken;
-                        break;
-
-                    case 2:
-                        zombie.GetComponent<ZombieTarget>().Target = _eggBase;
-                        break;
-                }
+                zombie.GetComponent<ZombieAttacking>().ResetZombieAttacking();
             }
             else 
             {

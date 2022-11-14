@@ -17,8 +17,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.Buildings
         void Awake()
         {
             _objectHealth = GetComponent<ObjectHealth>();
+        }
 
-            OnEggObject?.Invoke(gameObject.transform);
+        void Start()
+        {
+            OnEggObject?.Invoke(transform);            
         }
 
         void OnEnable()

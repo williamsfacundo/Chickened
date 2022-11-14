@@ -5,8 +5,7 @@ using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {   
-    [RequireComponent(typeof(ZombieTarget), typeof(ZombieAttacking), typeof(ZombieMovement))]
-    [RequireComponent(typeof(ZombieHealth))]
+    [RequireComponent(typeof(ZombieAttacking), typeof(ZombieHealth), typeof(ZombiesMovementIA))]    
     public class ZombieObject : CharacterObject
     {
         [SerializeField] [Range(50, 150)] private short _scoreGivenWhenKilled;

@@ -1,96 +1,72 @@
-    using UnityEngine;
+using UnityEngine;
 
 using ChickenDayZ.Gameplay.Health;
+using ChickenDayZ.General;
 
 namespace ChickenDayZ.Gameplay.Characters.Zombie
 {   
     public class ZombieAttacking : MonoBehaviour
-    {       
-        [SerializeField] private float _initialDamage;
+    {
+        [SerializeField] [Range(1f, 20f)] private float _initialDamage;
 
-        [SerializeField] private float _attackCooldownTime;
-
-        private ZombieTarget _target;
-
-        private ObjectHealth _targetHealth;
+        [SerializeField] [Range(1f, 4f)] private float _attackCooldownTime;        
 
         private float _damage;
 
-        private float _attackCooldownTimer;
-
-        private bool _inAttackMode;
-
-        void Awake()
-        {
-            _target = gameObject.GetComponent<ZombieTarget>();
-        }
-
-        void OnEnable()
-        {
-            _target.OnTargetChanged += UpdateTargetHealth;
-        }
-
-        void OnDisable()
-        {
-            _target.OnTargetChanged -= UpdateTargetHealth;
-        }
+        private Timer _attackCooldownTimer;
 
         void Start()
         {
             _damage = _initialDamage;
 
-            _attackCooldownTimer = 0f;
+            //_attackCooldownTimer = new Timer(_attackCooldownTime);
 
-            _inAttackMode = false;
+            _attackCooldownTimer.CountDown = 0f;            
         }
 
         void Update()
         {
-            EnterAttackModeIfZombieIsInTarget();
-
-            AttackTargetIfIsInAttackMode();
-
-            DecreaseCooldownTimerIfZombieHasAttacked();
+            DecreaseAtackCooldownTimer();
         }
 
-        private void EnterAttackModeIfZombieIsInTarget()
+        void OnCollisionEnter2D(Collision2D collision)
         {
-            if (_target.IsZombieCollidingWithTarget && _attackCooldownTimer <= 0f)
+            if (collision.transform.tag == "Base" || collision.transform.tag == "Player")
             {
-                _inAttackMode = true;
+                AttackTarget(collision.gameObject);
             }
         }
 
-        private void AttackTargetIfIsInAttackMode()
+        public void ResetZombieAttacking() 
         {
-            if (_inAttackMode)
+            if (_attackCooldownTimer == null) 
             {
-                _targetHealth.ReceiveDamage(_damage);
+                _attackCooldownTimer = new Timer(_attackCooldownTime);
 
-                _attackCooldownTimer = _attackCooldownTime;
-
-                _inAttackMode = false;
+                _attackCooldownTimer.CountDown = 0f;
+            }
+            else 
+            {
+                _attackCooldownTimer.CountDown = 0f;
             }
         }
 
-        private void DecreaseCooldownTimerIfZombieHasAttacked()
+        private void AttackTarget(GameObject gameObject)
         {
-            if (_attackCooldownTimer > 0f)
+            if (_attackCooldownTimer.TimerFinished) 
             {
-                _attackCooldownTimer -= Time.deltaTime;
+                gameObject.GetComponent<ObjectHealth>().ReceiveDamage(_damage);
 
-                if (_attackCooldownTimer < 0f)
-                {
-                    _attackCooldownTimer = 0f;
-                }
+                _attackCooldownTimer.ResetTimer();
+            }
+        }
+
+        private void DecreaseAtackCooldownTimer()
+        {
+            if (!_attackCooldownTimer.TimerFinished)
+            {
+                _attackCooldownTimer.DecreaseTimer();                
             }
         }        
-
-        private void UpdateTargetHealth() 
-        {            
-            _targetHealth = _target.Target.GetComponent<ObjectHealth>();
-
-            _attackCooldownTimer = 0f;
-        }
     }
 }

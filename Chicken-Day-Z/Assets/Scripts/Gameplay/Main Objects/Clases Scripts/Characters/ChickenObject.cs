@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using ChickenDayZ.Gameplay.Health;
@@ -17,7 +18,9 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         private ChickenScore _chickenScore;
 
         private ObjectHealth _objectHealth;
-        
+
+        public static event Action<Transform> OnChickenObject;
+
         public PlayerObjectTypeEnum PlayersObjectTypeEnum 
         {
             get 
@@ -41,6 +44,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             _objectHealth = GetComponent<ObjectHealth>();
 
             _chickenScore = GetComponent<ChickenScore>();
+        }
+
+        void Start()
+        {
+            OnChickenObject?.Invoke(transform);
         }
 
         private void OnEnable()

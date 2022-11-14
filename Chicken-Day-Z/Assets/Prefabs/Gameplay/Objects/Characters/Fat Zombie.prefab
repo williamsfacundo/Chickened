@@ -10,18 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 2811523339669616401}
   - component: {fileID: 2811523339669616400}
-  - component: {fileID: 3668622008214068018}
   - component: {fileID: 346120353000518287}
-  - component: {fileID: 3484924348982428427}
   - component: {fileID: 7144078933916608514}
   - component: {fileID: 2462428413045974377}
   - component: {fileID: -8250765791803884231}
+  - component: {fileID: 6306169603915751599}
   - component: {fileID: 2811523339669616404}
   - component: {fileID: 2811523339669616407}
   - component: {fileID: 2811523339669616405}
   - component: {fileID: -5826399074048199569}
   - component: {fileID: -6189455769589820092}
-  - component: {fileID: 6306169603915751599}
   m_Layer: 0
   m_Name: Fat Zombie
   m_TagString: Zombie
@@ -95,19 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3668622008214068018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811523339669616403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc8d39d76a6ec746ae12eaba245a6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _zombieMoveVelocity: 2
 --- !u!114 &346120353000518287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,18 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialDamage: 20
   _attackCooldownTime: 2
---- !u!114 &3484924348982428427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811523339669616403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756169bb7485de8458aba330bfa1c102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7144078933916608514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +148,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreGivenWhenKilled: 150
   _defineZombieType: 0
+--- !u!114 &6306169603915751599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00090ff7f20b5548a99f8f62b833c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &2811523339669616404
 Rigidbody2D:
   serializedVersion: 4
@@ -269,18 +254,6 @@ NavMeshAgent:
   m_BaseOffset: 0.96
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6306169603915751599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811523339669616403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00090ff7f20b5548a99f8f62b833c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5323368460201474710
 PrefabInstance:
   m_ObjectHideFlags: 0
