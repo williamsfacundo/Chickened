@@ -9,6 +9,35 @@
 							<ObjectRef Name="System" ID="{DC47222A-2E21-44D6-9167-9BAF465AEE97}" WorkUnitID="{973F21EF-ED9E-4D34-AF3F-DDFF046E5FD2}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Music" ID="{A1C55AF2-EE05-4793-9BE0-B81D171E9ABC}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{038BE9A0-8EEF-4A4C-A89E-3DC1D936DF78}" ShortID="1015623940">
+											<ReferenceList/>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}" SchemaVersion="103">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="PlayerHealth" ID="{8CBB6124-58E2-494E-8524-E4F4271DB6E5}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="EggHealth" ID="{317A3179-CA29-4321-B10E-5E282D2CE576}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="MusicVolumeIngameOption" ID="{931B3D68-EEA2-462F-95F7-EE9AAE90B4A1}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SFXVolumeIngameOption" ID="{5ABBDC0B-5994-4854-A0DE-4D3BC516085B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

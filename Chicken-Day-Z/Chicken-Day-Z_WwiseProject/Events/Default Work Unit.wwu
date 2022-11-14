@@ -72,6 +72,11 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_ChickenBeingHit" ID="{62276554-9DA2-4D0F-8B90-BDF69318FC2C}"/>
+				<Event Name="Play_Foosteps" ID="{FDDF1DC3-3B4B-4C17-BCBA-40E3C48C7C6C}"/>
+				<Event Name="Play_ChickenDeath" ID="{7D015A99-64B8-4368-BED2-95A990D2A652}"/>
+				<Event Name="Play_EggBeingHit" ID="{EAF419AC-7211-41C2-A49C-91718D55F567}"/>
+				<Event Name="Play_EggBreaking" ID="{28AC8468-8EE7-472C-981D-8A64BADFAE83}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

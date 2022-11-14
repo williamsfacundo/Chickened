@@ -10,7 +10,7 @@ public class ChangeSceneWhenVideoStops : MonoBehaviour
 
     void Start()
     {
-        _timer = new Timer(58f);        
+        _timer = new Timer(56f);        
     }
 
     void Update()
