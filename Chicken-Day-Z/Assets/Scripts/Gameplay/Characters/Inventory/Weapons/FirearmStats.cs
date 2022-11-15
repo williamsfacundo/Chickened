@@ -25,6 +25,6 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         public float Range;
 
-        public short FireCapacity;        
+        public bool IsShotGun;        
     }
 }

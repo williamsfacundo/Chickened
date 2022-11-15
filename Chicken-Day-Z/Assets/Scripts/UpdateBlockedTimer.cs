@@ -3,38 +3,41 @@ using TMPro;
 
 using ChickenDayZ.Gameplay.MainObjects.PowerUp;
 
-public class UpdateBlockedTimer : MonoBehaviour
+namespace ChickenDayZ.Gameplay.MainObjects.Buildings 
 {
-    [SerializeField] private TMP_Text _blockedTimerText;
-
-    private PowerUpObject _powerUpObject;
-
-    void Awake()
+    public class UpdateBlockedTimer : MonoBehaviour
     {
-        _powerUpObject = GetComponent<PowerUpObject>();        
-    }
+        [SerializeField] private TMP_Text _blockedTimerText;    
 
-    void Start()
-    {
-        _blockedTimerText.text = " ";
+        private PowerUpObject _powerUpObject;
 
-        _powerUpObject.OnBlockedChestTimerChanged += UpdateBlockedTimerText;
-    }
+        void Awake()
+        {
+            _powerUpObject = GetComponent<PowerUpObject>();
+        }
 
-    void OnDestroy()
-    {
-        _powerUpObject.OnBlockedChestTimerChanged -= UpdateBlockedTimerText;
-    }
-
-    private void UpdateBlockedTimerText() 
-    {
-        if (_powerUpObject.GetBlockedChestTimerCountDown() <= 0f)        
+        void Start()
         {
             _blockedTimerText.text = " ";
+
+            _powerUpObject.OnBlockedChestTimerChanged += UpdateBlockedTimerText;
         }
-        else 
+
+        void OnDestroy()
         {
-            _blockedTimerText.text = (int)_powerUpObject.GetBlockedChestTimerCountDown() + "";
+            _powerUpObject.OnBlockedChestTimerChanged -= UpdateBlockedTimerText;
+        }
+
+        private void UpdateBlockedTimerText()
+        {
+            if (_powerUpObject.GetBlockedChestTimerCountDown() <= 0f)
+            {
+                _blockedTimerText.text = " ";
+            }
+            else
+            {
+                _blockedTimerText.text = (int)_powerUpObject.GetBlockedChestTimerCountDown() + "";
+            }
         }
     }
 }

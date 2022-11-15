@@ -21,4 +21,4 @@ MonoBehaviour:
   Damage: 15
   BulletMoveSpeed: 20
   Range: 8
-  FireCapacity: 1
+  IsShotGun: 1

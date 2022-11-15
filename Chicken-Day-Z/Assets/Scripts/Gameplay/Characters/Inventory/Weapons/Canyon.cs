@@ -8,9 +8,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private float _bulletMoveSpeed;
 
-        private float _range;
+        private float _range;        
 
-        private short _fireCapacity;
+        private bool _isShotGun;
 
         public float FireRate
         {
@@ -42,17 +42,17 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 return _range;
             }
-        }
+        }       
 
-        public short FireCapacity
+        public bool IsShotGun 
         {
-            get
+            get 
             {
-                return _fireCapacity;
+                return _isShotGun;
             }
         }
 
-        public Canyon(float fireRate, float damage, float bulletMoveSpeed, float range, short fireCapacity)
+        public Canyon(float fireRate, float damage, float bulletMoveSpeed, float range, bool isShotGun)
         {
             _fireRate = fireRate;
 
@@ -62,7 +62,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _range = range;
 
-            _fireCapacity = fireCapacity;
+            _isShotGun = isShotGun;
         }
     }
 }

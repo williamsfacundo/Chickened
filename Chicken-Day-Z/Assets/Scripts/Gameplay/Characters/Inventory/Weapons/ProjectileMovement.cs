@@ -20,6 +20,10 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 _direction = value;
             }
+            get 
+            {
+                return _direction;
+            }
         }
 
         private void OnEnable()

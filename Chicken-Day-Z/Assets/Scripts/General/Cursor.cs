@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ChickenDayZ.Cursor 
+namespace ChickenDayZ.General 
 {
     public class Cursor : MonoBehaviour
     {

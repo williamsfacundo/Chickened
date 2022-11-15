@@ -42,26 +42,111 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         {
             if (_timer.TimerFinished && !_charger.IsEmpty && !_reloadFirearm.IsReloading) 
             {
-                for (short i = 0; i < _projectiles.Length; i++)
+                if (_canyon.IsShotGun) 
                 {
-                    if (!_projectiles[i].gameObject.activeSelf) 
+                    Vector3 mouseDirection = CalculateProjectileDirection(_character.transform.position);
+
+                    Vector3 angledDirection = new Vector3(mouseDirection.x * Mathf.Cos(0.2f) - mouseDirection.y * Mathf.Sin(0.2f), 
+                        mouseDirection.x * Mathf.Sin(0.2f) + mouseDirection.y * Mathf.Cos(0.2f), mouseDirection.z);
+
+                    for (short i = 0; i < _projectiles.Length; i++) 
                     {
-                        _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false; 
+                        if (!_projectiles[i].gameObject.activeSelf) 
+                        {
+                            _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
-                        _projectiles[i].gameObject.SetActive(true);
+                            _projectiles[i].gameObject.SetActive(true);
 
-                        _projectiles[i].gameObject.transform.position = _character.transform.position;
+                            _projectiles[i].gameObject.transform.position = _character.transform.position;
 
-                        _projectiles[i].Direction = CalculateProjectileDirection(_character.transform.position);
+                            _projectiles[i].Direction = mouseDirection;
 
+                            _charger.DecreaseCharger(1);
+
+                            break;
+                        }
+                    }
+
+                    if (_charger.IsEmpty)
+                    {
                         _timer.ResetTimer();
 
-                        AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);                                      
+                        AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);
 
-                        _charger.DecreaseCharger(_canyon.FireCapacity);                        
+                        return;
+                    }
 
-                        break;
-                    }                                        
+                    for (short i = 0; i < _projectiles.Length; i++) 
+                    {
+                        if (!_projectiles[i].gameObject.activeSelf) 
+                        {
+                            _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
+
+                            _projectiles[i].gameObject.SetActive(true);
+
+                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+
+                            _projectiles[i].Direction = angledDirection;
+
+                            _charger.DecreaseCharger(1);
+
+                            break;
+                        }
+                    }
+
+                    if (_charger.IsEmpty)
+                    {
+                        _timer.ResetTimer();
+
+                        AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);
+
+                        return;
+                    }
+
+                    angledDirection = new Vector3(mouseDirection.x * Mathf.Cos(-0.2f) - mouseDirection.y * Mathf.Sin(-0.2f),
+                        mouseDirection.x * Mathf.Sin(-0.2f) + mouseDirection.y * Mathf.Cos(-0.2f), mouseDirection.z);
+
+                    for (short i = 0; i < _projectiles.Length; i++)
+                    {
+                        if (!_projectiles[i].gameObject.activeSelf) 
+                        {
+                            _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
+
+                            _projectiles[i].gameObject.SetActive(true);
+
+                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+
+                            _projectiles[i].Direction = angledDirection;
+
+                            _charger.DecreaseCharger(1);
+
+                            break;
+                        }
+                    }                    
+                }
+                else 
+                {
+                    for (short i = 0; i < _projectiles.Length; i++)
+                    {
+                        if (!_projectiles[i].gameObject.activeSelf)
+                        {
+                            _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
+
+                            _projectiles[i].gameObject.SetActive(true);
+
+                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+
+                            _projectiles[i].Direction = CalculateProjectileDirection(_character.transform.position); ;
+
+                            _timer.ResetTimer();
+
+                            _charger.DecreaseCharger(1);
+
+                            AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);
+
+                            break;
+                        }
+                    }
                 }
             }
 

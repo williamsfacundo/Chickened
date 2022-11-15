@@ -88,7 +88,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
             _equippedItem = new Firearm(_firearmStats.ProjectilePrefab,
                                 new Charger(_firearmStats.ChargerMaxAmmo, _firearmStats.ReloadTime),
                                 new Canyon(_firearmStats.FireRate, _firearmStats.Damage,
-                                _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.FireCapacity),
+                                _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.IsShotGun),
                                 gameObject);
 
             _firearmSpriteRenderer.sprite = _firearmStats._sprite;
