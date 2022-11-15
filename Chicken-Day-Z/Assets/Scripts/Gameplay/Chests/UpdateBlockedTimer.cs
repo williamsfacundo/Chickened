@@ -3,7 +3,7 @@ using TMPro;
 
 using ChickenDayZ.Gameplay.MainObjects.PowerUp;
 
-namespace ChickenDayZ.Gameplay.MainObjects.Buildings 
+namespace ChickenDayZ.Gameplay.Chests
 {
     public class UpdateBlockedTimer : MonoBehaviour
     {

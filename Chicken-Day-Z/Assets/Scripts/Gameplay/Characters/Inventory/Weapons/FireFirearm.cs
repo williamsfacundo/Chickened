@@ -56,10 +56,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-
                             _projectiles[i].gameObject.transform.position = _character.transform.position;
-
                             _projectiles[i].Direction = mouseDirection;
+                            _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
                             _charger.DecreaseCharger(1);
 
@@ -83,10 +82,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-
                             _projectiles[i].gameObject.transform.position = _character.transform.position;
-
                             _projectiles[i].Direction = angledDirection;
+                            _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
                             _charger.DecreaseCharger(1);
 
@@ -113,12 +111,14 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-
                             _projectiles[i].gameObject.transform.position = _character.transform.position;
-
                             _projectiles[i].Direction = angledDirection;
+                            _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
                             _charger.DecreaseCharger(1);
+                            _timer.ResetTimer();
+
+                            AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);
 
                             break;
                         }
@@ -133,14 +133,12 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-
                             _projectiles[i].gameObject.transform.position = _character.transform.position;
-
-                            _projectiles[i].Direction = CalculateProjectileDirection(_character.transform.position); ;
-
-                            _timer.ResetTimer();
+                            _projectiles[i].Direction = CalculateProjectileDirection(_character.transform.position);
+                            _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
                             _charger.DecreaseCharger(1);
+                            _timer.ResetTimer();
 
                             AkSoundEngine.PostEvent("Play_Pistol_LV1", gameObject);
 
