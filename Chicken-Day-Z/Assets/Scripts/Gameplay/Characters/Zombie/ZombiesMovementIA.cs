@@ -9,6 +9,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
     [RequireComponent(typeof(NavMeshAgent), typeof(Rigidbody2D))]
     public class ZombiesMovementIA : MonoBehaviour
     {
+        [SerializeField] private float _initialSpeed;
+        
         private const int MaxTargets = 2;
 
         private Transform[] _targets;
@@ -67,6 +69,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _agent.updateUpAxis = false;
 
+            _agent.speed = _initialSpeed;
+
             _rb2D.velocity = Vector2.zero;
         }
 
@@ -84,9 +88,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             _rb2D.velocity = Vector2.zero;
         }       
 
-        public void SetRandomTarget() 
+        public void ResetZombieIA() 
         {
-            _currentTargetIndex = Random.Range(0, MaxTargets);
+            SetRandomTarget();
+
+            _agent.speed = _initialSpeed;
         }
 
         public int FindTargetIndex(Transform transform) 
@@ -100,6 +106,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             }
 
             return -1;
+        }
+
+        private void SetRandomTarget() 
+        {
+            _currentTargetIndex = Random.Range(0, MaxTargets);
         }
 
         private void SetDestinationTarget(Transform _transform)

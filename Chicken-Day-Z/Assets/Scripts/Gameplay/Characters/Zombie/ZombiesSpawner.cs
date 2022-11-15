@@ -30,8 +30,10 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         [SerializeField] private float _minNextZombieSpawnTime; 
 
-        [SerializeField] private float _maxNextZombieSpawnTime; 
-                                                                
+        [SerializeField] private float _maxNextZombieSpawnTime;
+
+        [SerializeField] private float _zombieHordeRadius;
+        
         [SerializeField] private short _initialRoundZombiesToKill;        
 
         [SerializeField] private short _maxNormalZombies;
@@ -39,6 +41,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         [SerializeField] private short _maxFastZombies;
         
         [SerializeField] private short _maxFatZombies;
+
+        private short _amountOfZombiesGeneratedAtOnce;
 
         private GameObject[] _normalZombies;
 
@@ -146,7 +150,9 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             Round = InitialRound;                        
 
-            _zombiesLeftToKill = _initialRoundZombiesToKill;                       
+            _zombiesLeftToKill = _initialRoundZombiesToKill;
+
+            _amountOfZombiesGeneratedAtOnce = _initialRoundZombiesToKill;
 
             CheckIfPercentagesAreRight();            
         }        
@@ -161,7 +167,12 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                     if (_timerForNextZombie.TimerFinished)
                     {
-                        ActivateRandomZombie();                        
+                        Vector3 position = GetRandomSpawnPosition();
+
+                        for (short i = 0; i < _amountOfZombiesGeneratedAtOnce; i++) 
+                        {
+                            ActivateRandomZombie(position);
+                        }
                     }
                 }
                 else if (ZombieObject.ZombiesActiveInstances <= 0) 
@@ -189,7 +200,9 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             Round = InitialRound;            
 
-            _zombiesLeftToKill = _initialRoundZombiesToKill;            
+            _zombiesLeftToKill = _initialRoundZombiesToKill;
+
+            _amountOfZombiesGeneratedAtOnce = 1;
 
             for (short i = 0; i < _normalZombies.Length; i++) 
             {
@@ -254,7 +267,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             }
         }                
 
-        private void ActivateRandomZombie() 
+        private void ActivateRandomZombie(Vector3 position) 
         {
             GameObject zombie = GetRandomZombie();
 
@@ -266,11 +279,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);                
 
-                zombie.transform.position = GetRandomSpawnPosition();
+                zombie.transform.position = position + UnityEngine.Random.insideUnitSphere * _zombieHordeRadius;
 
                 zombie.GetComponent<ObjectHealth>().ResetCurrentHealth();                
 
-                zombie.GetComponent<ZombiesMovementIA>().SetRandomTarget();
+                zombie.GetComponent<ZombiesMovementIA>().ResetZombieIA();
 
                 zombie.GetComponent<ZombieAttacking>().ResetZombieAttacking();
             }
@@ -320,7 +333,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private Vector3 GetRandomSpawnPosition()
         {
-            int random = UnityEngine.Random.Range(0, _spawnPoints.Length);
+            int random = UnityEngine.Random.Range(0, _spawnPoints.Length);            
             
             return _spawnPoints[random].transform.position;
         }
@@ -337,7 +350,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _timerForNextZombie.Time = UnityEngine.Random.Range(_minNextZombieSpawnTime, _maxNextZombieSpawnTime);
 
-            _timerForNextZombie.ResetTimer();
+            _timerForNextZombie.ResetTimer();            
 
             PowerUpObject.PowerUpAvailable = true;
         }
