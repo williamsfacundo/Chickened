@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -7,7 +8,6 @@ namespace ChickenDayZ.Gameplay.Controllers
 {
     public class ScenesManager : MonoBehaviour
     {
-
         [SerializeField] private Canvas _creditsCanvas1;
 
         [SerializeField] private Canvas _creditsCanvas2;
@@ -37,6 +37,8 @@ namespace ChickenDayZ.Gameplay.Controllers
         [SerializeField] private KeyCode _pauseKey;
 
         [SerializeField] private KeyCode _openMapKey;
+
+        public static Action OnGameplayToEndGame;
 
         private ChickenObject chicken;
 
@@ -188,9 +190,11 @@ namespace ChickenDayZ.Gameplay.Controllers
         {
             SetTimeScale(0f);
             ChangeCanvasState(_gameOverCanvas, true);
-            ChangeCanvasState(_gameplayCanvas, false);            
+            ChangeCanvasState(_gameplayCanvas, false);
 
-            _scoreText.text = chicken.ChickenScore.Score + "";
+            OnGameplayToEndGame?.Invoke();
+
+            _scoreText.text = chicken.ChickenScore.Score.ToString();
 
             chicken.ChickenScore.ResetScore();
         }
