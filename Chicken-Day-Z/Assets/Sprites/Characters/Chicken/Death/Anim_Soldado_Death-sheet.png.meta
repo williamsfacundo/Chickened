@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 13712a38b9567884e81d3ca408dbe126
+guid: e413b6b504d3a62478f28034a422e8c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4280763897900988574
-    second: Anim_Soldado_Death-sheet_0
+      213: 6901995060904320849
+    second: Anim_Soldado_Death_0
   - first:
-      213: 4769088924307323517
-    second: Anim_Soldado_Death-sheet_1
+      213: -3348388710569802308
+    second: Anim_Soldado_Death_1
   - first:
-      213: 1330469245896022974
-    second: Anim_Soldado_Death-sheet_2
+      213: -5323993574741129286
+    second: Anim_Soldado_Death_2
   - first:
-      213: 6244386128885826812
-    second: Anim_Soldado_Death-sheet_3
+      213: 6452568101245399319
+    second: Anim_Soldado_Death_3
   - first:
-      213: 3751741239583468239
-    second: Anim_Soldado_Death-sheet_4
+      213: -8382022344597069893
+    second: Anim_Soldado_Death_4
   - first:
-      213: -4752316667486566222
-    second: Anim_Soldado_Death-sheet_5
+      213: 4553969677689502839
+    second: Anim_Soldado_Death_5
   - first:
-      213: -1612806062904936242
-    second: Anim_Soldado_Death-sheet_6
+      213: -8917876126966407267
+    second: Anim_Soldado_Death_6
   - first:
-      213: 170726321050689328
-    second: Anim_Soldado_Death-sheet_7
+      213: 8036856316318286939
+    second: Anim_Soldado_Death_7
   - first:
-      213: 1078149951458318186
-    second: Anim_Soldado_Death-sheet_8
+      213: -4768570587844753759
+    second: Anim_Soldado_Death_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -59,7 +59,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_0
+      name: Anim_Soldado_Death_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9874bda514586b30800000000000000
-      internalID: 4280763897900988574
+      spriteID: 15fd3b680ffc8cf50800000000000000
+      internalID: 6901995060904320849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_1
+      name: Anim_Soldado_Death_1
       rect:
         serializedVersion: 2
         x: 192
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a7693eb153f2240800000000000000
-      internalID: 4769088924307323517
+      spriteID: cb50f8055322881d0800000000000000
+      internalID: -3348388710569802308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_2
+      name: Anim_Soldado_Death_2
       rect:
         serializedVersion: 2
         x: 384
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebbd632eab6c67210800000000000000
-      internalID: 1330469245896022974
+      spriteID: ab7c71f2d006d16b0800000000000000
+      internalID: -5323993574741129286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_3
+      name: Anim_Soldado_Death_3
       rect:
         serializedVersion: 2
         x: 576
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4cd9c991488a650800000000000000
-      internalID: 6244386128885826812
+      spriteID: 711bfbb30802c8950800000000000000
+      internalID: 6452568101245399319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_4
+      name: Anim_Soldado_Death_4
       rect:
         serializedVersion: 2
         x: 768
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fca6e82a7ccd01430800000000000000
-      internalID: 3751741239583468239
+      spriteID: bbf97e266131dab80800000000000000
+      internalID: -8382022344597069893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_5
+      name: Anim_Soldado_Death_5
       rect:
         serializedVersion: 2
         x: 960
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b88b467b216c0eb0800000000000000
-      internalID: -4752316667486566222
+      spriteID: 77c359c3b43f23f30800000000000000
+      internalID: 4553969677689502839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_6
+      name: Anim_Soldado_Death_6
       rect:
         serializedVersion: 2
         x: 1152
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec874f84e692e99e0800000000000000
-      internalID: -1612806062904936242
+      spriteID: d9f1b3559e65d3480800000000000000
+      internalID: -8917876126966407267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_7
+      name: Anim_Soldado_Death_7
       rect:
         serializedVersion: 2
         x: 1344
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f19083faa8e5200800000000000000
-      internalID: 170726321050689328
+      spriteID: b5481051d36a88f60800000000000000
+      internalID: 8036856316318286939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Anim_Soldado_Death-sheet_8
+      name: Anim_Soldado_Death_8
       rect:
         serializedVersion: 2
         x: 1536
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6717472bab56fe00800000000000000
-      internalID: 1078149951458318186
+      spriteID: 1a64329b052a2ddb0800000000000000
+      internalID: -4768570587844753759
       vertices: []
       indices: 
       edges: []
