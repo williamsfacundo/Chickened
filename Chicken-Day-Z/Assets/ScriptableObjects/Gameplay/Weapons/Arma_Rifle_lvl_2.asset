@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Arma_Rifle_lvl_2
   m_EditorClassIdentifier: 
   FirearmType: 0
-  _sprite: {fileID: 21300000, guid: 2cdc49998041eee44a6bba4ac9ab7f35, type: 3}
+  _sprite: {fileID: 21300000, guid: 6871273646871aa4ab9a20e8ab87cc9c, type: 3}
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 6333fb68f14eb0a4fb73cd3aa21bd74d, type: 3}
   ChargerMaxAmmo: 35
   ReloadTime: 0.8
@@ -21,4 +21,4 @@ MonoBehaviour:
   Damage: 20
   BulletMoveSpeed: 20
   Range: 9
-  FireCapacity: 1
+  IsShotGun: 0

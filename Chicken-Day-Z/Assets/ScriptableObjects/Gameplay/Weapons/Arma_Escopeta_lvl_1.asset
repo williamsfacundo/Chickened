@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Arma_Escopeta_lvl_1
   m_EditorClassIdentifier: 
   FirearmType: 0
-  _sprite: {fileID: 21300000, guid: 52f96d993894f8149b35882a9b97587b, type: 3}
+  _sprite: {fileID: 21300000, guid: 685ad138121a95d4fa74f8cafbda8a33, type: 3}
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 2033f53a0b56c6542961e94dccc0cf25, type: 3}
   ChargerMaxAmmo: 8
   ReloadTime: 0.8

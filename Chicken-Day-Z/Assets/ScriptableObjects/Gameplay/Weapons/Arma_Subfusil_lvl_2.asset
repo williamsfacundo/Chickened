@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Arma_Subfusil_lvl_2
   m_EditorClassIdentifier: 
   FirearmType: 0
-  _sprite: {fileID: 21300000, guid: ce603d2d6da0b6d44a5cb8917f70fcb7, type: 3}
+  _sprite: {fileID: 21300000, guid: 26df2fc76824f974ca314939d0adeca7, type: 3}
   ProjectilePrefab: {fileID: 5180422776441524054, guid: ce605a65c6fb97d44977aecf729a662c, type: 3}
   ChargerMaxAmmo: 30
   ReloadTime: 0.8
@@ -21,4 +21,4 @@ MonoBehaviour:
   Damage: 5
   BulletMoveSpeed: 20
   Range: 8
-  FireCapacity: 1
+  IsShotGun: 0
