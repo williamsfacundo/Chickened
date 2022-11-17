@@ -25,6 +25,6 @@ public class ChangeSceneWhenVideoStops : MonoBehaviour
 
     public void ChangeSceneToGameplay() 
     {
-        SceneManager.LoadScene("Gameplay 1", LoadSceneMode.Single);           
+        SceneManager.LoadScene("Gameplay", LoadSceneMode.Single);           
     }
 }

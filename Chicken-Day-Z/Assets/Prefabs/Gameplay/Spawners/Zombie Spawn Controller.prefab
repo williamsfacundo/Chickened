@@ -48,11 +48,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   _eggBase: {fileID: 0}
   _chicken: {fileID: 0}
+  _normalZombie: {fileID: 2811523339669616403, guid: c859bc1f8e76fda4091dc2f7955aa6d4, type: 3}
+  _fastZombie: {fileID: 2811523339669616403, guid: 5dc2b7a566c423f4492332fd0d4eb0cf, type: 3}
+  _fatZombie: {fileID: 2811523339669616403, guid: df0bfa6291f49034090b7e8f6e8f1c7d, type: 3}
   _zombieSpawnPercentages: 320019001900
-  _timeBeforeRoundStarts: 1
-  _minNextZombieSpawnTime: 3
+  _timeBeforeRoundStarts: 40
+  _minNextZombieSpawnTime: 1
   _maxNextZombieSpawnTime: 3
-  _initialRoundZombiesToKill: 0
-  _nextRoundSpawnTimesDecreasePercentage: 10
+  _zombieHordeRadius: 6
+  _initialRoundZombiesToKill: 4
+  _maxNormalZombies: 30
+  _maxFastZombies: 15
+  _maxFatZombies: 15

@@ -103,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -439346585
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 6590668892132498830, guid: 66664e95abdd95d40b7c81e404c3f6d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3595562619766330753, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
       propertyPath: m_Name
-      value: Arma_Revolver_lvl_1
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 3595562619766330755, guid: fa063d0507acd3a44a28bfb506f0958c, type: 3}
       propertyPath: m_RootOrder

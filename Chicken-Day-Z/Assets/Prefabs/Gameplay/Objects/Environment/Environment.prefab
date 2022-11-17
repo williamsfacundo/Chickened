@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1093126752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718128920546030476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
+--- !u!114 &45750010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532401959217641517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
+--- !u!114 &1093126747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077402081649466088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2304253195529021280
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +81,22 @@ Transform:
   m_Father: {fileID: 8892972975006789525}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093126750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2380684972035898735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2419329926914150917
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +130,86 @@ Transform:
   m_Father: {fileID: 1919027352962229130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093126745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875340711017950992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
+--- !u!114 &1093126749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4223444289641226933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
+--- !u!114 &1093126751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5571028111648478714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
+--- !u!114 &1093126753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022416302868604482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
+--- !u!114 &1093126748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323785027225221075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &7791156007027940484
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +243,22 @@ Transform:
   m_Father: {fileID: 1919027352962229130}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093126746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244024448677696132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8584492521875536929
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,9 +386,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
---- !u!4 &1532401959217641519 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1532401960205222302, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
+--- !u!1 &1532401959217641517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1532401960205222300, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
   m_PrefabInstance: {fileID: 996325809}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &5212257823951913713 stripped
@@ -236,12 +396,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5212257824599784256, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
   m_PrefabInstance: {fileID: 996325809}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1532401959217641517}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b590291ef9bae442974a60f8bf27bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1532401959217641519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1532401960205222302, guid: 5e76ecbc277e345419cd9c5e2f3d6399, type: 3}
+  m_PrefabInstance: {fileID: 996325809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1087417095118966603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -303,6 +468,11 @@ PrefabInstance:
       objectReference: {fileID: 5212257823951913713}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+--- !u!1 &2380684972035898735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3323283001576501796, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+  m_PrefabInstance: {fileID: 1087417095118966603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2380684972035898729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3323283001576501794, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
@@ -317,7 +487,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.size
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[0]
@@ -330,19 +500,51 @@ PrefabInstance:
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f2294bc5f48e034d9f3db2a396ec92d, type: 2}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: f599c9d4e8c733a46a95fa9fbab2400f, type: 2}
+      objectReference: {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
+      objectReference: {fileID: 11400000, guid: 81e4678fab6487c4486c93b1bb8dccf6, type: 2}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 50481c165e4a3944e8e2768443649109, type: 2}
+      objectReference: {fileID: 11400000, guid: 847559b6e0cc6c84dbde4d8c40061705, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c96a550a85104d647a3e610cbe101d60, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fe33c40ad21454ba3af4c2841de78d, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3df16f5ed2b86de44aa0899b6c4b49c6, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a4b1aae1fd55584db31e7f85802f62b, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 079cb32b736b73c46908e69c41a09aac, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9db5f15e810348844b65753e94ffaa24, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 56b368c7b230fb84f922e4ceefd57eef, type: 2}
     - target: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -393,6 +595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+--- !u!1 &8244024448677696132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174796553470254204, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+  m_PrefabInstance: {fileID: 1295163112224935672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8244024448677696130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
@@ -466,6 +673,11 @@ PrefabInstance:
 --- !u!4 &4223444289641226931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3323283001576501794, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+  m_PrefabInstance: {fileID: 1477774947332395153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4223444289641226933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3323283001576501796, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
   m_PrefabInstance: {fileID: 1477774947332395153}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1494799084762845078
@@ -591,6 +803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+--- !u!1 &5571028111648478714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7445620070919275762, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+  m_PrefabInstance: {fileID: 3027664200453083400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5571028111648478716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7445620070919275764, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
@@ -653,6 +870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+--- !u!1 &6022416302868604482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7445620070919275762, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+  m_PrefabInstance: {fileID: 3803223612453331632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6022416302868604484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7445620070919275764, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
@@ -667,7 +889,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.size
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[0]
@@ -680,19 +902,51 @@ PrefabInstance:
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f2294bc5f48e034d9f3db2a396ec92d, type: 2}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: f599c9d4e8c733a46a95fa9fbab2400f, type: 2}
+      objectReference: {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
+      objectReference: {fileID: 11400000, guid: 81e4678fab6487c4486c93b1bb8dccf6, type: 2}
     - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: _firearmStats.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 50481c165e4a3944e8e2768443649109, type: 2}
+      objectReference: {fileID: 11400000, guid: 847559b6e0cc6c84dbde4d8c40061705, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c96a550a85104d647a3e610cbe101d60, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fe33c40ad21454ba3af4c2841de78d, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3df16f5ed2b86de44aa0899b6c4b49c6, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a4b1aae1fd55584db31e7f85802f62b, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 079cb32b736b73c46908e69c41a09aac, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9db5f15e810348844b65753e94ffaa24, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 56b368c7b230fb84f922e4ceefd57eef, type: 2}
     - target: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -743,6 +997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+--- !u!1 &2875340711017950992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174796553470254204, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+  m_PrefabInstance: {fileID: 4933337527323669356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2875340711017950998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
@@ -809,6 +1068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+--- !u!1 &718128920546030476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7445620070919275762, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
+  m_PrefabInstance: {fileID: 7972328410820982654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &718128920546030474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7445620070919275764, guid: 56b18c5da61b4ee46af3aa7a84c9a3cc, type: 3}
@@ -879,6 +1143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+--- !u!1 &6323785027225221075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3323283001576501796, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
+  m_PrefabInstance: {fileID: 8780951314633770487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6323785027225221077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3323283001576501794, guid: b47e54c58fccfb34da3532b1746e3a09, type: 3}
@@ -891,6 +1160,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4254868344041164141}
     m_Modifications:
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f2294bc5f48e034d9f3db2a396ec92d, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: addeea4f252334442b06eb568e2b0645, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 81e4678fab6487c4486c93b1bb8dccf6, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 847559b6e0cc6c84dbde4d8c40061705, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c96a550a85104d647a3e610cbe101d60, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: d5fe33c40ad21454ba3af4c2841de78d, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3df16f5ed2b86de44aa0899b6c4b49c6, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a4b1aae1fd55584db31e7f85802f62b, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e93c3d62128ad14098e15a246fe7c50, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 079cb32b736b73c46908e69c41a09aac, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9db5f15e810348844b65753e94ffaa24, type: 2}
+    - target: {fileID: 4061560962419776868, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+      propertyPath: _firearmStats.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 56b368c7b230fb84f922e4ceefd57eef, type: 2}
     - target: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -944,5 +1265,10 @@ PrefabInstance:
 --- !u!4 &2077402081649466094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7174796553470254202, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
+  m_PrefabInstance: {fileID: 9170900440409507476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2077402081649466088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174796553470254204, guid: 57be874fad311d946b7991ac2be779f5, type: 3}
   m_PrefabInstance: {fileID: 9170900440409507476}
   m_PrefabAsset: {fileID: 0}
