@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbb04c6eba0b86439adff4fc789558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialDamage: 20
-  _attackCooldownTime: 2
+  _initialDamage: 15
+  _attackCooldownTime: 2.5
 --- !u!114 &7144078933916608514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76fc30fd30290b4e9e1cad1018c7ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 20
+  _initialHealth: 15
 --- !u!114 &-8250765791803884231
 MonoBehaviour:
   m_ObjectHideFlags: 0

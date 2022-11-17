@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialDamage: 10
-  _attackCooldownTime: 1.5
+  _attackCooldownTime: 2
 --- !u!114 &2504511685418369899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76fc30fd30290b4e9e1cad1018c7ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 15
+  _initialHealth: 10
 --- !u!114 &1129859960145508011
 MonoBehaviour:
   m_ObjectHideFlags: 0

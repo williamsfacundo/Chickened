@@ -131,12 +131,16 @@ PrefabInstance:
       value: Zombie Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
+      propertyPath: _timeBeforeRoundStarts
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxNextZombieSpawnTime
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _minNextZombieSpawnTime
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _spawnPoints.Array.data[0]
