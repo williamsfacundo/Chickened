@@ -17,9 +17,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         public event Action OnStartReloading;
 
-        public event Action OnFinishedReloading;
-
-        public event Action OnTimerCountDownChanged;
+        public event Action OnFinishedReloading;       
 
         public bool IsReloading 
         {
@@ -43,9 +41,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _timer = new Timer(_charger.ReloadTime);
 
-            _timer.CountDown = 0f;
-
-            OnTimerCountDownChanged?.Invoke();
+            _timer.CountDown = 0f;            
 
             _watingToReload = false;
         }
@@ -56,9 +52,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             {
                 _watingToReload = true;
 
-                _timer.ResetTimer();
-
-                OnTimerCountDownChanged?.Invoke();
+                _timer.ResetTimer();                
 
                 OnStartReloading?.Invoke();
 
@@ -69,9 +63,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public void ReloadCooldown() 
         {
             _timer.DecreaseTimer();
-
-            OnTimerCountDownChanged?.Invoke();
-
+                        
             if (_watingToReload && _timer.TimerFinished)
             {
                 _charger.RefillCharger();
@@ -84,9 +76,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         public void ResetObject()
         {
-            _timer.CountDown = 0f;
-
-            OnTimerCountDownChanged?.Invoke();
+            _timer.CountDown = 0f;            
 
             _watingToReload = false;
         }

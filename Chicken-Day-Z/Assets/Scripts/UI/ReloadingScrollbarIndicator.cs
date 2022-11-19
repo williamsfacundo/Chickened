@@ -14,9 +14,7 @@ namespace ChickenDayZ.UI
 
         [SerializeField] private CharacterInventory _chickenInventory;              
         
-        private ReloadFirearm _reloadFirearm;
-
-        bool aux;
+        private ReloadFirearm _reloadFirearm;       
 
         void Awake()
         {
@@ -25,26 +23,11 @@ namespace ChickenDayZ.UI
             _chickenInventory.OnEquippedItemSelected += SetChickenReloadMechanic;
 
             GameplayResetter.OnGameplayReset += HideReloadingScrollbar;
-        }
-
-        void Start()
-        {
-            aux = false;
-
-            if (_reloadFirearm != null)
-            {
-                _reloadFirearm.OnTimerCountDownChanged += UpdateScrollbar;
-            }            
-        }
+        }        
 
         void Update()
         {
-            if (_reloadFirearm != null && !aux)
-            {
-                _reloadFirearm.OnTimerCountDownChanged += UpdateScrollbar;
-
-                aux = true;
-            }
+            UpdateScrollbar();
         }
 
         void OnDestroy()
@@ -57,15 +40,15 @@ namespace ChickenDayZ.UI
             {
                 _reloadFirearm.OnStartReloading -= ShowReloadingScrollbar;
 
-                _reloadFirearm.OnFinishedReloading -= HideReloadingScrollbar;
-
-                _reloadFirearm.OnTimerCountDownChanged -= UpdateScrollbar;
+                _reloadFirearm.OnFinishedReloading -= HideReloadingScrollbar;                
             }
         }
 
         private void ShowReloadingScrollbar()
         {
             _reloadingScrollbar.gameObject.SetActive(true);
+
+            _reloadingScrollbar.value = 1f;
         }
 
         private void HideReloadingScrollbar()
@@ -89,7 +72,10 @@ namespace ChickenDayZ.UI
         
         private void UpdateScrollbar() 
         {
-            _reloadingScrollbar.value = Mathf.Clamp01(_reloadFirearm.TimerCountDown);
+            if (_reloadingScrollbar.gameObject.activeSelf) 
+            {
+                _reloadingScrollbar.value = Mathf.Clamp01(_reloadFirearm.TimerCountDown);                
+            }
         }
     }
 }
