@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _maxNextZombieSpawnTime
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _minNextZombieSpawnTime
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4809455559598656726, guid: 64347b9c7c5bd17458f594ebd5a92525, type: 3}
       propertyPath: _spawnPoints.Array.data[0]
