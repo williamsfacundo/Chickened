@@ -19,11 +19,21 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         public event Action OnFinishedReloading;
 
+        public event Action OnTimerCountDownChanged;
+
         public bool IsReloading 
         {
             get 
             {
                 return !_timer.TimerFinished;
+            }
+        }
+
+        public float TimerCountDown 
+        {
+            get 
+            {
+                return _timer.CountDown;
             }
         }
 
@@ -34,6 +44,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             _timer = new Timer(_charger.ReloadTime);
 
             _timer.CountDown = 0f;
+
+            OnTimerCountDownChanged?.Invoke();
 
             _watingToReload = false;
         }
@@ -46,6 +58,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
                 _timer.ResetTimer();
 
+                OnTimerCountDownChanged?.Invoke();
+
                 OnStartReloading?.Invoke();
 
                 AkSoundEngine.PostEvent("Play_Pistol_Reload_LV1", gameObject);
@@ -55,6 +69,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public void ReloadCooldown() 
         {
             _timer.DecreaseTimer();
+
+            OnTimerCountDownChanged?.Invoke();
 
             if (_watingToReload && _timer.TimerFinished)
             {
@@ -69,6 +85,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
         public void ResetObject()
         {
             _timer.CountDown = 0f;
+
+            OnTimerCountDownChanged?.Invoke();
 
             _watingToReload = false;
         }
