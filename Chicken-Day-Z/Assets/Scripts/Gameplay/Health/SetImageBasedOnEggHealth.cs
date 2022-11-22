@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 using ChickenDayZ.Gameplay.MainObjects.Buildings;
 
 namespace ChickenDayZ.Gameplay.Health 
 {
-    public class SetSpriteBasedOnEggHealth : MonoBehaviour
+    public class SetImageBasedOnEggHealth : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Image _image;
 
         [SerializeField] private Sprite[] _healthSprites;
 
@@ -28,7 +29,7 @@ namespace ChickenDayZ.Gameplay.Health
             _eggHealth.OnMaxHealthChanged -= UpdateHealthSprite;
         }
 
-        void UpdateHealthSprite() 
+        void UpdateHealthSprite()
         {
             int index = _healthSprites.Length - 1;
 
@@ -38,11 +39,11 @@ namespace ChickenDayZ.Gameplay.Health
 
             float lastHealthAcumulation = 0f;
 
-            for (short i = 0; i < _healthSprites.Length; i++) 
+            for (short i = 0; i < _healthSprites.Length; i++)
             {
                 currentHealthAcumulation += dividedHealth;
 
-                if (_eggHealth.CurrentHealth >= lastHealthAcumulation && _eggHealth.CurrentHealth <= currentHealthAcumulation) 
+                if (_eggHealth.CurrentHealth >= lastHealthAcumulation && _eggHealth.CurrentHealth <= currentHealthAcumulation)
                 {
                     index = i;
 
@@ -52,8 +53,7 @@ namespace ChickenDayZ.Gameplay.Health
                 lastHealthAcumulation = currentHealthAcumulation;
             }
 
-            _spriteRenderer.sprite = _healthSprites[index];
+            _image.sprite = _healthSprites[index];
         }
     }
-
 }

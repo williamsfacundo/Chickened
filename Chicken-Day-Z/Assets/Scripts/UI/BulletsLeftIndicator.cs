@@ -75,7 +75,7 @@ namespace ChickenDayZ.UI
 
         private void UpdateBulletsLeftText()
         {            
-            _showBulletsLeftText.text = _charger.ChargerAmmo + " / " + _charger.ChargerMaxAmmo;
+            _showBulletsLeftText.text = _charger.ChargerAmmo + "     " + _charger.ChargerMaxAmmo;
         }
 
         private void DestroyScriptIfAnySerializedFieldObjectIsMissing() 

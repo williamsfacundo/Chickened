@@ -4275,6 +4275,7 @@ GameObject:
   - component: {fileID: 2393533568793074156}
   - component: {fileID: 8442799498281568819}
   - component: {fileID: 6774575637481645052}
+  - component: {fileID: 1021212289354798493}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Base
@@ -4428,6 +4429,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1021212289354798493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945852621537829680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75a966b350d06543be1b2e3bb3a9548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 8945852621537829683}
+  _healthSprites:
+  - {fileID: 3307212642542812114, guid: a2688f02507d244429030dbc78b8a529, type: 3}
+  - {fileID: 5062878542545511995, guid: a2688f02507d244429030dbc78b8a529, type: 3}
+  - {fileID: -2555637558846653190, guid: a2688f02507d244429030dbc78b8a529, type: 3}
+  - {fileID: -2448261576098779970, guid: a2688f02507d244429030dbc78b8a529, type: 3}
+  - {fileID: 7196841652270372958, guid: a2688f02507d244429030dbc78b8a529, type: 3}
+  - {fileID: 4532994380988841453, guid: a2688f02507d244429030dbc78b8a529, type: 3}
 --- !u!1 &9084703416220984980
 GameObject:
   m_ObjectHideFlags: 0
