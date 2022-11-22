@@ -2190,45 +2190,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1654362150216748574}
     m_Modifications:
-    - target: {fileID: 2074511666910050303, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074511666910050303, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160676264772488779, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2160676264772488779, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_Direction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271794766452620749, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271794766452620749, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271794766452620749, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 7388906032524865506, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 7435675824422837651, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
       propertyPath: m_Name
       value: New Gameplay Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7435675824422837651, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7435675824422837663, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
       propertyPath: m_Pivot.x
@@ -2313,14 +2277,6 @@ PrefabInstance:
     - target: {fileID: 7435675824422837663, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428203288780686079, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8428203288780686079, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
