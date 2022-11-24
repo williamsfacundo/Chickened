@@ -503,10 +503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 281570653, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
-      propertyPath: _zombiesSpawner
-      value: 
-      objectReference: {fileID: 29431179}
     - target: {fileID: 258314140235233768, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _characterInventory
       value: 
@@ -579,6 +575,10 @@ PrefabInstance:
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 1928961633}
+    - target: {fileID: 6662729106971409841, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: _zombiesSpawner
+      value: 
+      objectReference: {fileID: 29431179}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
 --- !u!1001 &1554138891

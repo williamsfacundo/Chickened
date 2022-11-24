@@ -1,7 +1,79 @@
 fileFormatVersion: 2
 guid: 61a78a5b556cf804f856c34fdf6ba5f3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 986864801142485322
+    second: Marco animado para rondas _0
+  - first:
+      213: 5282962120954874973
+    second: Marco animado para rondas _1
+  - first:
+      213: 5601151342296835383
+    second: Marco animado para rondas _2
+  - first:
+      213: -1624661076518827530
+    second: Marco animado para rondas _3
+  - first:
+      213: 8289337205795263506
+    second: Marco animado para rondas _4
+  - first:
+      213: -1405446813300763170
+    second: Marco animado para rondas _5
+  - first:
+      213: -3742996962923665567
+    second: Marco animado para rondas _6
+  - first:
+      213: -4590385280275010383
+    second: Marco animado para rondas _7
+  - first:
+      213: -1374484281866882997
+    second: Marco animado para rondas _8
+  - first:
+      213: 2353712417088720426
+    second: Marco animado para rondas _9
+  - first:
+      213: 7873688828645743113
+    second: Marco animado para rondas _10
+  - first:
+      213: 7305484363105456516
+    second: Marco animado para rondas _11
+  - first:
+      213: 3187720204579465413
+    second: Marco animado para rondas _12
+  - first:
+      213: 758327755718428694
+    second: Marco animado para rondas _13
+  - first:
+      213: 1232273561724965993
+    second: Marco animado para rondas _14
+  - first:
+      213: 8542372363924844102
+    second: Marco animado para rondas _15
+  - first:
+      213: -1945353307102917612
+    second: Marco animado para rondas _16
+  - first:
+      213: -3615440190312856850
+    second: Marco animado para rondas _17
+  - first:
+      213: -8707183054818899208
+    second: Marco animado para rondas _18
+  - first:
+      213: 4312091636718205938
+    second: Marco animado para rondas _19
+  - first:
+      213: -5329347662426255852
+    second: Marco animado para rondas _20
+  - first:
+      213: -7215263675169615306
+    second: Marco animado para rondas _21
+  - first:
+      213: 7948312287701543680
+    second: Marco animado para rondas _22
+  - first:
+      213: 4614563748155198041
+    second: Marco animado para rondas _23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +113,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -65,7 +137,19 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -77,7 +161,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Marco animado para rondas _0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a413f69de4c02bd00800000000000000
+      internalID: 986864801142485322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c0c550f0ad05940800000000000000
+      internalID: 5282962120954874973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _2
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7352eca38794bbd40800000000000000
+      internalID: 5601151342296835383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _3
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f901b5db5b0479e0800000000000000
+      internalID: -1624661076518827530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _4
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2141bd61544a90370800000000000000
+      internalID: 8289337205795263506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _5
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5d086d199de7ce0800000000000000
+      internalID: -1405446813300763170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _6
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167a19de7143e0cc0800000000000000
+      internalID: -3742996962923665567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _7
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bca60398ecab40c0800000000000000
+      internalID: -4590385280275010383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _8
+      rect:
+        serializedVersion: 2
+        x: 2928
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4077f5f3d9dcece0800000000000000
+      internalID: -1374484281866882997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _9
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ecffb09f01aa020800000000000000
+      internalID: 2353712417088720426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _10
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a1467e546f44d60800000000000000
+      internalID: 7873688828645743113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _11
+      rect:
+        serializedVersion: 2
+        x: 4026
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4815217725b426560800000000000000
+      internalID: 7305484363105456516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _12
+      rect:
+        serializedVersion: 2
+        x: 4392
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c86b4503ae0d3c20800000000000000
+      internalID: 3187720204579465413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _13
+      rect:
+        serializedVersion: 2
+        x: 4758
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6188ae6731f168a00800000000000000
+      internalID: 758327755718428694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _14
+      rect:
+        serializedVersion: 2
+        x: 5124
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964d8b8864ae91110800000000000000
+      internalID: 1232273561724965993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _15
+      rect:
+        serializedVersion: 2
+        x: 5490
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64eaad2d76a9c8670800000000000000
+      internalID: 8542372363924844102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _16
+      rect:
+        serializedVersion: 2
+        x: 5856
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ccf7f5977b005e0800000000000000
+      internalID: -1945353307102917612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _17
+      rect:
+        serializedVersion: 2
+        x: 6222
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee24bb56d4063ddc0800000000000000
+      internalID: -3615440190312856850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _18
+      rect:
+        serializedVersion: 2
+        x: 6588
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa083fe42fd92780800000000000000
+      internalID: -8707183054818899208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _19
+      rect:
+        serializedVersion: 2
+        x: 6954
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb75854f70a7db30800000000000000
+      internalID: 4312091636718205938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _20
+      rect:
+        serializedVersion: 2
+        x: 7320
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e4680898a5a06b0800000000000000
+      internalID: -5329347662426255852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _21
+      rect:
+        serializedVersion: 2
+        x: 7686
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6325cb06aeb3edb90800000000000000
+      internalID: -7215263675169615306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _22
+      rect:
+        serializedVersion: 2
+        x: 8052
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ba258e9e31e4e60800000000000000
+      internalID: 7948312287701543680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marco animado para rondas _23
+      rect:
+        serializedVersion: 2
+        x: 8784
+        y: 0
+        width: 366
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a8f2aa7493a0040800000000000000
+      internalID: 4614563748155198041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
