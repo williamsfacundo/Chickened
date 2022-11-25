@@ -10,7 +10,7 @@ namespace ChickenDayZ.Animations
 
         [SerializeField] private Sprite[] m_SpriteArray;
 
-        [SerializeField] private float m_Speed = .02f;
+        [SerializeField] private float m_Speed;
 
         private int m_IndexSprite;
 

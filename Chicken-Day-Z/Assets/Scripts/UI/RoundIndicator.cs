@@ -57,14 +57,14 @@ namespace ChickenDayZ.UI
 
         private void ShowRoundText() 
         {
-            _showRoundText.text = "ROUND " + _zombiesSpawner.Round;
+            _showRoundText.text = _zombiesSpawner.Round.ToString();
 
             _timerToBanishText.ResetTimer();
         }
 
         private void HideRoundText() 
         {
-            _showRoundText.text = " ";
+            _showRoundText.text = string.Empty;
         }
     }
 }

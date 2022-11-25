@@ -2454,25 +2454,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1654362150216748574}
     m_Modifications:
-    - target: {fileID: 2271794766452620749, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271794766452620749, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271794766452620749, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7435675824422837651, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
       propertyPath: m_Name
       value: New Gameplay Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7435675824422837651, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7435675824422837663, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
       propertyPath: m_Pivot.x
@@ -2557,14 +2541,6 @@ PrefabInstance:
     - target: {fileID: 7435675824422837663, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354330327504291328, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 860
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354330327504291328, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 440
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8a00f8d0987b744cbfe33e1d607cd1d, type: 3}
