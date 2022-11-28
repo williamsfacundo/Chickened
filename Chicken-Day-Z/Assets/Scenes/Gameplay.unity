@@ -567,7 +567,7 @@ PrefabInstance:
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 1274526123}
-    - target: {fileID: 1654362150344095471, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+    - target: {fileID: 2572644833788649702, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _zombiesSpawner
       value: 
       objectReference: {fileID: 29431179}
