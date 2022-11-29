@@ -102,7 +102,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         {
             _animator.SetBool("IsDeath", true);
 
-            _zombiesMovementIA.Agent.speed = 0.0f;
+            _zombiesMovementIA.IsDead = true;
 
             _zombieAttacking.Damage = 0.0f;
         }

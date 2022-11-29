@@ -21,6 +21,16 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private int _currentTargetIndex;
 
+        private bool _isDead;
+
+        public bool IsDead 
+        {
+            set 
+            {
+                _isDead = value;
+            }
+        }
+
         public Transform Target 
         {            
             get 
@@ -72,6 +82,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             _agent.speed = _initialSpeed;
 
             _rb2D.velocity = Vector2.zero;
+
+            _isDead = false;
         }
 
         void OnDestroy()
@@ -86,11 +98,21 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             _agent.SetDestination(_targets[_currentTargetIndex].position);
 
             _rb2D.velocity = Vector2.zero;
-        }       
 
-        public void ResetZombieIA() 
+            if (_isDead) 
+            {
+                if (Agent.speed != 0.0f)
+                {
+                    Agent.speed = 0.0f;
+                }
+            }
+        }
+
+        public void ResetZombieIA()
         {
             SetRandomTarget();
+
+            _isDead = false;
 
             _agent.speed = _initialSpeed;
         }
