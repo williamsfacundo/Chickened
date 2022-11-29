@@ -1,5 +1,6 @@
 using UnityEngine;
 
+using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.Characters.Inventory.ItemActions;
 
 namespace ChickenDayZ.Gameplay.Characters.Chicken.Input 
@@ -17,7 +18,7 @@ namespace ChickenDayZ.Gameplay.Characters.Chicken.Input
 
         private void FireInput()
         {
-            if (UnityEngine.Input.GetMouseButtonDown(_fireMouseButton))
+            if (UnityEngine.Input.GetMouseButtonDown(_fireMouseButton) && ScenesManager.InGameplay)
             {
                 if (_itemActionController != null)
                 {

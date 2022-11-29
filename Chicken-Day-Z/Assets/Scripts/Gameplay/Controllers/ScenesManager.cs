@@ -34,9 +34,11 @@ namespace ChickenDayZ.Gameplay.Controllers
         
         [SerializeField] private KeyCode _pauseKey;
 
-        [SerializeField] private KeyCode _openMapKey;
+        [SerializeField] private KeyCode _useMapKey;
 
         public static Action OnGameplayToEndGame;
+
+        public static bool InGameplay;
 
         private ChickenObject chicken;
 
@@ -45,6 +47,11 @@ namespace ChickenDayZ.Gameplay.Controllers
             InitialConfigurations();
 
             chicken = FindObjectOfType<ChickenObject>();
+        }
+
+        void Start()
+        {
+            InGameplay = false;
         }
 
         void OnEnable()
@@ -77,13 +84,17 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_gameplayCanvas, false);
 
             SetTimeScale(0f);
+
+            InGameplay = false;
         }
 
         public void MapToGameplay()
         {
             ChangeCanvasState(_mapCanvas, false);
-            ChangeCanvasState(_gameplayCanvas, true);            
-            
+            ChangeCanvasState(_gameplayCanvas, true);
+
+            InGameplay = true;
+
             SetTimeScale(1f);
         }        
 
@@ -97,6 +108,8 @@ namespace ChickenDayZ.Gameplay.Controllers
         {
             ChangeCanvasState(_tutorialCanvas2, false);
             ChangeCanvasState(_gameplayCanvas, true);
+
+            InGameplay = true;
 
             SetTimeScale(1f);
         }
@@ -172,6 +185,8 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_gameOverCanvas, true);
             ChangeCanvasState(_gameplayCanvas, false);
 
+            InGameplay = false;
+
             OnGameplayToEndGame?.Invoke();
 
             _scoreText.text = chicken.ChickenScore.Score.ToString();
@@ -184,6 +199,8 @@ namespace ChickenDayZ.Gameplay.Controllers
             SetTimeScale(1f);
             ChangeCanvasState(_gameOverCanvas, false);
             ChangeCanvasState(_gameplayCanvas, true);
+
+            InGameplay = true;
         }
 
         public void EndGameToMainMenu()
@@ -197,6 +214,8 @@ namespace ChickenDayZ.Gameplay.Controllers
             SetTimeScale(0f);
             ChangeCanvasState(_pauseCanvas, true);
             ChangeCanvasState(_gameplayCanvas, false);
+
+            InGameplay = false;
         }
 
         public void PauseToGameplay()
@@ -204,6 +223,8 @@ namespace ChickenDayZ.Gameplay.Controllers
             SetTimeScale(1f);
             ChangeCanvasState(_pauseCanvas, false);
             ChangeCanvasState(_gameplayCanvas, true);
+
+            InGameplay = true;
         }
 
         public void PauseToGameplayWithRestart()
@@ -220,6 +241,8 @@ namespace ChickenDayZ.Gameplay.Controllers
             ChangeCanvasState(_gameplayCanvas, true);
 
             chicken.ChickenScore.ResetScore();
+
+            InGameplay = true;
         }
 
         public void PauseToMainMenu()
@@ -285,12 +308,16 @@ namespace ChickenDayZ.Gameplay.Controllers
 
         private void OpenCloseMap() 
         {
-            if (Input.GetKeyDown(_openMapKey) && _gameplayCanvas.gameObject.activeSelf) 
+            if (Input.GetKeyDown(_useMapKey)) 
             {
-                if (!_mapCanvas.gameObject.activeSelf) 
+                if (_gameplayCanvas.gameObject.activeSelf) 
                 {
                     GameplayToMap();
                 }
+                else if (_mapCanvas.gameObject.activeSelf) 
+                {
+                    MapToGameplay();
+                }                
             }
         }
     }
