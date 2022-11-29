@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2811523339669616407}
   - component: {fileID: 7598402709347114104}
   - component: {fileID: 7963424995435296682}
+  - component: {fileID: -5427838530286974133}
   m_Layer: 0
   m_Name: Fast Zombie
   m_TagString: Zombie
@@ -207,7 +208,7 @@ Animator:
   m_GameObject: {fileID: 2811523339669616403}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 39a5afb21052d3843a033a8eb6e6e44a, type: 2}
+  m_Controller: {fileID: 22100000, guid: 4d2a9a74952b9e740aab8af082519178, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -238,6 +239,18 @@ NavMeshAgent:
   m_BaseOffset: 0.96
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-5427838530286974133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8388e6156f981dd4d9c52f2e7def66da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4784073024173122848
 PrefabInstance:
   m_ObjectHideFlags: 0

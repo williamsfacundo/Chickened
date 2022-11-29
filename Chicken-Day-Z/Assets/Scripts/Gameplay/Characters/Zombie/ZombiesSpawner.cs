@@ -281,9 +281,9 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
                 zombie.transform.position = position + UnityEngine.Random.insideUnitSphere * _zombieHordeRadius;
 
-                zombie.GetComponent<ObjectHealth>().ResetCurrentHealth();                
+                zombie.GetComponent<ObjectHealth>().ResetCurrentHealth();
 
-                zombie.GetComponent<ZombiesMovementIA>().ResetZombieIA();
+                zombie.GetComponent<ZombiesMovementIA>().ResetZombieIA();                
 
                 zombie.GetComponent<ZombieAttacking>().ResetZombieAttacking();
             }

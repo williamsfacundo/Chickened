@@ -19,6 +19,14 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private float _zombieSpeed;
 
+        public float Damage 
+        {
+            set 
+            {
+                _damage = value;
+            }
+        }
+
         void Awake()
         {
             _zombiesMovementIA = GetComponent<ZombiesMovementIA>();
@@ -26,9 +34,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Start()
         {
-            _damage = _initialDamage;
-
-            //_attackCooldownTimer = new Timer(_attackCooldownTime);
+            _damage = _initialDamage;            
 
             _zombieSpeed = _zombiesMovementIA.Agent.speed;
 
@@ -78,6 +84,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             {
                 _attackCooldownTimer.CountDown = 0f;
             }
+
+            _damage = _initialDamage;
         }
 
         private void AttackTarget(GameObject gameObject)
