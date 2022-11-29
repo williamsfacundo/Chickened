@@ -6,51 +6,16 @@ namespace ChickenDayZ.Animations
     [RequireComponent(typeof(PowerUpObject), typeof(Animator))]
     public class ChestPlayAnimation : MonoBehaviour
     {
-        private Animator _animator;
-
-        private PowerUpObject _powerUpObject;                 
+        private Animator _animator;                       
 
         void Awake()
         {
-            _animator = GetComponent<Animator>();
-
-            _powerUpObject = GetComponent<PowerUpObject>();            
+            _animator = GetComponent<Animator>();                        
         }
 
-        void Start()
+        public void SetAnimation(string animationName) 
         {
-            _powerUpObject.OnPowerUpInteracted += SetAnimation;
+            _animator.SetTrigger(animationName);
         }
-
-        void OnDestroy()
-        {
-            _powerUpObject.OnPowerUpInteracted -= SetAnimation;
-        }
-
-        private void SetAnimation()
-        {
-            if (PowerUpObject.PowerUpAvailable) 
-            {
-                if (_powerUpObject.IsChestBlocked)
-                {
-                    _animator.SetTrigger("Blocked");
-                }
-                else 
-                {
-                    if (_powerUpObject.GetPowerUpLevel() < _powerUpObject.MaxLevel)
-                    {
-                        _animator.SetTrigger("Opened");
-                    }
-                    else
-                    {
-                        _animator.SetTrigger("Blocked");
-                    }
-                }         
-            }
-            else 
-            {
-                _animator.SetTrigger("Blocked");
-            }            
-        }        
     }
 }

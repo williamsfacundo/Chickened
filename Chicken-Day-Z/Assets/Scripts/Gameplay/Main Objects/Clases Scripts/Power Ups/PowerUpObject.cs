@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
+using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
-using ChickenDayZ.General;
 
 namespace ChickenDayZ.Gameplay.MainObjects.PowerUp 
 {
@@ -13,9 +13,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
         
         [SerializeField] [Range(0.1f, 180f)] private float _chestBlockedTime;
 
-        [SerializeField] [Range(1, 20)] private short _maxLevel;
-
-        public event Action OnPowerUpInteracted;
+        [SerializeField] [Range(1, 20)] private short _maxLevel;        
 
         public event Action OnBlockedChestTimerChanged;
 
@@ -176,8 +174,6 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             {
                 if (collision.transform.tag == "Player" && Input.GetKeyDown(_usePowerUpInput))
                 {
-                    CallOnPowerUpInteracted();
-
                     UsePowerUp();
 
                     ChestInteracted = true;
@@ -190,7 +186,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             return _blockedChestTimer.CountDown;
         }
 
-        private void ResetPowerUp() //Hacer bien el reset de todas las variables
+        private void ResetPowerUp()
         {
             ResetPowerUpLevel();
 
@@ -205,14 +201,7 @@ namespace ChickenDayZ.Gameplay.MainObjects.PowerUp
             _blockedChestTimer.CountDown = 0f;
 
             OnBlockedChestTimerChanged?.Invoke();
-        }
-
-        private void CallOnPowerUpInteracted() 
-        {
-            OnPowerUpInteracted?.Invoke();
-        }
-
-        public abstract short GetPowerUpLevel();
+        }        
 
         protected abstract void UsePowerUp();
 
