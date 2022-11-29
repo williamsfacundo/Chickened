@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,6 +20,10 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private Rigidbody2D _rb2D;
 
+        public event Action OnZombieIsDead;
+
+        public event Action OnZombieIsAlive;
+
         private int _currentTargetIndex;
 
         private bool _isDead;
@@ -28,6 +33,15 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             set 
             {
                 _isDead = value;
+
+                if (value) 
+                {
+                    OnZombieIsDead?.Invoke();
+                }
+                else 
+                {
+                    OnZombieIsAlive?.Invoke();
+                }
             }
         }
 
@@ -83,7 +97,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _rb2D.velocity = Vector2.zero;
 
-            _isDead = false;
+            IsDead = false;
         }
 
         void OnDestroy()
@@ -112,7 +126,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             SetRandomTarget();
 
-            _isDead = false;
+            IsDead = false;
 
             _agent.speed = _initialSpeed;
         }
@@ -132,7 +146,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private void SetRandomTarget() 
         {
-            _currentTargetIndex = Random.Range(0, MaxTargets);
+            _currentTargetIndex = UnityEngine.Random.Range(0, MaxTargets);
         }
 
         private void SetDestinationTarget(Transform _transform)

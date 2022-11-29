@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2811523339669616401}
   - component: {fileID: 2811523339669616400}
   - component: {fileID: -829709356541455412}
-  - component: {fileID: -596687904934799854}
   - component: {fileID: 3266489947848152846}
   - component: {fileID: -1799335867604622141}
   - component: {fileID: 9057340019600577919}
@@ -20,6 +19,7 @@ GameObject:
   - component: {fileID: 7598402709347114104}
   - component: {fileID: 7963424995435296682}
   - component: {fileID: -5427838530286974133}
+  - component: {fileID: 3505415070548796440}
   m_Layer: 0
   m_Name: Fast Zombie
   m_TagString: Zombie
@@ -107,20 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialDamage: 5
   _attackCooldownTime: 1.5
---- !u!114 &-596687904934799854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811523339669616403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49abab10df6825e4fbda565f6aad664a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectHealth: {fileID: 3266489947848152846}
-  _healthBar: {fileID: 8917924122527395014}
 --- !u!114 &3266489947848152846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +237,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8388e6156f981dd4d9c52f2e7def66da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3505415070548796440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5f138640e9f6f4d8ff217b71612859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectHealth: {fileID: 3266489947848152846}
+  _healthBar: {fileID: 8917924122527395014}
+  _canvasForHealthBar: {fileID: 7154095843384968172}
 --- !u!1001 &4784073024173122848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -351,6 +352,11 @@ PrefabInstance:
 --- !u!224 &935221537332672344 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5665213982548169336, guid: 012109958ad4d1d43a64aba1f4c679d8, type: 3}
+  m_PrefabInstance: {fileID: 4784073024173122848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &7154095843384968172 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2390291354041280204, guid: 012109958ad4d1d43a64aba1f4c679d8, type: 3}
   m_PrefabInstance: {fileID: 4784073024173122848}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8917924122527395014 stripped
