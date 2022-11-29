@@ -591,6 +591,22 @@ PrefabInstance:
       propertyPath: _objectHealth
       value: 
       objectReference: {fileID: 1928961633}
+    - target: {fileID: 3484870277824133101, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254405009433892787, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254405009433892787, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254405009433892787, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6662729106971409841, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _zombiesSpawner
       value: 
