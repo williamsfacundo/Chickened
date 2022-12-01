@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: -6189455769589820092}
   - component: {fileID: -8183482333259268077}
   - component: {fileID: 4657931738099673755}
+  - component: {fileID: 5435165367981771397}
   m_Layer: 0
   m_Name: Fat Zombie
   m_TagString: Zombie
@@ -269,6 +270,21 @@ MonoBehaviour:
   _objectHealth: {fileID: 2462428413045974377}
   _healthBar: {fileID: 8090367931959767920}
   _canvasForHealthBar: {fileID: 7551518678681050202}
+--- !u!114 &5435165367981771397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 677f4cb62a793e64fbcab5c91c5fef81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colliders:
+  - {fileID: 2811523339669616407}
+  - {fileID: 2811523339669616405}
 --- !u!1001 &5323368460201474710
 PrefabInstance:
   m_ObjectHideFlags: 0

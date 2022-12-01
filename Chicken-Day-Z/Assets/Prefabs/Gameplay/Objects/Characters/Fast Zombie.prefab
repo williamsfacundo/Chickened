@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7963424995435296682}
   - component: {fileID: -5427838530286974133}
   - component: {fileID: 3505415070548796440}
+  - component: {fileID: 16637941771708339}
   m_Layer: 0
   m_Name: Fast Zombie
   m_TagString: Zombie
@@ -252,6 +253,20 @@ MonoBehaviour:
   _objectHealth: {fileID: 3266489947848152846}
   _healthBar: {fileID: 8917924122527395014}
   _canvasForHealthBar: {fileID: 7154095843384968172}
+--- !u!114 &16637941771708339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811523339669616403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 677f4cb62a793e64fbcab5c91c5fef81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colliders:
+  - {fileID: 2811523339669616407}
 --- !u!1001 &4784073024173122848
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -286,6 +286,8 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 zombie.GetComponent<ZombiesMovementIA>().ResetZombieIA();                
 
                 zombie.GetComponent<ZombieAttacking>().ResetZombieAttacking();
+
+                zombie.GetComponent<ZombiesColliders>().EnableColliders();
             }
             else 
             {

@@ -6,7 +6,7 @@ using ChickenDayZ.Gameplay.MainObjects.Enumerators;
 namespace ChickenDayZ.Gameplay.MainObjects.Characters
 {   
     [RequireComponent(typeof(ZombieAttacking), typeof(ZombieHealth), typeof(ZombiesMovementIA))]
-    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Animator), typeof(ZombiesColliders))]
     public class ZombieObject : CharacterObject
     {
         [SerializeField] [Range(50, 150)] private short _scoreGivenWhenKilled;
@@ -20,6 +20,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
         private ZombiesMovementIA _zombiesMovementIA;
 
         private ZombieAttacking _zombieAttacking;
+
+        private ZombiesColliders _zombiesColliders;
 
         private Animator _animator;
         
@@ -65,6 +67,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
             _zombieAttacking = GetComponent<ZombieAttacking>();
 
+            _zombiesColliders = GetComponent<ZombiesColliders>();
+
             _zombieType =_defineZombieType;
 
             _zombiesTotalInstances += 1;
@@ -105,6 +109,8 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             _zombiesMovementIA.IsDead = true;
 
             _zombieAttacking.Damage = 0.0f;
+
+            _zombiesColliders.DisableColliders();
         }
 
         void AddScoreToPlayer() 
