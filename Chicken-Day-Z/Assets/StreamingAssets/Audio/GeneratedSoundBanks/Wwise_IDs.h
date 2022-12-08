@@ -14,6 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BGM = 3126765036U;
+        static const AkUniqueID PLAY_CHICKENBEINGHIT = 1307705531U;
+        static const AkUniqueID PLAY_CHICKENDEATH = 3167060539U;
+        static const AkUniqueID PLAY_EGGBEINGHIT = 946859409U;
+        static const AkUniqueID PLAY_EGGBREAKING = 1964645522U;
+        static const AkUniqueID PLAY_FOOSTEPS = 1946716263U;
         static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
         static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;
         static const AkUniqueID PLAY_ZOMBIES_DIE = 16750680U;
@@ -29,6 +34,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID GAMEOVER = 4158285989U;
                 static const AkUniqueID INGAME = 984691642U;
                 static const AkUniqueID INTRO = 1125500713U;
                 static const AkUniqueID MAINMENU = 3604647259U;
@@ -37,6 +43,14 @@ namespace AK
         } // namespace MUSICREGION
 
     } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID EGGHEALTH = 1594264742U;
+        static const AkUniqueID MUSICVOLUMEINGAMEOPTION = 1871523704U;
+        static const AkUniqueID PLAYERHEALTH = 151362964U;
+        static const AkUniqueID SFXVOLUMEINGAMEOPTION = 2704578016U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

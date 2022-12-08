@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e3f4ce82426514ab681b4da9a78fbbf
     GuidInternal: 
-    m_lastTime: -8585311442652882252
+    m_lastTime: -8585311385579505992
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585311442655167650
+    m_lastTime: -8585311358902716980
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -162,8 +162,8 @@ MonoBehaviour:
         guid: 54652762a29d0f4d8b90bdf69318fc2c
       Path: Events\Default Work Unit\Play_ChickenBeingHit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.33387
+      minDuration: 0.301771
     - name: Play_ChickenDeath
       guid: 995a017db8646843bed295a990d2a652
       id: 3167060539
@@ -179,8 +179,8 @@ MonoBehaviour:
         guid: 995a017db8646843bed295a990d2a652
       Path: Events\Default Work Unit\Play_ChickenDeath
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.157075
+      minDuration: 1.157075
     - name: Play_EggBeingHit
       guid: ac19f4ea1172c241a49c91718d55f567
       id: 946859409
@@ -196,8 +196,8 @@ MonoBehaviour:
         guid: ac19f4ea1172c241a49c91718d55f567
       Path: Events\Default Work Unit\Play_EggBeingHit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.244963
+      minDuration: 0.218237
     - name: Play_EggBreaking
       guid: 6884ac28e78e2c47981d8a64badfae83
       id: 1964645522
@@ -213,8 +213,8 @@ MonoBehaviour:
         guid: 6884ac28e78e2c47981d8a64badfae83
       Path: Events\Default Work Unit\Play_EggBreaking
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.881685
+      minDuration: 3.881685
     - name: Play_Foosteps
       guid: c31ddffd4b3b174cbcba40e3c48c7c6c
       id: 1946716263
@@ -230,8 +230,8 @@ MonoBehaviour:
         guid: c31ddffd4b3b174cbcba40e3c48c7c6c
       Path: Events\Default Work Unit\Play_Foosteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.380541
+      minDuration: 0.152884
     - name: Play_Pistol_LV1
       guid: 1476cec019b73c4884810ee1f22855bd
       id: 1493776129

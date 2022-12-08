@@ -72,11 +72,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_ChickenBeingHit" ID="{62276554-9DA2-4D0F-8B90-BDF69318FC2C}"/>
-				<Event Name="Play_Foosteps" ID="{FDDF1DC3-3B4B-4C17-BCBA-40E3C48C7C6C}"/>
-				<Event Name="Play_ChickenDeath" ID="{7D015A99-64B8-4368-BED2-95A990D2A652}"/>
-				<Event Name="Play_EggBeingHit" ID="{EAF419AC-7211-41C2-A49C-91718D55F567}"/>
-				<Event Name="Play_EggBreaking" ID="{28AC8468-8EE7-472C-981D-8A64BADFAE83}"/>
+				<Event Name="Play_ChickenBeingHit" ID="{62276554-9DA2-4D0F-8B90-BDF69318FC2C}">
+					<ChildrenList>
+						<Action Name="" ID="{A52DCB14-7C77-4C7A-AD6D-7E5A706AA285}" ShortID="571836904">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChickenBeingHit" ID="{E017C975-405F-4367-8768-4B972CA460CD}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Foosteps" ID="{FDDF1DC3-3B4B-4C17-BCBA-40E3C48C7C6C}">
+					<ChildrenList>
+						<Action Name="" ID="{82176F39-E9BD-49E6-BC56-1325C302E96F}" ShortID="200681860">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Foosteps" ID="{905A4482-D06D-4356-80A1-625C7F5E8EBF}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ChickenDeath" ID="{7D015A99-64B8-4368-BED2-95A990D2A652}">
+					<ChildrenList>
+						<Action Name="" ID="{6C791CC1-E4DB-4FA3-9A92-3B7BE97CB2DC}" ShortID="423113389">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="chickenCanto" ID="{61809BD6-5DFF-439C-96A6-711856DC9B41}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_EggBeingHit" ID="{EAF419AC-7211-41C2-A49C-91718D55F567}">
+					<ChildrenList>
+						<Action Name="" ID="{77D403BF-DAE4-4F40-9031-13110E9A910D}" ShortID="988036182">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EggBeingHit" ID="{2FE21CD6-3F7A-4052-BF6F-9F9F41CCC744}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_EggBreaking" ID="{28AC8468-8EE7-472C-981D-8A64BADFAE83}">
+					<ChildrenList>
+						<Action Name="" ID="{8E9EDB39-3BE2-46DC-A147-568CB4C748F2}" ShortID="674407679">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="glitchLowPitched" ID="{D2FE10FE-A748-41B3-9A55-5D606FEBCE5D}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
