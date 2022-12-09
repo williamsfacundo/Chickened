@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="1774333190">
+		<SoundBank Id="534561221" Language="SFX" Hash="3232474732">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
@@ -37,20 +37,32 @@
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{3CA6E239-C86D-4E10-919B-3665E26E3206}">
-							<Media>
-								<File Id="157120102"/>
-								<File Id="194565583"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}">
-							<Media>
-								<File Id="512980114"/>
-							</Media>
+							<Children>
+								<SwitchContainer SwitchValue="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
+									<Media>
+										<File Id="157120102"/>
+										<File Id="194565583"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{900AD062-182D-43C0-8E8A-21E9AF6929C4}">
-							<Media>
-								<File Id="379085472"/>
-							</Media>
+							<Children>
+								<SwitchContainer SwitchValue="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
+									<Media>
+										<File Id="379085472"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}">
+							<Children>
+								<SwitchContainer SwitchValue="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
+									<Media>
+										<File Id="512980114"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -58,7 +70,7 @@
 					<IncludedMemoryFiles>
 						<File Id="657774972" Language="SFX">
 							<ShortName>475732__dogwomble__rubber-chicken-3.wav</ShortName>
-							<Path>SFX\475732__dogwomble__rubber-chicken-3_C1F18130.wem</Path>
+							<Path>SFX\475732__dogwomble__rubber-chicken-3_B91FCA79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -74,15 +86,15 @@
 					<IncludedMemoryFiles>
 						<File Id="845246035" Language="SFX">
 							<ShortName>332711__amicasys__glitch.wav</ShortName>
-							<Path>SFX\332711__amicasys__glitch_B9750C56.wem</Path>
+							<Path>SFX\332711__amicasys__glitch_537EF6EE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1964645522" Name="Play_EggBreaking" ObjectPath="\Events\Default Work Unit\Play_EggBreaking" DurationType="OneShot" DurationMin="3.881685" DurationMax="3.881685">
+				<Event Id="3776342762" Name="Play_EggBroken" ObjectPath="\Events\Default Work Unit\Play_EggBroken" DurationType="OneShot" DurationMin="3.881685" DurationMax="3.881685">
 					<IncludedMemoryFiles>
 						<File Id="1011521806" Language="SFX">
 							<ShortName>332711__amicasys__glitch.wav</ShortName>
-							<Path>SFX\332711__amicasys__glitch_E61F21CA.wem</Path>
+							<Path>SFX\332711__amicasys__glitch_6B20D1B4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -90,35 +102,35 @@
 					<IncludedMemoryFiles>
 						<File Id="113322193" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_6230282F.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_CDFB98F2.wem</Path>
 						</File>
 						<File Id="392769535" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_9F9697C6.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_4835BA87.wem</Path>
 						</File>
 						<File Id="455621103" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_8940085D.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_AE70E299.wem</Path>
 						</File>
 						<File Id="530603827" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_183DFEF8.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_E6025682.wem</Path>
 						</File>
 						<File Id="781436012" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_2C6A1889.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_14806CD6.wem</Path>
 						</File>
 						<File Id="826151379" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_7F9B40A9.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_D7DFF581.wem</Path>
 						</File>
 						<File Id="861311897" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_CEF781D6.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_3C1FCC19.wem</Path>
 						</File>
 						<File Id="923926565" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_FD66106C.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_F6A4E71D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -225,12 +237,20 @@
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicRegion\None" GUID="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}"/>
 						<State Id="3604647259" Name="mainMenu" ObjectPath="\States\Default Work Unit\MusicRegion\mainMenu" GUID="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}"/>
-						<State Id="984691642" Name="ingame" ObjectPath="\States\Default Work Unit\MusicRegion\ingame" GUID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
+						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\MusicRegion\gameplay" GUID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
 						<State Id="1125500713" Name="intro" ObjectPath="\States\Default Work Unit\MusicRegion\intro" GUID="{900AD062-182D-43C0-8E8A-21E9AF6929C4}"/>
 						<State Id="4158285989" Name="gameOver" ObjectPath="\States\Default Work Unit\MusicRegion\gameOver" GUID="{05D12E60-C8BE-4201-B177-E8EB421BF3E5}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1792748095" Name="currentRoundState" ObjectPath="\Switches\Default Work Unit\currentRoundState" GUID="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
+					<Switches>
+						<Switch Id="3867762031" Name="inARound" ObjectPath="\Switches\Default Work Unit\currentRoundState\inARound" GUID="{8F5605AB-3A28-4CDA-9567-9BF18CB9D65C}"/>
+						<Switch Id="932640364" Name="betweenRounds" ObjectPath="\Switches\Default Work Unit\currentRoundState\betweenRounds" GUID="{D934841A-0689-4918-BE45-90374D5EFE33}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="4203866658">
 			<ObjectPath>Init</ObjectPath>

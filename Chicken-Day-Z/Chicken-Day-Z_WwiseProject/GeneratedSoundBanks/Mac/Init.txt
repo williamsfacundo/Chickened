@@ -3,10 +3,15 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	MusicRegion			
+	932640364	betweenRounds	MusicRegion			
 	984691642	ingame	MusicRegion			
 	1125500713	intro	MusicRegion			
 	3604647259	mainMenu	MusicRegion			
 	4158285989	gameOver	MusicRegion			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1871523704	MusicVolumeIngameOption			\Default Work Unit\MusicVolumeIngameOption	
+	2704578016	SFXVolumeIngameOption			\Default Work Unit\SFXVolumeIngameOption	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	

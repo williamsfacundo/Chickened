@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e3f4ce82426514ab681b4da9a78fbbf
     GuidInternal: 
-    m_lastTime: -8585311385579505992
+    m_lastTime: -8585310706602433603
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585311358902716980
+    m_lastTime: -8585310582668141728
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -198,9 +198,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.244963
       minDuration: 0.218237
-    - name: Play_EggBreaking
+    - name: Play_EggBroken
       guid: 6884ac28e78e2c47981d8a64badfae83
-      id: 1964645522
+      id: 3776342762
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -208,10 +208,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Play_EggBreaking
+      - ElementName: Play_EggBroken
         ObjectType: 3
         guid: 6884ac28e78e2c47981d8a64badfae83
-      Path: Events\Default Work Unit\Play_EggBreaking
+      Path: Events\Default Work Unit\Play_EggBroken
       maxAttenuation: 0
       maxDuration: 3.881685
       minDuration: 3.881685
@@ -399,7 +399,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 5eb438dbfc0d7045a7e89b7b7146cd0e
     GuidInternal: 
-    m_lastTime: -8585311442652872246
+    m_lastTime: -8585310518254656498
     List:
     - name: MusicRegion
       guid: d968fd35f0a2d94c89589dd518399b8c
@@ -432,9 +432,9 @@ MonoBehaviour:
         - ElementName: gameOver
           ObjectType: 8
           guid: 602ed105bec80142b177e8eb421bf3e5
-      - name: ingame
+      - name: gameplay
         guid: 39e2a63c6dc8104e919b3665e26e3206
-        id: 984691642
+        id: 89505537
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -445,7 +445,7 @@ MonoBehaviour:
         - ElementName: MusicRegion
           ObjectType: 9
           guid: d968fd35f0a2d94c89589dd518399b8c
-        - ElementName: ingame
+        - ElementName: gameplay
           ObjectType: 8
           guid: 39e2a63c6dc8104e919b3665e26e3206
       - name: intro
@@ -511,8 +511,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4986b7c7e68e12449f5e22af29b7dfa3
     GuidInternal: 
-    m_lastTime: -8585341580333953037
-    List: []
+    m_lastTime: -8585310530589216305
+    List:
+    - name: currentRoundState
+      guid: 2322ba299cbd6c47a5daf770a1b8d1d7
+      id: 1792748095
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4986b7c7e68e12449f5e22af29b7dfa3
+      - ElementName: currentRoundState
+        ObjectType: 11
+        guid: 2322ba299cbd6c47a5daf770a1b8d1d7
+      Path: Switches\Default Work Unit\currentRoundState
+      values:
+      - name: betweenRounds
+        guid: 1a8434d989061849be4590374d5efe33
+        id: 932640364
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4986b7c7e68e12449f5e22af29b7dfa3
+        - ElementName: currentRoundState
+          ObjectType: 11
+          guid: 2322ba299cbd6c47a5daf770a1b8d1d7
+        - ElementName: betweenRounds
+          ObjectType: 10
+          guid: 1a8434d989061849be4590374d5efe33
+      - name: inARound
+        guid: ab05568f283ada4c95679bf18cb9d65c
+        id: 3867762031
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 4986b7c7e68e12449f5e22af29b7dfa3
+        - ElementName: currentRoundState
+          ObjectType: 11
+          guid: 2322ba299cbd6c47a5daf770a1b8d1d7
+        - ElementName: inARound
+          ObjectType: 10
+          guid: ab05568f283ada4c95679bf18cb9d65c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -528,7 +578,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000001200000013000000140000001c0000001d000000610000006200000063000000b8000000b9000000ba000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

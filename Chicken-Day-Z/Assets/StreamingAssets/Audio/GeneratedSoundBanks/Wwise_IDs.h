@@ -17,7 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_CHICKENBEINGHIT = 1307705531U;
         static const AkUniqueID PLAY_CHICKENDEATH = 3167060539U;
         static const AkUniqueID PLAY_EGGBEINGHIT = 946859409U;
-        static const AkUniqueID PLAY_EGGBREAKING = 1964645522U;
+        static const AkUniqueID PLAY_EGGBROKEN = 3776342762U;
         static const AkUniqueID PLAY_FOOSTEPS = 1946716263U;
         static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
         static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;
@@ -35,7 +35,7 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID GAMEOVER = 4158285989U;
-                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID GAMEPLAY = 89505537U;
                 static const AkUniqueID INTRO = 1125500713U;
                 static const AkUniqueID MAINMENU = 3604647259U;
                 static const AkUniqueID NONE = 748895195U;
@@ -43,6 +43,21 @@ namespace AK
         } // namespace MUSICREGION
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace CURRENTROUNDSTATE
+        {
+            static const AkUniqueID GROUP = 1792748095U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BETWEENROUNDS = 932640364U;
+                static const AkUniqueID INAROUND = 3867762031U;
+            } // namespace SWITCH
+        } // namespace CURRENTROUNDSTATE
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

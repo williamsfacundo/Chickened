@@ -1235,6 +1235,9 @@
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Foosteps" ID="{905A4482-D06D-4356-80A1-625C7F5E8EBF}" ShortID="137288482">
+					<PropertyList>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
@@ -1400,7 +1403,7 @@
 								</Property>
 								<Property Name="Weight" Type="Real64">
 									<ValueList>
-										<Value>14</Value>
+										<Value>10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1440,7 +1443,7 @@
 								</Property>
 								<Property Name="Weight" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1480,7 +1483,7 @@
 								</Property>
 								<Property Name="Weight" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

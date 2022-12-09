@@ -116,7 +116,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_EggBreaking" ID="{28AC8468-8EE7-472C-981D-8A64BADFAE83}">
+				<Event Name="Play_EggBroken" ID="{28AC8468-8EE7-472C-981D-8A64BADFAE83}">
 					<ChildrenList>
 						<Action Name="" ID="{8E9EDB39-3BE2-46DC-A147-568CB4C748F2}" ShortID="674407679">
 							<ReferenceList>
