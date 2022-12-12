@@ -7,17 +7,23 @@ Event	ID	Name			Wwise Object Path	Notes
 	1307705531	Play_ChickenBeingHit			\Default Work Unit\Play_ChickenBeingHit	
 	1493776129	Play_Pistol_LV1			\Default Work Unit\Play_Pistol_LV1	
 	1946716263	Play_Foosteps			\Default Work Unit\Play_Foosteps	
-	1964645522	Play_EggBreaking			\Default Work Unit\Play_EggBreaking	
 	3126765036	Play_BGM			\Default Work Unit\Play_BGM	
 	3167060539	Play_ChickenDeath			\Default Work Unit\Play_ChickenDeath	
+	3776342762	Play_EggBroken			\Default Work Unit\Play_EggBroken	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1792748095	currentRoundState			\Default Work Unit\currentRoundState	
+
+Switch	ID	Name	Switch Group			Notes
+	932640364	betweenRounds	currentRoundState			
+	3867762031	inARound	currentRoundState			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	239549482	MusicRegion			\Default Work Unit\MusicRegion	
 
 State	ID	Name	State Group			Notes
+	89505537	gameplay	MusicRegion			
 	748895195	None	MusicRegion			
-	932640364	betweenRounds	MusicRegion			
-	984691642	ingame	MusicRegion			
 	1125500713	intro	MusicRegion			
 	3604647259	mainMenu	MusicRegion			
 	4158285989	gameOver	MusicRegion			

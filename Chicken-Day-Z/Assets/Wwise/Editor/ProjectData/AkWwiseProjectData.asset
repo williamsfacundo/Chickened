@@ -329,7 +329,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 17acb5b497f31645bb6327beffda800f
     GuidInternal: 
-    m_lastTime: -8585311442655157650
+    m_lastTime: -8585307989330510351
     List:
     - name: EggHealth
       guid: 79317a3129ca2143b10e5e282d2ce576
@@ -578,7 +578,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000001200000013000000140000001c0000001d000000610000006200000063000000b8000000b9000000ba000000
+  ExpandedWaapiItemIds: 010000001200000013000000140000001c0000001d0000001e0000001f000000610000006200000063000000b8000000b9000000ba000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
