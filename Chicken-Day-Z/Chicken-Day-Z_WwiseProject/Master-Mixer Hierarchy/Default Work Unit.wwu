@@ -16,6 +16,33 @@
 									<ValueList>
 										<Value>6</Value>
 									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{1F00B804-A0CC-43C8-99FE-75EB452A6882}" ShortID="811863961">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SFXVolumeIngameOption" ID="{5ABBDC0B-5994-4854-A0DE-4D3BC516085B}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{391B1A0C-F534-4F27-87B5-118235C21A39}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ObjectLists/>
@@ -26,11 +53,31 @@
 									<ValueList>
 										<Value>-3</Value>
 									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
 									<RTPCList>
-										<RTPC Name="" ID="{038BE9A0-8EEF-4A4C-A89E-3DC1D936DF78}" ShortID="1015623940">
-											<ReferenceList/>
+										<RTPC Name="" ID="{8B6DAFA6-6D1C-4A4D-B96A-1DE64EAF1DEC}" ShortID="638812438">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="MusicVolumeIngameOption" ID="{931B3D68-EEA2-462F-95F7-EE9AAE90B4A1}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{1E61C0D2-E4A0-414F-AD96-74BAB4694D8B}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
 										</RTPC>
 									</RTPCList>
 								</Property>

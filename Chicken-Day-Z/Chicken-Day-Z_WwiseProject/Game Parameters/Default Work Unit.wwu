@@ -15,12 +15,12 @@
 				</GameParameter>
 				<GameParameter Name="MusicVolumeIngameOption" ID="{931B3D68-EEA2-462F-95F7-EE9AAE90B4A1}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="InitialValue" Type="Real64" Value="80"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="SFXVolumeIngameOption" ID="{5ABBDC0B-5994-4854-A0DE-4D3BC516085B}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="InitialValue" Type="Real64" Value="80"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

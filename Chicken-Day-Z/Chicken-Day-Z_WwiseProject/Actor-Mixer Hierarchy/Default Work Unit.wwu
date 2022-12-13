@@ -523,6 +523,1000 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<Sound Name="glitchLowPitched" ID="{D2FE10FE-A748-41B3-9A55-5D606FEBCE5D}" ShortID="413504525">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-2400</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="332711__amicasys__glitch" ID="{24359C37-8DF8-42A5-8E61-726BB7370419}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0518018018018018"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.213963963963964"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.18438525230433"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1011521806"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="332711__amicasys__glitch" ID="{24359C37-8DF8-42A5-8E61-726BB7370419}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="ChickenBeingHit" ID="{E017C975-405F-4367-8768-4B972CA460CD}" ShortID="754431443">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="chickenBeingHit_01" ID="{FC28B839-0608-4064-B974-AAC2DBDC8B33}" ShortID="663328038">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{2A1C17E2-EFEE-4EBC-BD63-7CB17A370F36}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{2A1C17E2-EFEE-4EBC-BD63-7CB17A370F36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_02" ID="{C3D06426-2966-4874-88F7-598B8FA77A14}" ShortID="620802190">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{202D4153-12D2-4085-BE16-8C04AB6DB97A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{202D4153-12D2-4085-BE16-8C04AB6DB97A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_03" ID="{C1C4AB79-F1DB-4E85-9497-483B5493FABA}" ShortID="404916007">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{5BA51023-7324-4B23-88A2-61F9B47CE1B3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{5BA51023-7324-4B23-88A2-61F9B47CE1B3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_04" ID="{835B183C-FD4F-4F69-BE33-1FF6CCFEDFF2}" ShortID="226165480">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-75</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{2EB0ACB6-6543-4FE6-95D9-98A07ABC6A0F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{2EB0ACB6-6543-4FE6-95D9-98A07ABC6A0F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_05" ID="{21AA155D-7A62-486C-88AC-C5DB8B2ADD22}" ShortID="146243677">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{5B74CDFA-287F-4197-BC94-0D55CC1C3C1F}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{5B74CDFA-287F-4197-BC94-0D55CC1C3C1F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_06" ID="{5287EDEA-8BD3-41E0-929D-F4012A2EF75B}" ShortID="948639811">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{944F2B3D-9096-4486-B3CE-2F1AFB943AF8}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{944F2B3D-9096-4486-B3CE-2F1AFB943AF8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_07" ID="{350F066D-1496-48F4-A6FE-611745F64603}" ShortID="569290766">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{72C5B811-E8F3-409C-8A2D-9AED4A5429E5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{72C5B811-E8F3-409C-8A2D-9AED4A5429E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="chickenBeingHit_08" ID="{273193F7-7B4C-4BD9-88F2-C85AE64F1284}" ShortID="749332819">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>75</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="475732__dogwomble__rubber-chicken-3" ID="{D792708C-7699-48F5-B7B7-86368314594C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0114708255500991"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0485827664399093"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0297624154767012"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.344893873465302"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>475732__dogwomble__rubber-chicken-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657774972"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="475732__dogwomble__rubber-chicken-3" ID="{D792708C-7699-48F5-B7B7-86368314594C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<Sound Name="chickenCanto" ID="{61809BD6-5DFF-439C-96A6-711856DC9B41}" ShortID="301576699">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="316920__rudmer-rotteveel__chicken-single-alarm-call" ID="{7C3A584D-8772-4BCD-ACB2-2EC2539F4763}">
+							<Language>SFX</Language>
+							<AudioFile>316920__rudmer-rotteveel__chicken-single-alarm-call.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="633016177"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="316920__rudmer-rotteveel__chicken-single-alarm-call" ID="{7C3A584D-8772-4BCD-ACB2-2EC2539F4763}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="EggBeingHit" ID="{2FE21CD6-3F7A-4052-BF6F-9F9F41CCC744}" ShortID="869980923">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="glitch_01" ID="{96E359D5-29E7-48D4-A2C9-CC44FCE583EE}" ShortID="176136858">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{87E37901-2495-486E-888A-A3CECFF6BB5E}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{87E37901-2495-486E-888A-A3CECFF6BB5E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glitch_02" ID="{C0F1996B-3D71-4CB3-A6F1-F51A265A3BF4}" ShortID="903332263">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{DD78EAB0-5D59-4424-AA40-23AE6E1E931C}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{DD78EAB0-5D59-4424-AA40-23AE6E1E931C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glitch_03" ID="{1CBDCA0A-7DF0-4978-8461-CD6C3AB910D9}" ShortID="378754990">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{6A488805-73E7-44DF-8DA6-DB463EA5E37C}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{6A488805-73E7-44DF-8DA6-DB463EA5E37C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glitch_04" ID="{9EED1105-4594-40E3-9EF8-2C138057E0EF}" ShortID="852561020">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{DDBAC170-4C50-444A-B381-00E8B7153D8D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{DDBAC170-4C50-444A-B381-00E8B7153D8D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glitch_05" ID="{85F19C16-F0F4-43D7-8B10-1C0DDC252495}" ShortID="197534364">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{97697F43-BF8F-4280-AD21-0349646D7D91}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{97697F43-BF8F-4280-AD21-0349646D7D91}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glitch_06" ID="{2323F362-55F4-42EC-A5FC-64FA814BB6E7}" ShortID="156011708">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>80</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{7EFA816E-DEFA-4FBA-AFA8-3ABAC2D96E0F}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{7EFA816E-DEFA-4FBA-AFA8-3ABAC2D96E0F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="glitch_07" ID="{22962EB4-FCF3-4C77-8D34-A33848DAECF1}" ShortID="168041489">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="332711__amicasys__glitch" ID="{6300ECC4-8F3A-4F05-9AF9-D0D8742EF1B7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.79190751445087"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75722543352601"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.98843930635838"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>332711__amicasys__glitch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845246035"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="332711__amicasys__glitch" ID="{6300ECC4-8F3A-4F05-9AF9-D0D8742EF1B7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Foosteps" ID="{905A4482-D06D-4356-80A1-625C7F5E8EBF}" ShortID="137288482">
+					<PropertyList>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ChickenFoostep_01" ID="{57E616E0-B7D7-455A-8269-C28D4439E035}" ShortID="448438679">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{A4056CFC-52CE-44E9-8ED3-16DE797BE85F}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.118317279986679"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.271201299555973"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="392769535"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{A4056CFC-52CE-44E9-8ED3-16DE797BE85F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_02" ID="{DAB464F2-BEE3-4C17-8A95-5B3E8EF91517}" ShortID="859843465">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{AF344683-699B-4E61-9825-863A4DE26FAE}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.450330880598417"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.647416665448501"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="781436012"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{AF344683-699B-4E61-9825-863A4DE26FAE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_03" ID="{21CCCB4C-5431-427F-A749-A4FD514EEE4C}" ShortID="289245701">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{082ADC66-95DE-4EBA-B0ED-34CFA095D6A6}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.24891763404618"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.51448960858182"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="530603827"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{082ADC66-95DE-4EBA-B0ED-34CFA095D6A6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_05" ID="{4A877ECD-6D53-401C-A7E8-175DD294AA73}" ShortID="785572664">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{2C2427A2-4B3B-4BD9-8050-3A7D2B874182}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.9748004517884"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.19078888732923"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="861311897"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{2C2427A2-4B3B-4BD9-8050-3A7D2B874182}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_06" ID="{FEAF4849-D818-4B66-BE9F-1278868910A5}" ShortID="465042972">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{28311C9F-5998-4383-ADD6-693C77B4A56A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.73900781650055"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.01403486252451"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="113322193"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{28311C9F-5998-4383-ADD6-693C77B4A56A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_04" ID="{91546D12-A839-477F-BB01-42FFAF48F386}" ShortID="608717521">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{E3157F2F-333E-4640-90FC-DB58E7482A24}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.792314906109947"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.11149714990278"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="826151379"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{E3157F2F-333E-4640-90FC-DB58E7482A24}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_07" ID="{E7F7D09A-5D3F-4537-8320-DA3C8783D514}" ShortID="397532611">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{F6725533-327F-4198-9710-434AF05A7FC2}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.48596620345893"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.83951748800713"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="455621103"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{F6725533-327F-4198-9710-434AF05A7FC2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ChickenFoostep_08" ID="{EF6628BE-C449-4703-93E6-67DBC7749DB5}" ShortID="624930007">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="435882__dersuperanton__chicken" ID="{F619D799-F071-4374-9205-6D321DB8DA73}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.45780661529934"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.83834715583988"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>435882__dersuperanton__chicken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="923926565"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="435882__dersuperanton__chicken" ID="{F619D799-F071-4374-9205-6D321DB8DA73}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
