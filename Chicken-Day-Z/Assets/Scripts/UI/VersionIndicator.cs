@@ -9,7 +9,7 @@ namespace ChickenDayZ.UI
 
         void Awake()
         {
-            _showVersionText.text = "Version " + Application.version;
+            _showVersionText.text = "V " + Application.version;
         }
     }
 }
