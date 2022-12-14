@@ -30,17 +30,9 @@ namespace ChickenDayZ.UI
         
         private int _spriteIndex;
 
-        private bool _animating;
+        private bool _animating;       
 
-        public bool Animating 
-        {
-            get 
-            {
-                return _animating;
-            }
-        }
-
-        private void Awake()
+        void Awake()
         {
             GameplayResetter.OnGameplayReset += StopAnimation;
 
@@ -48,7 +40,6 @@ namespace ChickenDayZ.UI
 
             StopAnimation();
         }       
-        
 
         void Update()
         {
