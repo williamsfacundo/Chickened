@@ -198,6 +198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8390087879077635849, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+      propertyPath: _handWeapon
+      value: 
+      objectReference: {fileID: 712426873}
     - target: {fileID: 1430123743, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
       propertyPath: m_PointLightInnerAngle
       value: 360
@@ -272,6 +276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+--- !u!1 &712426873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3595562619768637623, guid: a15d289507929e54d9720a2dfd896f11, type: 3}
+  m_PrefabInstance: {fileID: 350705354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &729078570
 PrefabInstance:
   m_ObjectHideFlags: 0

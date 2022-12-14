@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 using ChickenDayZ.General;
 using ChickenDayZ.Gameplay.Health;
@@ -291,6 +292,10 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
                 zombie.GetComponent<ZombieAttacking>().ResetZombieAttacking();
 
                 zombie.GetComponent<ZombiesColliders>().EnableColliders();
+
+                zombie.GetComponent<ZombiesMovementIA>().enabled = true;
+
+                zombie.GetComponent<NavMeshAgent>().enabled = true;                
             }
             else 
             {

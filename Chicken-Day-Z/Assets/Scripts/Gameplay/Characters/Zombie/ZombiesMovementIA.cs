@@ -18,8 +18,6 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private NavMeshAgent _agent;
 
-        private Rigidbody2D _rb2D;
-
         public event Action OnZombieIsDead;
 
         public event Action OnZombieIsAlive;
@@ -76,9 +74,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             _agent = GetComponent<NavMeshAgent>();
 
-            _targets = new Transform[MaxTargets];
-
-            _rb2D = GetComponent<Rigidbody2D>();
+            _targets = new Transform[MaxTargets];            
 
             _currentTargetIndex = 0;
 
@@ -95,7 +91,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
             _agent.speed = _initialSpeed;
 
-            _rb2D.velocity = Vector2.zero;
+            
 
             IsDead = false;
         }
@@ -109,9 +105,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         void Update()
         {
-            _agent.SetDestination(_targets[_currentTargetIndex].position);
-
-            _rb2D.velocity = Vector2.zero;
+            _agent.SetDestination(_targets[_currentTargetIndex].position);            
 
             if (_isDead) 
             {
