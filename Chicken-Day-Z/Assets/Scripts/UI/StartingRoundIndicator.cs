@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-using ChickenDayZ.Gameplay.Controllers;
 using ChickenDayZ.Gameplay.Characters.Zombie;
 
 namespace ChickenDayZ.UI 
@@ -13,11 +12,7 @@ namespace ChickenDayZ.UI
 
         [SerializeField] private ZombiesSpawner _zombiesSpawner;
 
-        [SerializeField] private TMP_Text _showStartingRoundText;
-
-        [SerializeField] private RoundFrameAnimation _roundFrameAnimation;
-
-        private bool _roundAnimationFinished;
+        [SerializeField] private TMP_Text _showStartingRoundText;        
 
         private void Awake()
         {            
@@ -25,66 +20,44 @@ namespace ChickenDayZ.UI
             {
                 Debug.LogError("Assing a zombie spawner!");
             }
-
-            _roundFrameAnimation = GetComponent<RoundFrameAnimation>();
         }
 
         void Start()
         {
-            _chestIndicator.gameObject.SetActive(false);
+            HideText();            
 
-            _showStartingRoundText.text = string.Empty;
-
-            _roundAnimationFinished = false;            
-
-            _roundFrameAnimation.OnFinishedAnimation += ShowText;
-
-            _zombiesSpawner.OnTimerBeforeRoundStartsChanged += UpdateText;
-
-            GameplayResetter.OnGameplayReset += CantShowText;
+            _zombiesSpawner.OnTimerBeforeRoundStartsChanged += UpdateText;            
         }      
 
         void OnDestroy() 
         {
             _zombiesSpawner.OnTimerBeforeRoundStartsChanged -= UpdateText;
-            
-            _roundFrameAnimation.OnFinishedAnimation -= ShowText;
-
-            GameplayResetter.OnGameplayReset += CantShowText;
         }
 
         private void UpdateText()
         {
-            if (_zombiesSpawner.TimerBeforeRoundStarts.CountDown != 0f) 
+            if (_zombiesSpawner.TimerBeforeRoundStarts.CountDown != 0f && _zombiesSpawner.Round != 1) 
             {
-                if (_roundAnimationFinished) 
-                {
-                    _chestIndicator.gameObject.SetActive(true);
-                
-                    _showStartingRoundText.text = "ROUND STARTS IN " + (short)_zombiesSpawner.TimerBeforeRoundStarts.CountDown;
-                }                
+                ShowText();
             }
             else 
             {
-                _chestIndicator.gameObject.SetActive(false);
-
-                _showStartingRoundText.text = string.Empty;
-
-                _roundAnimationFinished = false;
+                HideText();    
             }
-        } 
+        }
         
         private void ShowText() 
         {
-            if (_zombiesSpawner.Round != 1) 
-            {
-                _roundAnimationFinished = true;
-            }
+            _chestIndicator.gameObject.SetActive(true);
+
+            _showStartingRoundText.text = "ROUND STARTS IN " + (short)_zombiesSpawner.TimerBeforeRoundStarts.CountDown;
         }
 
-        private void CantShowText() 
+        private void HideText() 
         {
-            _roundAnimationFinished = false;
+            _chestIndicator.gameObject.SetActive(false);
+
+            _showStartingRoundText.text = string.Empty;
         }
     }
 }

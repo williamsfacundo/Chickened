@@ -607,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3484870277824133101, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4565264423113431732, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_text
@@ -623,15 +623,15 @@ PrefabInstance:
       objectReference: {fileID: -6632436294744218671, guid: 42290493c2237ca4d80c2fb7cd829880, type: 2}
     - target: {fileID: 5254405009433892787, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5254405009433892787, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5254405009433892787, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6662729106971409841, guid: dbaa84c9018fcbc478d7bc1fecbdbb96, type: 3}
       propertyPath: _zombiesSpawner

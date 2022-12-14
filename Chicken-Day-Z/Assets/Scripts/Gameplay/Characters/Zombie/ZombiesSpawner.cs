@@ -48,11 +48,11 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
 
         private GameObject[] _fastZombies;
 
-        private GameObject[] _fatZombies;
-
-        public event Action OnRoundChanged;
+        private GameObject[] _fatZombies;        
 
         public event Action OnTimerBeforeRoundStartsChanged;
+
+        public event Action OnTimerBeforeRoundStartsFinished;
 
         private Timer _timerBeforeRoundStarts;
 
@@ -70,9 +70,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             set 
             {
-                _round = value;
-
-                OnRoundChanged?.Invoke();
+                _round = value;                
             }
             get 
             {
@@ -142,7 +140,7 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
         {
             _timerBeforeRoundStarts = new Timer(_timeBeforeRoundStarts);
 
-            _timerBeforeRoundStarts.CountDown = 0f;
+            _timerBeforeRoundStarts.CountDown = 1f;
 
             OnTimerBeforeRoundStartsChanged?.Invoke();
 
@@ -184,13 +182,18 @@ namespace ChickenDayZ.Gameplay.Characters.Zombie
             {
                 _timerBeforeRoundStarts.DecreaseTimer();
 
+                if (_timerBeforeRoundStarts.TimerFinished) 
+                {
+                    OnTimerBeforeRoundStartsFinished?.Invoke();
+                }
+
                 OnTimerBeforeRoundStartsChanged?.Invoke();
             }            
         }
 
         public void ResetObject()
         {
-            _timerBeforeRoundStarts.CountDown = 0f;
+            _timerBeforeRoundStarts.CountDown = 1f;
 
             OnTimerBeforeRoundStartsChanged?.Invoke();
 
