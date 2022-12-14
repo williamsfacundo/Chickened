@@ -21,7 +21,9 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
         private Camera _camera;
 
-        public FireFirearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character, ReloadFirearm reloadFirearm)
+        private GameObject _handWeapon;
+
+        public FireFirearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character, ReloadFirearm reloadFirearm, GameObject handWeapon)
         {
             _character = character;
 
@@ -36,6 +38,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             _projectiles = new ProjectileMovement[_charger.ChargerMaxAmmo / 2];
 
             InstanciateProjectiles(projectilePrefab);
+
+            _handWeapon = handWeapon;
         }
 
         public void ActivateProjectile(GameObject gameObject) 
@@ -56,7 +60,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+                            _projectiles[i].gameObject.transform.position = _handWeapon.transform.position;
                             _projectiles[i].Direction = mouseDirection;
                             _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
@@ -82,7 +86,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+                            _projectiles[i].gameObject.transform.position = _handWeapon.transform.position;
                             _projectiles[i].Direction = angledDirection;
                             _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
@@ -111,7 +115,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+                            _projectiles[i].gameObject.transform.position = _handWeapon.transform.position;
                             _projectiles[i].Direction = angledDirection;
                             _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 
@@ -133,7 +137,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
                             _projectiles[i].GetComponent<ProjectileImpact>().ProjectileImpacted = false;
 
                             _projectiles[i].gameObject.SetActive(true);
-                            _projectiles[i].gameObject.transform.position = _character.transform.position;
+                            _projectiles[i].gameObject.transform.position = _handWeapon.transform.position;
                             _projectiles[i].Direction = CalculateProjectileDirection(_character.transform.position);
                             _projectiles[i].gameObject.transform.up = _projectiles[i].Direction;
 

@@ -24,40 +24,22 @@ namespace ChickenDayZ.UI
 
         public event Action<string> OnShowTextIndex;
         
-        public event Action OnHideTextIndex;             
-        
-        public event Action OnFinishedAnimation;
+        public event Action OnHideTextIndex;    
 
         private Timer _animationTimer;
         
         private int _spriteIndex;
 
-        private bool _animating;
+        private bool _animating;       
 
-        public bool Animating 
+        void Awake()
         {
-            get 
-            {
-                return _animating;
-            }
-        }
-
-        private void Awake()
-        {
-            if (_zombiesSpawner == null)
-            {
-                Debug.LogError("Assing a zombie spawner!");
-            }
-
-            if (_zombiesSpawner != null)
-            {
-                _zombiesSpawner.OnRoundChanged += StartAnimation;
-            }
-
             GameplayResetter.OnGameplayReset += StopAnimation;
 
+            _zombiesSpawner.OnTimerBeforeRoundStartsFinished += StartAnimation; 
+
             StopAnimation();
-        }        
+        }       
 
         void Update()
         {
@@ -76,12 +58,9 @@ namespace ChickenDayZ.UI
 
         void OnDestroy()
         {
-            if (_zombiesSpawner != null)
-            {
-                _zombiesSpawner.OnRoundChanged -= StartAnimation;                
-            }
-
             GameplayResetter.OnGameplayReset -= StopAnimation;
+
+            _zombiesSpawner.OnTimerBeforeRoundStartsFinished -= StartAnimation;
         }
 
         public void StartAnimation()
@@ -113,8 +92,6 @@ namespace ChickenDayZ.UI
         {
             if (_spriteIndex >= _frameSpritesArray.Length)
             {
-                OnFinishedAnimation?.Invoke();
-
                 StopAnimation();
 
                 return;

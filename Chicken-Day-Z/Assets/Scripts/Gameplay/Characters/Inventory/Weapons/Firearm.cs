@@ -47,7 +47,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
             }
         }
 
-        public Firearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character)
+        public Firearm(GameObject projectilePrefab, Charger charger, Canyon canyon, GameObject character, GameObject handWeapon)
         {
             _charger = charger;
             
@@ -55,7 +55,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory.Weapons
 
             _reloadFirearmMechanic = new ReloadFirearm(_charger);
 
-            _fireFirearmMechanic = new FireFirearm(projectilePrefab, _charger, _canyon, character, _reloadFirearmMechanic);            
+            _fireFirearmMechanic = new FireFirearm(projectilePrefab, _charger, _canyon, character, _reloadFirearmMechanic, handWeapon);            
         }        
 
         public InventoryItemEnum GetInventoryItemType() 

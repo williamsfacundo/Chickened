@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 using ChickenDayZ.Gameplay.Characters.Zombie;
 using ChickenDayZ.Gameplay.MainObjects.Enumerators;
@@ -21,10 +22,12 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
         private ZombieAttacking _zombieAttacking;
 
-        private ZombiesColliders _zombiesColliders;
+        private ZombiesColliders _zombiesColliders;        
 
         private Animator _animator;
-        
+
+        private Rigidbody2D _rb2D;
+
         private ZombieObjectTypeEnum _zombieType;
 
         private static short _zombiesTotalInstances = 0;
@@ -69,9 +72,13 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
 
             _zombiesColliders = GetComponent<ZombiesColliders>();
 
+            _rb2D = GetComponent<Rigidbody2D>();
+
             _zombieType =_defineZombieType;
 
             _zombiesTotalInstances += 1;
+
+            _rb2D.velocity = Vector2.zero;
         }
 
         void OnEnable()
@@ -90,6 +97,11 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             _zombieHealth.OnHealthReachedZero -= AddScoreToPlayer;
 
             _zombiesActiveInstances -= 1;
+        }
+
+        void Update()
+        {
+            _rb2D.velocity = Vector2.zero;
         }
 
         void OnDestroy()
@@ -111,6 +123,10 @@ namespace ChickenDayZ.Gameplay.MainObjects.Characters
             _zombieAttacking.Damage = 0.0f;
 
             _zombiesColliders.DisableColliders();
+
+            _zombiesMovementIA.enabled = false;
+
+            GetComponent<NavMeshAgent>().enabled = false;
         }
 
         void AddScoreToPlayer() 

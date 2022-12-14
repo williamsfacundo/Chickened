@@ -17,8 +17,8 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 5180422776441524054, guid: 24387d193a607f8478af6d146fa76382, type: 3}
   ChargerMaxAmmo: 30
   ReloadTime: 0.8
-  FireRate: 0.3
-  Damage: 20
+  FireRate: 0.6
+  Damage: 10
   BulletMoveSpeed: 20
-  Range: 9
-  FireCapacity: 1
+  Range: 11
+  IsShotGun: 0

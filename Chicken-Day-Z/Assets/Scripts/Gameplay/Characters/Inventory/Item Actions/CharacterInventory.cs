@@ -14,6 +14,8 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
 
         [SerializeField] private FirearmStats _initialFirearmStats;
 
+        [SerializeField] private GameObject _handWeapon;
+
         private FirearmStats _firearmStats;        
 
         public event Action OnEquippedItemSelected;
@@ -89,7 +91,7 @@ namespace ChickenDayZ.Gameplay.Characters.Inventory
                                 new Charger(_firearmStats.ChargerMaxAmmo, _firearmStats.ReloadTime),
                                 new Canyon(_firearmStats.FireRate, _firearmStats.Damage,
                                 _firearmStats.BulletMoveSpeed, _firearmStats.Range, _firearmStats.IsShotGun),
-                                gameObject);
+                                gameObject, _handWeapon);
 
             _firearmSpriteRenderer.sprite = _firearmStats._sprite;
 
