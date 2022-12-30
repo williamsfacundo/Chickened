@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585310582668141728
+    m_lastTime: -8585292268757595195
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -196,8 +196,8 @@ MonoBehaviour:
         guid: ac19f4ea1172c241a49c91718d55f567
       Path: Events\Default Work Unit\Play_EggBeingHit
       maxAttenuation: 0
-      maxDuration: 0.244963
-      minDuration: 0.218237
+      maxDuration: 0.267134
+      minDuration: 0.200124
     - name: Play_EggBroken
       guid: 6884ac28e78e2c47981d8a64badfae83
       id: 3776342762
@@ -230,8 +230,25 @@ MonoBehaviour:
         guid: c31ddffd4b3b174cbcba40e3c48c7c6c
       Path: Events\Default Work Unit\Play_Foosteps
       maxAttenuation: 0
-      maxDuration: 0.380541
-      minDuration: 0.152884
+      maxDuration: 0.38555
+      minDuration: 0.140195
+    - name: Play_gameOver
+      guid: 32eecf761d024a4b8a6c029661f7a481
+      id: 3174629258
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_gameOver
+        ObjectType: 3
+        guid: 32eecf761d024a4b8a6c029661f7a481
+      Path: Events\Default Work Unit\Play_gameOver
+      maxAttenuation: 0
+      maxDuration: 0.767527
+      minDuration: 0.767527
     - name: Play_Pistol_LV1
       guid: 1476cec019b73c4884810ee1f22855bd
       id: 1493776129
@@ -578,7 +595,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

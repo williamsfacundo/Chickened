@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="1670323687">
+		<SoundBank Id="534561221" Language="SFX" Hash="892503567">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
@@ -114,7 +114,7 @@
 						</File>
 						<File Id="530603827" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_B0ED2512.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_2D53EDD1.wem</Path>
 						</File>
 						<File Id="781436012" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
@@ -138,7 +138,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1050864262" Language="SFX">
 							<ShortName>42349__irrlicht__game-over.wav</ShortName>
-							<Path>SFX\42349__irrlicht__game-over_F746946B.wem</Path>
+							<Path>SFX\42349__irrlicht__game-over_EC83DAE5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
