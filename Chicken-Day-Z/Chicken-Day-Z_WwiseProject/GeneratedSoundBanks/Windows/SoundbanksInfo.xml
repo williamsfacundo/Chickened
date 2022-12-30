@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="3232474732">
+		<SoundBank Id="534561221" Language="SFX" Hash="1670323687">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
@@ -82,7 +82,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="946859409" Name="Play_EggBeingHit" ObjectPath="\Events\Default Work Unit\Play_EggBeingHit" DurationType="OneShot" DurationMin="0.218237" DurationMax="0.244963">
+				<Event Id="946859409" Name="Play_EggBeingHit" ObjectPath="\Events\Default Work Unit\Play_EggBeingHit" DurationType="OneShot" DurationMin="0.200124" DurationMax="0.267134">
 					<IncludedMemoryFiles>
 						<File Id="845246035" Language="SFX">
 							<ShortName>332711__amicasys__glitch.wav</ShortName>
@@ -98,7 +98,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1946716263" Name="Play_Foosteps" ObjectPath="\Events\Default Work Unit\Play_Foosteps" DurationType="OneShot" DurationMin="0.152884" DurationMax="0.380541">
+				<Event Id="1946716263" Name="Play_Foosteps" ObjectPath="\Events\Default Work Unit\Play_Foosteps" DurationType="OneShot" DurationMin="0.140195" DurationMax="0.38555">
 					<IncludedMemoryFiles>
 						<File Id="113322193" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
@@ -114,7 +114,7 @@
 						</File>
 						<File Id="530603827" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
-							<Path>SFX\435882__dersuperanton__chicken_E6025682.wem</Path>
+							<Path>SFX\435882__dersuperanton__chicken_B0ED2512.wem</Path>
 						</File>
 						<File Id="781436012" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
@@ -131,6 +131,14 @@
 						<File Id="923926565" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
 							<Path>SFX\435882__dersuperanton__chicken_F6A4E71D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3174629258" Name="Play_gameOver" ObjectPath="\Events\Default Work Unit\Play_gameOver" DurationType="OneShot" DurationMin="0.767527" DurationMax="0.767527">
+					<IncludedMemoryFiles>
+						<File Id="1050864262" Language="SFX">
+							<ShortName>42349__irrlicht__game-over.wav</ShortName>
+							<Path>SFX\42349__irrlicht__game-over_F746946B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

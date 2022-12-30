@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_EGGBEINGHIT = 946859409U;
         static const AkUniqueID PLAY_EGGBROKEN = 3776342762U;
         static const AkUniqueID PLAY_FOOSTEPS = 1946716263U;
+        static const AkUniqueID PLAY_GAMEOVER = 3174629258U;
         static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
         static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;
         static const AkUniqueID PLAY_ZOMBIES_DIE = 16750680U;

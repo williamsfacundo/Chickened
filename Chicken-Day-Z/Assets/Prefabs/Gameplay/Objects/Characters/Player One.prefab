@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 6266846075603150994}
   - component: {fileID: 4548758258070621498}
   - component: {fileID: 5598873944086128991}
+  - component: {fileID: 259178119906161040}
   - component: {fileID: 7480977285595935392}
   - component: {fileID: 7480977285595935395}
   - component: {fileID: 3521646903989923705}
@@ -157,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firearmSpriteRenderer: {fileID: 3595562619768637622}
   _initialFirearmStats: {fileID: 11400000, guid: 2b4c8ded93924a5448b79fdc481fccca, type: 2}
+  _handWeapon: {fileID: 0}
 --- !u!114 &7324721198159398488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +288,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _definePlayersObjectTypeEnum: 0
+--- !u!114 &259178119906161040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480977285595935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02d1c5cc6e275b4a86f07c4e3762a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7480977285595935392
 Rigidbody2D:
   serializedVersion: 4
