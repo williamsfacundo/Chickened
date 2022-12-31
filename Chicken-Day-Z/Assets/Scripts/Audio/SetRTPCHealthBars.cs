@@ -16,5 +16,6 @@ public class SetRTPCHealthBars : MonoBehaviour
     #if DEBUG
         Debug.Log("se esta seteando el RTPC en: " + ImageSliderValue);
     #endif
+      
     }
 }

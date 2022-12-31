@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C7B78649-8EE6-4412-9F5E-22AF29B7DFA3}" SchemaVersion="103">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{C7B78649-8EE6-4412-9F5E-22AF29B7DFA3}" PersistMode="Standalone">
-			<ChildrenList>
-				<SwitchGroup Name="currentRoundState" ID="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
-					<ChildrenList>
-						<Switch Name="inARound" ID="{8F5605AB-3A28-4CDA-9567-9BF18CB9D65C}"/>
-						<Switch Name="betweenRounds" ID="{D934841A-0689-4918-BE45-90374D5EFE33}"/>
-					</ChildrenList>
-				</SwitchGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{C7B78649-8EE6-4412-9F5E-22AF29B7DFA3}" PersistMode="Standalone"/>
 	</Switches>
 </WwiseDocument>

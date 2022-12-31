@@ -7,18 +7,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1307705531	Play_ChickenBeingHit			\Default Work Unit\Play_ChickenBeingHit	
 	1493776129	Play_Pistol_LV1			\Default Work Unit\Play_Pistol_LV1	
 	1946716263	Play_Foosteps			\Default Work Unit\Play_Foosteps	
+	3095772632	Play_eggSiren			\Default Work Unit\Play_eggSiren	
 	3126765036	Play_BGM			\Default Work Unit\Play_BGM	
-	3174629258	Play_gameOver			\Default Work Unit\Play_gameOver	
 	3363860168	Reset_PlayerHealthAndEggHealth			\Default Work Unit\Reset_PlayerHealthAndEggHealth	
 	3765695918	Play_heartBeat			\Default Work Unit\Play_heartBeat	
-	3776342762	Play_EggBroken			\Default Work Unit\Play_EggBroken	
-
-Switch Group	ID	Name			Wwise Object Path	Notes
-	1792748095	currentRoundState			\Default Work Unit\currentRoundState	
-
-Switch	ID	Name	Switch Group			Notes
-	932640364	betweenRounds	currentRoundState			
-	3867762031	inARound	currentRoundState			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	239549482	MusicRegion			\Default Work Unit\MusicRegion	
@@ -32,9 +24,9 @@ State	ID	Name	State Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
+	1594264742	EggHealth			\Default Work Unit\EggHealth	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	566089642	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\gameOver\silence_01\Wwise Silence	
 	970581536	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\silence_01\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -52,6 +44,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	344487911	Pistol 9mm Glock 1-001	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Pistol 9mm Glock 1-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-001		115616
 	355425558	Zombie Impact 01	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Zombie Impact 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 01		86040
 	379085472	CHICKENEDIntroAndMenuMusic_intro	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\CHICKENEDIntroAndMenuMusic_intro_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\introBGM\CHICKENED_intro\CHICKENEDIntroAndMenuMusic_intro		2540224
+	381230078	51752__erkanozan__warning	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\51752__erkanozan__warning_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\eggSiren\51752__erkanozan__warning		51656
 	392769535	ChickenFoostep_01	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\435882__dersuperanton__chicken_4835BA87.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\ChickenFoostep_01		13548
 	395896696	Zombie Die 06	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Zombie Die 06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Die\Zombie Die 06		99918
 	455621103	ChickenFoostep_07	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\435882__dersuperanton__chicken_AE70E299.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\ChickenFoostep_07		31248
@@ -69,9 +62,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	904365897	Zombie Impact 06	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Zombie Impact 06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 06		79232
 	917140263	485076__inspectorj__heartbeat-regular-single-01-01-loop	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\485076__inspectorj__heartbeat-regular-single-01-01-loop_7A3C9245.wem		\Actor-Mixer Hierarchy\Default Work Unit\heartBeat\485076__inspectorj__heartbeat-regular-single-01-01-loop		175068
 	923926565	ChickenFoostep_08	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\435882__dersuperanton__chicken_F6A4E71D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\ChickenFoostep_08		33628
-	1011521806	glitchLowPitched	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\332711__amicasys__glitch_6B20D1B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\glitchLowPitched		171244
 	1029540244	Pistol 9mm Glock 1-003	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Pistol 9mm Glock 1-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-003		103608
 	1046129648	Zombie Impact 04	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Zombie Impact 04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Zombies Impact\Zombie Impact 04		103778
-	1050864262	gameOver	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\42349__irrlicht__game-over_EC83DAE5.wem		\Actor-Mixer Hierarchy\Default Work Unit\gameOver\gameOver		73746
 	1061936875	Pistol 9mm Glock 1-005	C:\Users\leojv\Documents\Repositorios\Chickens-Day-Z\Chicken-Day-Z\Chicken-Day-Z_WwiseProject\.cache\Windows\SFX\Pistol 9mm Glock 1-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pistol\Pistol 9mm Glock 1-005		84138
 

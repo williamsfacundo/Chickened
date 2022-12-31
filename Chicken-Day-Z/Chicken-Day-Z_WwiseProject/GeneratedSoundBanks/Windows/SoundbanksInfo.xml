@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="534561221" Language="SFX" Hash="3378468435">
+		<SoundBank Id="534561221" Language="SFX" Hash="693303740">
 			<ObjectPath>\SoundBanks\Default Work Unit\mainSoundBank</ObjectPath>
 			<ShortName>mainSoundBank</ShortName>
 			<Path>mainSoundBank.bnk</Path>
@@ -37,32 +37,20 @@
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{3CA6E239-C86D-4E10-919B-3665E26E3206}">
-							<Children>
-								<SwitchContainer SwitchValue="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
-									<Media>
-										<File Id="157120102"/>
-										<File Id="194565583"/>
-									</Media>
-								</SwitchContainer>
-							</Children>
+							<Media>
+								<File Id="157120102"/>
+								<File Id="194565583"/>
+							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{900AD062-182D-43C0-8E8A-21E9AF6929C4}">
-							<Children>
-								<SwitchContainer SwitchValue="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
-									<Media>
-										<File Id="379085472"/>
-									</Media>
-								</SwitchContainer>
-							</Children>
+							<Media>
+								<File Id="379085472"/>
+							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}">
-							<Children>
-								<SwitchContainer SwitchValue="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
-									<Media>
-										<File Id="512980114"/>
-									</Media>
-								</SwitchContainer>
-							</Children>
+							<Media>
+								<File Id="512980114"/>
+							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -82,13 +70,21 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3776342762" Name="Play_EggBroken" ObjectPath="\Events\Default Work Unit\Play_EggBroken" DurationType="OneShot" DurationMin="3.881685" DurationMax="3.881685">
+				<Event Id="3095772632" Name="Play_eggSiren" ObjectPath="\Events\Default Work Unit\Play_eggSiren" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="1011521806" Language="SFX">
-							<ShortName>332711__amicasys__glitch.wav</ShortName>
-							<Path>SFX\332711__amicasys__glitch_6B20D1B4.wem</Path>
+						<File Id="381230078" Language="SFX">
+							<ShortName>51752__erkanozan__warning.wav</ShortName>
+							<Path>SFX\51752__erkanozan__warning_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{3CA6E239-C86D-4E10-919B-3665E26E3206}">
+							<Media>
+								<File Id="381230078"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="1946716263" Name="Play_Foosteps" ObjectPath="\Events\Default Work Unit\Play_Foosteps" DurationType="OneShot" DurationMin="0.140195" DurationMax="0.38555">
 					<IncludedMemoryFiles>
@@ -115,14 +111,6 @@
 						<File Id="923926565" Language="SFX">
 							<ShortName>435882__dersuperanton__chicken.wav</ShortName>
 							<Path>SFX\435882__dersuperanton__chicken_F6A4E71D.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3174629258" Name="Play_gameOver" ObjectPath="\Events\Default Work Unit\Play_gameOver" DurationType="OneShot" DurationMin="60.767525" DurationMax="60.767525">
-					<IncludedMemoryFiles>
-						<File Id="1050864262" Language="SFX">
-							<ShortName>42349__irrlicht__game-over.wav</ShortName>
-							<Path>SFX\42349__irrlicht__game-over_EC83DAE5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -247,6 +235,7 @@
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="151362964" Name="PlayerHealth" ObjectPath="\Game Parameters\Default Work Unit\PlayerHealth"/>
+				<GameParameter Id="1594264742" Name="EggHealth" ObjectPath="\Game Parameters\Default Work Unit\EggHealth"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="239549482" Name="MusicRegion" ObjectPath="\States\Default Work Unit\MusicRegion" GUID="{35FD68D9-A2F0-4CD9-8958-9DD518399B8C}">
@@ -259,16 +248,8 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
-			<SwitchGroups>
-				<SwitchGroup Id="1792748095" Name="currentRoundState" ObjectPath="\Switches\Default Work Unit\currentRoundState" GUID="{29BA2223-BD9C-476C-A5DA-F770A1B8D1D7}">
-					<Switches>
-						<Switch Id="3867762031" Name="inARound" ObjectPath="\Switches\Default Work Unit\currentRoundState\inARound" GUID="{8F5605AB-3A28-4CDA-9567-9BF18CB9D65C}"/>
-						<Switch Id="932640364" Name="betweenRounds" ObjectPath="\Switches\Default Work Unit\currentRoundState\betweenRounds" GUID="{D934841A-0689-4918-BE45-90374D5EFE33}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2903441951">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4240937657">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -277,6 +258,17 @@
 				<GameParameter Id="1871523704" Name="MusicVolumeIngameOption" ObjectPath="\Game Parameters\Default Work Unit\MusicVolumeIngameOption"/>
 				<GameParameter Id="2704578016" Name="SFXVolumeIngameOption" ObjectPath="\Game Parameters\Default Work Unit\SFXVolumeIngameOption"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="239549482" Name="MusicRegion" ObjectPath="\States\Default Work Unit\MusicRegion" GUID="{35FD68D9-A2F0-4CD9-8958-9DD518399B8C}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MusicRegion\None" GUID="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}"/>
+						<State Id="3604647259" Name="mainMenu" ObjectPath="\States\Default Work Unit\MusicRegion\mainMenu" GUID="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}"/>
+						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\MusicRegion\gameplay" GUID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
+						<State Id="1125500713" Name="intro" ObjectPath="\States\Default Work Unit\MusicRegion\intro" GUID="{900AD062-182D-43C0-8E8A-21E9AF6929C4}"/>
+						<State Id="4158285989" Name="gameOver" ObjectPath="\States\Default Work Unit\MusicRegion\gameOver" GUID="{05D12E60-C8BE-4201-B177-E8EB421BF3E5}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

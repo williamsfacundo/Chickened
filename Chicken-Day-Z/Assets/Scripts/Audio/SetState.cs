@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AK.Wwise;
 
 public class SetState : MonoBehaviour
 {
@@ -9,5 +10,12 @@ public class SetState : MonoBehaviour
     public void ClickButton()
     {
         State.SetValue();
+        uint stateID;
+        AkSoundEngine.GetState("MyStateGroupName", out stateID);
+
+
     }
+
+
+
 }

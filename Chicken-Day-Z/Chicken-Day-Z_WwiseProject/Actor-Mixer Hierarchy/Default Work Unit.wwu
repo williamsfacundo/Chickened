@@ -592,53 +592,6 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
-				<Sound Name="glitchLowPitched" ID="{D2FE10FE-A748-41B3-9A55-5D606FEBCE5D}" ShortID="413504525">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>-2400</Value>
-							</ValueList>
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{2E5869C0-7C4B-4037-B3AA-FDD7891BEFE4}"/>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="332711__amicasys__glitch" ID="{24359C37-8DF8-42A5-8E61-726BB7370419}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="0.0518018018018018"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.0693641618497109"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="0.213963963963964"/>
-								<Property Name="TrimEnd" Type="Real64" Value="1.18438525230433"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>332711__amicasys__glitch.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1011521806"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ObjectLists/>
-					<ActiveSourceList>
-						<ActiveSource Name="332711__amicasys__glitch" ID="{24359C37-8DF8-42A5-8E61-726BB7370419}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<RandomSequenceContainer Name="ChickenBeingHit" ID="{E017C975-405F-4367-8768-4B972CA460CD}" ShortID="754431443">
 					<PropertyList>
 						<Property Name="Pitch" Type="int32">
@@ -1957,94 +1910,75 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
-				<RandomSequenceContainer Name="gameOver" ID="{922B5D3B-9E30-4C98-ADC8-8D43C9645BEF}" ShortID="587602825">
+				<SwitchContainer Name="eggSiren" ID="{D7F189F7-1496-47D3-81F4-56018C652FD7}" ShortID="679130835">
 					<PropertyList>
-						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{8A3DB820-A3DA-4DB6-B206-6A344E929F42}" ShortID="151356357">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="EggHealth" ID="{317A3179-CA29-4321-B10E-5E282D2CE576}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{BB397A22-B450-4447-808A-93C216A6E1A4}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-6</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.3</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
 						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="None" ID="{6C2943EE-F56D-4617-ADF7-C248A4FDDC0A}" WorkUnitID="{DB38B45E-0DFC-4570-A7E8-9B7B7146CD0E}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
 						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="MusicRegion" ID="{35FD68D9-A2F0-4CD9-8958-9DD518399B8C}" WorkUnitID="{DB38B45E-0DFC-4570-A7E8-9B7B7146CD0E}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="gameOver" ID="{0C8D1D87-7AB6-4308-BC36-62D343111BEC}" ShortID="944684796">
+						<Sound Name="51752__erkanozan__warning" ID="{75E4C5BD-27FC-4D65-BEC1-583B814D82FD}" ShortID="53484251">
 							<PropertyList>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{53316B48-F994-423D-9779-7D88AC830D7E}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3668E08-A5FD-4A6B-8D8E-9CA306416E9A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{7DA90980-2CF2-45F7-B411-5455C897A525}" WorkUnitID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="42349__irrlicht__game-over" ID="{790F092B-D055-4555-B31C-2270B8C21E01}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0428429523273273"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0273465653153153"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0419314001501502"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>42349__irrlicht__game-over.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1050864262"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="42349__irrlicht__game-over" ID="{790F092B-D055-4555-B31C-2270B8C21E01}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}" ShortID="276670907">
-							<PropertyList>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-9</Value>
-									</ValueList>
-								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2055,30 +1989,37 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SourcePlugin Name="Wwise Silence" ID="{47EF78A4-BAE9-4285-AD3F-E69F8EA68FEF}" ShortID="566089642" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-									<PropertyList>
-										<Property Name="Length" Type="Real32" Value="10"/>
-									</PropertyList>
+								<AudioFileSource Name="51752__erkanozan__warning" ID="{4ABE6CF8-4328-4989-828C-4351F9829860}">
 									<Language>SFX</Language>
-								</SourcePlugin>
+									<AudioFile>51752__erkanozan__warning.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="381230078"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Wwise Silence" ID="{47EF78A4-BAE9-4285-AD3F-E69F8EA68FEF}" Platform="Linked"/>
+								<ActiveSource Name="51752__erkanozan__warning" ID="{4ABE6CF8-4328-4989-828C-4351F9829860}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
-					<Playlist>
-						<ItemRef Name="gameOver" ID="{0C8D1D87-7AB6-4308-BC36-62D343111BEC}"/>
-						<ItemRef Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}"/>
-						<ItemRef Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}"/>
-						<ItemRef Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}"/>
-						<ItemRef Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}"/>
-						<ItemRef Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}"/>
-						<ItemRef Name="silence_01" ID="{013BF3F4-34ED-4D08-BDC1-A24F0C9CC1A2}"/>
-					</Playlist>
-				</RandomSequenceContainer>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="51752__erkanozan__warning" ID="{75E4C5BD-27FC-4D65-BEC1-583B814D82FD}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="gameplay" ID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
+								<ItemList>
+									<ItemRef Name="51752__erkanozan__warning" ID="{75E4C5BD-27FC-4D65-BEC1-583B814D82FD}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

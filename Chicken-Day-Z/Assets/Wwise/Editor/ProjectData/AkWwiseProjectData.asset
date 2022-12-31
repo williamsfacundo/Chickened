@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e3f4ce82426514ab681b4da9a78fbbf
     GuidInternal: 
-    m_lastTime: -8585291461964615055
+    m_lastTime: -8585291434604025707
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585291461964550038
+    m_lastTime: -8585291428087263252
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -181,9 +181,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.267134
       minDuration: 0.200124
-    - name: Play_EggBroken
-      guid: 6884ac28e78e2c47981d8a64badfae83
-      id: 3776342762
+    - name: Play_eggSiren
+      guid: ccff8b96078c3047bc7e8a7e185bb121
+      id: 3095772632
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -191,13 +191,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Play_EggBroken
+      - ElementName: Play_eggSiren
         ObjectType: 3
-        guid: 6884ac28e78e2c47981d8a64badfae83
-      Path: Events\Default Work Unit\Play_EggBroken
+        guid: ccff8b96078c3047bc7e8a7e185bb121
+      Path: Events\Default Work Unit\Play_eggSiren
       maxAttenuation: 0
-      maxDuration: 3.881685
-      minDuration: 3.881685
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Foosteps
       guid: c31ddffd4b3b174cbcba40e3c48c7c6c
       id: 1946716263
@@ -215,23 +215,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.38555
       minDuration: 0.140195
-    - name: Play_gameOver
-      guid: 32eecf761d024a4b8a6c029661f7a481
-      id: 3174629258
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Play_gameOver
-        ObjectType: 3
-        guid: 32eecf761d024a4b8a6c029661f7a481
-      Path: Events\Default Work Unit\Play_gameOver
-      maxAttenuation: 0
-      maxDuration: 60.767525
-      minDuration: 60.767525
     - name: Play_heartBeat
       guid: b696ff1edc6e294b93bfb7fc32edf4bc
       id: 3765695918
@@ -545,58 +528,8 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4986b7c7e68e12449f5e22af29b7dfa3
     GuidInternal: 
-    m_lastTime: -8585310530589216305
-    List:
-    - name: currentRoundState
-      guid: 2322ba299cbd6c47a5daf770a1b8d1d7
-      id: 1792748095
-      PathAndIcons:
-      - ElementName: Switches
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 4986b7c7e68e12449f5e22af29b7dfa3
-      - ElementName: currentRoundState
-        ObjectType: 11
-        guid: 2322ba299cbd6c47a5daf770a1b8d1d7
-      Path: Switches\Default Work Unit\currentRoundState
-      values:
-      - name: betweenRounds
-        guid: 1a8434d989061849be4590374d5efe33
-        id: 932640364
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 4986b7c7e68e12449f5e22af29b7dfa3
-        - ElementName: currentRoundState
-          ObjectType: 11
-          guid: 2322ba299cbd6c47a5daf770a1b8d1d7
-        - ElementName: betweenRounds
-          ObjectType: 10
-          guid: 1a8434d989061849be4590374d5efe33
-      - name: inARound
-        guid: ab05568f283ada4c95679bf18cb9d65c
-        id: 3867762031
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 4986b7c7e68e12449f5e22af29b7dfa3
-        - ElementName: currentRoundState
-          ObjectType: 11
-          guid: 2322ba299cbd6c47a5daf770a1b8d1d7
-        - ElementName: inARound
-          ObjectType: 10
-          guid: ab05568f283ada4c95679bf18cb9d65c
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8585291434603885685
+    List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:

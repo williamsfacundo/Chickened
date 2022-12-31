@@ -16,9 +16,8 @@ namespace AK
         static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_CHICKENBEINGHIT = 1307705531U;
         static const AkUniqueID PLAY_EGGBEINGHIT = 946859409U;
-        static const AkUniqueID PLAY_EGGBROKEN = 3776342762U;
+        static const AkUniqueID PLAY_EGGSIREN = 3095772632U;
         static const AkUniqueID PLAY_FOOSTEPS = 1946716263U;
-        static const AkUniqueID PLAY_GAMEOVER = 3174629258U;
         static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
         static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
         static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;
@@ -45,21 +44,6 @@ namespace AK
         } // namespace MUSICREGION
 
     } // namespace STATES
-
-    namespace SWITCHES
-    {
-        namespace CURRENTROUNDSTATE
-        {
-            static const AkUniqueID GROUP = 1792748095U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID BETWEENROUNDS = 932640364U;
-                static const AkUniqueID INAROUND = 3867762031U;
-            } // namespace SWITCH
-        } // namespace CURRENTROUNDSTATE
-
-    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

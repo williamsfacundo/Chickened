@@ -105,28 +105,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_EggBroken" ID="{28AC8468-8EE7-472C-981D-8A64BADFAE83}">
-					<ChildrenList>
-						<Action Name="" ID="{8E9EDB39-3BE2-46DC-A147-568CB4C748F2}" ShortID="674407679">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="glitchLowPitched" ID="{D2FE10FE-A748-41B3-9A55-5D606FEBCE5D}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_gameOver" ID="{76CFEE32-021D-4B4A-8A6C-029661F7A481}">
-					<ChildrenList>
-						<Action Name="" ID="{1120E06A-F315-4549-BDE1-C2BCE2A90562}" ShortID="305319449">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="gameOver" ID="{922B5D3B-9E30-4C98-ADC8-8D43C9645BEF}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_heartBeat" ID="{1EFF96B6-6EDC-4B29-93BF-B7FC32EDF4BC}">
 					<ChildrenList>
 						<Action Name="" ID="{659CBD5E-6F60-4991-A4C9-0DC4222F5DEC}" ShortID="564247267">
@@ -143,6 +121,8 @@
 						<Action Name="" ID="{B7D396DA-698A-4EA4-81D6-13C7A375E573}" ShortID="36907634">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -153,10 +133,23 @@
 						<Action Name="" ID="{FBC8C2AF-08A2-4DA7-8744-4C6311EC34BD}" ShortID="546260060">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="EggHealth" ID="{317A3179-CA29-4321-B10E-5E282D2CE576}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_eggSiren" ID="{968BFFCC-8C07-4730-BC7E-8A7E185BB121}">
+					<ChildrenList>
+						<Action Name="" ID="{82ADE335-371A-463A-A7FE-6E113171D425}" ShortID="945802975">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eggSiren" ID="{D7F189F7-1496-47D3-81F4-56018C652FD7}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

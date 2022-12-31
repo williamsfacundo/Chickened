@@ -121,6 +121,31 @@
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="MusicRegion" ID="{35FD68D9-A2F0-4CD9-8958-9DD518399B8C}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="gameOver" ID="{05D12E60-C8BE-4201-B177-E8EB421BF3E5}"/>
+								<CustomState Name="" ID="{B3F919EB-B1B0-4A40-B20C-0FB48868199A}" ShortID="901770247"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="intro" ID="{900AD062-182D-43C0-8E8A-21E9AF6929C4}"/>
+								<CustomState Name="" ID="{0DF7172E-AC0C-4F24-BED9-FABCA8C7E7D4}" ShortID="918830671"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="gameplay" ID="{3CA6E239-C86D-4E10-919B-3665E26E3206}"/>
+								<CustomState Name="" ID="{81B602DF-244C-40EC-BCA3-9D2CA6DB2032}" ShortID="1034580994"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="mainMenu" ID="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}"/>
+								<CustomState Name="" ID="{2A5815C0-6DDC-449A-B411-96979D98C34A}" ShortID="634765539"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>
