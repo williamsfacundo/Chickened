@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e3f4ce82426514ab681b4da9a78fbbf
     GuidInternal: 
-    m_lastTime: -8585307986535952875
+    m_lastTime: -8585291461964615055
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585292268757595195
+    m_lastTime: -8585291461964550038
     List:
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
@@ -164,23 +164,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.33387
       minDuration: 0.301771
-    - name: Play_ChickenDeath
-      guid: 995a017db8646843bed295a990d2a652
-      id: 3167060539
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 5dfc683da98bfe4ead6d09b381dc022d
-      - ElementName: Play_ChickenDeath
-        ObjectType: 3
-        guid: 995a017db8646843bed295a990d2a652
-      Path: Events\Default Work Unit\Play_ChickenDeath
-      maxAttenuation: 0
-      maxDuration: 1.157075
-      minDuration: 1.157075
     - name: Play_EggBeingHit
       guid: ac19f4ea1172c241a49c91718d55f567
       id: 946859409
@@ -247,8 +230,25 @@ MonoBehaviour:
         guid: 32eecf761d024a4b8a6c029661f7a481
       Path: Events\Default Work Unit\Play_gameOver
       maxAttenuation: 0
-      maxDuration: 0.767527
-      minDuration: 0.767527
+      maxDuration: 60.767525
+      minDuration: 60.767525
+    - name: Play_heartBeat
+      guid: b696ff1edc6e294b93bfb7fc32edf4bc
+      id: 3765695918
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Play_heartBeat
+        ObjectType: 3
+        guid: b696ff1edc6e294b93bfb7fc32edf4bc
+      Path: Events\Default Work Unit\Play_heartBeat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Pistol_LV1
       guid: 1476cec019b73c4884810ee1f22855bd
       id: 1493776129
@@ -315,8 +315,25 @@ MonoBehaviour:
         guid: e1d91df44845ad45ab11a31541819e2a
       Path: Events\Default Work Unit\Play_Zombies_Impact
       maxAttenuation: 0
-      maxDuration: 1.175896
+      maxDuration: 1.75
       minDuration: 0.857823
+    - name: Reset_PlayerHealthAndEggHealth
+      guid: f49c88c6ec29304e89b14993b85265e5
+      id: 3363860168
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: Reset_PlayerHealthAndEggHealth
+        ObjectType: 3
+        guid: f49c88c6ec29304e89b14993b85265e5
+      Path: Events\Default Work Unit\Reset_PlayerHealthAndEggHealth
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BGM
       guid: a5099412584b914e9483371228926f52
       id: 1073466678
@@ -346,7 +363,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 17acb5b497f31645bb6327beffda800f
     GuidInternal: 
-    m_lastTime: -8585307989330510351
+    m_lastTime: -8585291501414104275
     List:
     - name: EggHealth
       guid: 79317a3129ca2143b10e5e282d2ce576
@@ -595,7 +612,7 @@ MonoBehaviour:
     m_lastTime: -8585341580333948035
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000
+  ExpandedWaapiItemIds: 05000000060000001e0000001f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

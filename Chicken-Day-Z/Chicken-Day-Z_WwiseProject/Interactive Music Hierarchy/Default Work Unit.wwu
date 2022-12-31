@@ -5,6 +5,40 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="BGM" ID="{D71DE5F9-D272-42AE-B0B1-BA23E369465D}" ShortID="785146666">
 					<PropertyList>
+						<Property Name="PlaybackSpeed" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{46ED5E60-E42D-46DF-8053-ED5CDE1D9FDA}" ShortID="644879851">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="PlayerHealth" ID="{8CBB6124-58E2-494E-8524-E4F4271DB6E5}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{CE371D37-3C0A-4824-BB42-DC50940AD6F0}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0.6</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Log1</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>0.4</XPos>
+												<YPos>1</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>1</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="130"/>
 					</PropertyList>
 					<ReferenceList>

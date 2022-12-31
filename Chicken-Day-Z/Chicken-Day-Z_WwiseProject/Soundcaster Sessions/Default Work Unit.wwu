@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7E180FBE-272A-4941-993C-DC28E06C0D71}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{7E180FBE-272A-4941-993C-DC28E06C0D71}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7E180FBE-272A-4941-993C-DC28E06C0D71}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{E4CDC12F-65B8-46AF-9189-B28AF32C0363}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_heartBeat" ID="{1EFF96B6-6EDC-4B29-93BF-B7FC32EDF4BC}" WorkUnitID="{3D68FC5D-8BA9-4EFE-AD6D-09B381DC022D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_BGM" ID="{D89AAC22-D475-4215-B991-C76EEBD7D894}" WorkUnitID="{3D68FC5D-8BA9-4EFE-AD6D-09B381DC022D}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="EggHealth" ID="{317A3179-CA29-4321-B10E-5E282D2CE576}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolumeIngameOption" ID="{931B3D68-EEA2-462F-95F7-EE9AAE90B4A1}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFXVolumeIngameOption" ID="{5ABBDC0B-5994-4854-A0DE-4D3BC516085B}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="PlayerHealth" ID="{8CBB6124-58E2-494E-8524-E4F4271DB6E5}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="mainMenu" ID="{543D67AD-3812-4EBB-9FBD-2FC37443B26F}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="betweenRounds" ID="{D934841A-0689-4918-BE45-90374D5EFE33}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

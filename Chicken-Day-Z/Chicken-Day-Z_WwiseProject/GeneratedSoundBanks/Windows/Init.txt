@@ -9,6 +9,7 @@ State	ID	Name	State Group			Notes
 	4158285989	gameOver	MusicRegion			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
 	1871523704	MusicVolumeIngameOption			\Default Work Unit\MusicVolumeIngameOption	
 	2704578016	SFXVolumeIngameOption			\Default Work Unit\SFXVolumeIngameOption	
 

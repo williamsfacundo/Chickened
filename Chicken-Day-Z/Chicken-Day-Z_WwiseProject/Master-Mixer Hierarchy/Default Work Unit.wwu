@@ -4,6 +4,42 @@
 		<WorkUnit Name="Default Work Unit" ID="{E84C3F9E-2624-4A51-B681-B4DA9A78FBBF}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{2BD49F2C-5AF5-41F4-BE68-F13016A0F114}" ShortID="664036952">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="PlayerHealth" ID="{8CBB6124-58E2-494E-8524-E4F4271DB6E5}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{7EF7FBA5-C988-4749-875C-6C4FE0225CC1}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>55</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>0.5</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{DC47222A-2E21-44D6-9167-9BAF465AEE97}" WorkUnitID="{973F21EF-ED9E-4D34-AF3F-DDFF046E5FD2}"/>

@@ -15,15 +15,16 @@ namespace AK
     {
         static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_CHICKENBEINGHIT = 1307705531U;
-        static const AkUniqueID PLAY_CHICKENDEATH = 3167060539U;
         static const AkUniqueID PLAY_EGGBEINGHIT = 946859409U;
         static const AkUniqueID PLAY_EGGBROKEN = 3776342762U;
         static const AkUniqueID PLAY_FOOSTEPS = 1946716263U;
         static const AkUniqueID PLAY_GAMEOVER = 3174629258U;
+        static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
         static const AkUniqueID PLAY_PISTOL_LV1 = 1493776129U;
         static const AkUniqueID PLAY_PISTOL_RELOAD_LV1 = 183297547U;
         static const AkUniqueID PLAY_ZOMBIES_DIE = 16750680U;
         static const AkUniqueID PLAY_ZOMBIES_IMPACT = 297923524U;
+        static const AkUniqueID RESET_PLAYERHEALTHANDEGGHEALTH = 3363860168U;
         static const AkUniqueID STOP_BGM = 1073466678U;
     } // namespace EVENTS
 

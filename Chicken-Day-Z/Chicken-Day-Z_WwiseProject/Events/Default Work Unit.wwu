@@ -94,17 +94,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_ChickenDeath" ID="{7D015A99-64B8-4368-BED2-95A990D2A652}">
-					<ChildrenList>
-						<Action Name="" ID="{6C791CC1-E4DB-4FA3-9A92-3B7BE97CB2DC}" ShortID="423113389">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="chickenCanto" ID="{61809BD6-5DFF-439C-96A6-711856DC9B41}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_EggBeingHit" ID="{EAF419AC-7211-41C2-A49C-91718D55F567}">
 					<ChildrenList>
 						<Action Name="" ID="{77D403BF-DAE4-4F40-9031-13110E9A910D}" ShortID="988036182">
@@ -132,7 +121,42 @@
 						<Action Name="" ID="{1120E06A-F315-4549-BDE1-C2BCE2A90562}" ShortID="305319449">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="gameOver" ID="{0C8D1D87-7AB6-4308-BC36-62D343111BEC}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+									<ObjectRef Name="gameOver" ID="{922B5D3B-9E30-4C98-ADC8-8D43C9645BEF}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_heartBeat" ID="{1EFF96B6-6EDC-4B29-93BF-B7FC32EDF4BC}">
+					<ChildrenList>
+						<Action Name="" ID="{659CBD5E-6F60-4991-A4C9-0DC4222F5DEC}" ShortID="564247267">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="heartBeat" ID="{51650031-97B0-4B9F-9411-F88825699191}" WorkUnitID="{BEEEA980-F296-4A97-9512-5BF79BEE38BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reset_PlayerHealthAndEggHealth" ID="{C6889CF4-29EC-4E30-89B1-4993B85265E5}">
+					<ChildrenList>
+						<Action Name="" ID="{B7D396DA-698A-4EA4-81D6-13C7A375E573}" ShortID="36907634">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerHealth" ID="{8CBB6124-58E2-494E-8524-E4F4271DB6E5}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FBC8C2AF-08A2-4DA7-8744-4C6311EC34BD}" ShortID="546260060">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EggHealth" ID="{317A3179-CA29-4321-B10E-5E282D2CE576}" WorkUnitID="{B4B5AC17-F397-4516-BB63-27BEFFDA800F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

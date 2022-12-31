@@ -10,6 +10,8 @@ public class GameOverSoundPlay : MonoBehaviour
 {
     [SerializeField] AK.Wwise.Event Event = new AK.Wwise.Event();
 
+    
+
 
 
     void Update()
@@ -17,11 +19,16 @@ public class GameOverSoundPlay : MonoBehaviour
         float ImageSliderValue = gameObject.GetComponent<Image>().fillAmount;
         Debug.Log(ImageSliderValue);
 
-        if (ImageSliderValue <= 0)
+        if (ImageSliderValue <= 0.5)
         {
-            AkSoundEngine.PostEvent("Play_gameOver", gameObject);
+            PostSelectedEventOnce();
         }
+        
+        
 
-
+    }
+    void PostSelectedEventOnce()
+    {
+        Event.Post(gameObject);
     }
 }
