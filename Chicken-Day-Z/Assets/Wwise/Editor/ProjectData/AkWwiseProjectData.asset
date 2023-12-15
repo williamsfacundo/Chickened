@@ -128,8 +128,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5dfc683da98bfe4ead6d09b381dc022d
     GuidInternal: 
-    m_lastTime: -8585291428087263252
+    m_lastTime: -8584991675923663083
     List:
+    - name: EVENTO_NUEVO_PRUEBA
+      guid: 42e7ed486052764bb84eaff1ec8e6fb9
+      id: 1449451066
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5dfc683da98bfe4ead6d09b381dc022d
+      - ElementName: EVENTO_NUEVO_PRUEBA
+        ObjectType: 3
+        guid: 42e7ed486052764bb84eaff1ec8e6fb9
+      Path: Events\Default Work Unit\EVENTO_NUEVO_PRUEBA
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_BGM
       guid: 22ac9ad875d41542b991c76eebd7d894
       id: 3126765036
